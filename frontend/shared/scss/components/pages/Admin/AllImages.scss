@@ -1,0 +1,41 @@
+.images-data-table {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .images-data-table-images {
+        width: 100%;
+        height: 75px;
+        img {
+            width: 100px;
+            height: 75px;
+            object-fit: contain;
+        }
+    }
+    .image-dimesion-column {
+        display: flex;
+        justify-content: flex-start;
+        div {
+            height: auto;
+            h1 {
+                display: none;
+            }
+        }
+    }
+    .images-data-table-icons {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.upload-site-image {
+    margin-bottom: 20px;
+    .image_upload_neated_container {
+        margin-bottom: 20px;
+    }
+    .lwp-button-wrapper {
+        button {
+            width: 172px;
+        }
+    }
+}

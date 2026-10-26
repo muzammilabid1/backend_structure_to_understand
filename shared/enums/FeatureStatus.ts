@@ -1,0 +1,5 @@
+export enum FeatureStatus {
+    ALL_SCHOOLS = 'ALL_SCHOOLS',
+    NO_SCHOOLS = 'NO_SCHOOLS',
+    LIMITED_RELEASE = 'LIMITED_RELEASE',
+}

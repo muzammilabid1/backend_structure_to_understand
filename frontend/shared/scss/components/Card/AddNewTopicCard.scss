@@ -1,0 +1,9 @@
+.addNewTopic {
+  border: 3px dashed map-get($theme-colors, base-warm-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $base-radius;
+  width: 100%;
+  min-height: 138px;
+}

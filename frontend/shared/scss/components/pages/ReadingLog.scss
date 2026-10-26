@@ -1,0 +1,485 @@
+.reading_log_container {
+    @include sm {
+        margin-top: -10px;
+        .welcome_child {
+            line-height: 60px;
+        }
+    }
+    .breadcrumb-item {
+        margin-bottom: 36px;
+    }
+    .reading_log_target_container {
+        // width: 100%;
+        // height: 62px;
+        padding: 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        .reading_log_target_book_container {
+            display: flex;
+            align-items: center;
+        }
+        .reading_log_target_text {
+            margin: 0 10px 0 20px;
+        }
+    }
+
+    .wel_head {
+        .heading-one {
+            font-size: 32px !important;
+        }
+    }
+
+    .is-current-topic {
+        .lwp-button-wrapper {
+            display: flex;
+            justify-content: flex-end;
+
+            @include sm {
+                justify-content: center;
+            }
+        }
+    }
+
+    .yellow-bg {
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+    }
+    .yellow-book-bg {
+        width: 42px;
+        height: 42px;
+        background-color: map-get($theme-colors, auxiliary-yellow-base);
+        border-radius: 25px;
+        margin-left: 19px;
+        img {
+            margin-left: -10px;
+        }
+    }
+    .yellow-text {
+        color: map-get($theme-colors, principal-main-dark);
+        font-size: 20px;
+    }
+
+    .green-bg {
+        background-color: map-get($theme-colors, auxiliary-green-light);
+    }
+    .green-book-bg {
+        width: 42px;
+        height: 42px;
+        background-color: map-get($theme-colors, principal-maths-light);
+        border-radius: 25px;
+        margin-left: 19px;
+        img {
+            margin-left: -10px;
+        }
+    }
+    .green-text {
+        color: map-get($theme-colors, auxiliary-green-base);
+        font-size: 20px;
+    }
+
+    .blue-bg {
+        background-color: map-get($theme-colors, auxiliary-blue-light);
+    }
+    .blue-book-bg {
+        width: 42px;
+        height: 42px;
+        background-color: map-get($theme-colors, principal-english-light);
+        border-radius: 25px;
+        margin-left: 19px;
+        img {
+            margin-left: -10px;
+        }
+    }
+    .blue-text {
+        color: map-get($theme-colors, auxiliary-blue-base);
+        font-size: 20px;
+    }
+
+    form {
+        padding: 0px 32px 40px 32px;
+        .no-reading-topic {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hide-on-mobile {
+            display: block !important;
+
+            @include sm {
+                display: none !important;
+            }
+        }
+        .hide-on-desktop {
+            display: none !important;
+            .slider-parent {
+                margin: 30px 15px 64px 15px !important;
+            }
+
+            @include sm {
+                display: block !important;
+            }
+        }
+        @include sm {
+            padding: 0px 32px 15px 32px;
+        }
+    }
+    .slider-parent {
+        margin: 35px 0 64px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .slick-arrow {
+            display: none !important;
+        }
+        .disabel {
+            cursor: not-allowed !important;
+        }
+        .material-icons {
+            cursor: pointer;
+            font-size: 30px;
+            margin-top: 10px;
+            color: #999591;
+        }
+        .unselectable {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+        // background: #ffffff;
+        // box-shadow: 0px 4px 8px 0px #d6d1cb80;
+        .slick-slider {
+            width: 100%;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // text-align: center;
+            // .slick-list {
+            // width: 100%;
+            // padding: 0 !important;
+            // }
+            // .customIcon {
+            //     margin-top: 20px;
+            //     .material-icons {
+            //         cursor: pointer;
+            //         color: #999591;
+            //     }
+            // }
+
+            .selected-item {
+                // p {
+                //     font-weight: bold;
+                // }
+                outline: none !important;
+                .material-icons {
+                    background: map-get($theme-colors, auxiliary-green-base);
+                }
+            }
+            .un-selected-item {
+                .material-icons {
+                    background: map-get($theme-colors, principal-reading-base);
+                }
+            }
+            .done-item {
+                .material-icons {
+                    background: rgba(136, 125, 255, 0.6);
+                }
+            }
+            .disable {
+                .material-icons {
+                    background: #d6d1cb;
+                    cursor: not-allowed !important;
+                }
+            }
+
+            .item {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .material-icons {
+                    cursor: pointer;
+                    border: 1px solid white;
+                    border-radius: 50%;
+                    color: white;
+                    padding: 15px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+
+    .slider_container {
+        margin-top: 24px;
+        @include sm {
+            margin-top: 48px;
+            .reader-btn {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 15px;
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .collapse_continer {
+        // max-width: 856px;
+        background-color: rgb(255, 255, 255);
+        margin: 0 auto;
+        box-shadow:
+            0px 2px 4px -1px rgb(0 0 0 / 20%),
+            0px 4px 5px 0px rgb(0 0 0 / 5%),
+            0px 1px 10px 0px rgb(0 0 0 / 12%);
+        .css-1j0cay7-MuiPaper-root {
+            box-shadow: none;
+            background: none;
+        }
+        .css-pmy05b {
+            box-shadow: none;
+            background: none;
+        }
+        .upload-img-right-content {
+            > :last-child {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .recoder-img-conatiner {
+                border: 3px dashed #d6d1cb;
+                padding: 1em;
+
+                @include sm {
+                    width: inherit;
+                }
+
+                .mic-icon {
+                    color: #d6d1cb;
+                    font-size: 100px !important;
+                    margin-bottom: 25px;
+                }
+
+                .MuiButton-root {
+                    width: 172px;
+                }
+            }
+
+            .image_upload_neated_container {
+                .dropzone-container {
+                    .MuiBox-root {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column-reverse;
+
+                        .MuiButton-root {
+                            width: 172px;
+                        }
+                    }
+                }
+            }
+
+            .helper-text {
+                margin-left: 16px;
+                margin-top: 3px;
+            }
+        }
+        @include sm {
+            margin: -30px -24px 24px -24px;
+        }
+        .includeInReadingTarget-checkbox {
+            .MuiTypography-root {
+                padding-top: 8px !important;
+            }
+        }
+    }
+
+    @include sm {
+        .heading-two {
+            margin-top: -30px;
+        }
+    }
+
+    // The day has no field of its own, so its error sits with the save button, outside the form's
+    // own .error-message rule. The red and the size are repeated to match the errors above it.
+    .reading-day-error {
+        margin-top: 64px;
+        text-align: end;
+
+        p {
+            color: map-get($theme-colors, auxiliary-red-base);
+            font-size: 12px;
+        }
+
+        // The button row supplies this gap when there is no error to show.
+        + .reader-btn {
+            margin-top: 8px;
+        }
+    }
+
+    .reader-btn {
+        text-align: end;
+        margin-top: 64px;
+
+        .cancel_btn {
+            margin-right: 1rem;
+        }
+    }
+
+    .finish-book-radio-btn {
+        .MuiFormControlLabel-label {
+            margin-left: 9px;
+        }
+    }
+
+    .Radio_btn_3 {
+        padding: 6px;
+    }
+
+    .MuiRadio-colorSecondary.Mui-checked {
+        color: map-get($theme-colors, base-blue-black);
+    }
+    .MuiRadio-colorSecondary {
+        color: lightgray;
+    }
+
+    // .child-comment {
+    //     margin-top: 0 !important;
+    //     text-align: start !important;
+
+    //     .heading {
+    //         font-weight: bold !important;
+    //         font-family: Verdana !important;
+    //     }
+    //     .para {
+    //         font-family: Verdana !important;
+    //     }
+    // }
+
+    .demo-activity-photo-permission-card {
+        margin: 30px 0;
+        padding: 10px 20px;
+        background-color: map-get($theme-colors, base-off-white);
+        box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+
+        .divider-line {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    .demo-activity-photo-permission-update-card {
+        background-color: map-get($theme-colors, base-off-white);
+        margin: 30px 0;
+        padding: 10px 20px;
+
+        .update-link {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .school-readinglog-alert {
+        margin-top: 24px;
+        .MuiPaper-root {
+            background-color: map-get($theme-colors, auxiliary-blue-light);
+            .MuiAlert-icon {
+                color: map-get($theme-colors, auxiliary-blue-base);
+                font-size: 26px;
+            }
+        }
+    }
+
+    .add-to-home-screen-snackbar {
+        .MuiAlert-root {
+            display: flex;
+            align-items: center;
+            .MuiAlert-message {
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        @include sm {
+            .MuiAlert-root {
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+.reading-log-modal-container {
+    height: 100vh;
+    overflow: auto;
+    .modal-content {
+        margin: auto;
+    }
+}
+
+.reading-log-modal {
+    .log-text {
+        font-weight: 400px;
+        margin-top: 24px;
+    }
+    .readingLog-modal-card-container {
+        padding: 10px 0 10px 0;
+        .readingLog-modal-card {
+            margin-top: 20px;
+            border-top: 4px solid map-get($theme-colors, principal-reading-base);
+            box-shadow: 0px 4px 8px 0px #d6d1cb80;
+            min-height: 82px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            cursor: pointer;
+            .content {
+                padding: 5px;
+            }
+            .card_icon {
+                padding: 1em;
+                .edit_off {
+                    color: map-get($theme-colors, base-warm-grey);
+                }
+                .edit {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+    }
+
+    .new-reading-record {
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 4px 8px 0px #d6d1cb80;
+        background: #ffffff;
+        border-radius: 4px;
+        height: 65px;
+        cursor: pointer;
+        margin-top: 10px;
+        .paragraph {
+            margin-bottom: 0;
+        }
+        .material-icons {
+            padding: 15px;
+            color: map-get($theme-colors, principal-reading-base);
+            font-size: 30px;
+        }
+    }
+
+    .MuiCardContent-root:last-child {
+        padding-bottom: 0 !important;
+    }
+
+    .expand-icon {
+        display: none;
+    }
+}
+
+.welcome_child {
+    margin-top: 2rem;
+}

@@ -1,0 +1,376 @@
+.reading-container {
+    width: 100%;
+    .class-register-header-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 24px;
+        .class-register-header-image-reading {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-reading-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 34px;
+                height: 18px;
+                margin-left: 3px;
+                object-fit: none;
+            }
+        }
+        .class-register-header-image-fullProgramme {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-maths-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 28px;
+                height: 31px;
+                object-fit: none;
+            }
+        }
+        .class-register-header-image-group-across-classes {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 28px;
+                height: 31px;
+                object-fit: none;
+            }
+        }
+        .heading {
+            font-size: 1.5rem;
+            margin-right: 22px;
+        }
+    }
+    // .heading {
+    //     font-size: 1.5rem;
+    //     margin-bottom: 1.5rem !important;
+    // }
+    .material {
+        .material-icons {
+            margin-right: 14px !important;
+        }
+    }
+
+    .icon-home {
+        color: #d13f75;
+    }
+    .icon-school {
+        color: #0083cb;
+    }
+    .icon_pupil {
+        height: 16px;
+        margin: 2px 2px 4px 2px;
+    }
+    .typography-text {
+        margin-bottom: 0;
+
+        .makeStyles-justifyContent-29 {
+            justify-content: center !important;
+        }
+    }
+
+    .reading_flex {
+        display: flex;
+        .icon_pupil {
+            height: 16px;
+            margin: 4px 2px 4px 2px;
+        }
+    }
+
+    .popover_container {
+        .reading-PopOver {
+            width: fit-content;
+        }
+
+        .reading-card-pupil-name {
+            .heading-three {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .reading-log-filter {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        h3 {
+            font-size: 14px;
+        }
+        .MuiFormControl-root {
+            margin-left: 5px;
+            .MuiSelect-select {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .MuiInput-root {
+                font-size: 14px;
+            }
+            .MuiInput-root::before {
+                border-bottom: none;
+            }
+            .MuiInput-root::after {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .school-reading-log-card {
+        .MuiCardContent-root {
+            padding: 24px;
+
+            .school-reading-wrapper {
+                height: auto;
+            }
+            .school-reading-icons {
+                height: 24px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .reading-top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .reading-log-filter {
+            h3,
+            .MuiInput-root {
+                font-size: 16px;
+            }
+        }
+
+        .common_drop_down {
+            border-bottom: 1px dashed;
+            .textClassName {
+                margin-right: 7px;
+            }
+        }
+        .reading-identification-icon {
+            display: flex;
+            gap: 28px;
+            @include maw(590) {
+                flex-direction: column;
+                gap: 0px;
+                button {
+                    padding: 6px;
+                }
+            }
+        }
+    }
+
+    .reading-img {
+        img {
+            padding: 12px;
+            height: 17px;
+        }
+    }
+
+    .reading-icons {
+        display: flex;
+        align-items: center;
+        p {
+            margin: 0;
+        }
+        .icon-home {
+            color: #d13f75;
+        }
+        .icon-school {
+            color: #0083cb;
+        }
+    }
+
+    .reading-down {
+        .MuiAccordionSummary-content {
+            margin: 0;
+        }
+        .MuiAccordionDetails-root {
+            padding: 8px 11px;
+            .MuiAccordionSummary-expandIconWrapper {
+                margin-top: 0;
+                color: map-get($theme-colors, base-blue-black);
+                padding: 4px !important;
+            }
+        }
+        .common_accordion > .MuiPaper-root {
+            overflow: auto;
+        }
+
+        .MuiPaper-root {
+            .MuiAccordionSummary-root {
+                min-width: 991px;
+                padding: 18px 16px;
+                .activity-feed-content {
+                    padding: 0 !important;
+                }
+                .date-popover {
+                    span {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            .MuiCollapse-root {
+                .MuiCollapse-wrapper {
+                    min-width: 991px;
+                    .MuiAccordionDetails-root {
+                        min-width: 991px;
+                    }
+                }
+            }
+        }
+        @include customRange(768, 1060) {
+            .MuiPaper-root {
+                overflow: unset;
+            }
+        }
+        .m-25 {
+            margin: 25px 0;
+        }
+        .makeStyles-details-30 {
+            padding: 0;
+        }
+        .reading-title:first-child {
+            padding-left: 12px;
+            p {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .reading-title:nth-child(2) {
+            letter-spacing: 64px;
+        }
+        .reading-title:last-child {
+            flex-basis: content;
+            width: 100%;
+            .align-items-center {
+                h3 {
+                    width: 108px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+                svg {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+                .isNotExpanded {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .reading-column {
+            flex-basis: 33.33%;
+
+            .reading-text {
+                color: map-get($theme-colors, base-blue-black);
+                border-bottom-style: solid;
+                border-bottom-width: 1px;
+                width: fit-content;
+                cursor: pointer;
+            }
+
+            .reading-PopOver {
+                img {
+                    margin-top: 15px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+
+            .reading-icon {
+                width: 75px;
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+        .icon-school {
+            color: #0083cb;
+        }
+        .MuiAccordionSummary-content {
+            align-items: center;
+            .accordion-detail {
+                margin-left: 45px;
+                font-size: 14px;
+            }
+        }
+        .reading-PopOver {
+            width: fit-content;
+            height: 48px;
+        }
+        .maxi {
+            width: 30px;
+            border: 1px solid #000 !important;
+        }
+        .reading-column-down {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+        @include customRange(768, 1060) {
+            .reading-column-down {
+                margin-left: 5px;
+            }
+        }
+
+        .typography {
+            max-width: 245px;
+        }
+    }
+
+    .Accord_Details_last {
+        display: flex;
+        .Accord_Details_img {
+            width: 100%;
+            max-width: 500px;
+            max-height: 380px;
+            img {
+                max-width: 500px;
+                max-height: 380px;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+        .Accord_Details {
+            margin: 10px;
+        }
+    }
+}
+
+.key_icon {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.para {
+    .m_25 {
+        margin: 40px 0;
+    }
+    .inputField {
+        margin-top: 25px;
+    }
+    .custumpara {
+        margin-bottom: 24px;
+    }
+}

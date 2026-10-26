@@ -1,0 +1,133 @@
+name: Nightly Cypress tests
+
+on:
+    workflow_call:
+        inputs:
+            branch:
+                required: true
+                type: string
+                description: The branch to run the tests on
+            type:
+                required: false
+                type: string
+                description: Type of test run (defaults to "nightly")
+            enableFastFail:
+                required: false
+                type: boolean
+                description: If true, enables the tests to fast-fail.
+        secrets:
+            slack_webhook:
+                required: true
+            GH_LWP_PULL_TOKEN:
+                required: true
+            WONDE_API_TOKEN:
+                required: true
+jobs:
+    cypress-run:
+        timeout-minutes: 720 # 12 hour timeout
+        runs-on: ${{ inputs.type == 'Renovate' && 'renovate' || 'aws' }}
+        env:
+            required_packages: apt-transport-https ca-certificates chromium curl gnupg-agent software-properties-common libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb postgresql-client
+            NODE_ENV: test
+        container:
+            image: cimg/node:22.23.4
+            options: --user root --add-host=host.docker.internal:host-gateway --shm-size 2048M --ipc=host
+        outputs:
+            job-id: ${{ steps.job_id.outputs.result }}
+            status: ${{ steps.test-runner.conclusion == 'success' && 'passed' || steps.test-runner.conclusion == 'failure' && 'failed' || 'encountered an exception' }}
+        steps:
+            - run: add-apt-repository ppa:xtradeb/apps -y
+            - run: apt-get update
+            - run: apt-get install -y ${{ env.required_packages }}
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ inputs.branch }}
+                  submodules: 'recursive'
+                  token: ${{ secrets.GH_LWP_PULL_TOKEN }}
+            - name: Setup env
+              run: cp .env.container .env
+            ## Based on https://stackoverflow.com/a/78171197/8060859
+            - name: Resolve job ID from workflow run, accounting for matrix strategy.
+              id: job_id
+              uses: actions/github-script@main
+              env:
+                  matrix: ${{ toJson(matrix) }}
+              with:
+                  script: |
+                      const { data: workflow_run } = await github.rest.actions.listJobsForWorkflowRun({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        run_id: context.runId
+                      });
+                      const matrix = JSON.parse(process.env.matrix);
+                      const job_name = `${context.job}${matrix ? ` (${Object.values(matrix).join(", ")})` : ""}`;
+                      return workflow_run.jobs.find((job) => job.name.match(new RegExp(`^(?:[^/]*/\\s*)?${job_name}$`)))?.id;
+            ## Can't run this securely even with sysbox: https://github.com/actions/runner/discussions/1335
+            - name: Cypress run
+              uses: cypress-io/github-action@v6
+              id: test-runner
+              env:
+                  CYPRESS_GRAPHQL_ENDPOINT: http://localhost:3006/graphql
+                  CYPRESS_BACKEND_BASE_URL: http://localhost:3006
+                  WONDE_API_TOKEN: ${{ secrets.WONDE_API_TOKEN }}
+                  CYPRESS_FAST_FAIL_ENABLED: ${{ inputs.enableFastFail || false }}
+                  CYPRESS_NO_COMMAND_LOG: '1'
+              with:
+                  build: yarn build
+                  start: yarn start:fresh
+                  config-file: cypress.config.js
+                  project: e2e-tests
+                  wait-on: 'http://localhost:3000, http://localhost:3006/health'
+                  wait-on-timeout: 180
+            - uses: actions/upload-artifact@v4
+              if: ${{ failure() }}
+              with:
+                  name: cypress-screenshots
+                  path: e2e-tests/cypress/screenshots
+                  if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+            - uses: actions/upload-artifact@v4
+              if: ${{ failure() }}
+              with:
+                  name: cypress-videos
+                  path: e2e-tests/cypress/videos
+                  if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+    slack-notifier:
+        runs-on: ubuntu-latest
+        if: ${{ !cancelled() }}
+        permissions:
+            actions: read
+            contents: read
+        needs: cypress-run
+        steps:
+            - name: Get failure info
+              id: failure-info
+              run: |
+                  delimiter=$(openssl rand -hex 8)
+                  {
+                    echo "ERRORS_OUTPUT<<$delimiter"
+                    curl -v -L \
+                      -H "Accept: application/vnd.github+json" \
+                      -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                      -H "X-GitHub-Api-Version: 2022-11-28" \
+                      https://api.github.com/repos/${{ github.repository }}/actions/jobs/${{ needs.cypress-run.outputs.job-id }}/logs \
+                      | (grep '✖' || echo "No errors found") | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"
+                    echo -e "\n$delimiter\n"
+                  } | tee -a "$GITHUB_OUTPUT"
+            - name: Notify Slack
+              uses: slackapi/slack-github-action@v1.26.0
+              if: ${{ !cancelled() }}
+              with:
+                  # This data can be any valid JSON from a previous step in the GitHub Action.
+                  # The toJSON function in "errors" should automatically quote the errors appropriately.
+                  payload: |
+                      {
+                        "branch": "${{ inputs.branch }}",
+                        "type": "${{ inputs.type || 'Nightly cypress' }}",
+                        "commit": "${{ github.sha }}",
+                        "run_id": "${{ github.run_id }}",
+                        "status": "${{ needs.cypress-run.outputs.status }}",
+                        "errors": ${{ toJSON(steps.failure-info.outputs.ERRORS_OUTPUT) }}
+                      }
+              env:
+                  SLACK_WEBHOOK_URL: ${{ secrets.slack_webhook }}

@@ -1,0 +1,68 @@
+.pupils_list {
+    margin-bottom: 12px;
+
+    .typography-text::first-letter {
+        text-transform: none;
+    }
+
+    .first_lists {
+        background: #edf6e6;
+        padding: 12px 0;
+
+        .list {
+            border-bottom: none;
+            padding: 8px 20px 8px 20px;
+
+            p {
+                font-weight: normal;
+            }
+        }
+
+        border-bottom: 1px solid #d6d1cb;
+
+        .list_first {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+            align-items: center;
+            svg {
+                padding-bottom: 8px;
+            }
+            p {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .list {
+        display: flex;
+        gap: 8px;
+        padding: 16px 20px 16px 20px;
+        align-items: center;
+        border-bottom: 1px solid #d6d1cb;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        p {
+            margin: 0;
+            font-weight: 700;
+        }
+    }
+}
+
+.pupil_list_popover {
+    padding: 0 !important;
+    min-width: 295px;
+
+    .pupils_list {
+        margin-bottom: 0px;
+        .typography-text::first-letter {
+            text-transform: none;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+    install:
+        commands:
+            - if [ "$LWP_ENV" == 'stage' ]; then aws s3 sync s3://lwp-public-media s3://lwp-public-media-stage; fi
+            - if [ "$LWP_ENV" == 'stage' ]; then aws s3 sync s3://lwp-user-media s3://lwp-user-media-stage; fi

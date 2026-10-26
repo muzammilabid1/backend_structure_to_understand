@@ -1,0 +1,142 @@
+.video-card-container {
+    // padding-top: 4em;
+    // border-top: 8px solid map-get($theme-colors, principal-maths-base);
+    box-shadow: $standard-shadow;
+
+    .star-class {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .video-player {
+        background: map-get($theme-colors, base-white);
+        // opacity: 0.6;
+
+        &:focus {
+            outline: none;
+        }
+
+        .play-icon {
+            position: absolute;
+            @include sm {
+                height: 72px;
+                object-fit: contain;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        .wrapper {
+            position: relative;
+
+            .video-trouble-shoot-container {
+                position: absolute;
+                top: 24px;
+                left: 50%;
+                transform: translateX(-50%);
+                box-sizing: border-box;
+                padding: 3px 16px;
+                width: 90%;
+                max-width: 340px;
+                background-color: map-get($theme-colors, auxiliary-yellow-light);
+                .MuiAlert-message {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 18px;
+                    .paragraph {
+                        margin-bottom: 0px;
+                        span {
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+                    }
+                    svg {
+                        color: black;
+                        cursor: pointer;
+                    }
+                }
+
+                @include sm {
+                    top: 10px !important;
+                }
+            }
+        }
+    }
+
+    .thumbnail_img_container {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .video_thumb {
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        padding-top: 56.25%; //16:9, Player ratio: 100 / (1280 / 720)
+
+        .player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.troubleshooting-dialog {
+    .dialog-content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 32px !important;
+
+        @include maw(425) {
+            padding: 32px 16px;
+        }
+        .dialog-title {
+            padding: 0px;
+            margin: 0px;
+        }
+        .MuiDialogContent-root {
+            padding: 0px;
+            .paragraph {
+                margin: 0px;
+            }
+            .troubleshooting-content {
+                ul {
+                    line-height: 22.5px;
+                    margin-bottom: 24px;
+                    li {
+                        margin-left: 24px;
+                    }
+                }
+                .lwp-button-wrapper {
+                    margin-top: 40px;
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    .lwp-button {
+                        max-width: 123px;
+                        width: 100%;
+                        @include maw(425) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

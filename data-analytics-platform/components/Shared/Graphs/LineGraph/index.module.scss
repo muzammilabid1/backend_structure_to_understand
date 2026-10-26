@@ -1,0 +1,21 @@
+.lineGraphContainer{
+    width: 100%;
+}
+
+.lineGraphTooltip {
+  background: white;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  .lineGraphTooltipLabel {
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    color: #374151;
+  }
+  .lineGraphTooltipSeries {
+    margin: 0 0 4px 0;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,173 @@
+.common_table {
+    .MuiTableHead-root {
+        .typography-text {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        tr {
+            th:nth-child(1) {
+                padding-left: 32px;
+            }
+
+            th:nth-last-child(1) {
+                padding-right: 32px;
+            }
+        }
+    }
+
+    .headWithIcon {
+        display: flex;
+        align-items: center;
+        .Icon {
+            margin-left: 10px;
+        }
+    }
+
+    .MuiCollapse-root {
+        .MuiPaper-root {
+            .MuiTable-root {
+                .MuiTableBody-root {
+                    tr {
+                        td:nth-child(1) {
+                            padding-left: 32px;
+                        }
+
+                        td:nth-last-child(1) {
+                            padding-right: 32px;
+                        }
+                    }
+                    .MuiTableRow-root {
+                        .MuiTableCell-root {
+                            .teacher-name-cell {
+                                display: flex;
+                                align-items: center;
+
+                                .material-icons {
+                                    cursor: context-menu;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .teacher-last-login-container {
+        margin-left: 2px;
+    }
+
+    .badge_pending_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, auxiliary-yellow-base);
+            width: max-content;
+        }
+    }
+
+    .badge_registered_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, auxiliary-green-base);
+            width: max-content;
+        }
+    }
+
+    .badge_imported_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, base-warm-grey);
+            width: max-content;
+        }
+    }
+
+    .badge_red_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, auxiliary-red-base);
+            width: max-content;
+            // margin-left: 20px;
+        }
+    }
+
+    .MuiTableRow-head {
+        height: 56px;
+        // th {
+        //     padding-top: 8px;
+        //     padding-bottom: 8px;
+        // }
+
+        // :last-child {
+        //     text-align: center;
+        // }
+
+        .toggle_icon {
+            cursor: pointer;
+            span {
+                color: map-get($theme-colors, base-blue-black);
+            }
+        }
+    }
+
+    .deactivated {
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+
+    .actions-cell {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        .material-icons {
+            cursor: pointer;
+        }
+    }
+
+    // .MuiTableRow-root {
+    // }
+
+    // caption {
+    //     nav {
+    //         display: flex;
+    //         justify-content: flex-end;
+    //     }
+    // }
+
+    .common_pagination {
+        margin-top: 32px;
+
+        // .MuiPagination-ul {
+        //     justify-content: flex-end;
+        // }
+    }
+}
+
+.send-invitation-to-parents-modal {
+    .MuiTableHead-root {
+        tr {
+            th:nth-child(1) {
+                padding-left: 0px;
+            }
+
+            th:nth-last-child(1) {
+                padding: 6px 0;
+            }
+        }
+    }
+    .MuiTableBody-root {
+        tr {
+            vertical-align: top;
+            th {
+                padding: 6px 0 !important;
+            }
+        }
+    }
+    .parent_invite_container {
+        margin-bottom: 20px !important;
+
+        .parent_invite_heading {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .parent_invite_sub_heading {
+            font-size: 14px !important;
+        }
+    }
+}

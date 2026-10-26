@@ -1,0 +1,83 @@
+.add-pupil-feedback-modal {
+    .MuiPaper-root {
+        max-width: 1085px !important;
+    }
+
+    .dialog-content-section {
+        .dialog-title {
+            padding-top: 35px;
+            padding-bottom: 0;
+            text-align: center;
+            font-family: Chaloops-Medium;
+            font-weight: normal;
+        }
+
+        .save_comment_btn_wrapper {
+            text-align: center;
+            margin-top: 37px;
+        }
+        .activity-preview-buttons {
+            margin-top: 37px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .MuiDialogContent-root {
+            padding: 0 24px 20px 24px;
+            form {
+                .comment-card-container {
+                    .comment-card-left-sec {
+                        .MuiFormControl-root {
+                            .text-area-bg {
+                                opacity: 0.2;
+                                height: 120px;
+                                position: absolute;
+                                right: 15px;
+                                bottom: 58px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // .ENGLISH-bg {
+        //   background-color: map-get($theme-colors, principal-english-light);
+        // }
+
+        // .MATHS-bg {
+        //   background-color: map-get($theme-colors, principal-maths-light);
+        // }
+
+        // .OTHER-bg {
+        //   background-color: map-get($theme-colors, base-off-white);
+        // }
+
+        // .OWN-bg {
+        //   background-color: map-get($theme-colors, principal-main-light);
+        // }
+
+        .demo-activity-photo-permission-card {
+            margin: 30px 0;
+            padding: 10px 20px;
+        }
+
+        .demo-activity-photo-permission-update-card {
+            background-color: map-get($theme-colors, base-off-white);
+            margin: 30px 0;
+            padding: 10px 20px;
+
+            .update-link {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .swap-div {
+            flex-direction: row-reverse;
+        }
+    }
+}

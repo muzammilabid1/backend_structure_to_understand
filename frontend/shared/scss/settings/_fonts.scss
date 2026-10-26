@@ -1,0 +1,48 @@
+/*@font-face {
+  font-family: "Verdana";
+  src: local("Verdana"), url("../../../public/assets/fonts/Verdana-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Verdana";
+  src: local("Verdanab"), url("../../../public/assets/fonts/Verdana-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}*/
+
+@font-face {
+    font-family: 'Chaloops-Medium';
+    src: local('Chaloops-Medium'), url('../../../public/assets/fonts/Chaloops-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Chaloops-Light';
+    src: local('Chaloops-Light'), url('../../../public/assets/fonts/Chaloops-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Chaloops-Regular';
+    src: local('Chaloops-Regular'), url('../../../public/assets/fonts/Chaloops-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SassoonInfantRg-Regular';
+    src: local('SassoonInfantRg-Regular'), url('../../../public/assets/fonts/SassoonInfantRg-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SassoonInfantTkB-Regular';
+    src: local('SassoonInfantTkB-Regular'), url('../../../public/assets/fonts/SassoonInfantTkB-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SassoonInfantTk-Regular2';
+    src: local('SassoonInfantTk-Regular2'), url('../../../public/assets/fonts/SassoonInfantTk-Regular2.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Lucida-Console-Regular';
+    src: local('Lucida-Console-Regular'), url('../../../public/assets/fonts/Lucida-Console-Regular.ttf') format('opentype');
+}

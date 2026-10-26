@@ -1,0 +1,24 @@
+Evaluate the page design and images based on the following criteria. For each question, provide:
+
+A repetition of the question.
+A score out of 10.
+A brief explanation of the score, including reasoning and suggestions for improvement if the criterion is not fully met.
+
+Criteria for Evaluation:
+
+Is there at least one image on the page?
+Are images, dice, buttons, or other visuals prominently displayed above the fold?
+Do images serve both instructional and decorative purposes?
+Do images avoid stock photos and portray diversity in people and settings?
+Is alt text included for accessibility?
+Is the text minimal, simple, and broken into digestible sections?
+Is the language and grammar easy to understand for children aged 5–11?
+Are bullet points used over prose where appropriate?
+Does the page use sentence-case formatting for titles and appropriate subheadings (e.g., 'You will need,' 'How to play')?
+Is extra information provided in modals if necessary?
+Output Example Format:
+
+[Repeated Question]
+Score: [X/10]
+Explanation: [Brief reasoning behind the score, highlighting strengths and weaknesses. Include suggestions for improvement where relevant.]
+Ensure responses are concise, objective, and actionable.

@@ -1,0 +1,8 @@
+export enum UserType {
+    PARENT = 'PARENT',
+    TEACHER = 'TEACHER',
+    ADMIN = 'ADMIN',
+    HELPER = 'HELPER',
+    TOPICACCESS = 'TOPICACCESS',
+    MAGICPARENT = 'MAGICPARENT',
+}

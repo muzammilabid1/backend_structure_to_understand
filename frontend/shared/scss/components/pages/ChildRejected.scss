@@ -1,0 +1,31 @@
+.childRejected_container {
+    width: 100%;
+    .childRejected_content {
+        .childRejected_image {
+            display: flex;
+            justify-content: center;
+            padding-top: 90px;
+            height: 200px;
+            margin-bottom: 24px;
+        }
+        .childRejected_subheading {
+            width: 500px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    @include sm {
+        .childRejected_content {
+            .childRejected_image {
+                padding: 0;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .childRejected_subheading {
+                width: 100%;
+                margin-top: 16px;
+            }
+        }
+    }
+}

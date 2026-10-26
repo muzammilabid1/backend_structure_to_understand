@@ -1,0 +1,21 @@
+.common_Tags_container {
+    display: flex;
+    gap: 6px;
+}
+
+.common_Tags {
+    width: max-content;
+    border-radius: 8px;
+    background: #39b0e2;
+    padding: 4px 8px;
+    max-height: 27px;
+
+    p {
+        color: #fff;
+        font-family: Chaloops;
+        font-size: 15.239px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140.625%;
+    }
+}

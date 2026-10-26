@@ -1,0 +1,47 @@
+.choose_topic_modal {
+    .MuiDialog-paperWidthLg {
+        width: 100%;
+    }
+
+    .loading_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dialog-content-section {
+        min-height: 513px;
+
+        @include sm {
+            .dialog-title {
+                flex: auto;
+                padding-left: 0;
+
+                .typography-text {
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+
+    .no_match_item_status {
+        max-width: 630px;
+        margin: 0 auto;
+
+        .lwp-button {
+            background-color: map-get($theme-colors, base-warm-grey);
+            width: 176px;
+            height: 52px;
+        }
+    }
+}
+
+.no_match_item_status_topic_libary {
+    padding: 27px 0 40px 0;
+    box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+    p {
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,212 @@
+.school-settings-page {
+    .heading-one {
+        font-size: 24px;
+        margin-bottom: 32px;
+    }
+    .settings-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .setting-item {
+            border-radius: 4px;
+            background: #fff;
+            box-shadow: 0px 4px 8px 0px rgba(214, 209, 203, 0.5);
+            padding: 24px;
+            border-left: 7px solid map-get($theme-colors, principal-main-base);
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            text-decoration: none;
+            color: unset;
+            div {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+                gap: 8px;
+                .heading-two {
+                    font-size: 20px;
+                    margin-bottom: 0px;
+                }
+                .paragraph {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+.school-settings-wrapper {
+    .school-settings-back-button {
+        margin-bottom: 24px;
+    }
+    .holiday-date-page {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .holiday-date-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .heading-one {
+                font-size: 24px;
+                margin-bottom: 0px;
+            }
+            .common_nav_list {
+                padding: 0px;
+                li {
+                    align-items: center;
+                    .heading-three {
+                        margin-bottom: 0px;
+                        font-size: 14px;
+                    }
+                    .MuiListItemIcon-root {
+                        min-width: 35px;
+                    }
+                }
+            }
+        }
+        .holiday-alert {
+            background-color: map-get($theme-colors, auxiliary-blue-light);
+            gap: 16px;
+            padding: 16px;
+            .MuiAlert-icon {
+                color: map-get($theme-colors, auxiliary-blue-base);
+                font-size: 26.67px;
+                margin: 0px;
+                padding: 0px;
+            }
+            .MuiAlert-message {
+                padding: 0px;
+                .paragraph {
+                    margin-bottom: 0px;
+                    padding: 0px;
+                }
+            }
+            .MuiAlert-action {
+                padding: 0px;
+            }
+        }
+    }
+    .school-stickers {
+        .stickers-heading {
+            margin-bottom: 32px;
+            font-size: 24px;
+        }
+    }
+
+    .school-configuration-page {
+        .configuration-page-heading {
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+        .configuration-sections-container {
+            display: flex;
+            gap: 44px;
+            flex-direction: column;
+            .configuration-section {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: flex-start;
+
+                .heading-one {
+                    font-size: 20px;
+                    margin-bottom: 0px;
+                }
+                .lwp-button {
+                    font-size: 14px;
+                }
+                .teacher-engagement-header {
+                    .heading-one {
+                        margin-bottom: 7px;
+                    }
+                }
+                .checkbox-container {
+                    .MuiFormControlLabel-label {
+                        padding-top: 9px;
+                        .paragraph {
+                            margin-bottom: 0px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+            .money-skills-licence-section {
+                border-radius: 8px;
+                border: 0.5px solid map-get($theme-colors, principal-main-base);
+                padding: 32px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                .money-skills-alert {
+                    display: flex;
+                    align-items: center;
+                    gap: 13px;
+                    padding: 16px;
+                    background-color: #fff8f0;
+                    > span {
+                        width: 38px;
+                        height: 38px;
+                        background: map-get($theme-colors, principal-main-base);
+                        border-radius: 25px;
+                        margin-left: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                            width: 45px;
+                            height: 43px;
+                            object-fit: none;
+                            margin-left: 8px;
+                        }
+                        .paragraph {
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+
+                .money-skills-content {
+                    .heading-one {
+                        margin-bottom: 8px;
+                        font-size: 20px;
+                    }
+                    a {
+                        color: map-get($theme-colors, base-black);
+                    }
+                }
+                .lwp-button-wrapper {
+                    width: fit-content;
+                }
+            }
+        }
+    }
+
+    .teacher-details-page {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .teacher-details-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .heading-one {
+                font-size: 24px;
+                margin-bottom: 0px;
+            }
+            .common_nav_list {
+                padding: 0px;
+                li {
+                    align-items: center;
+                    .heading-three {
+                        margin-bottom: 0px;
+                        font-size: 14px;
+                    }
+                    .MuiListItemIcon-root {
+                        min-width: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

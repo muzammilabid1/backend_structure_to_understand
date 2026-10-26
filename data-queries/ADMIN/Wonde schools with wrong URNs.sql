@@ -1,0 +1,2 @@
+select l."schoolName", l.urn as lwp_urn, w.urn as wonde_urn, 'https://explore.learningwithparents.com/admin/school/' || l.id as link from imported_school w join lwp_school l on l.
+"importedSchoolId" = w.id where not l."inactive" and not l."isTestSchool" and l.urn is not null and l.urn <> w.urn::text

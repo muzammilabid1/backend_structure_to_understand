@@ -1,0 +1,25 @@
+.main_sortable_table {
+    .MuiDataGrid-columnHeaderTitle {
+        font-weight: bold;
+    }
+    .MuiDataGrid-columnHeaders {
+        background-color: #fcfcfd !important;
+    }
+    .MuiDataGrid-row.Mui-selected {
+        background-color: transparent !important;
+    }
+
+    .MuiDataGrid-cell:focus-within,
+    .MuiDataGrid-columnHeader:focus,
+    .MuiDataGrid-cell:focus {
+        outline: none !important;
+    }
+
+    .action-button-container {
+        .lwp-button {
+            border: 1px solid map-get($theme-colors, dark-warm-grey);
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

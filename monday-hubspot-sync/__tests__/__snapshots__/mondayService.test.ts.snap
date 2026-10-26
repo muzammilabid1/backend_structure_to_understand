@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`GraphQL Mutation Snapshots should maintain consistent create mutation format 1`] = `
+"
+    mutation {
+      create_item (
+        board_id: 123456,
+        item_name: "Snapshot Test School",
+        column_values: "{\\"col1\\":\\"value1\\",\\"col2\\":\\"value2\\"}"
+      ) {
+        id
+        name
+      }
+    }
+  "
+`;
+
+exports[`GraphQL Mutation Snapshots should maintain consistent fetch board query format 1`] = `
+"
+    query {
+      boards (ids: 123456) {
+        id
+        name
+        description
+        columns {
+          id
+          title
+          type
+        }
+        items_page (limit: 500) {
+          cursor
+          items {
+            id
+            name
+            created_at
+            updated_at
+            column_values {
+              id
+              text
+              value
+              ... on BoardRelationValue {
+                linked_items {
+                  id
+                  name
+                  column_values {
+                    id
+                    text
+                    value
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  "
+`;
+
+exports[`GraphQL Mutation Snapshots should maintain consistent update mutation format 1`] = `
+"
+    mutation {
+      change_multiple_column_values (
+        board_id: 123456,
+        item_id: 789012,
+        column_values: "{\\"hubspot_id\\":\\"hs-123\\",\\"hubspot_url\\":\\"https://hubspot.com/company/123\\"}"
+      ) {
+        id
+        name
+      }
+    }
+  "
+`;

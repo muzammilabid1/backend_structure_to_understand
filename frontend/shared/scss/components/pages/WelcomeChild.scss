@@ -1,0 +1,184 @@
+.welcomepage_container {
+    .welcomepage_content {
+        .welcomepage_header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            height: 109px;
+            img {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+        .no-image-header {
+            margin-top: 110px;
+        }
+        .welcomepage_header_text {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 13px;
+        }
+        .welcomepage_header_heading {
+            margin-bottom: 38px;
+            margin-top: 37px;
+            font-size: 32px;
+        }
+        .heading {
+            margin-top: 64px;
+        }
+        .welcomepage_video {
+            margin: 0 auto;
+            width: 856px;
+        }
+        .welcomepage_active_image_container {
+            width: 290px;
+            margin: 0 auto;
+            margin-bottom: 92px;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .invitation_heading {
+            font-size: 20px;
+        }
+        .welcomepage_underlinedText {
+            margin-top: 9px;
+            text-align: center;
+            margin-bottom: 40px;
+            u {
+                cursor: pointer;
+            }
+        }
+        .welcomepage_checkbox {
+            width: 660px;
+            margin: 0 auto;
+            .MuiFormControlLabel-root {
+                margin-right: 0;
+                align-items: flex-start;
+                .MuiTypography-root {
+                    p {
+                        color: map-get($theme-colors, base-black);
+                    }
+                }
+                .material-icons {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+        .welcomepage_lwpButton {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            .MuiButtonBase-root {
+                width: 170px;
+                height: 52px;
+            }
+        }
+
+        .welcomepage_responsive_view {
+            display: none;
+        }
+        .welcomepage_image_container {
+            display: flex;
+            justify-content: center;
+        }
+        .welcomepage_learning_sharing {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+            .welcomepage_learning {
+                width: 30%;
+            }
+            .welcomepage_sharing {
+                width: 30%;
+            }
+        }
+    }
+    @include sm {
+        .welcomepage_content {
+            padding: 0;
+            .welcomepage_header_heading {
+                margin-bottom: 31px;
+                margin-top: 39px;
+            }
+            .welcomepage_active_image_container {
+                margin-bottom: 65px;
+            }
+            .welcomepage_video {
+                margin: 0 auto;
+                width: 100%;
+            }
+            .welcomepage_checkbox {
+                width: 100%;
+            }
+            .welcomepage_underlinedText {
+                margin-top: 22px;
+                margin-bottom: 33px;
+            }
+            .welcomepage_desktop_view {
+                display: none;
+            }
+            .welcomepage_responsive_view {
+                display: block;
+            }
+            .welcomepage_lwpButton {
+                margin-top: 30px;
+                .lwp-button-wrapper {
+                    width: 100%;
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include customRange(320, 540) {
+        .welcomepage_content {
+            .welcomepage_lwpButton {
+                span {
+                    width: 100%;
+                    display: grid;
+                }
+            }
+        }
+    }
+    @include customRange(769, 1030) {
+        .welcomepage_content {
+            .welcomepage_video {
+                width: 100%;
+            }
+            .welcomepage_desktop_view {
+                .welcomepage_learning_sharing {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+}
+
+.welcomepage_modal {
+    padding-top: 30px;
+    .login-or-signup-modal-inner-content {
+        margin-bottom: 70px;
+        margin-top: 64px;
+        p {
+            width: 500px;
+        }
+    }
+
+    @include sm {
+        .login-or-signup-modal-inner-content {
+            margin-bottom: 46px;
+            margin-top: 53px;
+            p {
+                width: 100%;
+            }
+        }
+    }
+}

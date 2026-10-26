@@ -1,0 +1,46 @@
+.set-by-teacher-accordion {
+    background-color: map-get($theme-colors, base-off-white);
+    &.MuiPaper-root {
+        border-radius: 8px !important;
+        overflow: hidden;
+    }
+
+    &.Mui-expanded {
+        border-radius: 8px !important;
+    }
+
+    .set-by-teacher-upload-card {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .MuiFormLabel-root {
+            color: map-get($theme-colors, base-blue-black);
+        }
+
+        &__required-error {
+            color: map-get($theme-colors, auxiliary-red-base);
+            font-size: 0.75rem;
+            display: block;
+            margin-top: 4px;
+        }
+
+        &--error {
+            .dropzone-container {
+                border-color: map-get($theme-colors, auxiliary-red-base) !important;
+            }
+        }
+
+        .set-by-teacher-image-upload-card {
+            margin-top: 8px;
+
+            .dropzone-container {
+                background-color: map-get($theme-colors, auxiliary-yellow-light);
+                border-radius: 4px;
+
+                .lwp-button {
+                    width: 180px;
+                }
+            }
+        }
+    }
+}

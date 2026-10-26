@@ -1,0 +1,21 @@
+.child_invitation_modal {
+    .img_contain {
+        text-align: center;
+        margin-bottom: 25px;
+
+        img {
+            width: 290px;
+        }
+    }
+
+    .btn_group {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 40px;
+
+        .cancel_btn {
+            margin-right: 10px;
+            padding: 8px 22px;
+        }
+    }
+}

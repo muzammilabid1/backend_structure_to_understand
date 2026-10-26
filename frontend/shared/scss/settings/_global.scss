@@ -1,0 +1,246 @@
+$base-font-size: 12px;
+$base-line-height: 20px;
+// $math-scot-height: 159px;
+
+$base-radius: 4px;
+
+$base-spacing-unit: $base-line-height;
+
+$standard-shadow: 0px 4px 8px
+    rgba(
+        $color: #d6d1cb,
+        $alpha: 0.5
+    );
+
+$header-shadow: 0px 2px 4px
+    rgba(
+        $color: #d6d1cb,
+        $alpha: 0.25
+    );
+
+.paragraph-bold {
+    font-weight: bold !important;
+}
+
+.truncate {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cursor-pointer,
+.cp {
+    cursor: pointer;
+}
+
+.cursor-help {
+    cursor: help;
+}
+
+.icons-cell {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 16px;
+
+    .material-icons {
+        cursor: pointer;
+    }
+}
+
+.checkbox-with-info-icon {
+    display: flex;
+    align-items: flex-start;
+}
+
+.class-overview-table-action {
+    gap: 12px;
+    .material-icons {
+        color: #00303c;
+        font-size: 28px;
+    }
+}
+
+.common-tool-tip-icon {
+    width: 25px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+// Shared "has uninvited staff / not invited" attention icon, used next to a name on the Schools Overview
+// and Staff pages. Size/width come from .common-tool-tip-icon; we only set the colour + spacing.
+.uninvited-staff-icon {
+    color: #ed6c02;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.a_tag {
+    text-decoration: none;
+    color: black;
+}
+
+.underline,
+.ul {
+    text-decoration: underline;
+}
+
+.ul_dot {
+    border-bottom: 1px dotted;
+}
+
+.Mui-focusVisible {
+    background-color: transparent !important;
+}
+
+.disabled-field {
+    .MuiFormLabel-root {
+        color: #757575 !important;
+    }
+    .Mui-disabled {
+        background-color: #ffffff;
+        &:hover {
+            cursor: not-allowed;
+        }
+        .MuiInputBase-input {
+            -webkit-text-fill-color: #757575;
+        }
+        .MuiInputAdornment-root {
+            margin-right: 0px;
+            .material-icons {
+                font-size: 21px;
+            }
+        }
+        .MuiOutlinedInput-notchedOutline {
+            border-color: #757575 !important;
+        }
+    }
+}
+
+.fs20 {
+    font-size: 20px !important;
+}
+
+.disabled-edit-field {
+    .MuiFormLabel-root {
+        color: #757575 !important;
+    }
+    .Mui-disabled {
+        background-color: #ffffff;
+        .MuiInputBase-input {
+            -webkit-text-fill-color: #757575;
+        }
+        .MuiInputAdornment-root {
+            margin-right: 0px;
+            .material-icons {
+                font-size: 21px;
+            }
+        }
+        .MuiOutlinedInput-notchedOutline {
+            border-color: #757575 !important;
+        }
+    }
+}
+
+.MuiBreadcrumbs-li {
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+// MARGIN
+.m-15 {
+    margin: 15px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mtb-20 {
+    margin: 20px 0;
+}
+
+// DIPSLAY
+.display {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+// PADDING
+.p-20 {
+    padding: 20px;
+}
+
+// COMMON FLEX CLASSES //
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.justify-sb {
+    display: flex;
+    justify-content: space-between;
+}
+// $base-popover-shadow: 0px 3px 16px rgba(0, 0, 0, 0.2);
+
+div#hubspot-messages-iframe-container.hide_widget {
+    display: none !important;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.custom-thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.img_fit_contain {
+    object-fit: contain;
+}
+
+.activity-step-tabs {
+    .MuiTabs-flexContainer {
+        justify-content: center;
+        .tebs {
+            flex: 1 !important;
+            padding: 0 !important;
+        }
+    }
+}
+
+.highcharts-container {
+    .highcharts-credits {
+        display: none;
+    }
+}

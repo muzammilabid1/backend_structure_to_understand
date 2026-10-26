@@ -1,0 +1,10 @@
+@use '../../shared/scss/settings/colors' as c;
+@use '../../shared/scss/mixins/banner' as b;
+
+.container {
+    @include b.banner();
+    background-color: map-get(c.$theme-colors, auxiliary-red-base);
+    .link {
+        color: map-get(c.$theme-colors, base-white);
+    }
+}

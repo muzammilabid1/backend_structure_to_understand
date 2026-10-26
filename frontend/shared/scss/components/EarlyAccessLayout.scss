@@ -1,0 +1,21 @@
+.early-access-layout {
+    border: solid 1px map-get($theme-colors, principal-main-base);
+    border-radius: 10px;
+    padding: 30px;
+
+    .MuiAlert-standardSuccess {
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+    }
+
+    .MuiPaper-root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .MuiSvgIcon-root {
+        color: map-get($theme-colors, principal-main-base);
+        font-size: 26px;
+    }
+}

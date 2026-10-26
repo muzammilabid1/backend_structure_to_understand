@@ -1,0 +1,33 @@
+.general-die {
+    // width: 116px;
+    // height: 116px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px map-get($theme-colors, box-shadow-color);
+}
+
+.die-text-container {
+    @extend .general-die;
+    // width: 64px;
+    // height: 64px;
+    background-color: map-get($theme-colors, principal-main-light);
+    .die-text {
+        font-size: 26px;
+        color: map-get($theme-colors, base-black);
+    }
+}
+
+.die-image-container {
+    @extend .general-die;
+
+    .image-step-die-image {
+        img {
+            object-fit: scale-down;
+            background-color: map-get($theme-colors, principal-main-light);
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

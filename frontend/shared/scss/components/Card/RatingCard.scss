@@ -1,0 +1,23 @@
+.rating-card-container {
+    border-radius: $base-radius;
+    .rating-card {
+        text-align: center;
+        padding: 2em;
+        min-height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: $standard-shadow !important;
+        background-color: transparent;
+
+        .star-color-TOPIC {
+            color: map-get($theme-colors, principal-maths-base);
+        }
+
+        @include sm {
+            padding: 0;
+            height: auto;
+        }
+    }
+}

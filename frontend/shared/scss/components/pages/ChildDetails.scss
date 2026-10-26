@@ -1,0 +1,559 @@
+.child-details-container {
+    .wel_child {
+        cursor: pointer;
+    }
+    .child-detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include sm {
+            display: none;
+        }
+
+        .btn_container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lwp-button {
+            white-space: pre;
+        }
+    }
+
+    .no_topics {
+        margin: auto;
+    }
+    .no-topics {
+        margin-top: 30px;
+    }
+
+    .common_tebs {
+        .MuiTabs-root {
+            .MuiTabs-scroller {
+                overflow-x: auto !important;
+            }
+        }
+    }
+
+    .child_review {
+        .MuiTabs-root {
+            width: fit-content;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        .tebs {
+            margin: 0;
+            padding: 0 32px;
+            @include sm {
+                padding: 0 25px;
+            }
+        }
+    }
+
+    .home_page_heading {
+        .heading-one {
+            @include sm {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .inactive-message {
+        margin: 48px auto;
+    }
+
+    .child-details-wrapper {
+        .child-tabs-header {
+            display: flex;
+            flex-direction: column;
+            gap: 72px;
+        }
+    }
+}
+
+.inactive_pupil_banner_container {
+    box-shadow: none !important;
+}
+
+.intro_video_card {
+    .lwp-button {
+        font-size: 13px;
+    }
+}
+
+.survey_card {
+    border: 3px solid map-get($theme-colors, auxiliary-yellow-base);
+}
+
+.no-topics {
+    max-width: 260px;
+    margin: 0 auto;
+}
+
+.intro_video {
+    .MuiDialog-paperWidthSm {
+        width: 100%;
+        max-width: 1032px;
+    }
+
+    .MuiDialogContent-root {
+        padding: 0;
+    }
+}
+
+.mobile-bottom-nav {
+    z-index: 999 !important;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    .MuiBottomNavigation-root {
+        .Mui-selected {
+            svg {
+                color: map-get($theme-colors, principal-main-base);
+            }
+        }
+    }
+}
+
+.history_bar {
+    .drawer-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em;
+        box-shadow: $standard-shadow;
+
+        @include sm {
+            display: none;
+        }
+        span {
+            cursor: pointer;
+        }
+    }
+    .no_history {
+        max-width: 260px;
+        margin: 0 auto;
+    }
+
+    .common_status_container {
+        margin-top: 100px;
+    }
+}
+
+.history_log {
+    .common_status_container {
+        .lwp-button-wrapper {
+            button {
+                height: 52px;
+                padding: 8px 40px;
+            }
+        }
+    }
+    .activity-feed-container {
+        .activity-feed-comment-section {
+            .history_log_img {
+                display: flex;
+                justify-content: flex-start;
+                img {
+                    width: 100%;
+                    max-height: 532px;
+                }
+
+                .activity-feed-card {
+                    line-height: normal !important;
+                    .common_card {
+                        padding: 24px !important;
+                        @include sm {
+                            padding: 16px !important;
+                        }
+                    }
+
+                    max-width: 80%;
+                    width: auto !important;
+                    @include maw(768) {
+                        max-width: unset;
+                    }
+                }
+
+                @include sm {
+                    img {
+                        max-height: 283px;
+                    }
+                }
+            }
+        }
+    }
+
+    .history_log_dividerText {
+        margin-bottom: 0;
+        font-size: 14px;
+        @include sm {
+            font-size: 12px;
+        }
+    }
+
+    .pupil_history_card {
+        .comment {
+            .paragraph {
+                margin-bottom: 26px;
+            }
+
+            .comment-text {
+                font-size: 16px;
+                white-space: break-spaces;
+                line-height: 160%;
+
+                @include sm {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .common_status_img {
+        margin-top: 50px;
+        img {
+            max-height: unset;
+        }
+    }
+
+    .activity-feed-title {
+        u {
+            cursor: pointer;
+            color: map-get($theme-colors, $key: base-blue-black);
+        }
+    }
+
+    @include customRange(320, 540) {
+        .common_status_container {
+            .lwp-button-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.reading_group_log_img {
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .activity-feed-card {
+        line-height: normal !important;
+        .common_card {
+            padding: 24px !important;
+            @include sm {
+                padding: 16px !important;
+            }
+        }
+    }
+
+    @include sm {
+        img {
+            max-height: 283px;
+        }
+    }
+}
+
+.achivement_bar {
+    .title {
+        font-size: 24px;
+    }
+    .pupil-trophies-assign-container {
+        margin-top: 20px;
+
+        .paragraph {
+            margin: 20px 0;
+        }
+    }
+
+    .nested_container_card {
+        max-width: 710px;
+        margin: auto;
+        margin-top: 70px;
+
+        @include sm {
+            margin-top: 0;
+            width: calc(100% + 47px);
+            margin-left: -24px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px 0px #d6d1cb80;
+            max-width: none;
+        }
+
+        .common_card {
+            box-shadow: 0px 4px 8px 0px #d6d1cb80;
+        }
+    }
+
+    .nested_container_1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Chaloops-Medium;
+
+        p {
+            font-size: 32px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .middle-img {
+            margin-right: 13px;
+        }
+
+        .nested_sapn {
+            margin: 0 13px;
+            display: flex;
+            align-items: center;
+        }
+
+        .awards_bar_text {
+            margin-bottom: 0.25rem;
+        }
+
+        .cus-gold {
+            font-size: 53px;
+            font-weight: 500;
+            color: map-get($theme-colors, auxiliary-yellow-base);
+        }
+
+        .cus-silver {
+            font-size: 35px;
+            font-weight: 500;
+            color: map-get($theme-colors, dark-warm-grey);
+        }
+
+        @include sm {
+            flex-direction: column;
+            .nested_sapn {
+                margin: 3px 0;
+                align-items: center;
+                height: 50px;
+            }
+        }
+    }
+
+    .nested_container_readmore {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+        .common-read-more {
+            text-align: center;
+            max-width: 600px;
+
+            @include sm {
+                max-width: 270px;
+            }
+        }
+    }
+
+    .no-mathscot-text {
+        margin-top: 35px;
+    }
+
+    .achivement_pupil_mathscot_cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @include sm {
+            flex-direction: column;
+            .pupil_mathscot_card {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .achivement_card {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 22px 0;
+
+        img {
+            cursor: pointer;
+            width: 105px;
+            padding: 0 10px;
+            height: 100px;
+        }
+
+        .paragraph {
+            max-width: 60%;
+        }
+    }
+
+    .pupil_mathscot_card {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 22px 0;
+
+        img {
+            width: 105px;
+            padding: 0 10px;
+            height: 100px;
+            cursor: pointer;
+        }
+
+        .paragraph {
+            max-width: 60%;
+        }
+    }
+
+    .status_bar {
+        max-width: 327px;
+        margin: 55px auto 0 auto;
+
+        .common_status_container_image {
+            max-width: 109px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+    }
+}
+
+.pupil_mathscot_modal {
+    .dialog-content-section {
+        margin: 0 auto;
+        .pupil_mathscot_modal_image {
+            width: 530px;
+            height: 450px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .MuiDialogContent-root {
+            .para {
+                font-size: 24px;
+                text-align: center;
+                line-height: 22.5px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @include md {
+            width: 520px;
+            .pupil_mathscot_modal_image {
+                width: 480px;
+                height: 450px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        @include sm {
+            width: 330px;
+            .pupil_mathscot_modal_image {
+                width: 300px;
+                height: 350px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.pupil-trophy-certificate {
+    .dialog-content-section {
+        margin: 0 auto;
+        .MuiDialogContent-root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .pupil-trophy-image {
+                width: 250px;
+                height: 250px;
+                margin: 10px 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .MuiDialogContent-root {
+                .para {
+                    font-size: 24px;
+                    text-align: center;
+                    line-height: 22.5px;
+                    margin-bottom: 10px;
+                }
+            }
+            .pupil-trophy-certificate-button {
+                margin: 10px 0;
+            }
+
+            @include md {
+                width: 520px;
+                .pupil-trophy-image {
+                    width: 250px;
+                    height: 250px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            @include sm {
+                width: 290px;
+                .pupil-trophy-image {
+                    width: 200px;
+                    height: 200px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        @include sm {
+            max-width: 330px;
+            width: 100%;
+        }
+    }
+}
+
+.activity-feed-card-img {
+    line-height: normal !important;
+    .common_card {
+        padding: 24px !important;
+        @include sm {
+            padding: 16px !important;
+        }
+    }
+
+    .activity-img {
+        margin-bottom: 0 !important;
+        img {
+            width: 100%;
+            max-height: 532px;
+        }
+
+        @include sm {
+            img {
+                max-height: 283px;
+            }
+        }
+    }
+}

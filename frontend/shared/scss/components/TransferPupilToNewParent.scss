@@ -1,0 +1,35 @@
+.transfer-pupil-to-new-parent-modal {
+    .dialog-content-section {
+        .transfer-pupil-to-new-parent-modal-container {
+            .transfer-pupil-to-new-parent-modal-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                .transfer-pupil-to-new-parent-modal-content-disabled,
+                .transfer-pupil-to-new-parent-modal-content-new {
+                    width: 100%;
+                    padding: 24px;
+                    padding-bottom: 8px;
+                    border: 1px solid map-get($theme-colors, base-warm-grey);
+                    margin-top: 20px;
+                    border-radius: 10px;
+
+                    .transfer-pupil-to-new-parent-modal-content-disabled-heading,
+                    .transfer-pupil-to-new-parent-modal-content-new-heading {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .transfer-pupil-to-new-parent-modal-content-disabled {
+                    background-color: map-get($theme-colors, base-background-grey);
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .dialog-side-btn {
+            padding: 0 18px;
+        }
+    }
+}

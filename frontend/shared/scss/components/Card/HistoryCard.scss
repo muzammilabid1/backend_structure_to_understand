@@ -1,0 +1,38 @@
+.history-card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em 1.5em;
+    cursor: pointer;
+
+    @include customRange(375, 390) {
+        margin-left: -1rem;
+    }
+
+    .topic-class {
+        width: 300px;
+        padding-bottom: 4px;
+    }
+
+    .date-time {
+        font-size: 14px;
+        color: map-get($theme-colors, netural-blue-black);
+    }
+}
+.ENGLISH-border {
+    border-left: 0.5em solid map-get($theme-colors, principal-english-base);
+}
+.READING-border {
+    border-left: 0.5em solid map-get($theme-colors, principal-reading-base);
+}
+.MATHS-border {
+    border-left: 0.5em solid map-get($theme-colors, principal-maths-base);
+}
+.TOPIC-border {
+    border-left: 0.5em solid map-get($theme-colors, principal-maths-base);
+}
+.OTHER-border {
+    border-left: 0.5em solid map-get($theme-colors, principal-main-base);
+}
+.OWN-border {
+    border-left: 0.5em solid map-get($theme-colors, principal-main-light);
+}

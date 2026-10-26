@@ -1,0 +1,6 @@
+export enum SchoolImpactReportFeedbackContentType {
+  PUPIL_COMMENT = "PUPIL_COMMENT",
+  PARENT_COMMENT = "PARENT_COMMENT",
+  READING_COMMENT = "READING_COMMENT",
+  PHOTO = "PHOTO",
+}

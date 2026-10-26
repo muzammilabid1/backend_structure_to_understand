@@ -1,0 +1,52 @@
+.add-trophy-certificate-container {
+    .heading-two {
+        margin-bottom: 40px;
+    }
+
+    .add-trophy-certificate-form {
+        display: flex;
+        flex-direction: column;
+
+        hr {
+            margin: 20px 0;
+        }
+
+        .trophy-certificate-mathscot-data {
+            margin-top: 15px;
+
+            .MuiSlider-root {
+                max-width: 510px;
+            }
+        }
+
+        .fieldData-field-array {
+            .fieldData-card {
+                padding: 20px 10px;
+                margin: 15px 0;
+                max-width: 100%;
+
+                .field-card-heading {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .thumbnail_image_container {
+            .thumbnail_image_container {
+                .MuiDropzoneArea-root {
+                    max-width: 420px;
+                    max-height: 240px;
+                }
+            }
+
+            .image-preview {
+                max-width: 150px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .add-trophy-button {
+        display: block;
+    }
+}

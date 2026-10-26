@@ -1,0 +1,20 @@
+.add_school_modal {
+    .add-resource-file-upload {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+    }
+    .add-resource-file-upload input[type=file] {
+        margin-left: 0 !important
+    }
+    .school-social-login-permissions-section {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+
+        .school-social-login-permissions-heading {
+            margin-bottom: 15px;
+        }
+    }
+}

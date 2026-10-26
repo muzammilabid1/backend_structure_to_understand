@@ -1,0 +1,50 @@
+.common_radio_button {
+    .common_radio_border {
+        label {
+            width: 100%;
+            padding: 16px 0;
+            margin: 0 0 16px 0;
+            border-radius: 4px;
+            border: 1px solid red;
+            align-items: flex-start;
+        }
+        .common_radio_text {
+            display: flex;
+            align-items: center;
+        }
+        p,
+        h3 {
+            padding-right: 16px;
+        }
+        p {
+            font-family: Verdana;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140.625%;
+        }
+    }
+
+    .border_active {
+        label {
+            border: 1px solid map-get($theme-colors, auxiliary-yellow-base);
+            background: #fffdf7;
+        }
+    }
+
+    .border_unActive {
+        label {
+            border: 1px solid map-get($theme-colors, dark-warm-grey);
+        }
+    }
+
+    // Borderless variant (bordered={false}): plain radio list with no card outline or selected background,
+    // and without the card padding/margin that would leave large gaps between options.
+    .common_radio_border.common_radio_borderless {
+        label {
+            border: none;
+            background: none;
+            padding: 4px 0;
+            margin: 0;
+        }
+    }
+}

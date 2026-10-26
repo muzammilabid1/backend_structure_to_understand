@@ -1,0 +1,441 @@
+$sizes: 24;
+
+$break-points: (
+    screen-sm-max: 768px,
+    screen-md-max: 1160px,
+    screen-md-min: 769px,
+    screen-lg-max: 1440px,
+    screen-lg-min: 1441px
+);
+
+@mixin border-box-t {
+    border: 1px solid red;
+}
+
+@mixin border-box($width, $style, $color) {
+    border: $width $style $color;
+}
+
+@mixin margin-classes {
+    @for $i from 1 through $sizes {
+        $margin: $i * 0.25rem;
+        /* margin #{$margin} */
+        .m#{$i} {
+            margin: $margin;
+        }
+        .ml#{$i} {
+            margin-left: $margin;
+        }
+        .mr#{$i} {
+            margin-right: $margin;
+        }
+        .mt#{$i} {
+            margin-top: $margin;
+        }
+        .mb#{$i} {
+            margin-bottom: $margin;
+        }
+        .mx#{$i} {
+            margin-left: $margin;
+            margin-right: $margin;
+        }
+        .my#{$i} {
+            margin-top: $margin;
+            margin-bottom: $margin;
+        }
+    }
+}
+
+@include margin-classes;
+
+@mixin padding-classes {
+    @for $i from 1 through $sizes {
+        $padding: $i * 0.25rem;
+        /* padding #{$padding} */
+        .p#{$i} {
+            padding: $padding;
+        }
+        .pl#{$i} {
+            padding-left: $padding;
+        }
+        .pr#{$i} {
+            padding-right: $padding;
+        }
+        .pt#{$i} {
+            padding-top: $padding;
+        }
+        .pb#{$i} {
+            padding-bottom: $padding;
+        }
+        .px#{$i} {
+            padding-left: $padding;
+            padding-right: $padding;
+        }
+        .py#{$i} {
+            padding-top: $padding;
+            padding-bottom: $padding;
+        }
+    }
+}
+
+@include padding-classes;
+
+@mixin border-classes {
+    @for $i from 1 through $sizes {
+        $borderRadius: $i * 0.25rem;
+        .br#{$i} {
+            border-radius: $borderRadius;
+        }
+        .br-tl#{$i} {
+            border-top-left-radius: $borderRadius;
+        }
+        .br-tr#{$i} {
+            border-top-right-radius: $borderRadius;
+        }
+        .br-bl#{$i} {
+            border-bottom-left-radius: $borderRadius;
+        }
+        .br-br#{$i} {
+            border-bottom-right-radius: $borderRadius;
+        }
+        .br-t#{$i} {
+            border-top-left-radius: $borderRadius;
+            border-top-right-radius: $borderRadius;
+        }
+        .br-b#{$i} {
+            border-bottom-left-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+        }
+    }
+}
+
+@include border-classes;
+
+@mixin custom-height {
+    @for $i from 1 through $sizes {
+        $height: $i * 0.25rem;
+        .height-#{$i} {
+            height: $height;
+        }
+    }
+}
+
+@include custom-height;
+
+@mixin font-size($font-size, $line-height: auto) {
+    font-size: $font-size;
+    font-size: ($font-size / $base-font-size) * 1rem;
+
+    @if $line-height == auto {
+        line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    } @else {
+        @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+            line-height: $line-height;
+        } @else if ($line-height != none and $line-height != false) {
+            @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`.";
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@mixin sm {
+    @media (max-width: map-get($break-points, screen-sm-max)) {
+        @content;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin md {
+    @media (min-width: map-get($break-points, screen-md-min)) and (max-width: map-get($break-points, screen-md-max)) {
+        @content;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin lg {
+    @media (min-width: map-get($break-points, screen-lg-min)) and (max-width: map-get($break-points, screen-lg-max)) {
+        @content;
+    }
+}
+
+// Custom devices for width and height
+@mixin rwd($width, $height) {
+    @media (width: $width+'px') and (height: $height+'px') {
+        @content;
+    }
+}
+
+// Custom devices for min width
+@mixin mw($min) {
+    @media (min-width: $min+'px') {
+        @content;
+    }
+}
+// Custom devices for max width
+@mixin maw($max) {
+    @media (max-width: $max+'px') {
+        @content;
+    }
+}
+
+// Custom Range for inconvenient sizes
+@mixin customRange($min, $max) {
+    @media (min-width: $min+'px') and (max-width: $max+'px') {
+        @content;
+    }
+}
+
+// activity and modal css
+@mixin activityAndModalStyles {
+    .editor-step {
+        p {
+            padding: 5px 0;
+        }
+
+        .activity-tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            cursor: default;
+        }
+
+        .activity-tooltip .activity-tooltiptext {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #fff;
+            padding: 25px 25px;
+            border-radius: 6px;
+            color: #555;
+            text-align: start;
+            position: absolute;
+            z-index: 1;
+            top: 125%;
+            left: 50%;
+            margin-left: -120px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            filter: drop-shadow(0px 0px 3px #807c74);
+        }
+
+        .activity-tooltip:hover .activity-tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+
+    .activity_contain {
+        margin: 24px 0;
+
+        .secondary_btn_color {
+            color: #000;
+        }
+
+        .mb2 {
+            margin: 5px 5px;
+        }
+
+        .break {
+            flex-basis: 100%;
+            height: 0;
+        }
+
+        .activity-question {
+            font-size: 1em;
+        }
+
+        .activity-step-table {
+            @include sm {
+                .common_table {
+                    .MuiTable-root {
+                        min-width: 295px;
+                    }
+                }
+            }
+        }
+
+        .img-container {
+            display: flex;
+            justify-content: center;
+            margin: 24px 0;
+
+            .activity-image {
+                display: flex;
+                justify-content: center;
+                object-fit: contain;
+                max-height: 350px;
+                width: 100%;
+            }
+        }
+
+        .activity-step-timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            line-height: 45px;
+
+            .timer-wrapper {
+                display: flex;
+                justify-content: center;
+            }
+
+            .timer {
+                font-family: Chaloops-Light;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .timerEndString {
+                color: map-get($theme-colors, principal-main-base);
+                font-family: Chaloops-Medium;
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                max-width: 130px;
+                word-break: break-word;
+            }
+
+            .text {
+                color: #aaa;
+            }
+
+            .value {
+                font-size: 40px;
+                color: map-get($theme-colors, principal-main-base);
+            }
+
+            .activity-step-timer-buttons {
+                margin-top: 10px;
+            }
+        }
+
+        .activity-step-stopwatch {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .activity-step-stopwatch-numbers {
+                line-height: 60px;
+                border: 10px solid map-get($theme-colors, $key: base-background-light-grey);
+                cursor: pointer;
+                padding: 5px 20px;
+                border-radius: 15%;
+                font-family: Chaloops-Light;
+                font-size: 40px;
+                display: flex;
+                align-items: center;
+                color: map-get($theme-colors, $key: principal-main-base);
+            }
+        }
+
+        .activity-step-audio {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mwp-orange {
+            color: map-get($theme-colors, principal-main-dark);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 24px 0;
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+        }
+
+        .react_material_body_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .react_material_body {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            background-color: map-get($theme-colors, principal-light);
+            padding: 16px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include sm {
+                width: 65%;
+            }
+
+            p,
+            span {
+                white-space: pre-line;
+                font-family: SassoonInfantRg-Regular;
+                font-size: 32px;
+                max-width: 250px;
+                margin: auto;
+            }
+            .typography-text::first-letter {
+                text-transform: none !important;
+            }
+
+            .Carousel-indicators-80 {
+                height: 0;
+            }
+
+            .Carousel-fullHeightHoverWrapper-21 {
+                height: 83%;
+            }
+        }
+
+        .image-carousel-container {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .Carousel-indicators-80 {
+                height: 0;
+            }
+
+            .Carousel-fullHeightHoverWrapper-21 {
+                height: 83%;
+            }
+        }
+
+        .activity-step-modal {
+            text-align: center;
+        }
+
+        ul,
+        ol,
+        dl {
+            padding-left: 50px;
+            li {
+                margin: 12px 0;
+            }
+        }
+
+        dd {
+            padding-left: 20px;
+            li {
+                margin: 12px 0;
+            }
+        }
+
+        button {
+            pointer-events: all;
+        }
+    }
+}

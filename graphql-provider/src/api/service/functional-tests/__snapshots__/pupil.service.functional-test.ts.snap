@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PupilService#mergePupils Given the destination pupil doesn't exist When I call mergePupils Then it throws an error 1`] = `[InternalServerErrorException: Merge operation failed; either the source or destination pupil does not exist, or they are not in the same school]`;
+
+exports[`PupilService#mergePupils Given the source and destination pupils are distinct and in the same school When I call mergePupils Then the source pupil is deleted from their school 1`] = `"no result"`;
+
+exports[`PupilService#mergePupils Given the source and destination pupils are in different schools When I call mergePupils Then it throws an error 1`] = `[InternalServerErrorException: Merge operation failed; either the source or destination pupil does not exist, or they are not in the same school]`;
+
+exports[`PupilService#mergePupils Given the source and destination pupils are the same When I call mergePupils Then it throws an error 1`] = `[InternalServerErrorException: Merge operation failed; either the source or destination pupil does not exist, or they are not in the same school]`;
+
+exports[`PupilService#mergePupils Given the source pupil doesn't exist When I call mergePupils Then it throws an error 1`] = `[InternalServerErrorException: Merge operation failed; either the source or destination pupil does not exist, or they are not in the same school]`;

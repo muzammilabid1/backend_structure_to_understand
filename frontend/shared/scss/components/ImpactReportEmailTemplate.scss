@@ -1,0 +1,17 @@
+.school-impact-report-email-template {
+    .school-impact-report-email-template-field-container {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: white;
+
+        .email_temp_btn {
+            margin: 20px 0px;
+        }
+
+        .school-impact-report-email-template-field-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

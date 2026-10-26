@@ -1,0 +1,15 @@
+.common_drop_down {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  .down-arrow-icon {
+    margin-left: 0.85em;
+  }
+}
+
+.setting-icon {
+  width: 18px;
+  margin-right: 1em;
+}

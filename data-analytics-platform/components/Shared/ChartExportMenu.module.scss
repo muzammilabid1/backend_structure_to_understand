@@ -1,0 +1,112 @@
+.exportMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.triggerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--background-card);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--text-secondary);
+  
+  &:hover {
+    background: var(--background-hover);
+    border-color: var(--border-medium);
+    color: var(--text-primary);
+  }
+  
+  &:focus {
+    outline: none;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: var(--background-card);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  min-width: 140px;
+  z-index: 50;
+  overflow: hidden;
+  
+  // Subtle animation
+  animation: slideDown 0.15s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  transition: background-color 0.15s ease;
+  
+  &:hover:not(:disabled) {
+    background: var(--background-hover);
+  }
+  
+  &:focus {
+    outline: none;
+    background: var(--background-hover);
+  }
+  
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--text-disabled, #9ca3af);
+    
+    svg {
+      color: var(--text-disabled, #9ca3af);
+    }
+  }
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  svg {
+    flex-shrink: 0;
+    color: var(--text-secondary);
+  }
+  
+  span {
+    white-space: nowrap;
+  }
+}
+
+// Success state styling
+.menuItem:has(svg[data-lucide="check"]) {
+  color: var(--success-text, #059669);
+  
+  svg {
+    color: var(--success-text, #059669);
+  }
+} 

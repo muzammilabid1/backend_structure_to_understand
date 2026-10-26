@@ -1,0 +1,18 @@
+name: Renovate tests
+
+on:
+    pull_request:
+        types: [opened, synchronize]
+
+jobs:
+    run-renovate:
+        if: "${{ github.event.pull_request.user.login == 'renovate[bot]' && github.event.pull_request.title != 'chore(deps): lock file maintenance' }}"
+        uses: ./.github/workflows/nightly-base.yml
+        with:
+            branch: ${{ github.head_ref }}
+            type: Renovate
+            enableFastFail: true
+        secrets:
+            GH_LWP_PULL_TOKEN: ${{ secrets.GH_LWP_PULL_TOKEN }}
+            slack_webhook: ${{ secrets.slack_webhook }}
+            WONDE_API_TOKEN: ${{ secrets.WONDE_API_TOKEN }}

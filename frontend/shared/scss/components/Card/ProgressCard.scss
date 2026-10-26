@@ -1,0 +1,24 @@
+.progress-card-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: $standard-shadow;
+  border-radius: $base-radius;
+  padding: 1em;
+
+  .activity-content-section {
+    margin-bottom: 2em;
+  }
+
+  .activity-goal-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0.5em;
+  }
+
+  .active-border {
+    border-top: 8px solid;
+  }
+}

@@ -1,0 +1,16 @@
+Analyze the clarity of the set-up and instructions based on the following criteria. For each question, provide:
+
+A repetition of the question.
+A score out of 10.
+A brief explanation of the score, including reasoning and suggestions for improvement if the criterion is not fully met.
+Criteria for Evaluation:
+
+Are the steps clearly defined and sequential where necessary?
+Are sections like 'You will need' or 'Set up' included if the setup involves multiple steps or resources?
+Are roles (e.g., Player 1/2 or Adult/Child) explicitly defined and consistently used?
+Output Example Format:
+
+[Repeated Question]
+Score: [X/10]
+Explanation: [Brief reasoning behind the score, highlighting strengths and weaknesses. Include suggestions for improvement if instructions are unclear or incomplete.]
+Ensure responses are concise, objective, and actionable.

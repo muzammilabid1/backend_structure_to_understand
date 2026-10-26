@@ -1,0 +1,17 @@
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, textarea, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+figure,
+table, th, td, caption,
+hr {
+    margin:  0;
+    padding: 0;
+}
+
+html {
+    background-color: map-get($theme-colors, base-background-grey);
+    // background-color: map-get($theme-colors, base-static-pages-background-gray);
+    // background-color: map-get($theme-colors, base-normal-pages-background-gray);
+}

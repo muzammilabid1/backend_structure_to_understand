@@ -1,0 +1,26 @@
+.thumbnail_image_container {
+    .thumbnail_image_container {
+        .MuiDropzoneArea-root {
+            max-width: 420px;
+            max-height: 240px;
+        }
+    }
+
+    .image-preview {
+        width: 100%;
+    }
+
+    .topic_image {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .material-icons {
+            padding: 5px 0 0 0;
+        }
+    }
+}

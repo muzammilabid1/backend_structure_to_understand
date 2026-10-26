@@ -1,0 +1,174 @@
+.week_by_week {
+    .table-row {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .info_snackbar_icon {
+        color: map-get($theme-colors, auxiliary-blue-base) !important;
+    }
+
+    .week_by_week_snackbar {
+        .info_snackbar {
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .week-by-week-top-options {
+        .common_nav_list {
+            .MuiListItem-root {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        .active_date {
+            font-size: 14px;
+        }
+
+        .released_tag {
+            font-size: 12px;
+        }
+    }
+
+    .message_pupils_text {
+        .common_card {
+            box-shadow: none !important;
+        }
+    }
+
+    .table-row-border {
+        .pupil_fullname {
+            margin-bottom: 8px;
+        }
+    }
+
+    .table-row-border::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 100%;
+        bottom: 0;
+        width: 4px;
+        left: 0;
+    }
+
+    .compact-table-container {
+        padding: 0px 5px;
+        margin: 0 0 0 -5px;
+        background-color: unset;
+        box-shadow: unset;
+        table {
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0px 4px 8px 0px rgba(214, 209, 203, 0.5);
+            thead {
+                background-color: map-get($theme-colors, base-background-grey);
+            }
+        }
+        .table-row-border {
+            padding: 12px 24px !important;
+            z-index: 5;
+            .paragraph {
+                margin-bottom: 0px;
+                line-height: 23px;
+            }
+            .compact-tags {
+                display: flex;
+                align-items: center;
+            }
+            &::before {
+                left: -6px;
+                border-top-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+                height: 97%;
+            }
+        }
+    }
+
+    .readingweek-compact-view-table {
+        table {
+            thead {
+                tr {
+                    th {
+                        p {
+                            font-weight: 400 !important;
+                        }
+                        &:nth-child(1) {
+                            p {
+                                font-weight: 600 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .border-warning::before {
+        border: 1px solid map-get($theme-colors, auxiliary-yellow-base);
+        background-color: map-get($theme-colors, auxiliary-yellow-base);
+    }
+
+    .border-active::before {
+        border: 1px solid map-get($theme-colors, auxiliary-green-base);
+        background-color: map-get($theme-colors, auxiliary-green-base);
+    }
+
+    .border-inactive::before {
+        border: 1px solid #99c95d;
+        background-color: #99c95d;
+    }
+
+    .table-row {
+        &:last-child {
+            margin: 0px;
+        }
+    }
+
+    .week-by-week-scrapbook-prompt-card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: map-get($theme-colors, auxiliary-green-light);
+        border-radius: 12px;
+        padding: 16px 24px;
+        .week-by-week-scrapbook-prompt-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: map-get($theme-colors, principal-main-base);
+
+            .heading-three {
+                font-size: 14px;
+                font-weight: 700;
+                margin: 1px 0px 0px 0px !important;
+                color: map-get($theme-colors, principal-main-base);
+            }
+        }
+        .paragraph {
+            margin: 0px !important;
+        }
+    }
+}
+
+.pupil-tab-drawer {
+    .parents_carers_table_container {
+        margin: 0;
+        .header {
+            margin-bottom: 16px;
+        }
+    }
+
+    .parents_carers_text {
+        opacity: 0;
+    }
+}
+
+.pupil-feedback-entries-drawer {
+    .activity-feed-container {
+        .feedback-comment-card {
+            width: 90% !important;
+        }
+    }
+}

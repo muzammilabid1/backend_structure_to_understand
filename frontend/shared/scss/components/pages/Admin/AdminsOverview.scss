@@ -1,0 +1,49 @@
+.admins_overview {
+    .MuiListItemIcon-root {
+        min-width: 35px;
+    }
+
+    .admin-filter-button {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+
+        .filter-button {
+            color: black;
+            text-transform: initial;
+            font-weight: bold;
+        }
+        .filter-icon {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+
+    .admin-collapse {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .feeds-filter-container {
+        margin-bottom: 20px;
+
+        .MuiCardActions-root {
+            justify-content: flex-end;
+        }
+        .MuiCardActions-spacing > :not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            flex: 1;
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+        }
+    }
+}

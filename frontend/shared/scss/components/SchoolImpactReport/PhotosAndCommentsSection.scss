@@ -1,0 +1,81 @@
+.photos-and-comments-section {
+    .heading-two {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .photos-and-comments-card-media {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .photos-and-comments-content-section {
+        width: 90%;
+    }
+
+    .photos-and-comments-content-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .photos-and-comments-content-section,
+    .photos-and-comments-content-container {
+        .content-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+
+            .content-card-form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                .photo-uploader {
+                    margin-bottom: 10px;
+                }
+
+                .lwp-button-wrapper {
+                    align-self: flex-end;
+                    .upload-photo-btn {
+                        width: 100px;
+                    }
+                }
+
+                .buttons-section {
+                    align-self: flex-end;
+                    .lwp-button-wrapper {
+                        .update-button {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            .action-icons {
+                .material-icons {
+                    margin-bottom: 20px;
+                    align-self: flex-end;
+                }
+            }
+
+            .feedback-image {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .feedback-content {
+                align-self: flex-start;
+            }
+
+            .feedback-information {
+                margin-top: 20px;
+                align-self: flex-end;
+            }
+        }
+    }
+}

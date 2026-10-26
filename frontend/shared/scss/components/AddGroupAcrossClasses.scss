@@ -1,0 +1,112 @@
+.individual_group_form {
+    max-width: 621px;
+    margin: 0 auto;
+
+    .individual_group_search_pupil {
+        display: flex;
+        justify-content: space-between;
+
+        .individual_group_search_pupil_input {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .individual_group_search_pupil_loading {
+            margin-left: 20px;
+        }
+    }
+
+    .individual_group_form_reading_container {
+        .add_group_date_picker {
+            .date-picker-field {
+                width: 100%;
+            }
+        }
+
+        .date-error-message {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            .MuiSvgIcon-root {
+                font-size: 14px;
+                margin-top: 8px;
+                color: map-get($theme-colors, auxiliary-red-base);
+            }
+            p {
+                margin-top: 8px;
+                font-size: 12px;
+                color: map-get($theme-colors, auxiliary-red-base);
+            }
+        }
+
+        .mt-14 {
+            margin-top: 14px;
+        }
+    }
+}
+
+.individual_group {
+    .main_heading {
+        margin-bottom: 37px;
+    }
+
+    .mb_24 {
+        margin-bottom: 24px;
+    }
+
+    .mb_16 {
+        margin-bottom: 16px;
+    }
+
+    .mt_16 {
+        margin-top: 16px;
+    }
+
+    .mt_32 {
+        margin-top: 32px;
+    }
+
+    .addTeacherContainer {
+        max-width: 100%;
+        max-height: 67px;
+        background-color: map-get($theme-colors, base-background-grey);
+        box-shadow: 0px 4px 8px 0px #d6d1cb80;
+        padding: 10px 16px;
+        margin: 20px auto 24px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .title {
+        padding: 16px 8px 16px 8px;
+        font-size: 14px;
+    }
+
+    .btn_group {
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+        margin-top: 24px;
+    }
+
+    .addBtn {
+        border: 3px solid #f28d00;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #f28d00;
+        font-weight: bold;
+    }
+
+    .common_table .MuiTableRow-head {
+        background-color: map-get($theme-colors, base-off-white);
+
+        .typography-text {
+            font-weight: 500;
+        }
+    }
+}

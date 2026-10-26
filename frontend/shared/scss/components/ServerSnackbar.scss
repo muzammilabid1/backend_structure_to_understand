@@ -1,0 +1,13 @@
+.server-snackbar {
+    .MuiPaper-root {
+        display: flex;
+        flex-direction: row-reverse;
+        .MuiSnackbarContent-action {
+            padding-left: 0;
+            padding-right: 5px;
+            button {
+                padding: 12px 12px 12px 0;
+            }
+        }
+    }
+}

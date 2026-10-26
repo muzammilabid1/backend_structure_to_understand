@@ -1,0 +1,16 @@
+name: Cypress manual run on PR
+
+on:
+    pull_request:
+        types: [labeled]
+
+jobs:
+    run-nightly:
+        uses: ./.github/workflows/nightly-base.yml
+        if: ${{ github.event.label.name == 'Cypress test this PR' }}
+        with:
+            branch: ${{ github.event.pull_request.head.ref }}
+        secrets:
+            GH_LWP_PULL_TOKEN: ${{ secrets.GH_LWP_PULL_TOKEN }}
+            slack_webhook: ${{ secrets.slack_webhook }}
+            WONDE_API_TOKEN: ${{ secrets.WONDE_API_TOKEN }}

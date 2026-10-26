@@ -1,0 +1,242 @@
+.register {
+    .register-cards-grid {
+        .class-progrees-card {
+            box-shadow: $standard-shadow;
+            padding: 1em;
+        }
+    }
+    .register-card {
+        .material-icons {
+            width: 24px;
+            font-size: 27px;
+        }
+    }
+
+    .class-register-header-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 24px;
+        .class-register-header-image-reading {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-reading-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 34px;
+                height: 18px;
+                margin-left: 3px;
+                object-fit: none;
+            }
+        }
+        .class-register-header-image-fullProgramme {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-maths-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 28px;
+                height: 31px;
+                object-fit: none;
+            }
+        }
+        .class-register-header-image-group-across-classes {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 28px;
+                height: 31px;
+                object-fit: none;
+            }
+        }
+        .heading {
+            font-size: 1.5rem;
+            margin-right: 22px;
+        }
+    }
+
+    .premium_link {
+        text-decoration: underline;
+        margin-left: 1px;
+        cursor: pointer;
+        color: map-get($theme-colors, base-blue-black);
+    }
+
+    .MuiListItemIcon-root {
+        min-width: 0 !important;
+    }
+
+    .edit_class_details_list_popOver {
+        .common_drop_down {
+            justify-content: space-between;
+            span {
+                width: 24px;
+                font-size: 27px;
+            }
+        }
+    }
+    .not-active-class-alert-container {
+        margin-bottom: 24px;
+        width: 100%;
+        height: 63.13px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+        .not-active-class-alert-mathscot-container {
+            width: 38px;
+            height: 38px;
+            background: map-get($theme-colors, auxiliary-yellow-base);
+            border-radius: 25px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 45px;
+                height: 43px;
+                object-fit: none;
+                margin-left: 8px;
+            }
+        }
+        .not-active-class-alert-text {
+            margin: 0 10px 0 20px;
+            p {
+                font-size: 14px;
+                margin-bottom: 0;
+                .not-active-class-link-text {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+    }
+    .register_popOver {
+        margin-bottom: 20px;
+        margin-left: 38px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .MuiFormControlLabel-root {
+            align-items: center !important;
+            margin: 0;
+        }
+
+        .Show_activity_counts {
+            .MuiSwitch-track {
+                opacity: 0.18;
+            }
+        }
+
+        .reading-PopOver {
+            margin-left: 38px;
+        }
+
+        .typography {
+            max-width: 250px;
+        }
+    }
+
+    .progress_bar_card_text_header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.maxi {
+    .register_filter {
+        margin-bottom: 16px;
+
+        p {
+            margin-bottom: 0;
+            margin-left: 5px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            margin-bottom: 8px;
+        }
+        &:first-child {
+            margin-top: 8px;
+        }
+    }
+}
+
+.parent-contact-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    .parent-contact-detail-inputfield {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        .material-icons {
+            color: map-get($theme-colors, base-blue-black);
+            margin-bottom: 1em;
+            cursor: pointer;
+        }
+    }
+    .parent-contact-detail-text {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .parent-contact-detail-icons {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+            .material-icons {
+                color: map-get($theme-colors, base-blue-black);
+                cursor: pointer;
+            }
+        }
+    }
+    .parent-contact-add-contact-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .material-icons {
+            color: map-get($theme-colors, base-blue-black);
+            cursor: pointer;
+        }
+        h3 {
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.missing-parent-alert {
+    .MuiAlert-message {
+        color: map-get($theme-colors, base-black);
+    }
+}
+
+.confirm-detail-validation {
+    display: flex;
+    gap: 6px;
+    svg {
+        color: red;
+        font-size: 14px;
+    }
+    .confirm-detail-validation-message {
+        font-size: 12px;
+        color: red;
+        margin-bottom: 0;
+    }
+}

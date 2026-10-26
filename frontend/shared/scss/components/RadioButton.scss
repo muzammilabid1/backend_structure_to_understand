@@ -1,0 +1,40 @@
+.form-radio-check > .MuiRadio-colorSecondary.Mui-checked {
+    color: map-get($theme-colors, base-blue-black);
+
+    // color: map-get($theme-colors, base-white);
+
+    &:hover {
+        background: none;
+    }
+}
+.form-radio-check > .Mui-checked {
+    color: map-get($theme-colors, base-blue-black);
+
+    // color: map-get($theme-colors, base-white);
+
+    &:hover {
+        background: none;
+    }
+}
+
+.form-radio-check > .MuiRadio-root {
+    color: map-get($theme-colors, base-warm-grey);
+    // color: map-get($theme-colors, base-warm-grey);
+}
+.form-radio-check > .radio-check {
+    padding-top: 0;
+    color: map-get($theme-colors, base-blue-black);
+}
+.form-radio-check > .MuiButtonBase-root:hover {
+    color: map-get($theme-colors, base-blue-black);
+    // color: map-get($theme-colors, base-white);
+    background: none;
+}
+
+.radio-formcontrol > .MuiFormGroup-root > .form-radio-check {
+    align-items: flex-start;
+}
+.form-radio-check {
+    padding-bottom: 1rem;
+    color: map-get($theme-colors, base-blue-black);
+}

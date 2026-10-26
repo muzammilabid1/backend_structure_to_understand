@@ -1,0 +1,32 @@
+.school-add-class {
+    .date-picker-error {
+        .date-picker-field {
+            background-color: map-get($theme-colors, auxiliary-red-light);
+            .MuiFormLabel-root {
+                color: map-get($theme-colors, base-black);
+                background-color: map-get($theme-colors, auxiliary-red-light);
+            }
+            .MuiOutlinedInput-notchedOutline {
+                border: 1px solid map-get($theme-colors, auxiliary-red-base);
+            }
+        }
+    }
+    .date-picker-field {
+        width: 100%;
+    }
+    .date-error-message {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        .MuiSvgIcon-root {
+            font-size: 14px;
+            margin-top: 8px;
+            color: map-get($theme-colors, auxiliary-red-base);
+        }
+        p {
+            margin-top: 8px;
+            font-size: 12px;
+            color: map-get($theme-colors, auxiliary-red-base);
+        }
+    }
+}

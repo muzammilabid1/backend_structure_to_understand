@@ -1,0 +1,19 @@
+.school-pupil-tag {
+    .pupil-tag-heading {
+        font-size: 24px;
+    }
+
+    .snackbar {
+        .info_snackbar {
+            margin-top: 32px;
+            align-items: flex-start;
+            .info_snackbar_icon {
+                color: map-get($theme-colors, auxiliary-blue-base) !important;
+            }
+        }
+    }
+}
+
+.warm-grey-color {
+    color: map-get($theme-colors, dark-warm-grey);
+}

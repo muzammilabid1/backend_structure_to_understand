@@ -1,0 +1,52 @@
+/**
+ * SummaryCard renders label/value pairs as rows of columns. Callers that already
+ * own their spacing pass their own rowClass, so the rules here only cover the
+ * component's own defaults and the parents/carers cards that use them.
+ */
+.summary-card-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.summary-card-stack-spacing {
+    margin-bottom: 2em;
+}
+
+.parents-carer-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.parents-carer-summary-card {
+    .MuiPaper-root {
+        padding: 24px;
+        box-shadow: $standard-shadow;
+        border-radius: $base-radius;
+    }
+
+    .summary-card-row {
+        // Two evenly sized columns on a wide screen, stacked once space runs out,
+        // which is what stopped the status from being reachable on a phone.
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px 32px;
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // The status badge is anchored to the bottom left of an empty MUI Badge root,
+    // so it needs a line of its own to sit against.
+    .badge-color {
+        margin-top: 4px;
+    }
+}
+
+.parents-carer-summary-card-attention {
+    .MuiPaper-root {
+        background-color: map-get($theme-colors, auxiliary-red-light);
+    }
+}

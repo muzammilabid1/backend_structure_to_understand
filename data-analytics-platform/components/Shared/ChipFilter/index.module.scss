@@ -1,0 +1,31 @@
+.chipFilterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+
+  .chip {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1.5px solid #e5e7eb;
+    background: #fff;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+
+    &:hover {
+      border-color: #f97316;
+      color: #f97316;
+    }
+
+    &.active {
+      background: #f97316;
+      border-color: #f97316;
+      color: #fff;
+    }
+  }
+}

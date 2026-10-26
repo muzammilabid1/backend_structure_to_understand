@@ -1,0 +1,20 @@
+SELECT
+	A.NAME,
+	SLS.NAME AS "subject",
+	CONCAT(
+		'https://explore.learningwithparents.com/admin/activity/',
+		S."activityId"::TEXT
+	) AS LINK
+FROM
+	STATIC_LWP_ACTIVITY_STEPS S
+	JOIN STATIC_LWP_ACTIVITY A ON A.ID = S."activityId"
+	JOIN STATIC_LWP_TOPIC T ON T.ID = A."topicId"
+	JOIN STATIC_LWP_TOPIC_DOMAIN_YEAR_GROUP SLTDY ON SLTDY."topicId" = T.id
+	JOIN STATIC_LWP_TOPIC_DOMAIN SLTD ON SLTD.id = SLTDY."domainId"
+	JOIN STATIC_LWP_SUBJECT SLS ON SLS.id = SLTD."subjectId"
+WHERE
+	"stepType" = 'DICE'
+GROUP BY
+	A.NAME,
+	S."activityId",
+	SLS.NAME

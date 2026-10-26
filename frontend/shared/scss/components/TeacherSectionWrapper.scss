@@ -1,0 +1,419 @@
+.teacher-wrapper-container {
+    display: flex;
+    background-color: map-get($theme-colors, base-background-grey);
+    position: relative;
+
+    .teacher-header {
+        background-color: white;
+        box-shadow: 0px 2px 4px rgba(214, 209, 203, 0.25);
+        width: 100%;
+        position: fixed;
+        height: 70px;
+        z-index: 11;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 32px;
+        align-items: center;
+        box-sizing: border-box;
+        gap: 10px;
+
+        .teacher-header-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            overflow: hidden;
+            .heading-one {
+                font-size: 24px !important;
+                font-weight: 500;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 0px;
+            }
+        }
+        .teacher-header-actions {
+            display: flex;
+            gap: 8px;
+
+            > .MuiIconButton-root {
+                border-radius: 4px;
+                width: 46px;
+                height: 46px;
+                padding: 8px;
+                border: 1px solid map-get($theme-colors, base-warm-grey);
+                .material-icons {
+                    font-size: 30px;
+                }
+            }
+            .teacher-header-popover {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 8px 16px;
+                background-color: map-get($theme-colors, auxiliary-yellow-light);
+                border-radius: 4px;
+                width: auto;
+                .paragraph {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+        }
+    }
+
+    .side-drawer-arrow {
+        top: 86px;
+    }
+    .side-drawer-arrow-icon-admin-viewing-mode {
+        top: 136px;
+    }
+
+    .details {
+        .mt-10 {
+            margin-top: 10px;
+        }
+    }
+    .teacher-header-mobile {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        F .menu-button {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            border-radius: 0;
+            height: 50px;
+        }
+    }
+
+    .notification-icon {
+        width: 46px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid map-get($theme-colors, base-warm-grey);
+
+        svg {
+            font-size: 27px;
+        }
+
+        @include sm {
+            margin-right: 12px;
+            height: 36px;
+            width: 36px;
+            svg {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.teacher-admin-side-mini-drawer {
+    position: relative;
+    z-index: 10;
+    .teacher-admin-side-drawer {
+        .MuiDrawer-paper {
+            margin-top: 70px;
+            height: calc(100% - 70px);
+        }
+        .admin-is-on-viewing-mode {
+            margin-top: 120px;
+            height: calc(100% - 120px);
+        }
+    }
+}
+
+.drawer-header {
+    width: 240px;
+    display: flex;
+    padding: 1em 1.5em;
+    align-items: center;
+    min-height: 40px;
+    box-shadow: $header-shadow;
+    white-space: break-spaces;
+
+    .profile-logo {
+        width: 2em;
+        margin-right: 0.75em;
+    }
+
+    h1 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.MuiAutocomplete-groupLabel {
+    color: map-get($theme-colors, base-blue-black) !important;
+}
+
+.side-drawer-container {
+    height: 100%;
+    .sidebar-options-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 32px;
+        position: relative;
+        height: 100%;
+        box-sizing: border-box;
+        .sidebar-options-list {
+            padding: 0px;
+
+            .quick_actions {
+                margin-top: 24px;
+            }
+
+            .sidebar-option {
+                padding: 1em 0;
+            }
+
+            .heading-one {
+                font-size: 17px;
+                margin-bottom: 8px;
+            }
+
+            .badge-container {
+                display: flex;
+                flex: 1;
+            }
+
+            .sidebar-tabs-header {
+                padding: 0px 24px 0px 24px;
+                .all-classes-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    cursor: pointer;
+                }
+            }
+
+            a {
+                color: map-get($theme-colors, base-black);
+                text-decoration: none;
+            }
+
+            .class-programme-icon {
+                width: 24px;
+                height: 24px;
+                background: map-get($theme-colors, principal-maths-light);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                img {
+                    width: 20px;
+                    height: 23px;
+                    object-fit: contain;
+                }
+            }
+            .class-reading-icon {
+                width: 24px;
+                height: 24px;
+                background: map-get($theme-colors, principal-reading-light);
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                img {
+                    width: 26px;
+                    height: 14px;
+                    object-fit: contain;
+                }
+            }
+
+            .common_nav_list,
+            .groups-and-classes {
+                margin-right: 24px;
+
+                li {
+                    padding: 4px 2px 4px 20px;
+                    border-radius: 0px 4px 4px 0px;
+                    .paragraph,
+                    .MuiTypography-root {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin-bottom: 0px;
+                    }
+                    .MuiBadge-root {
+                        margin: 0px;
+
+                        .MuiBadge-badge {
+                            position: relative;
+                            padding: 5px;
+                            border-radius: 100px;
+                            height: auto;
+                            width: auto;
+                            color: #fff;
+                            font-size: 15px;
+                            font-family: Chaloops-Medium;
+                            aspect-ratio: 1 / 1;
+                            line-height: 10px;
+                            transform: unset;
+                        }
+                    }
+                }
+
+                .active-list-item {
+                    position: relative;
+                    &:before {
+                        content: '';
+                        height: 100%;
+                        width: 4px;
+                        position: absolute;
+                        left: 0;
+                        border-radius: 0px 2px 2px 0px;
+                        background-color: map-get($theme-colors, principal-main-base);
+                    }
+                }
+
+                .class-groups-list {
+                    padding: 4px 2px 4px 20px;
+                    border-radius: 0px 4px 4px 0px;
+                    .paragraph,
+                    .MuiTypography-root {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        margin-bottom: 0px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+            .groups-and-classes {
+                .MuiListItemIcon-root {
+                    min-width: 45px !important;
+                }
+            }
+        }
+
+        .admin-search-bar-container {
+            padding: 0px 24px;
+        }
+
+        .MuiListItemIcon-root {
+            min-width: 38px;
+        }
+        .sidebar-footer-container {
+            margin-top: auto;
+            padding: 16px;
+            box-shadow: 0px -2px 4px 0px rgba(214, 209, 203, 0.25);
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            bottom: 0;
+            background-color: white;
+            width: 100%;
+            box-sizing: border-box;
+
+            .common_nav_list {
+                margin-right: 0px;
+                padding: 0px;
+                li {
+                    border-radius: 4px;
+                    padding: 4px !important;
+                    min-width: unset;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.teacher-wrapper-contant {
+    padding: 1.5em;
+    flex-grow: 1;
+    margin-top: 6em;
+
+    @include sm {
+        padding: 1em;
+        margin-top: 3em;
+    }
+    @include md {
+        padding: 1em;
+        margin-top: 3em;
+    }
+}
+
+.show-mobile {
+    display: none;
+    @include sm {
+        display: flex;
+    }
+}
+
+.hide-mobile {
+    display: flex;
+    @include sm {
+        display: none;
+    }
+}
+
+.button-icons {
+    height: 25px;
+    width: 25px;
+}
+
+.active-tab {
+    path {
+        fill: map-get($theme-colors, principal-main-base);
+    }
+}
+
+.custom-btn-class {
+    width: 100%;
+
+    .MuiButton-label {
+        font-weight: normal;
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+}
+
+.class_and_groups_mini {
+    position: relative;
+    display: none;
+    .mini_sidebar_container {
+        padding: 16.5px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .active::before {
+            content: '';
+            position: absolute;
+            height: 49px;
+            width: 4px;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f28d00;
+            border-radius: 0px 2px 2px 0px;
+        }
+
+        .mini_sidebar_gol {
+            background-color: #d6d1cb;
+            padding: 7px;
+            border-radius: 50%;
+            font-weight: 700;
+        }
+
+        .active {
+            background-color: #f28d00;
+        }
+    }
+}

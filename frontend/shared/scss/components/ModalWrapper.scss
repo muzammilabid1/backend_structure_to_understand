@@ -1,0 +1,177 @@
+.dialog-wrapper > .MuiBackdrop-root {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.email-bad-params-details,
+.email-preview {
+    .dialog-content-section {
+        iframe {
+            width: 100%;
+            height: 50vw;
+        }
+    }
+}
+
+.dialog-wrapper {
+    .MuiDialog-paperScrollBody {
+        width: -webkit-fill-available !important;
+        width: -moz-available !important;
+    }
+
+    .dialog-content-section {
+        padding: 0.5em;
+        box-shadow: none;
+
+        .typography-text::first-letter {
+            text-transform: none;
+        }
+
+        .MuiDialogContent-root {
+            background-color: map-get($theme-colors, base-white);
+            overflow: hidden;
+
+            .class-edit-divider {
+                margin: 20px 0;
+            }
+
+            .MuiFormControl-root {
+                .MuiFormLabel-root {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+
+                .MuiFormGroup-root {
+                    .MuiFormControlLabel-root {
+                        align-items: center !important;
+
+                        .MuiRadio-root {
+                            color: map-get($theme-colors, base-blue-black);
+                        }
+                    }
+                }
+            }
+
+            .award-trophy-container {
+                .paragraph {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .m-30 {
+            margin: 30px 0;
+        }
+
+        .rdw-storybook-editor {
+            border: 1px solid rgba(0, 0, 0, 0.23);
+            padding: 10px 20px;
+            border-radius: 10px;
+            min-height: 300px;
+            margin-bottom: 15px;
+        }
+
+        .dialog-header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-right: 1.5em;
+            padding-top: 1em;
+
+            @include sm {
+                // justify-content: flex-start;
+                flex-wrap: wrap;
+                padding: 0;
+                padding-bottom: 1em;
+            }
+
+            .dialog-title {
+                width: fit-content;
+            }
+
+            .filter-btn {
+                margin-left: 1.5em;
+            }
+        }
+
+        .dialog-btn-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5em;
+
+            @include sm {
+                // justify-content: flex-end;
+                flex-wrap: wrap;
+            }
+
+            .dialog-action {
+                padding: 0;
+
+                // @include sm {
+                //   margin-top: 0.5em;
+                // }
+            }
+        }
+
+        .add-topic-file-upload,
+        .admin-upload-file-uploader,
+        .add-blog-file-upload,
+        .add-logo-file-upload,
+        .add-resource-file-upload,
+        .add-staff-file-upload,
+        .add-video-tutorial-file-upload {
+            justify-content: center;
+            display: flex;
+            align-items: center;
+
+            input[type='file'] {
+                margin-left: 170px;
+            }
+        }
+
+        .guess_the_animal_container_nested {
+            .modal-btn {
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+
+                .lwp-button {
+                    @include sm {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .mein_heading {
+                line-height: 51px;
+            }
+
+            ul,
+            ol,
+            dl {
+                padding-left: 50px;
+                li {
+                    margin: 12px 0;
+                }
+            }
+
+            dd {
+                padding-left: 20px;
+                li {
+                    margin: 12px 0;
+                }
+            }
+
+            @include activityAndModalStyles;
+        }
+    }
+}
+
+.dialog-side-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .disconnect-btn {
+        background-color: map-get($theme-colors, auxiliary-red-base);
+    }
+}

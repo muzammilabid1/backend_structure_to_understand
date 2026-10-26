@@ -1,0 +1,58 @@
+.accountless-email-container {
+    max-width: 520px;
+    margin: 0 auto;
+    .accountless-email-back-btn {
+        margin-top: 118px;
+    }
+    .common_status_container {
+        margin-bottom: 32px;
+        margin-top: 35px;
+        h1 {
+            margin-top: 24px;
+        }
+        p {
+            margin-top: 24px;
+        }
+    }
+    .accountless-bottom-text-without-gap {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+    .accountless-bottom-text {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 35px;
+        .link-text {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    @include sm {
+        max-width: 100%;
+        .accountless-email-back-btn {
+            margin-top: 96px;
+        }
+        .common_status_container {
+            margin-bottom: 24px;
+            margin-top: 25px;
+            h1 {
+                margin-top: 18px;
+            }
+        }
+        .accountless-bottom-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+        .accountless-bottom-text-without-gap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+        }
+    }
+}

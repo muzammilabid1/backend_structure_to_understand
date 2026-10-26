@@ -1,0 +1,78 @@
+.common_accordion {
+    .MuiAccordion-root {
+        display: block;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    .MuiAccordionDetails-root {
+        display: block;
+        // padding: 8px 0 16px;
+    }
+
+    .MuiAccordionSummary-root.Mui-focused {
+        background-color: transparent;
+    }
+
+    .secondary-accordion-details {
+        .secondary-accordion-list-item {
+            padding: 0;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 3em;
+        }
+
+        .accordion-list-item {
+            padding: 0;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .list-item-text {
+                flex: 1;
+
+                .heading-font {
+                    font-size: 1.5em;
+
+                    @include sm {
+                        font-size: 1em;
+                    }
+                }
+
+                .permitted {
+                    font-weight: 600;
+                    color: mediumseagreen;
+                }
+
+                .notPermitted {
+                    font-weight: 600;
+                    color: orange;
+                }
+            }
+
+            .accordion-list-content {
+                align-items: flex-start;
+                padding: 0;
+                padding-top: 1.5em;
+
+                .list-item-text {
+                    flex: 1;
+
+                    .side-img {
+                        width: 100%;
+                        object-fit: contain;
+                        height: 250px;
+                    }
+
+                    .image-on-side {
+                        width: 275px;
+                    }
+
+                    .secondary-list-item-text {
+                        margin-top: 2em;
+                    }
+                }
+            }
+        }
+    }
+}

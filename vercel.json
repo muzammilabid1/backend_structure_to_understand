@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "git": {
+        "deploymentEnabled": false
+    },
+    "build": {
+        "env": {
+            "FORCE_BUILDER_TAG": "canary"
+        }
+    },
+    "functions": {
+        "pages/**/*": {
+            "maxDuration": 30
+        }
+    }
+}

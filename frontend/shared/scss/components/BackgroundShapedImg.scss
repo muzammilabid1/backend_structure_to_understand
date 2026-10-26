@@ -1,0 +1,56 @@
+.BackgroundShapedImg_container {
+    background-color: map-get($theme-colors, principal-light);
+
+    .MuiContainer-root {
+        z-index: 1;
+        max-width: 984px;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include sm {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    margin-top: 120px;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .white_img_top,
+    .white_img_bottom,
+    .both_side_img_bottom {
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .white_img_top {
+        top: 0;
+    }
+
+    .white_img_bottom {
+        bottom: 0;
+    }
+
+    .both_side_img_bottom {
+        bottom: -50px;
+
+        @include customRange(768, 1024) {
+            bottom: -30px;
+        }
+
+        @include sm {
+            bottom: -15px;
+        }
+    }
+}

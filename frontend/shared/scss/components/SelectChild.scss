@@ -1,0 +1,28 @@
+.select-child-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 2em 0;
+
+    .select-child-heading {
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+        font-family: Chaloops-Medium;
+    }
+}
+
+.speech-bubble-text {
+    font-size: 14px;
+}
+
+.simple-child-cards-grid {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.topic-summary-cards-grid {
+    align-items: flex-start;
+}

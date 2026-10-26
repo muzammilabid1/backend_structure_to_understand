@@ -1,0 +1,71 @@
+.class-activate-container {
+    .programme-options-container {
+        .programme-info-alert-container {
+            width: 100%;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            background-color: map-get($theme-colors, auxiliary-blue-light);
+            margin: 16px 0;
+            padding: 10px 0px;
+            .programme-info-alert-mathscot-container {
+                width: 38px;
+                height: 38px;
+                background: rgba(57, 176, 226, 0.6);
+                border-radius: 25px;
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 45px;
+                    height: 43px;
+                    object-fit: none;
+                    margin-left: 8px;
+                }
+            }
+            .programme-info-alert-text {
+                margin: 0 10px 0 20px;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .date-picker-error {
+            .date-picker-field {
+                background-color: map-get($theme-colors, auxiliary-red-light);
+                .MuiFormLabel-root {
+                    color: map-get($theme-colors, base-black);
+                    background-color: map-get($theme-colors, auxiliary-red-light);
+                }
+                .MuiOutlinedInput-notchedOutline {
+                    border: 1px solid map-get($theme-colors, auxiliary-red-base);
+                }
+            }
+        }
+        .date-picker-field {
+            width: 100%;
+            .MuiInputAdornment-root {
+                button {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+        .date-error-message {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            .MuiSvgIcon-root {
+                font-size: 14px;
+                margin-top: 8px;
+                color: map-get($theme-colors, auxiliary-red-base);
+            }
+            p {
+                margin-top: 8px;
+                font-size: 12px;
+                color: map-get($theme-colors, auxiliary-red-base);
+            }
+        }
+    }
+}

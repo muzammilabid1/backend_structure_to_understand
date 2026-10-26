@@ -1,0 +1,33 @@
+@use '../mixins/banner' as b;
+
+.view_mode_container {
+    margin-bottom: 3em;
+
+    .view_mode_nested_container {
+        @include b.banner();
+        background-color: map-get($theme-colors, auxiliary-blue-base);
+        color: map-get($theme-colors, base-white);
+
+        .link {
+            color: map-get($theme-colors, base-white);
+            font-weight: 700 !important;
+            margin-top: 5px;
+        }
+    }
+
+    .view_mode_nested_container_academic {
+        @include b.banner();
+        background-color: map-get($theme-colors, principal-main-base);
+        color: map-get($theme-colors, base-black);
+
+        .link {
+            color: map-get($theme-colors, base-black);
+            font-weight: 700 !important;
+        }
+    }
+
+    .link_text {
+        color: #fff !important;
+        font-weight: 700 !important;
+    }
+}

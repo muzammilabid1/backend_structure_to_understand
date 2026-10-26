@@ -1,0 +1,81 @@
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.measures {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.measure {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 10px;
+}
+
+.caption {
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.track {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  background: var(--surface-row-rule);
+  border-radius: 3px;
+}
+
+.subscribedFill,
+.launchedFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+}
+
+// Both bars carry the one programme hex, so the subscribed one is faded to leave the launched
+// bar as the emphasised measure; the captions, not the shades, say which is which.
+.subscribedFill {
+  opacity: 0.4;
+}
+
+.subscribedValue,
+.launchedValue {
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.subscribedValue {
+  color: var(--text-secondary);
+}
+
+.launchedValue {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}

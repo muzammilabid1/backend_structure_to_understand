@@ -1,0 +1,388 @@
+.school-overview-classes {
+    .info_snackbar {
+        margin: 16px 0;
+    }
+
+    .school-overview-add-class-button {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .MuiList-padding {
+            padding: 0;
+            .heading-three {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .enable-other-programmes-alert {
+        padding: 16px;
+        align-items: center;
+        background-color: map-get($theme-colors, auxiliary-blue-light);
+        color: map-get($theme-colors, base-black);
+        .MuiAlert-icon {
+            margin-right: 16px;
+            svg {
+                font-size: 26px;
+            }
+        }
+        .MuiAlert-message {
+            padding: 0px;
+            .paragraph {
+                margin: 0px;
+                color: map-get($theme-colors, base-black);
+                a {
+                    color: map-get($theme-colors, base-black);
+                }
+            }
+        }
+        .MuiAlert-action {
+            margin-right: 0px;
+            svg {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .school-overview-classes-paper {
+        box-shadow: 0px 4px 8px 0px rgba(214, 209, 203, 0.5);
+        .MuiAccordionDetails-root {
+            padding: 0 0 16px 0;
+            .school-overview-classDetail-accordion-header {
+                background: #fcfcfd;
+                border-bottom: 1px solid #d6d1cb;
+            }
+            .school-overview-classDetail-summary {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                .MuiButtonBase-root {
+                    // padding: 12px 29px 0 26px;
+                    a {
+                        text-decoration: none;
+                    }
+                    .MuiAccordionSummary-expandIconWrapper {
+                        color: map-get($theme-colors, base-blue-black);
+                        cursor: pointer;
+                    }
+                }
+                .MuiCollapse-root {
+                    padding: 6px 32px;
+                    .MuiAccordionDetails-root {
+                        padding: 0 0 16px 0;
+                    }
+                }
+            }
+            > .school-overview-classDetail-summary {
+                border-bottom: 1px solid #d6d1cb;
+            }
+            .not-active-class-row {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                background-color: #f5f5f5;
+                padding: 16px 30px;
+                div {
+                    width: 235px;
+                }
+                .not-active-class-progress-bar-container {
+                    .not-active-class-progress-bar {
+                        width: 192px;
+                        height: 24px;
+                        border-radius: 120px;
+                        background-color: #d6d1cb;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0px 4px 8px 0px rgba(214, 209, 203, 0.5);
+                        p {
+                            font-size: 14px;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                :first-child {
+                    .MuiButtonBase-root {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .class-overview-classname {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .school-overview-isFullProgramme-container {
+            width: 32px;
+            height: 32px;
+            background: map-get($theme-colors, principal-reading-light);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                margin-left: 2px;
+            }
+        }
+        .school-overview-isNotFullProgramme-container {
+            width: 32px;
+            height: 32px;
+            background: map-get($theme-colors, principal-maths-light);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .school-overview-isGroupAcrossClasses-container {
+            width: 32px;
+            height: 32px;
+            background: map-get($theme-colors, principal-light);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            width: 156px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        a {
+            text-decoration: none;
+            color: map-get($theme-colors, base-black);
+        }
+    }
+
+    .school-overview-classDetail-top-section {
+        margin: 24px 0;
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            margin-bottom: 6px;
+        }
+    }
+
+    .school-overview-classDetail-bottom-section {
+        display: flex;
+        align-items: center;
+        .classDetail-bottom-left {
+            width: 50%;
+            .classDetail-bottom-top {
+                margin-bottom: 24px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+        }
+        .classDetail-bottom-right {
+            width: 50%;
+            .classDetail-bottom-top {
+                margin-bottom: 24px;
+            }
+            h3 {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .school-overview-classDetail-bottom-section-alert {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 18px;
+        .MuiPaper-root {
+            width: 100%;
+            .MuiAlert-action {
+                padding: 0;
+                button {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+
+    .not-active-class-button-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+        .MuiButtonBase-root {
+            padding: 8px 16px;
+        }
+    }
+
+    .icons-cell {
+        margin: 0;
+        // Only the auto-schedule button has any real height, so without this the icons beside it
+        // stretch to match it instead of sitting on its centre line.
+        align-items: center;
+    }
+
+    // The auto-schedule action on a class's own row. Padded down from the default large button, as
+    // the Hide and Open buttons on an inactive row are, so one row's height is not set by one button.
+    .class-overview-auto-schedule-button {
+        padding: 8px 16px;
+        white-space: nowrap;
+    }
+
+    tr {
+        th:nth-child(1),
+        td:nth-child(1) {
+            padding-left: 32px;
+        }
+
+        th:nth-last-child(1),
+        td:nth-last-child(1) {
+            padding-right: 32px;
+        }
+    }
+
+    .overview_header {
+        background: map-get($theme-colors, base-background-grey);
+    }
+
+    .row_collapse_table {
+        .heading-three {
+            margin: 20px 0;
+        }
+
+        tr {
+            th {
+                background: map-get($theme-colors, base-off-white);
+
+                p {
+                    font-style: normal !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+
+        .MuiTableContainer-root {
+            box-shadow: none;
+        }
+    }
+
+    .name_with_calendar {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        p {
+            margin: 0;
+            line-height: initial;
+        }
+    }
+}
+
+.hidden-classes-container {
+    margin-bottom: 32px;
+
+    .hidden-classes-main-accordion {
+        box-shadow: none;
+        background: none;
+
+        tr {
+            th:nth-child(1),
+            td:nth-child(1) {
+                padding-left: 32px;
+            }
+
+            th:nth-last-child(1),
+            td:nth-last-child(1) {
+                padding-right: 32px;
+            }
+            th {
+                background: map-get($theme-colors, base-background-grey);
+
+                p {
+                    font-style: normal !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+
+        .school-overview-classDetail-accordion-header {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0;
+            gap: 14px;
+            .MuiAccordionSummary-content {
+                gap: 14px;
+                align-items: center;
+                margin: 0;
+                h1 {
+                    font-size: 20px;
+                }
+                .MuiChip-root {
+                    border-radius: 8px;
+                    background-color: map-get($theme-colors, auxiliary-yellow-base);
+                    height: 17px;
+                }
+            }
+            .MuiAccordionSummary-expandIconWrapper {
+                font-size: 36px;
+                transform: rotate(270deg);
+                svg {
+                    color: map-get($theme-colors, base-blue-black);
+                    font-size: 36px;
+                }
+            }
+            .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        .MuiCollapse-root {
+            .MuiAccordionDetails-root {
+                padding: 8px 0px 16px 0px;
+                .school-overview-classes {
+                    .MuiAccordionDetails-root {
+                        padding: 0 0 16px 0;
+                        .school-overview-classDetail-accordion-header {
+                            background-color: transparent;
+                        }
+                        .hidden-classes-header {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            padding: 16px 34px;
+                            div {
+                                width: 234px;
+                            }
+                        }
+                        .school-overview-classDetail-summary {
+                            .not-active-class-row {
+                                .not-active-class-button-container {
+                                    button {
+                                        background: map-get($theme-colors, principal-main-base);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Year-groups {
+    tr {
+        th:nth-child(1),
+        td:nth-child(1) {
+            padding-left: 32px;
+        }
+
+        th:nth-last-child(1),
+        td:nth-last-child(1) {
+            padding-right: 32px;
+        }
+    }
+}

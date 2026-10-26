@@ -1,0 +1,28 @@
+.rating_check_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    border: 1.27px solid map-get($theme-colors, auxiliary-yellow-base);
+    background-color: #ffff;
+    height: 27px;
+    box-shadow: 0px 1.2727272510528564px 5.090909004211426px 0px #ffefba;
+    border-radius: 5px;
+    padding: 0 10px;
+
+    .icon {
+        font-size: 24px;
+        color: map-get($theme-colors, principal-main-base);
+        display: flex;
+    }
+
+    .disabled_icon {
+        opacity: 0.5;
+    }
+
+    .star {
+        font-size: 46px;
+        margin-top: -5px;
+    }
+}

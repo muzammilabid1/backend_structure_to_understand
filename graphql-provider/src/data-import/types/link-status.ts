@@ -1,0 +1,7 @@
+export enum LinkStatus {
+    PENDING = 'PENDING',
+    SELECTED = 'SELECTED',
+    REJECTED = 'REJECTED',
+    AUTO_SELECTED = 'AUTO_SELECTED',
+    AUTO_REJECTED = 'AUTO_REJECTED'
+}

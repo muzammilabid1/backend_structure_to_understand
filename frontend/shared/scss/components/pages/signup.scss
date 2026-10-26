@@ -1,0 +1,171 @@
+.signup-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .MuiAlert-standardSuccess {
+        background-color: map-get($theme-colors, auxiliary-red-light);
+
+        .icon_color {
+            color: map-get($theme-colors, auxiliary-red-base);
+        }
+
+        .MuiButton-textSizeSmall {
+            min-width: 30px;
+            border-radius: 50%;
+        }
+    }
+
+    .mt-45 {
+        margin-top: 45px;
+    }
+
+    .social-login-card {
+        p {
+            text-align: left;
+        }
+        .common_social_account_container {
+            margin-bottom: 20px;
+
+            .MuiPaper-root {
+                width: 100%;
+            }
+        }
+    }
+
+    .common_status_container {
+        .common_status_img {
+            margin-top: 40px;
+
+            @include sm {
+                margin-top: 40px;
+            }
+        }
+        h1 {
+            margin: 60px 0;
+        }
+        .reject-invitation-p {
+            max-width: 500px;
+        }
+        .common_status_container_image {
+            max-width: 200px;
+        }
+    }
+
+    .socail_signUp_status {
+        h1 {
+            margin: 40px 0 16px 0;
+        }
+        p {
+            margin-bottom: 30px;
+        }
+    }
+
+    .email_address_disabled {
+        background: #f5f5f5;
+
+        input {
+            background: #f5f5f5;
+        }
+    }
+
+    .mb-20 {
+        margin-bottom: 20px;
+    }
+
+    .text-fields {
+        width: 50%;
+        text-align: center;
+
+        .email-btn {
+            margin-top: 18px;
+        }
+
+        @include sm {
+            width: 100%;
+            .email-btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .bottom_section {
+        text-align: start;
+        margin-bottom: 80px;
+
+        @include sm {
+            margin-bottom: 40px;
+        }
+    }
+
+    .signup-already-account-text {
+        margin-top: 24px;
+    }
+
+    .login-btn {
+        @include sm {
+            width: 100%;
+        }
+    }
+}
+
+.social-options-btn-container {
+    max-width: max-content;
+    margin: 0 auto;
+    h1 {
+        margin-top: 108px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .social-options-btn-heading {
+        margin-top: 35px;
+    }
+    .mt-32 {
+        margin-top: 32px;
+    }
+    .social-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        .lwp-social-button-wrapper {
+            min-width: 290px;
+            .MuiPaper-root {
+                box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+                padding: 0 7px;
+            }
+        }
+        .lwp-social-button-wrapper-signup {
+            width: 100%;
+            .MuiPaper-root {
+                box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+                padding: 0 7px;
+            }
+        }
+    }
+}
+
+@include sm {
+    .social-options-btn-container {
+        max-width: 100%;
+        h1 {
+            margin-top: 50px;
+        }
+        .mt-32 {
+            margin-top: 24px;
+        }
+        .social-button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            .lwp-social-button-wrapper {
+                min-width: 100%;
+                button {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

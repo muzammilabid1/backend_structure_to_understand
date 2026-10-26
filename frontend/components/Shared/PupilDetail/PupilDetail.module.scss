@@ -1,0 +1,7 @@
+@use 'sass:map';
+
+@use '../../../shared/scss/settings/_colors' as c;
+
+.highlightedField {
+    background-color: map.get(c.$theme-colors, principal-main-lighter);
+}

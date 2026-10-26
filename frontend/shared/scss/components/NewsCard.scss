@@ -1,0 +1,44 @@
+.news_card {
+    position: relative;
+
+    .MuiCardContent-root {
+        padding: 20px 12px;
+    }
+
+    .news_card_heading {
+        font-family: Chaloops-Medium;
+        font-weight: normal;
+        line-height: 34px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0;
+
+        @include sm {
+            font-size: 24px;
+        }
+    }
+
+    .news_date {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .news_description {
+        margin-top: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 8;
+        -webkit-box-orient: vertical;
+        min-height: 185px;
+        max-height: 185px;
+        overflow: hidden;
+        line-height: 23px;
+    }
+
+    .news_card_action {
+        position: absolute;
+        bottom: 14px;
+        left: 5px;
+    }
+}

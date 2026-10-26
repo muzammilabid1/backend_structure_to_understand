@@ -1,0 +1,619 @@
+.common_tebs {
+    .MuiTabs-scroller {
+        overflow-x: scroll !important;
+        border-bottom: 1px solid map-get($theme-colors, base-warm-grey);
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .MuiTabs-root {
+        margin-bottom: 24px;
+    }
+
+    .normal-link {
+        text-decoration: underline;
+        margin-left: 5px;
+        cursor: pointer;
+        color: #000000;
+        margin-bottom: 0.25rem;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .normal-text {
+        margin-left: 5px;
+    }
+
+    .normal-text::first-letter {
+        text-transform: lowercase;
+    }
+
+    .MuiButton-label {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .admin_topic_details {
+        textarea {
+            min-height: 100px;
+        }
+        .download-btn {
+            margin-bottom: 21px;
+        }
+
+        .topic-details-btn-container {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 10px 0 0;
+
+            .remove-topic-btn {
+                margin-top: 20px;
+                background-color: map-get($theme-colors, aa-red);
+
+                &:hover {
+                    background-color: map-get($theme-colors, aa-red-hover);
+                }
+            }
+        }
+    }
+
+    .heading-three {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .teacher-pupil-details {
+        .teacher-pupil-details-input {
+            max-width: 400px;
+        }
+        .parents_carers_table_container {
+            max-width: 100%;
+            .header {
+                .MuiButtonBase-root {
+                    padding-right: 0;
+                }
+            }
+            .MuiTableBody-root {
+                .MuiButtonBase-root {
+                    padding: 0 6px;
+                }
+                .MuiTableRow-root {
+                    vertical-align: top;
+                    .truncate {
+                        max-width: 275px;
+                    }
+                    .MuiTableCell-root {
+                        .parent-status-badge-container {
+                            width: max-content;
+
+                            .badge_pending_color {
+                                display: flex;
+                                align-items: center;
+                                background-color: map-get($theme-colors, auxiliary-yellow-base);
+                                padding: 0 8px;
+                                height: 23px;
+                                border-radius: 8px;
+                                p {
+                                    font-size: 12px;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                            .badge_registered_color {
+                                display: flex;
+                                align-items: center;
+                                background-color: map-get($theme-colors, auxiliary-green-base);
+                                padding: 0 8px;
+                                height: 23px;
+                                border-radius: 8px;
+                                p {
+                                    font-size: 12px;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                            .badge_imported_color {
+                                display: flex;
+                                align-items: center;
+                                background-color: map-get($theme-colors, base-warm-grey);
+                                padding: 0 8px;
+                                height: 23px;
+                                border-radius: 8px;
+                                p {
+                                    font-size: 12px;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                            .badge_red_color {
+                                display: flex;
+                                align-items: center;
+                                background-color: map-get($theme-colors, auxiliary-red-base);
+                                padding: 0 8px;
+                                height: 23px;
+                                border-radius: 8px;
+                                p {
+                                    font-size: 12px;
+                                    margin-bottom: 0 !important;
+                                }
+                            }
+                        }
+
+                        .detail_history_status_badge {
+                            width: max-content;
+                        }
+                    }
+                }
+            }
+        }
+        .mis-pupil-container {
+            margin-top: 36px;
+            h1 {
+                font-size: 24px;
+            }
+            .pupil-mis-btn {
+                margin-top: 25px;
+            }
+            .mis-pupil-detail-container {
+                h3 {
+                    margin: 35px 0;
+                    font-size: 16px;
+                }
+                .typography-text::first-letter {
+                    text-transform: none;
+                }
+            }
+        }
+        .remove-pupil-from-school {
+            margin-top: 36px;
+            h1 {
+                font-size: 24px;
+            }
+            .remove-pupil-from-school-btn {
+                margin-top: 24px;
+                background-color: map-get($theme-colors, aa-red);
+
+                &:hover {
+                    background-color: map-get($theme-colors, aa-red-hover);
+                }
+            }
+        }
+        .parent-table {
+            .typography-text::first-letter {
+                text-transform: none;
+            }
+
+            .parent_cares_for_teacher {
+                .care_header {
+                    background-color: map-get($theme-colors, base-background-grey);
+                }
+
+                tr {
+                    th:nth-child(1) {
+                        padding-left: 32px;
+                    }
+
+                    td:nth-child(1) {
+                        padding-left: 32px;
+                    }
+
+                    th:nth-last-child(1) {
+                        padding-right: 32px;
+                    }
+
+                    td:nth-last-child(1) {
+                        padding-right: 32px;
+                    }
+                }
+
+                .detail-BG {
+                    background-color: #fafafa;
+
+                    .detail_history {
+                        padding: 22px 0;
+
+                        h3 {
+                            color: #757575;
+                        }
+
+                        .history_top {
+                            display: flex;
+                            gap: 32px;
+
+                            .invitation_requested {
+                                display: flex;
+                                align-items: center;
+                                gap: 9px;
+                                p {
+                                    margin: 0;
+                                }
+                            }
+
+                            .text_nowarp {
+                                h3,
+                                p {
+                                    text-wrap: nowrap;
+                                }
+                            }
+                        }
+
+                        .history_table {
+                            margin-top: 20px;
+
+                            .common_table {
+                                tr th {
+                                    background-color: #f5f5f5;
+                                    border: none;
+
+                                    p {
+                                        font-weight: 400;
+                                    }
+                                }
+
+                                tr td {
+                                    background-color: #fafafa;
+                                    border: none;
+                                }
+
+                                .common_table_container {
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .admin-pupil-details {
+        .mis-pupil-container {
+            margin-top: 36px;
+            h1 {
+                font-size: 24px;
+            }
+            .pupil-mis-btn {
+                margin-top: 25px;
+            }
+            .mis-pupil-detail-container {
+                h3 {
+                    margin: 35px 0;
+                    font-size: 16px;
+                }
+            }
+        }
+        .remove-pupil-from-school {
+            margin-top: 36px;
+            h1 {
+                font-size: 24px;
+            }
+            .remove-pupil-from-school-btn {
+                margin-top: 24px;
+                background-color: map-get($theme-colors, aa-red);
+
+                &:hover {
+                    background-color: map-get($theme-colors, aa-red-hover);
+                }
+            }
+        }
+        .parent-table {
+            .typography-text::first-letter {
+                text-transform: none;
+            }
+        }
+        .common_accordion {
+            .admin-parent-detail-table-header {
+                width: 307px;
+                flex-basis: 19.8%;
+            }
+            .MuiAccordionDetails-root {
+                width: 100%;
+                padding: 0 0 16px 0;
+                .typography-text::first-letter {
+                    text-transform: none;
+                }
+                .admin-parent-detail-summary {
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    .admin-parent-detail-summary-content {
+                        width: 307px;
+                        p {
+                            max-width: 250px;
+                            a {
+                                text-decoration: none;
+                                color: map-get($theme-colors, base-black);
+                            }
+                        }
+                        .admin-parent-detail-badge {
+                            width: 100px;
+                        }
+                        button {
+                            padding: 0 12px 12px 12px;
+                        }
+                    }
+                }
+                .MuiAccordionSummary-expandIconWrapper {
+                    margin-top: -25px;
+                }
+                .MuiCollapse-root {
+                    padding: 0 16px;
+                    .admin-parent-accordion-summary-detail {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        .admin-parent-accordion-summary-detail-content {
+                            width: 307px;
+                        }
+                    }
+                }
+                .MuiAccordionSummary-content {
+                    .badge_pending_color {
+                        .MuiBadge-badge {
+                            background-color: map-get($theme-colors, auxiliary-yellow-base);
+                            width: max-content;
+                            padding: 0 8px;
+                            height: 23px;
+                            border-radius: 8px;
+                        }
+                    }
+
+                    .badge_registered_color {
+                        .MuiBadge-badge {
+                            background-color: map-get($theme-colors, auxiliary-green-base);
+                            width: max-content;
+                            padding: 0 8px;
+                            height: 23px;
+                            border-radius: 8px;
+                        }
+                    }
+                    .badge_imported_color {
+                        .MuiBadge-badge {
+                            background-color: map-get($theme-colors, base-warm-grey);
+                            width: max-content;
+                            padding: 0 8px;
+                            height: 23px;
+                            border-radius: 8px;
+                        }
+                    }
+                    .badge_red_color {
+                        .MuiBadge-badge {
+                            background-color: map-get($theme-colors, auxiliary-red-base);
+                            width: max-content;
+                            padding: 0 8px;
+                            height: 23px;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn_group {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .tebs {
+        width: max-content;
+        text-transform: none;
+        min-width: 72px;
+        padding: 0 24px;
+        font-size: 16px;
+        color: #000;
+        font-weight: 400;
+
+        @include md {
+            padding: 0 16px;
+        }
+        @include sm {
+            padding: 0 16px;
+        }
+
+        &:hover {
+            color: map-get($theme-colors, base-black);
+            opacity: 1;
+        }
+
+        &:focus {
+            color: map-get($theme-colors, base-black);
+            font-weight: bold;
+        }
+    }
+
+    .Mui-selected {
+        color: map-get($theme-colors, base-black);
+        font-weight: bold;
+    }
+
+    .class-topic-overview,
+    .admin-parents-overview {
+        .class-topic-filter-button,
+        .parent-filter-button {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            .filter-button {
+                color: black;
+                text-transform: initial;
+                font-weight: bold;
+            }
+            .filter-icon {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+        }
+
+        .class-topic-collapse,
+        .parent-collapse {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .feeds-filter-container {
+            margin-bottom: 20px;
+
+            .MuiCardActions-root {
+                justify-content: flex-end;
+            }
+            .MuiCardActions-spacing > :not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+        .pupil-feedacks-table {
+            .td {
+                padding: 20px 8px;
+            }
+        }
+    }
+
+    .edit-pupil-mathscot-container {
+        display: flex;
+        flex-direction: column;
+
+        .heading-one {
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        .edit-pupil-mathscot-sections {
+            display: flex;
+
+            .edit-pupil-mathscot-input-section {
+                flex: 1 1 400px;
+                padding: 20px;
+
+                .edit-pupil-mathscot-buttons {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .preview-button {
+                        margin-right: 15px;
+                    }
+                }
+
+                @include sm {
+                    order: 2;
+                    padding: 0 20px;
+                }
+            }
+
+            .edit-pupil-mathscot-preview-section {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 400px;
+                padding: 20px;
+
+                .heading-two {
+                    margin: 0 auto;
+                }
+
+                .preview-image {
+                    width: 350px;
+                    margin: 0 auto;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                @include sm {
+                    order: 1;
+                    padding: 0 20px;
+                }
+            }
+
+            @include sm {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .tab-badge {
+        margin-left: 1.5rem;
+        .MuiBadge-badge {
+            font-size: 15px;
+            color: #fff;
+            background-color: map-get($theme-colors, principal-main-base);
+            font-family: 'Chaloops-Medium';
+            border-radius: 100%;
+            aspect-ratio: 1 / 1;
+            padding: 15px;
+            line-height: 10px;
+        }
+    }
+}
+
+.delete-button {
+    background-color: map-get($theme-colors, aa-red);
+    &:hover {
+        background-color: map-get($theme-colors, aa-red-hover);
+    }
+}
+
+#commonTabsWrapper {
+    scroll-margin-top: 90px;
+    .not-active-this-year-banner-alert {
+        margin-bottom: 70px;
+    }
+}
+
+.show_date_child {
+    padding: 8px !important;
+}
+
+.show_date {
+    border-bottom: 2px dashed #757575;
+    width: fit-content;
+}
+
+.common_tab_mobile {
+    p {
+        text-transform: none;
+        font-size: 14px;
+    }
+
+    .tab_heading {
+        font-family: Verdana !important;
+        font-weight: bold !important;
+    }
+
+    .active {
+        font-weight: bold;
+    }
+
+    .truncate {
+        max-width: -webkit-fill-available;
+    }
+
+    .scroll-left {
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+
+        p {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            transform: translateX(0);
+            white-space: nowrap;
+            animation: scroll-left 15s linear infinite;
+        }
+    }
+    /* Move it (define the animation) */
+    @keyframes scroll-left {
+        0%,
+        25% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%); /* Move to the left */
+        }
+    }
+}

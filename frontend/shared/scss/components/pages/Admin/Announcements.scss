@@ -1,0 +1,125 @@
+.admin-announcements {
+    .admin-announcements-header {
+        margin-bottom: 50px;
+        .heading-one {
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+        .lwp-button {
+            font-size: 14px;
+        }
+    }
+    .admin-announcements-list {
+        .paragraph,
+        .heading-one {
+            margin-bottom: 0px;
+        }
+        .heading-one {
+            font-size: 20px;
+        }
+        .admin-announcements-table {
+            .th,
+            .td {
+                padding: 16px;
+            }
+
+            .tr,
+            .tr_row {
+                .td:first-child,
+                .th:first-child {
+                    padding-left: 32px;
+                }
+                .td:last-child,
+                .th:last-child {
+                    padding-right: 32px;
+                }
+            }
+
+            .announcement-message {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: fit-content;
+                img {
+                    width: 35px;
+                    height: 35px;
+                    object-fit: contain;
+                }
+            }
+            .announcement-menu {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.announcement-pages-popover {
+    width: 420px;
+    max-width: 80vw;
+
+    .heading-three {
+        font-size: 14px;
+        margin: 8px 0 4px;
+    }
+}
+
+.announcement-menu-popover {
+    .MuiListItem-root:last-child {
+        .paragraph,
+        span.material-icons {
+            margin-bottom: 0px;
+            color: map-get($theme-colors, auxiliary-red-base);
+        }
+    }
+}
+
+.admin-announcement-form {
+    max-width: 813px;
+    margin: auto;
+
+    .paragraph {
+        margin-bottom: 0px;
+    }
+
+    .admin-announcement-form-heading {
+        margin-bottom: 31px;
+    }
+
+    .select-predefined-image {
+        .MuiOutlinedInput-notchedOutline {
+            border: 1px solid #000 !important;
+        }
+    }
+
+    .image_upload_neated_container {
+        .image-preview {
+            max-width: 150px;
+        }
+    }
+
+    .admin-announcement-form-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        > div {
+            display: flex;
+            gap: 16px;
+        }
+
+        .lwp-button {
+            font-size: 14px;
+        }
+    }
+}
+
+.select-predefined-image-options {
+    .MuiMenuItem-root {
+        display: flex;
+        justify-content: center;
+        border-radius: 4px;
+    }
+    .selected-predefined-image {
+        border: 1px solid map-get($theme-colors, principal-main-base);
+    }
+}

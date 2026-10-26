@@ -1,0 +1,39 @@
+.activity-page-card {
+    padding: 5em 10em;
+    box-shadow: $standard-shadow;
+    overflow: visible;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: $base-radius;
+
+    @include sm {
+        padding: 1.5em;
+    }
+
+    .main-heading {
+        // margin-bottom: 1.5em;
+        @include sm {
+            display: none;
+        }
+    }
+
+    .typography-text::first-letter {
+        text-transform: none;
+    }
+
+    @include activityAndModalStyles;
+
+    .activity-btn {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+
+        .lwp-button {
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+}

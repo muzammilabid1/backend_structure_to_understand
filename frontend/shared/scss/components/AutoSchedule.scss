@@ -1,0 +1,351 @@
+// The class auto-schedule page: /class/[class_id]/auto-schedule.
+//
+// These rules were written for the assign-sequence dialog this page replaces, so most of them are
+// carried over unchanged. Anything that was compensating for the dialog itself has gone, and the
+// page furniture the dialog supplied (a heading, a footer) is declared here instead.
+
+.auto-schedule-page {
+    // The dialog was capped at 900px, and the preview table's date columns read no better for being
+    // stretched across a wide screen, so the page keeps a comparable measure.
+    max-width: 960px;
+
+    .auto-schedule-heading {
+        margin: 24px 0 8px;
+    }
+
+    // Grid implements spacing as a negative margin on the container and padding on the items, so
+    // every container here would otherwise pull itself up into whatever sits above it. Declared
+    // before the per-block rules below so those win at equal specificity.
+    .MuiGrid-container {
+        margin-top: 0;
+    }
+
+    .assign-sequence-intro {
+        margin: 0 0 24px !important;
+    }
+
+    .assign-sequence-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 140px;
+        padding: 24px 0;
+
+        .paragraph {
+            margin: 0 !important;
+            color: map-get($theme-colors, dark-warm-grey);
+        }
+    }
+
+    .assign-sequence-hint {
+        color: map-get($theme-colors, dark-warm-grey);
+        font-size: 14px;
+        margin: 10px 0 0 !important;
+    }
+
+    // Grid's spacing is implemented as negative margins on the container and padding on the items,
+    // so a container needs its own bottom margin or the next block sits flush against the fields.
+    .assign-sequence-fields {
+        margin-bottom: 4px;
+    }
+
+    .assign-sequence-summary {
+        font-weight: 700;
+        margin: 28px 0 0 !important;
+    }
+
+    .sequence-items-table {
+        margin: 12px 0 24px;
+    }
+
+    // The rows carry inline controls, so they need more height than a plain text table would.
+    .sequence-items-table-row {
+        padding: 16px 12px;
+    }
+
+    .sequence-items-table-head {
+        padding: 0 12px 10px;
+    }
+
+    .assign-sequence-callout {
+        margin-top: 4px;
+        padding: 8px 16px;
+        border-radius: 8px;
+
+        ul {
+            margin: 8px 0 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 6px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .assign-sequence-nothing-to-add {
+        margin: 4px 0 8px !important;
+    }
+
+    // Sits between the yellow callout and the action row. The same treatment as the other hints on
+    // this page, but with air above it: the callout has no bottom margin, so a 10px gap would read as
+    // the last line of the callout rather than as a note about the button below it.
+    .assign-sequence-skip-note {
+        color: map-get($theme-colors, dark-warm-grey);
+        font-size: 14px;
+        margin: 20px 0 0 !important;
+    }
+
+    // What the dialog footer used to provide. Same shape as the other full-page forms in the
+    // codebase, which right-align a text cancel followed by the primary action.
+    .assign-sequence-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        margin: 32px 0 40px;
+    }
+
+    // CommonStatus is only ever styled under a page ancestor elsewhere, so the empty state needs its
+    // own spacing here rather than inheriting any.
+    .auto-schedule-empty-state {
+        padding: 40px 0;
+
+        p {
+            max-width: 420px;
+        }
+    }
+}
+
+// The Money Skills page: /class/[class_id]/money-skills-auto-schedule.
+//
+// It carries `.auto-schedule-page` as well, so the scheduler step's layout and both of the states
+// above are inherited whole and only the explainer needs rules of its own.
+.money-skills-auto-schedule-page {
+    // The explainer is a centred message rather than a page of fields, so it is not held to the
+    // form's measure: it centres in the whole content area, as drawn. Two classes, to out-specify
+    // the max-width above on the element they share.
+    &.money-skills-auto-schedule-page-explainer {
+        max-width: none;
+    }
+
+    .money-skills-auto-schedule-intro {
+        padding: 40px 0;
+
+        // The mascot is drawn at 390px wide and CommonStatus caps its images at 200 by 180, which
+        // would shrink this one to a thumbnail. The height cap is declared !important there, so
+        // lifting it needs the same.
+        .common_status_container_image {
+            max-width: 390px;
+            max-height: none !important;
+        }
+
+        // Heading and mascot are centred by CommonStatus. The body copy is not: a paragraph this
+        // long reads better left-aligned, and the design draws it that way, in a column the width of
+        // the mascot above it.
+        .money-skills-auto-schedule-intro-body {
+            max-width: 390px;
+
+            .paragraph {
+                margin-top: 24px;
+            }
+        }
+
+        // Right-aligned under the copy, the same shape as the form's own action row: a text dismiss
+        // followed by the primary action.
+        .money-skills-auto-schedule-intro-actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            margin-top: 32px;
+
+            // CommonStatus spaces its own single button 40px from the copy above it, which here would
+            // apply to each button inside the row instead of to the row.
+            .lwp-button {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+// The Auto-schedule entry point on the Topic library page (/school/[school_id]/topic-library), and
+// the class picker it opens. Kept here rather than with the Topic library's own styles because it
+// belongs to auto-scheduling and shares its treatment.
+.auto-schedule-entry-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    // The row holds its height whether or not the button is in it. The availability query resolves
+    // after the page has painted, so without this the filter grid below would jump the moment the
+    // answer arrives, which is exactly when someone is reaching for it.
+    //
+    // 44px rather than the large text button's own 42.25px, so the reserved height is the larger of
+    // the two and the row cannot be grown by the button it holds. The margins are the gap the page's
+    // <br/> used to supply here.
+    min-height: 44px;
+    margin: 16px 0 8px;
+
+    .lwp-button {
+        // Flush with the filter grid's right edge below it, rather than inset by the button's own
+        // horizontal padding.
+        margin-right: -8px;
+    }
+}
+
+.auto-schedule-class-menu {
+    .MuiPaper-root {
+        min-width: 280px;
+        max-width: 360px;
+    }
+
+    .auto-schedule-class-menu-heading {
+        line-height: 1.4;
+        padding-top: 12px;
+        padding-bottom: 8px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    // The two groups a leader sees. A teacher only ever has one, so these are not rendered at all
+    // rather than sitting above a single list and labelling the obvious.
+    .auto-schedule-class-group {
+        line-height: 1.4;
+        padding-top: 8px;
+        padding-bottom: 4px;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    .auto-schedule-class-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        .auto-schedule-class-year {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.6);
+            flex: none;
+        }
+    }
+
+    // Says once why a class the viewer expected is not in the list, rather than a disabled row per
+    // class saying it again. A plain <li> because it is not selectable and must not take focus.
+    .auto-schedule-class-menu-note {
+        padding: 10px 16px 4px;
+        margin-top: 4px;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        font-size: 12px;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.6);
+        white-space: normal;
+    }
+}
+
+// "Set a topic" and its two tabs, for leaders and admins (LEA-6687). Left-aligned, as the design
+// draws it, where a teacher keeps the Topic library's own centred heading.
+.set-a-topic-header {
+    margin-bottom: 24px;
+}
+
+// The Auto schedule tab: one banner per programme not yet scheduled.
+//
+// Full width rather than the auto-schedule page's measure, so the tab bar is the same length on both
+// tabs and does not jump when switching. Two classes, to out-specify that max-width.
+.auto-schedule-page.set-a-topic-auto-schedule {
+    max-width: none;
+}
+
+.set-a-topic-auto-schedule {
+    // The summary table is a card in the design, with room above it and no accent on its rows.
+    .auto-schedule-tab-intro {
+        margin-bottom: 24px !important;
+    }
+
+    .sequence-items-table {
+        margin-top: 0;
+        background: map-get($theme-colors, base-white);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+        .sequence-items-table-head {
+            padding-top: 12px;
+        }
+
+        .sequence-items-table-row {
+            border-left: none;
+        }
+    }
+
+    .auto-schedule-none-scheduled {
+        margin: 0 0 24px;
+        font-family: Chaloops-Medium;
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+    // MUI's sm breakpoint, where the summary cells stop sharing a line.
+    @media (max-width: 599px) {
+        .sequence-items-table-head {
+            display: none;
+        }
+
+        .sequence-items-table-row [data-label]::before {
+            content: attr(data-label);
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+}
+
+// One programme's call to auto-schedule, on the Auto schedule tab (LEA-6687) and the school
+// overview (LEA-6688).
+.auto-schedule-programme-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 12px 20px 12px 12px;
+    border-radius: 4px;
+    background: map-get($theme-colors, auxiliary-yellow-light);
+
+    img {
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+        border-radius: 50%;
+        object-fit: contain;
+        background: map-get($theme-colors, principal-main-light);
+    }
+
+    &[data-programme='MONEY_SKILLS'] {
+        background: map-get($theme-colors, auxiliary-green-light);
+
+        img {
+            background: map-get($theme-colors, auxiliary-green-base);
+        }
+    }
+
+    .auto-schedule-programme-banner-text {
+        flex: 1;
+        margin: 0 !important;
+        font-weight: 700;
+    }
+
+    // MUI's sm breakpoint: the button drops under the text rather than squeezing it into a narrow column.
+    @media (max-width: 599px) {
+        flex-wrap: wrap;
+
+        .auto-schedule-programme-banner-text {
+            flex-basis: calc(100% - 52px);
+        }
+    }
+}

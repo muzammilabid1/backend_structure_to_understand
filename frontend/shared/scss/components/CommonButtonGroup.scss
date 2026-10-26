@@ -1,0 +1,27 @@
+.button_group_btn_group {
+    .btn_group {
+        width: 100%;
+        button {
+            width: 100%;
+            text-transform: none;
+        }
+    }
+
+    .btn_group_type {
+        color: #000;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px;
+    }
+
+    .btn_group_active {
+        background: #fff6d9;
+        border: 1px solid rgba(242, 141, 0, 0.5) !important;
+        z-index: 1;
+    }
+
+    .btn_group_rest {
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.12) !important;
+    }
+}

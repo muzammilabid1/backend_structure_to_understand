@@ -1,0 +1,41 @@
+.mathscot-with-bubble-text {
+    .typography-text::first-letter {
+        text-transform: none;
+    }
+    .preview-topic-img {
+        display: flex;
+        justify-content: center;
+        margin: 2.5em 0;
+
+        .img_container {
+            width: 112px;
+            margin-right: 25px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .speech-bubble-class {
+            width: 50%;
+
+            @include sm {
+                width: 80%;
+            }
+
+            .speech-bubble {
+                padding: 2.5em;
+
+                @include sm {
+                    padding: 16px;
+                }
+
+                .speech-bubble-text {
+                    font-size: 14px;
+                    line-height: 140.625%;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

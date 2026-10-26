@@ -1,0 +1,8 @@
+.cropper-view-box {
+    outline: 1px solid map-get($theme-colors, principal-main-base);
+    outline-color: map-get($theme-colors, principal-main-base);
+}
+
+.cropper-line, .cropper-point {
+    background-color: map-get($theme-colors, principal-main-base);
+}

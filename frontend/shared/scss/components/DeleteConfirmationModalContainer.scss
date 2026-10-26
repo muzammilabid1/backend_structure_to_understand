@@ -1,0 +1,24 @@
+.confirmation-modal {
+    .dialog-title {
+        padding-bottom: 0;
+        margin-bottom: 16px;
+    }
+
+    .MuiDialogContent-root {
+        padding-top: 0;
+    }
+
+    .mb-25 {
+        margin-bottom: 25px;
+    }
+}
+
+.delete-confirmation-modal {
+    .dialog-side-btn {
+        .dialog-action {
+            button {
+                background-color: map-get($theme-colors, auxiliary-red-base);
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.public-impact-report-header-container {
+    width: calc(100vw - 22px);
+    margin-left: calc(-50vw + 50% + 11px);
+    background-color: #fef3e2;
+    margin-bottom: 64px;
+    margin-top: -15px;
+    .public-impact-report-header {
+        max-width: 1080px;
+        padding: 32px;
+        margin: auto;
+        box-sizing: border-box;
+    }
+    @include sm {
+        .public-impact-report-header {
+            padding: 24px;
+        }
+        .impact_report_logo {
+            display: none;
+        }
+    }
+}

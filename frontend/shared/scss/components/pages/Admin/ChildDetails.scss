@@ -1,0 +1,22 @@
+.child_details {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+            margin-bottom: 30px;
+        }
+        .header-view-button {
+            display: flex;
+            gap: 24px;
+            .MuiButtonBase-root {
+                background: map-get($theme-colors, base-warm-grey);
+                .material-icons {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+    }
+}

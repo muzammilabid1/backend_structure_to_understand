@@ -1,0 +1,15 @@
+.common_list {
+    .MuiListItem-root {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .MuiList-padding {
+        padding: 0;
+    }
+    .home-icon {
+        color: map-get($theme-colors, auxiliary-pink-base) !important;
+    }
+    .school-icon {
+        color: map-get($theme-colors, auxiliary-blue-base) !important;
+    }
+}

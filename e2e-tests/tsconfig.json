@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "target": "es5",
+        "checkJs": true,
+        "allowJs": true,
+        "outDir": "build",
+    },
+    "include": [
+        "cypress/**/*.js"
+    ],
+    "exclude": [
+        "node_modules",
+        "build"
+    ],
+}

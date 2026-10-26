@@ -1,0 +1,56 @@
+.comment-card-container {
+    margin: 2em 0;
+    border-radius: $base-radius;
+
+    .comment-card {
+        display: flex;
+        gap: 40px;
+        // justify-content: space-between;
+        align-items: center;
+        box-shadow: $standard-shadow;
+        padding: 1em 2em 0 2em;
+        background-color: transparent;
+
+        @include sm {
+            padding: 0;
+            box-shadow: none;
+            background-color: map-get($theme-colors, base-white);
+        }
+
+        .comment-card-left-sec {
+            width: 100%;
+            .MuiOutlinedInput-input {
+                background-color: transparent !important;
+            }
+            @include sm {
+                width: 100%;
+            }
+        }
+
+        .child-comment-card-left-sec {
+            width: 200px;
+            @include sm {
+                display: none;
+            }
+            @include md {
+                margin: 0;
+            }
+            .side-image {
+                height: 200px;
+                object-fit: contain;
+            }
+        }
+
+        .comment-card-right-sec {
+            width: 30%;
+
+            @include sm {
+                display: none;
+            }
+            .side-image {
+                height: 220px;
+                object-fit: contain;
+            }
+        }
+    }
+}

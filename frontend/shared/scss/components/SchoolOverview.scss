@@ -1,0 +1,350 @@
+.school-overview {
+    .school-overview-header {
+        margin-bottom: 16px;
+        .heading-one {
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+    }
+    .school-overview-card-container {
+        width: 100%;
+        max-width: 317px;
+        min-height: 320px;
+        max-height: 320px;
+        margin: 0 auto;
+
+        p.title::first-letter {
+            text-transform: lowercase;
+        }
+    }
+
+    .extra-width {
+        max-width: 270px;
+    }
+
+    // The auto-schedule prompt (LEA-6688) takes the cards' usual gap above it, and sits closer to the
+    // licence summary below it, as the design spaces them.
+    .head-card-section + .auto-schedule-programme-banner {
+        margin-top: 46px;
+    }
+
+    .auto-schedule-programme-banner + .school-overview-classDetail-page {
+        margin-top: 24px;
+    }
+
+    .school-overview-classDetail-page {
+        margin-top: 46px;
+        .school-overview-alert-container {
+            margin: 20px 0;
+            width: 100%;
+            min-height: 63.13px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: map-get($theme-colors, auxiliary-blue-light);
+            padding: 10px 5px;
+            box-sizing: border-box;
+
+            .school-overview-left {
+                display: flex;
+                align-items: center;
+                .school-overview-alert-mathscot-container {
+                    width: 38px;
+                    height: 38px;
+                    background: #39b0e299;
+                    border-radius: 25px;
+                    margin-left: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 45px;
+                        height: 43px;
+                        object-fit: none;
+                        margin-left: 8px;
+                    }
+                }
+                .school-overview-alert-text {
+                    margin: 0 10px 0 20px;
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .school-overview-right {
+                margin-right: 15px;
+                .material-icons {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .not-active-class-table {
+            background: #f5f5f5;
+        }
+
+        .not-active-class-progress-bar {
+            width: 192px;
+            height: 24px;
+            border-radius: 120px;
+            background-color: #d6d1cb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 8px 0px rgba(214, 209, 203, 0.5);
+            p {
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+        }
+
+        .not-active-class-button-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            .MuiButtonBase-root {
+                padding: 8px 16px;
+            }
+
+            .button_hide {
+                background-color: transparent;
+            }
+        }
+
+        .snackbar {
+            .info_snackbar {
+                .icon_color {
+                    color: map-get($theme-colors, auxiliary-blue-base);
+                }
+            }
+        }
+    }
+
+    .school-statistics {
+        .signups-chart,
+        .school-topics {
+            .heading-one {
+                text-align: center;
+            }
+        }
+
+        .classes-sign-up-chart {
+            .classes-sign-up-chart-header {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+            }
+
+            .common-column-chart {
+                .common-column-chart-paper {
+                    padding: 40px 0 20px 0;
+
+                    .chart-input-select {
+                        max-width: 150px;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+
+        .school-statistics-grid {
+            margin: 20px 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .common-pie-chart {
+                width: 335px;
+
+                @include sm {
+                    width: 100%;
+                }
+                @include md {
+                    width: 100%;
+                }
+            }
+
+            @include sm {
+                flex-direction: column;
+            }
+            @include md {
+                flex-direction: column;
+            }
+        }
+    }
+
+    .card_body {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding-bottom: 0 !important;
+        margin-top: 40px;
+        img {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+        }
+        .second-card-img {
+            margin-left: -38px;
+        }
+    }
+
+    .count {
+        font-size: 42px;
+        text-align: center;
+        font-family: Verdana;
+        font-weight: bold;
+        color: map-get($theme-colors, base-blue-black);
+    }
+
+    .title {
+        font-family: Verdana;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .go-to-activity-feed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        margin-top: 9px;
+        .title {
+            width: 100%;
+            text-decoration: underline;
+            color: map-get($theme-colors, auxiliary-blue-base);
+        }
+        ::first-letter {
+            text-transform: none !important;
+        }
+        img {
+            width: auto;
+            height: 20px;
+            object-fit: contain;
+        }
+    }
+
+    .card-img {
+        width: 90%;
+    }
+
+    .all-class-details {
+        margin-top: 80px;
+    }
+
+    .paddingTop-0 {
+        padding-top: 0;
+    }
+}
+
+// The one-time Money Skills welcome (LEA-6505), to Figma frame 29797:10424. Top level because a dialog
+// renders outside the page.
+.money-skills-welcome-modal {
+    .MuiDialogContent-root {
+        padding: 32px 40px;
+
+        // The design is desktop-only; on a phone its 40px sides leave the text in a narrow column.
+        @include sm {
+            padding: 24px 20px;
+        }
+    }
+
+    .money-skills-welcome-content {
+        img {
+            display: block;
+            width: 322px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 40px;
+        }
+
+        .heading-two {
+            margin: 0 0 18px;
+            line-height: 1.40625;
+        }
+
+        // The design's two paragraphs, a blank line apart.
+        .paragraph {
+            margin: 0 0 22px;
+            line-height: 1.40625;
+        }
+    }
+
+    .money-skills-welcome-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24px;
+        margin-top: 30px;
+    }
+}
+
+.school-imported-data-sync {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background-color: map-get($theme-colors, auxiliary-yellow-light);
+    padding: 32px;
+    border-radius: 8px;
+    margin: 0px auto 32px auto;
+    width: 100%;
+    box-sizing: border-box;
+
+    @include sm {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px;
+        margin: 32px auto;
+        img {
+            max-width: 95px;
+        }
+    }
+
+    img {
+        max-height: 165px;
+    }
+    .sync-message-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+        @include sm {
+            align-items: center;
+        }
+        .heading-one,
+        .paragraph {
+            margin-bottom: 0px;
+        }
+        .heading-one {
+            font-size: 32px;
+        }
+        .paragraph {
+            line-height: 22.5px;
+        }
+        .lwp-button {
+            margin-top: 8px;
+        }
+        .error-text {
+            margin: 0px;
+            font-size: 16px;
+            align-items: center;
+            color: map-get($theme-colors, auxiliary-red-base) !important;
+            line-height: 16px;
+            .error-icon {
+                color: map-get($theme-colors, auxiliary-red-base);
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}

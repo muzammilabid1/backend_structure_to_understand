@@ -1,0 +1,61 @@
+.snackbar {
+    // padding: 18px;
+    .MuiAlert-standardSuccess {
+        min-height: 64px;
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+    }
+
+    .MuiPaper-root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .MuiAlert-action {
+        .MuiButton-root {
+            margin-bottom: 6px;
+        }
+    }
+
+    .MuiSvgIcon-root {
+        color: map-get($theme-colors, principal-main-base);
+        font-size: 26px;
+    }
+
+    .MuiAlert-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .MuiAlert-message {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// .premium_status_label {
+//   background-color: map-get($theme-colors, auxiliary-yellow-light);
+//   display: flex;
+//   align-items: center;
+//   padding: 18px;
+
+//   @include sm {
+//     padding: 12px;
+//   }
+
+//   .paragraph {
+//     margin-left: 18px;
+//     margin-right: 5px;
+//   }
+
+//   .MuiSvgIcon-root {
+//     color: map-get($theme-colors, principal-main-base);
+//     font-size: 26px;
+//   }
+
+//   .Link {
+//     text-decoration: underline;
+//     margin: 0;
+//     cursor: pointer;
+//   }
+// }

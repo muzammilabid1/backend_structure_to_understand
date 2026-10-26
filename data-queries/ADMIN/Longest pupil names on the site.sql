@@ -1,0 +1,1 @@
+select concat(firstname, ' ', lastname) as name, length(concat(firstname, ' ', lastname)) as length from lwp_pupil order by length(concat(firstname, lastname)) desc limit 25

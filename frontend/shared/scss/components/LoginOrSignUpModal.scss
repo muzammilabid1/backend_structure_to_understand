@@ -1,0 +1,170 @@
+.login-or-signup-modal {
+    .dialog-content-section {
+        padding: 0;
+        .dialog-side-btn {
+            padding: 0 0.5em;
+            .dialog-action {
+                span {
+                    button {
+                        display: none;
+                        background-color: map-get($theme-colors, base-warm-grey);
+                        height: 52px;
+                    }
+                }
+            }
+        }
+    }
+
+    .MuiDialog-paper {
+        background-color: transparent !important;
+    }
+
+    .login-or-signup-modal-inner-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 90px;
+        margin-top: 50px;
+
+        .login-or-signup-modal-inner-content-image {
+            max-width: 230px;
+            max-height: 230px;
+        }
+
+        .login-or-signup-modal-inner-content-image-container {
+            display: flex;
+        }
+
+        .heading-one {
+            margin-top: 8px;
+            font-size: 32px;
+        }
+
+        .paragraph {
+            margin-top: 8px;
+            white-space: pre-line;
+        }
+
+        .login-or-signup-modal-inner-content-button-container {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .lwp-button {
+                margin-top: 30px;
+                font-size: 14px;
+                height: 52px;
+
+                @include sm {
+                    width: 95%;
+                }
+            }
+
+            .primaryBtn {
+                margin-left: 32px;
+                min-width: 128px;
+            }
+
+            .secondaryBtn {
+                background-color: map-get($theme-colors, base-warm-grey);
+                width: 118px;
+            }
+
+            .login-or-signup-invitation-modal {
+                width: 100%;
+                .primaryBtn {
+                    width: 100%;
+                    margin-left: 0;
+                    background-color: map-get($theme-colors, base-warm-grey);
+                }
+            }
+
+            @include sm {
+                width: 70%;
+                display: flex;
+                flex-direction: column;
+                .secondaryBtn {
+                    display: none;
+                }
+
+                span {
+                    width: 70%;
+                    .primaryBtn {
+                        margin-left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+
+            @include customRange(320, 540) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                .secondaryBtn {
+                    display: none;
+                }
+
+                span {
+                    width: 100%;
+                    .primaryBtn {
+                        margin-left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        .login-or-signup-modal-inner-content {
+            margin: 0;
+        }
+        .dialog-content-section {
+            .dialog-side-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .dialog-action {
+                    width: 70%;
+                    display: flex;
+                    justify-content: center;
+                    span {
+                        width: 70%;
+                        button {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include customRange(320, 540) {
+        .dialog-content-section {
+            .dialog-side-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .dialog-action {
+                    width: 100%;
+                    span {
+                        width: 100%;
+                        button {
+                            width: 100%;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.reading-log-slider-modal {
+    .MuiBackdrop-root {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}

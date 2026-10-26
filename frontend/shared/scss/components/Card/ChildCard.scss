@@ -1,0 +1,343 @@
+.grid-card > .child-card-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 280px;
+    width: 100%;
+    box-shadow: $standard-shadow !important;
+    border-radius: $base-radius;
+    cursor: pointer;
+    height: fit-content;
+
+    .child-card-bg {
+        background-position: center;
+        background-repeat: repeat;
+        background-size: inherit;
+        height: 216px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 19px;
+
+        .isBlur_child_common_card {
+            opacity: 0.2;
+        }
+
+        .child_common_card {
+            position: relative;
+            > div {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .child_card_on_complete {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            img {
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        .rating-star {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            @include sm {
+                margin-top: 10px;
+                justify-content: space-between;
+            }
+
+            .round-rating-star {
+                border: 1.27px solid map-get($theme-colors, auxiliary-yellow-base);
+                background-color: #ffff;
+                height: 27px;
+                box-shadow: 0px 1.2727272510528564px 5.090909004211426px 0px #ffefba;
+                border-radius: 5px;
+                padding: 0 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .check_icon {
+                position: absolute;
+                font-size: 60px;
+                color: #fff;
+                background: #00303c;
+                border-radius: 50%;
+            }
+        }
+
+        .side-rating-star {
+            // display: flex;
+            // justify-content: center;
+            // align-items: flex-start;
+            // flex-direction: row-reverse;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+
+            .MuiRating-root {
+                position: absolute;
+                // right: -40px;
+                // top: -16px;
+                right: -10px;
+                top: -10px;
+            }
+        }
+
+        // old code
+        .child_img_container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .child-image {
+                height: 190px;
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+
+        // new code
+        .card_img_container {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // height: 100%;
+            // width: 100%;
+            width: 160px;
+            height: 160px;
+            margin: 0 auto;
+
+            .child_image {
+                width: 105px;
+                margin-top: 22px;
+            }
+        }
+        .card_reading_container {
+            margin: 0 auto;
+            .child-image {
+                height: 150px;
+                object-fit: contain;
+                width: 90%;
+            }
+        }
+
+        .child-image {
+            // height: 190px;
+            height: 150px;
+            object-fit: contain;
+            max-width: 246px;
+        }
+
+        .edit-icon-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-radius: 4px;
+            color: map-get($theme-colors, principal-main-base);
+
+            &:hover {
+                transition: 0.5s;
+                background-color: rgba(255, 255, 255, 0.4);
+            }
+
+            .edit-icon {
+                top: 0.75em;
+                right: 0.75em;
+                padding: 10px;
+            }
+        }
+
+        .active-border {
+            border-top: 8px solid;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    .child-card-name-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        min-height: 76px;
+        height: auto;
+        position: relative;
+    }
+}
+
+.scrapbook-card {
+    .SCRAPBOOK-bg {
+        background-color: map-get($theme-colors, principal-light) !important;
+    }
+
+    .SCRAPBOOK-color {
+        color: map-get($theme-colors, principal-main-base) !important;
+    }
+}
+
+.reading_img {
+    text-align: center;
+    .child_card_heading {
+        font-size: 24px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+
+.reading-card-container {
+    @include sm {
+        display: flex;
+        flex-direction: column;
+
+        .rating_check_container {
+            display: flex;
+            // flex-direction: row;
+        }
+    }
+}
+
+.reading_img {
+    text-align: center;
+    .child_card_heading {
+        font-size: 24px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+
+.popup:hover {
+    transform: translateY(-4px) scale(1.004);
+    transition-duration: 0.15s;
+}
+
+.ENGLISH-bg {
+    background-color: map-get($theme-colors, principal-english-light);
+}
+
+.ENGLISH-bg-light {
+    background-color: #e3f5f9;
+}
+
+.MATHS-bg {
+    background-color: map-get($theme-colors, principal-maths-light);
+}
+
+.MATHS-bg-light {
+    background-color: #eef5dd;
+}
+
+.TOPIC-bg {
+    background-color: map-get($theme-colors, principal-maths-light);
+}
+
+.TOPIC-bg-light {
+    background-color: #eef5dd;
+}
+.SCRAPBOOK-bg {
+    background-color: map-get($theme-colors, auxiliary-yellow-light);
+}
+
+.SCRAPBOOK-bg-light {
+    background-color: map-get($theme-colors, auxiliary-yellow-light);
+}
+
+.TOPIC_ACTIVITY-bg-light {
+    background-color: #fef6ef;
+}
+
+.OTHER-bg {
+    background-color: map-get($theme-colors, base-off-white);
+}
+
+.OWN-bg {
+    background-color: map-get($theme-colors, principal-main-light);
+}
+
+.READING-bg {
+    background-color: map-get($theme-colors, principal-reading-light);
+}
+.READING-bg-light,
+.READING-NOT-COUNTING-TOWARDS-TARGET-bg-light {
+    background-color: #ecefff;
+}
+
+.READ-bg {
+    background-color: map-get($theme-colors, principal-reading-light);
+}
+
+.ENGLISH-color {
+    color: map-get($theme-colors, principal-english-base) !important;
+}
+
+.MATHS-color {
+    color: map-get($theme-colors, principal-maths-base) !important;
+}
+
+.TOPIC-color {
+    color: map-get($theme-colors, principal-maths-base) !important;
+}
+
+.OTHER-color {
+    color: map-get($theme-colors, principal-main-base) !important;
+}
+
+.OWN-color {
+    color: map-get($theme-colors, principal-main-light) !important;
+}
+
+.NOT-OWN-color {
+    color: map-get($theme-colors, dark-warm-grey) !important;
+}
+
+.READING-color {
+    color: map-get($theme-colors, principal-reading-base) !important;
+}
+
+.SCRAPBOOK-color {
+    color: map-get($theme-colors, auxiliary-yellow-base) !important;
+}
+
+.READ-color {
+    color: map-get($theme-colors, principal-reading-base) !important;
+}
+
+.READING-NOT-COUNTING-TOWARDS-TARGET-color {
+    color: map-get($theme-colors, dark-warm-grey) !important;
+}

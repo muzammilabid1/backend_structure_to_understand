@@ -1,0 +1,395 @@
+.readinglog-for-parent-page {
+    width: 100%;
+    .readinglog-input {
+        width: 80%;
+    }
+    button.common-tool-tip-icon {
+        padding: 0;
+        border: none;
+        background: none;
+        color: inherit;
+        line-height: 1;
+        &:focus-visible {
+            outline: 2px solid map-get($theme-colors, principal-main-base);
+            outline-offset: 2px;
+        }
+    }
+    .reading-mode-card-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        margin-top: 24px;
+        margin-bottom: 32px;
+        // Matches .readinglog-input, so the cards line up with the book name field below them.
+        width: 80%;
+        .reading-mode-card-background {
+            box-sizing: border-box;
+            position: relative;
+            flex: 1 1 0;
+            height: 99px;
+            border: 1px solid map-get($theme-colors, base-warm-grey);
+            border-radius: 5.891px;
+            cursor: pointer;
+            &:focus-visible {
+                outline: 2px solid map-get($theme-colors, principal-main-base);
+                outline-offset: 2px;
+            }
+            .reading-mode-card-disc {
+                position: absolute;
+                top: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: map-get($theme-colors, auxiliary-yellow-light);
+            }
+            img {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            // Spans the card rather than a fixed width, which overflows once the cards flex narrower.
+            .paragraph {
+                position: absolute;
+                top: 74px;
+                left: 0;
+                right: 0;
+                margin: 0;
+                padding: 0 6px;
+                font-size: 12px;
+                line-height: 1.4;
+                text-align: center;
+            }
+            .reading-mode-radio-button {
+                position: absolute;
+                right: 8px;
+                top: 2px;
+                .MuiButtonBase-root {
+                    padding: 0;
+                    svg {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .active {
+            background: #fff8f0;
+            border: 1px solid map-get($theme-colors, principal-main-base);
+        }
+        @include sm {
+            flex-wrap: wrap;
+            gap: 12px;
+            width: 100%;
+
+            // Exactly two per row, filling the width. A max-width here would leave the grid
+            // narrower than the fields below it on mid-size phones.
+            .reading-mode-card-background {
+                flex: 0 0 calc(50% - 6px);
+            }
+        }
+    }
+
+    // Spacing only. The error text is styled by .error-message, and a font-size here would win.
+    .reading-type-heading {
+        margin-top: 24px;
+    }
+
+    .reading-optional-heading {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 24px;
+
+        .paragraph {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+
+    .reading-type-chip-container {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        .reading-type-chip {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            height: 38px;
+            padding: 8px 12px;
+            border: 1px solid map-get($theme-colors, base-warm-grey);
+            border-radius: 5.891px;
+            cursor: pointer;
+            .paragraph {
+                margin: 0;
+            }
+            .reading-type-chip-radio {
+                display: flex;
+                .MuiButtonBase-root {
+                    padding: 0;
+                    svg {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .active {
+            background: #fff8f0;
+            border: 1px solid map-get($theme-colors, principal-main-base);
+        }
+        @include sm {
+            flex-wrap: wrap;
+        }
+    }
+
+    .suggested-books-container {
+        max-width: 80%;
+        @include sm {
+            max-width: 100%;
+        }
+    }
+
+    .mandatory-field::after {
+        content: '*';
+        color: map-get($theme-colors, auxiliary-red-base);
+    }
+    .readinglog-comment-box {
+        margin-top: 24px;
+        background-color: map-get($theme-colors, principal-reading-light);
+        padding: 0 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 4px;
+        .MuiList-root {
+            .MuiListItemIcon-root {
+                min-width: 30px;
+                .material-icons {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+        .input-field {
+            label.Mui-focused {
+                background-color: #ffffff;
+            }
+            .MuiInputBase-root {
+                padding: 0;
+            }
+        }
+    }
+    .upload-img-right-content {
+        background-color: map-get($theme-colors, principal-reading-light);
+        padding: 0 14px 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 4px;
+        .MuiListItemIcon-root {
+            min-width: 30px;
+            .material-icons {
+                color: map-get($theme-colors, base-blue-black);
+            }
+        }
+        .recoder-img-conatiner {
+            background: rgba(255, 255, 255, 0.4);
+            width: -webkit-fill-available;
+            .audio-player-container {
+                width: 100%;
+                .audio-player {
+                    width: 100%;
+                    audio {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .image_upload_neated_container {
+            width: -webkit-fill-available;
+            .dropzone-container {
+                background: rgba(255, 255, 255, 0.4);
+                .dropzone-para {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .image-uploaded-container {
+        background-color: map-get($theme-colors, principal-reading-light);
+        padding: 0 14px 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 4px;
+        .MuiListItemIcon-root {
+            min-width: 30px;
+            .material-icons {
+                color: map-get($theme-colors, base-blue-black);
+            }
+        }
+        .image_upload_neated_container {
+            width: -webkit-fill-available;
+            .dropzone-container {
+                background: map-get($theme-colors, principal-reading-light);
+                border: none;
+                .MuiBox-root {
+                    width: 100%;
+                    .dropzone-para {
+                        margin-bottom: 0;
+                        .lwp-button-wrapper {
+                            button {
+                                width: 157px;
+                                background: none;
+                                .material-icons {
+                                    color: map-get($theme-colors, base-blue-black);
+                                }
+                            }
+                            :hover {
+                                background-color: rgba(0, 0, 0, 0.04);
+                            }
+                        }
+                    }
+                    img {
+                        border-radius: 8px;
+                        width: 100%;
+                        max-height: 600px;
+                        object-fit: contain;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .error-message {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        p {
+            color: map-get($theme-colors, auxiliary-red-base);
+            font-size: 12px;
+        }
+    }
+    .readinglog-input-card-container {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-top: 24px;
+        .readinglog-input-card {
+            padding: 8px 22px;
+            border: 3px solid map-get($theme-colors, base-warm-grey);
+            border-style: dashed;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .readinglog-input-card-image-text {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                flex-direction: column;
+                color: map-get($theme-colors, principal-reading-dark);
+                h1 {
+                    font-size: 16px;
+                    color: map-get($theme-colors, principal-reading-dark);
+                }
+                h2 {
+                    font-size: 14px;
+                    color: map-get($theme-colors, principal-reading-dark);
+                }
+            }
+        }
+
+        .readinglog-input-disable {
+            cursor: not-allowed;
+        }
+
+        .comment-card {
+            padding: 8px 14px;
+        }
+
+        .extra-width {
+            max-width: 130px;
+            @include sm {
+                max-width: 100%;
+            }
+        }
+
+        .width {
+            max-width: 100px;
+            @include sm {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .on-teacher {
+        .readinglog-input-card {
+            h2 {
+                white-space: pre;
+            }
+        }
+    }
+
+    @include sm {
+        .readinglog-input {
+            width: 100%;
+        }
+
+        .readinglog-thoughts-fields {
+            margin-left: -32px;
+            width: calc(100% + 64px);
+            .upload-img-right-content {
+                .recoder-img-conatiner {
+                    width: -webkit-fill-available !important;
+                }
+            }
+        }
+
+        .readinglog-input-card-container {
+            gap: 14px;
+            .readinglog-input-card {
+                width: 91px;
+                height: 107px;
+                padding: 0;
+            }
+            .comment-card {
+                padding: 0;
+            }
+        }
+
+        .on-teacher {
+            flex-direction: column;
+            .readinglog-input-card {
+                width: 100%;
+            }
+
+            .readinglog-input-heading {
+                margin-top: unset !important;
+            }
+        }
+    }
+
+    @include maw(425) {
+        .readinglog-input-card-container {
+            flex-direction: column;
+            .readinglog-input-card {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+// The definitions render inside a MUI tooltip portal on body, so nesting this under the page
+// class above would never match.
+.reading-mode-definitions {
+    p {
+        margin: 0 0 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

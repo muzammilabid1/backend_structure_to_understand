@@ -1,0 +1,169 @@
+.faq-container {
+    .main-heading {
+        margin: 2rem 0 4rem 0;
+
+        @include sm {
+            display: none;
+        }
+    }
+}
+
+.faqs_container {
+    margin: 0px auto;
+    margin-top: 160px;
+    flex-direction: column;
+
+    @include sm {
+        margin-top: 100px;
+    }
+
+    .heading {
+        margin-bottom: 40px;
+        font-size: 32px;
+        text-align: center;
+        line-height: 45px;
+
+        @include sm {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.teacher-faqs-container {
+    .teacher-faqs-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+
+            .heading-one {
+                font-size: 24px;
+                margin-bottom: 0px;
+            }
+            .lwp-button {
+                font-size: 14px;
+            }
+            @include maw(560) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        .faq-card {
+            height: 77px;
+            .MuiAccordion-root {
+                height: 100%;
+                border-radius: 4px;
+                background: #fff;
+                box-shadow: 0 4px 8px 0 rgba(214, 209, 203, 0.5);
+                border: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .MuiAccordionSummary-root {
+                    gap: 10px;
+                    .MuiAccordionSummary-content {
+                        margin: 16px 0px;
+                        width: 100%;
+                        .heading-two {
+                            width: 100%;
+                            margin-bottom: 0px;
+                            font-size: 16px;
+                            line-height: 22.5px;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                    .MuiAccordionSummary-expandIconWrapper {
+                        svg {
+                            color: map-get($theme-colors, base-blue-black);
+                        }
+                    }
+                }
+                .MuiAccordionDetails-root {
+                    padding: 16px 0px 24px 0px;
+                    margin: 0px 16px 0px 16px;
+                    border-top: 1px solid map-get($theme-colors, base-warm-grey);
+                }
+            }
+        }
+        .expanded-faq {
+            height: unset;
+            .MuiAccordionSummary-content {
+                .heading-two {
+                    display: block !important;
+                    overflow: visible !important;
+                    text-overflow: unset !important;
+                    -webkit-line-clamp: unset !important;
+                    -webkit-box-orient: unset !important;
+                }
+            }
+        }
+        .contact-info {
+            border-radius: 16px;
+            background-color: map-get($theme-colors, base-white);
+            box-shadow: 0 4px 8px 0 rgba(214, 209, 203, 0.5);
+            padding: 32px;
+            display: flex;
+            gap: 32px;
+
+            @include maw(500) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            img {
+                object-fit: contain;
+            }
+            .contact-info-details {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .heading-one,
+                .paragraph {
+                    margin-bottom: 0px;
+                }
+
+                .heading-one {
+                    font-size: 24px;
+                }
+                .paragraph {
+                    line-height: 22.5px;
+                    a {
+                        color: map-get($theme-colors, principal-english-base);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ask-question-dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .ask-question-dialog-header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .heading-three {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    .ask-question-dialog-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        .lwp-button {
+            font-size: 14px;
+        }
+    }
+}

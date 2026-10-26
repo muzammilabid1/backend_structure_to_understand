@@ -1,0 +1,92 @@
+.change-reading-week-start {
+    p {
+        padding: 1em;
+    }
+    summary {
+        margin-left: 20px;
+        text-indent: -20px;
+        cursor: pointer;
+    }
+    strong {
+        text-decoration: underline;
+        text-decoration-color: map-get($theme-colors, auxiliary-red-base);
+    }
+}
+
+.update-reading-week-confirmation-modal em {
+    color: map-get($theme-colors, auxiliary-red-base);
+    font-style: normal;
+}
+
+.programme-options-container {
+    .common-select-field {
+        margin-top: 14px;
+    }
+
+    .programme-options-checkbox {
+        .Mui-disabled {
+            .material-icons {
+                color: map-get($theme-colors, dark-warm-grey) !important;
+            }
+            .MuiFormControlLabel-label {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .programme-options-checkbox-container {
+        margin-bottom: 15px;
+
+        .programme-options-licence-checkbox {
+            display: flex;
+            align-items: center;
+        }
+
+        .activate-money-skills-text {
+            margin-left: 31px;
+            margin-top: -5px;
+            font-size: 14px;
+            font-weight: 400;
+            a {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.activate-money-skills-modal {
+    .activate-money-skills-modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 42px;
+        padding: 20px 0px;
+        .activate-money-skills-modal-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            .paragraph {
+                max-width: 500px;
+                text-align: center;
+                line-height: 22.5px;
+            }
+        }
+        .activate-money-skills-modal-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            button {
+                padding: 10px 40px;
+            }
+            @include maw(425) {
+                flex-direction: column-reverse;
+                button {
+                    width: 100%;
+                    padding: 8px 20px;
+                }
+            }
+        }
+    }
+}

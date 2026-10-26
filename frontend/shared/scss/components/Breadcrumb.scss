@@ -1,0 +1,14 @@
+.breadcrumb-item {
+  .breadcrumb-link-text {
+    font-size: 1rem;
+    font-weight: normal;
+    cursor: pointer;
+    font-weight: bold;
+    color: map-get($theme-colors, netural-blue-black);
+    margin-bottom: 0.25rem;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

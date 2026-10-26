@@ -1,0 +1,1 @@
+These queries may be too slow to be executed as part of the standard query set on prod. They are recommended to be executed on staging, or in a local environment.

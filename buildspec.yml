@@ -1,0 +1,50 @@
+version: 0.2
+
+batch:
+    fast-fail: false
+    build-list:
+        - identifier: BuildArtifact
+          ignore-failure: false
+        - identifier: StagingSync
+          buildspec: buildspec-staging-sync.yml
+          ignore-failure: true
+
+phases:
+    install:
+        # runtime-versions:
+        #   nodejs: 20.x
+        commands:
+            - echo build type $LWP_BUILD_TYPE started
+            - ./release/install_node.sh
+            - node -v
+            - npm -v
+            - npm install -g yarn
+            - yarn -v
+    pre_build:
+        commands:
+            - echo Installing source NPM dependencies...
+            - yarn install --production=false
+    build:
+        commands:
+            - echo Build started on `date`
+            - if [ "$LWP_ENV" == 'dev' ]; then yarn frontend:build; fi
+            - yarn graphql:build
+            - if [ "$LWP_BUILD_TYPE" == 'stage' ]; then yarn analytics:build; fi
+            - if [ "$LWP_BUILD_TYPE" == 'stage' ] || [ "$LWP_BUILD_TYPE" == 'production' ]; then yarn spm-dashboard:build; fi
+            - ./release/createServices.js
+    post_build:
+        commands:
+            - echo Build completed on `date`
+            - ./release/launch.sh
+artifacts:
+    files:
+        - '**/*'
+    enable-symlinks: yes
+    exclude-paths:
+        - .releaseignore
+        - .gitignore
+        - .git
+        - temp
+        - docker-compose.yml
+        - docker-readme.md
+        - ormlogs.log

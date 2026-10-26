@@ -1,0 +1,68 @@
+.audio-player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .audio-download > span {
+        background-color: #f28d00;
+        margin-left: 10px;
+        border-radius: 50%;
+        padding: 7px;
+        font-size: 30px;
+        color: black;
+        cursor: pointer;
+    }
+
+    .readinglog-audio-player {
+        width: 100%;
+        .rhap_container {
+            background-color: transparent;
+            box-shadow: none;
+            .rhap_main {
+                .rhap_progress-section {
+                    .rhap_time {
+                        font-size: 16px;
+                        font-family: Verdana;
+                    }
+                    .rhap_progress-container {
+                        .rhap_progress-bar {
+                            background-color: map-get($theme-colors, base-warm-grey);
+                            height: 2px;
+                            .rhap_progress-indicator {
+                                background-color: map-get($theme-colors, principal-main-base);
+                            }
+                            .rhap_progress-filled {
+                                background-color: map-get($theme-colors, principal-main-base);
+                            }
+                        }
+                    }
+                }
+                .rhap_controls-section {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 45px;
+                    .rhap_additional-controls {
+                        display: none;
+                    }
+                    .rhap_main-controls {
+                        button {
+                            color: map-get($theme-colors, base-blue-black);
+                            width: 36px;
+                            height: 36px;
+                            font-size: 36px;
+                        }
+                    }
+                    .rhap_volume-controls {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        .audio-player > audio {
+            width: 250px;
+        }
+    }
+}

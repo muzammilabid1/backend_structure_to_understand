@@ -1,0 +1,229 @@
+.email_handler {
+    .email_template_Table {
+        .tr_row {
+            background-color: #fff;
+            box-shadow: none;
+            height: 60px;
+            .template_type {
+                display: flex;
+                gap: 10px;
+                > span {
+                    background-color: #fff6d9;
+                    height: 25px;
+                    width: 25px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .draft-icon {
+                    background-color: #fff;
+                }
+            }
+        }
+
+        .row_grey {
+            background-color: #f5f5f5;
+        }
+        .row_draft {
+            background-color: #fff6d9;
+            .MuiChip-filled {
+                margin-left: 10px;
+                border-radius: 7px;
+                .MuiChip-label {
+                    padding: 0px 10px;
+                }
+            }
+        }
+    }
+}
+
+.Common_btn_group {
+    display: flex;
+    justify-content: center;
+
+    .btn_group_type {
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .btn_group_active {
+        background: #ffd19b;
+    }
+    .btn_group_rest {
+        background: #fff;
+    }
+}
+
+.message_stats {
+    width: 337px;
+    padding: 0 15px;
+    color: #000;
+
+    .statsList {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0 0;
+    }
+
+    .statsList li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #d6d1cb;
+        padding: 5px 0;
+        font-size: 16px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .number {
+        margin-left: auto;
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.Status_stats {
+    width: 458px;
+    padding: 0 15px;
+
+    .statsList {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0 0;
+    }
+
+    .statsList li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #d6d1cb;
+        padding: 5px 0;
+    }
+}
+
+.edit_email_template {
+    .rdw-storybook-editor {
+        border: 1px solid rgba(0, 0, 0, 0.23);
+        padding: 10px 20px;
+        border-radius: 10px;
+        min-height: 300px;
+    }
+
+    .edit_email_heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .email_option {
+        .common_radio_container {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+
+        .common_radio_button .common_radio_border label {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-radio-check {
+            .radio-check {
+                padding-bottom: 0;
+            }
+        }
+
+        .common_radio_button .common_radio_border p {
+            margin: 0;
+        }
+    }
+
+    .email_template_save_btn {
+        .top_container {
+            cursor: pointer;
+            display: flex;
+            .lwp-button-wrapper {
+                width: 100%;
+            }
+            .lwp-button {
+                width: 100%;
+                border-radius: 4px 0 0 4px;
+            }
+            .save_btn_expand_more {
+                border-radius: 0 4px 4px 0;
+                background-color: #ff9705;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.remove-message-btn {
+    background-color: map-get($theme-colors, aa-red);
+
+    &:hover {
+        background-color: map-get($theme-colors, aa-red-hover);
+    }
+}
+
+.email_template_warning_modal {
+    .modal-content {
+        width: 514px;
+        height: 220px;
+    }
+    .warning_modal_sub_heading {
+        margin-top: 16px;
+    }
+
+    .warning_modal_btns {
+        display: flex;
+        height: 60%;
+        align-items: self-end;
+        justify-content: flex-end;
+        gap: 24px;
+    }
+}
+
+.email_template_perview_modal {
+    .modal-content {
+        min-width: 1256px;
+    }
+
+    height: 876px;
+    margin: auto;
+
+    .common_card {
+        box-shadow: none !important;
+    }
+}
+
+.message_layout_preview_modal {
+    .common_card {
+        box-shadow: none !important;
+    }
+}
+
+.resizable-editor {
+    resize: vertical; /* or 'both' to allow resizing in both directions */
+    overflow: auto; /* Needed to enable resizing */
+    box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+    height: 400px;
+
+    .cm-editor {
+        // height: 400px;
+        height: 100%;
+    }
+}
+
+.error_snackbar {
+    max-width: 700px !important;
+}

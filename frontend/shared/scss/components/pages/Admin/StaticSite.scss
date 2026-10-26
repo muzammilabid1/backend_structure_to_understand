@@ -1,0 +1,45 @@
+.static_site_for_admin_pages_container {
+    .MuiListItemIcon-root {
+        min-width: 35px;
+    }
+
+    .staff_avatar {
+        width: 100%;
+    }
+
+    .MuiList-padding {
+        padding: 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        h2 {
+            flex: 1;
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+        }
+    }
+}
+
+.add_video_tutorial {
+    .img_container {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+
+        .play_icon {
+            width: 25%;
+            position: absolute;
+        }
+    }
+
+    .thumbnail_img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,259 @@
+.class_details {
+    .class-register-header-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 24px;
+        .class-register-header-image-reading {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-reading-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 34px;
+                height: 18px;
+                margin-left: 3px;
+                object-fit: none;
+            }
+        }
+        .class-register-header-image-fullProgramme {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-maths-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 28px;
+                height: 31px;
+                object-fit: none;
+            }
+        }
+        .class-register-header-image-group-across-classes {
+            width: 34px;
+            height: 34px;
+            background-color: map-get($theme-colors, principal-light);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 28px;
+                height: 31px;
+                object-fit: none;
+            }
+        }
+        .heading {
+            font-size: 1.5rem;
+            margin-right: 22px;
+        }
+    }
+    .register-diabel-check {
+        // margin-bottom: 12px;
+        .Mui-disabled {
+            .typography-text {
+                color: map-get($theme-colors, dark-warm-grey);
+            }
+        }
+    }
+    .general-heading {
+        margin-bottom: 20px;
+    }
+    .class-detail-form {
+        max-width: 400px;
+        min-width: 100px;
+        margin-top: 40px;
+        .class-detail-programme-section {
+            margin-top: 32px;
+            .programme-info-alert-container {
+                width: 100%;
+                min-height: 63.13px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                background-color: map-get($theme-colors, auxiliary-blue-light);
+                margin: 16px 0;
+                padding: 10px 0px;
+                .programme-info-alert-mathscot-container {
+                    width: 38px;
+                    height: 38px;
+                    background: rgba(57, 176, 226, 0.6);
+                    border-radius: 25px;
+                    margin-left: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 45px;
+                        height: 43px;
+                        object-fit: none;
+                        margin-left: 8px;
+                    }
+                }
+                .programme-info-alert-text {
+                    margin: 0 10px 0 20px;
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .programme-class-info {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 21px;
+                width: 590px;
+                p {
+                    color: map-get($theme-colors, base-blue-black);
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+                .material-icons {
+                    width: 25px;
+                    height: 25px;
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+            .date-picker-error {
+                .date-picker-field {
+                    background-color: map-get($theme-colors, auxiliary-red-light);
+                    .MuiFormLabel-root {
+                        color: map-get($theme-colors, base-black);
+                        background-color: map-get($theme-colors, auxiliary-red-light);
+                    }
+                    .MuiOutlinedInput-notchedOutline {
+                        border: 1px solid map-get($theme-colors, auxiliary-red-base);
+                    }
+                }
+            }
+            .date-picker-field {
+                width: 100%;
+                .MuiInputAdornment-root {
+                    button {
+                        color: map-get($theme-colors, base-blue-black);
+                    }
+                }
+            }
+            .disabled-field {
+                width: 100%;
+            }
+            .date-error-message {
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+                margin-bottom: 8px;
+                .MuiSvgIcon-root {
+                    font-size: 14px;
+                    margin-top: 8px;
+                    color: map-get($theme-colors, auxiliary-red-base);
+                }
+                p {
+                    margin-top: 8px;
+                    font-size: 12px;
+                    color: map-get($theme-colors, auxiliary-red-base);
+                }
+            }
+            @include sm {
+                .programme-class-info {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .registration-class {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        gap: 20px;
+    }
+
+    .teacher-heading {
+        margin-bottom: 20px;
+        margin-top: 32px;
+    }
+
+    .add-teacher-container {
+        max-width: 100%;
+        max-height: 67px;
+        background: #ffffff;
+        box-shadow: 0px 4px 8px 0px #d6d1cb80;
+        padding: 10px 16px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4;
+        font-weight: bold;
+        .title {
+            padding: 16px 5px 16px 0px;
+            font-size: 14px;
+        }
+        .add-btn {
+            border: 3px solid #f28d00;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #f28d00;
+            font-weight: bold;
+        }
+    }
+
+    .reading-log-settings-container {
+        display: flex;
+        flex-direction: column;
+        .reading-log-heading {
+            margin-top: 30px;
+        }
+        .reading-log-select {
+            margin-top: 14px;
+        }
+        .reading-log-not-available {
+            display: flex;
+            margin-top: 12px;
+            .reading-log-class-icon {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .custom-alert-skip-pupil {
+        background-color: #fffdf7;
+        border: 1px solid map-get($theme-colors, auxiliary-yellow-base);
+
+        .MuiAlert-icon {
+            color: map-get($theme-colors, auxiliary-yellow-base);
+        }
+    }
+
+    .invite_them_now {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+        cursor: pointer;
+
+        p {
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+    .update_buttons {
+        display: flex;
+        gap: 25px;
+        margin-top: 25px;
+    }
+}
+
+.class-detail-programme-modal {
+    .dialog-content-section {
+        .dialog-title {
+            padding: 16px 24px 0 24px;
+        }
+        .MuiDialogContent-root {
+            padding: 16px 24px 45px 24px;
+        }
+    }
+}

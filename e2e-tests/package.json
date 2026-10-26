@@ -1,0 +1,44 @@
+{
+    "name": "e2e-tests",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "test": "cypress run",
+        "test:chrome": "cypress run --browser chrome",
+        "graphql-test": "yarn cypress:run --headless --config video=false --reporter junit --spec \"cypress/integration/graphql/**/*\"",
+        "build": "echo",
+        "start": "echo",
+        "format": "prettier --write '**/*.js'",
+        "lint:fix": "eslint . --ext .js --fix",
+        "lint": "eslint . --ext .js"
+    },
+    "devDependencies": {
+        "@faker-js/faker": "^10.5.0",
+        "@playwright/test": "^1.48.2",
+        "@types/faker": "^5.5.3",
+        "@types/luxon": "^3.4.2",
+        "@types/node": "^22.9.0",
+        "cypress-fail-fast": "^7.1.1",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-react": "^7.21.5",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-simple-import-sort": "^12.0.0",
+        "globals": "^15.9.0",
+        "graphql-request": "^3.3.0",
+        "prettier": "^3.0.0"
+    },
+    "dependencies": {
+        "@lwp/postgres-client": "*",
+        "cypress": "^14.2.0",
+        "cypress-file-upload": "^5.0.8",
+        "cypress-iframe": "^1.0.1",
+        "eslint": "^9.0.0",
+        "faker": "^5.5.3",
+        "graphql": "^15.5.3",
+        "graphql-request": "^3.5.0",
+        "jwt-decode": "^4.0.0",
+        "luxon": "^3.5.0"
+    }
+}

@@ -1,0 +1,39 @@
+// Scrapbook Prompt Card styles
+.scrapbook-prompt-card {
+    border: 1.5px solid map-get($theme-colors, principal-main-base);
+    border-radius: 12px;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .scrapbook-prompt-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: map-get($theme-colors, principal-main-base);
+
+        .heading-three {
+            font-size: 14px;
+            font-weight: 700;
+            margin: 1px 0px 0px 0px !important;
+            color: map-get($theme-colors, principal-main-base);
+        }
+    }
+
+    .scrapbook-prompt {
+        margin: 17px 0 20px;
+    }
+
+    .scrapbook-prompt-description {
+        background: map-get($theme-colors, auxiliary-green-light);
+        border-radius: 4px;
+        padding: 12px;
+        .paragraph {
+            font-style: italic;
+            font-size: 11px;
+            margin: 0 !important;
+            line-height: 15px;
+        }
+    }
+}

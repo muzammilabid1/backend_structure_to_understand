@@ -1,0 +1,66 @@
+.suggested-books-container {
+    display: flex;
+    gap: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+    align-items: stretch;
+    margin-top: 24px;
+    margin-bottom: 32px;
+
+    @include sm {
+        max-width: 100%;
+        overflow-x: auto;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .suggested-books-card {
+            min-width: 215px;
+        }
+    }
+
+    .suggested-books-card {
+        flex: 1;
+        max-width: 33.33%;
+        padding: 7px;
+        display: flex;
+        min-height: 75px;
+        align-items: center;
+        box-sizing: border-box;
+        border-radius: 5.891px;
+        border: 1px solid map-get($theme-colors, base-warm-grey);
+        background: map-get($theme-colors, base-white);
+        cursor: pointer;
+
+        .paragraph {
+            margin: 10px 8px;
+            font-family: Verdana;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 145.625%;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .book-finished-icon {
+            align-self: flex-start;
+        }
+    }
+
+    .suggested-books-card-active {
+        border: 1px solid map-get($theme-colors, principal-main-base);
+        background: #fff8f0;
+    }
+
+    .disabled {
+        cursor: not-allowed !important;
+    }
+}

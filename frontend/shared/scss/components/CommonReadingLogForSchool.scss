@@ -1,0 +1,67 @@
+.school-reading-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    .school-reading-container {
+        .school-reading-days {
+            display: flex;
+            justify-content: space-between;
+            p {
+                display: flex;
+                justify-content: center;
+                width: 22px;
+            }
+            .visible-day {
+                display: flex;
+                justify-content: center;
+                border-radius: 11px;
+                background-color: map-get($theme-colors, auxiliary-blue-light);
+            }
+        }
+        .school-reading-icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            .reading-icon {
+                width: 22px;
+
+                .reading-image {
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+            .no-reading-found {
+                width: 100%;
+                background-color: map-get($theme-colors, base-off-white);
+                border-radius: 4px;
+                text-align: center;
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.MuiModal-root {
+    .MuiPaper-root {
+        .school-reading-popoverContent-container {
+            width: 320px;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 15px;
+            .school-reading-popoverContent-image {
+                margin-top: 4px;
+
+                img {
+                    width: 24px;
+                }
+            }
+            .school-reading-popoverContent-text {
+                margin-left: 15px;
+                color: map-get($theme-colors, base-blue-black);
+            }
+        }
+    }
+}

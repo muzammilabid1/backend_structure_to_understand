@@ -1,0 +1,96 @@
+.pupils_not_assigned {
+    .acton_icon {
+        display: flex;
+        gap: 16px;
+        button {
+            padding: 5px;
+        }
+        .material-icons {
+            color: map-get($theme-colors, base-blue-black);
+        }
+    }
+
+    .pupils_not_assigned_heading {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    > .paragraph {
+        margin-bottom: 32px;
+    }
+
+    .common_tebs {
+        .MuiTab-root {
+            max-width: 410px;
+        }
+    }
+    .MuiDataGrid-columnSeparator {
+        display: none;
+    }
+    .MuiDataGrid-columnHeaderTitle {
+        font-weight: bold;
+    }
+    .MuiCheckbox-root {
+        color: black;
+    }
+    .MuiDataGrid-footerContainer {
+        display: none;
+    }
+    .pupils_delete {
+        color: #fff;
+    }
+    .snackBar_close {
+        color: #fff;
+    }
+
+    .pupils-not-in-class-accordion {
+        box-shadow: none;
+        background: none;
+        margin-top: 10px;
+
+        &::before {
+            display: none;
+        }
+
+        .pupils-not-in-class-accordion-header {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0;
+            gap: 14px;
+            margin-top: 26px;
+
+            .MuiAccordionSummary-content {
+                gap: 14px;
+                align-items: center;
+                margin: 0;
+                h1 {
+                    font-size: 20px;
+                }
+                .MuiChip-root {
+                    border-radius: 8px;
+                    background-color: map-get($theme-colors, auxiliary-yellow-base);
+                    height: 17px;
+                }
+            }
+            .MuiAccordionSummary-expandIconWrapper {
+                font-size: 36px;
+                transform: rotate(270deg);
+                svg {
+                    color: map-get($theme-colors, base-blue-black);
+                    font-size: 36px;
+                }
+            }
+            .MuiAccordionSummary-expandIconWrapper.Mui-expanded {
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        .pupils-not-in-class-accordion-details {
+            padding: 0px;
+            .main_sortable_table {
+                > div {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

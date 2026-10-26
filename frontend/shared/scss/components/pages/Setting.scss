@@ -1,0 +1,153 @@
+.setting-container {
+    .main-heading {
+        margin: 2rem 0 2.5rem 0;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    .setting-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .setting-content {
+            max-width: 504px;
+            width: 100%;
+
+            .account-settings-heading {
+                font-size: 1.5rem;
+                padding-bottom: 1.25rem;
+            }
+
+            .delete-acount-btn {
+                .lwp-button {
+                    background-color: map-get($theme-colors, aa-red);
+
+                    &:hover {
+                        background-color: map-get($theme-colors, aa-red-hover);
+                    }
+                }
+            }
+        }
+        .parent-setting-content {
+            max-width: 700px;
+            width: 100%;
+
+            .account-settings-heading {
+                font-size: 1.5rem;
+                padding-bottom: 1.25rem;
+            }
+
+            .delete-acount-btn {
+                .lwp-button {
+                    background-color: map-get($theme-colors, aa-red);
+
+                    &:hover {
+                        background-color: map-get($theme-colors, aa-red-hover);
+                    }
+                }
+            }
+            .login-options-wrapper {
+                margin-top: 72px;
+                h1 {
+                    margin: 0 0 1.25rem 0;
+                }
+                @include sm {
+                    position: relative;
+                    margin-top: 62px;
+                    .login-option-wrapper {
+                        width: calc(100% + 47px);
+                        margin-left: -24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .lwp-button {
+        font-size: 14px;
+    }
+
+    .truncate {
+        max-width: 170px;
+    }
+
+    .class_details {
+        h1 {
+            margin-top: 64px;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+        p {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.account-setting-heading {
+    font-size: 1.5rem;
+    padding-bottom: 1.25rem;
+}
+
+.parents_carers_table_container {
+    .badge-color {
+        width: 70px;
+    }
+    .truncate {
+        max-width: 170px;
+    }
+    .badge_pending_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, auxiliary-yellow-base);
+            width: max-content;
+
+            // margin-left: 20px;
+        }
+    }
+
+    .badge_registered_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, auxiliary-green-base);
+            width: max-content;
+            // margin-left: 20px;
+        }
+    }
+    .badge_imported_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, base-warm-grey);
+            width: max-content;
+            // margin-left: 20px;
+        }
+    }
+    .badge_red_color {
+        .MuiBadge-badge {
+            background-color: map-get($theme-colors, auxiliary-red-base);
+            width: max-content;
+            // margin-left: 20px;
+        }
+    }
+    .parents-carers-table-icons {
+        color: map-get($theme-colors, base-blue-black);
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            flex: 1;
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+        }
+    }
+
+    .MuiListItemIcon-root {
+        min-width: 35px;
+    }
+
+    .makeStyles-table-37 {
+        min-width: 0;
+    }
+}

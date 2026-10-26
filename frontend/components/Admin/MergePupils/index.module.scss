@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+@use '../../../shared/scss/settings/_colors' as c;
+
+$spacing: 1rem;
+
+.comparePupilsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: $spacing;
+    > * {
+        &.selected {
+            outline: 3px solid orange;
+        }
+        header {
+            display: flex;
+            gap: 0.25rem;
+            align-items: baseline;
+            margin: 0 1rem;
+            padding: 1rem 0 0.5rem 0;
+            border-bottom: 1px solid map.get(c.$theme-colors, base-warm-grey);
+        }
+        flex-basis: calc(50% - $spacing);
+        flex-grow: 1;
+        border: 1px solid map.get(c.$theme-colors, base-warm-grey);
+    }
+    margin-bottom: $spacing * 2;
+}

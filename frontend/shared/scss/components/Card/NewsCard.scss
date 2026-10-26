@@ -1,0 +1,42 @@
+.news-card-container {
+  padding: 1.5em;
+  box-shadow: $standard-shadow !important;
+  border-radius: $base-radius;
+  margin-bottom: 1.5em;
+  border-top: 4px solid map-get($theme-colors, principal-main-base);
+
+  @include sm {
+    padding: 1em;
+  }
+
+  .news-card-content {
+    padding: 0;
+
+    &:last-child {
+      padding: 0;
+    }
+
+    .heading-one {
+      font-size: 1.5em;
+      @include sm {
+        font-size: 1em;
+      }
+    }
+
+    .news-card-date {
+      font-size: 14px;
+      @include sm {
+        font-size: 12px;
+      }
+    }
+
+    .description {
+      padding-top: 1.5em;
+      display: inline-block;
+      @include sm {
+        padding-top: 1em;
+        font-size: 14px;
+      }
+    }
+  }
+}

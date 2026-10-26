@@ -1,0 +1,31 @@
+.topic_detail_container {
+    .class-progrees-card {
+        padding: 1em;
+    }
+    .topic-detail-page p {
+        color: map-get($theme-colors, base-blue-black);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        width: fit-content;
+    }
+
+    .common_accordion {
+        .MuiAccordionSummary-expandIconWrapper {
+            color: map-get($theme-colors, base-blue-black);
+            cursor: pointer;
+        }
+    }
+
+    .topic-detail-title {
+        font-size: 24px;
+    }
+}
+
+.pupilTopic-popover-text {
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+
+.pupilTopic-popover-text-container > p:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,140 @@
+.preview-email-details {
+    font-style: italic;
+    margin-left: 2em;
+}
+
+.dialog-sub-heading {
+    font-size: 14px;
+}
+
+.update-topic-modal {
+    .dialog-content-section {
+        .MuiDialogContent-root {
+            padding: 0 24px 20px 24px;
+            .topic-preview-and-resources {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                margin-bottom: 18px;
+            }
+            .topic-review-text {
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.material-icons {
+    color: #000000;
+}
+
+.skip-pupils {
+    display: flex;
+    align-items: center;
+}
+
+.skip-toolTip {
+    display: flex;
+}
+
+.topic-review-text {
+    font-size: 14px;
+    margin-bottom: 1.5em;
+}
+.topic-message-input {
+    margin-top: 20px;
+}
+
+.helper-text {
+    color: map-get($theme-colors, base-black);
+    font-size: 14px;
+}
+
+.preview-topic-modal-inner-content {
+    background-color: map-get($theme-colors, base-white);
+    padding: 6em;
+
+    @include sm {
+        padding: 2em 1em;
+    }
+
+    // .preview-topic-img {
+    //   display: flex;
+    //   justify-content: center;
+    //   margin: 2.5em 0;
+
+    //   .speech-bubble-class {
+    //     width: 50%;
+
+    //     .speech-bubble {
+    //       padding: 2.5em;
+
+    //       .speech-bubble-text {
+    //         font-size: 18px;
+    //         font-family: Chaloops-Medium;
+    //       }
+    //     }
+    //   }
+    // }
+
+    .preview-topic-child-cards {
+        margin: 2em 0;
+    }
+}
+
+.preview-activity-modal-inner-content {
+    background-color: map-get($theme-colors, base-white);
+    padding: 6em 15em;
+
+    @include sm {
+        padding: 2em 2em;
+    }
+    @include md {
+        padding: 2em 7em;
+    }
+
+    .preview-activity-img {
+        display: flex;
+        flex-direction: column;
+        margin: 2.5em 0;
+
+        .activity-img {
+            object-fit: contain;
+        }
+    }
+}
+
+.pupil_book_history_modal {
+    .MuiDialogContent-root {
+        padding: 24px;
+    }
+
+    .MuiDialog-paper {
+        width: 873px;
+    }
+
+    .switch-container {
+        margin: 0;
+    }
+
+    .read_on {
+        display: flex;
+        @include sm {
+            flex-direction: column;
+        }
+    }
+
+    .read_at_book {
+        border: 1px solid #d6d1cb;
+        border-radius: 50%;
+        padding: 4px;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .read_at_active {
+        border: 1px solid map-get($theme-colors, auxiliary-yellow-base);
+        background: #fff6d9;
+    }
+}

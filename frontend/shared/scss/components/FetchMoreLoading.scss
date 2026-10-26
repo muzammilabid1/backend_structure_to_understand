@@ -1,0 +1,43 @@
+.fetch_more_loader {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    &__dot {
+        animation: bounce-fade 1s infinite ease-in-out;
+        border-radius: 8px;
+        background: #333;
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin: 0 2px;
+        transform: translateY(0);
+        opacity: 1;
+        background-color: #f28d00;
+
+        $item: 4;
+        @for $i from 1 to $item {
+            &:nth-child(#{$i}) {
+                animation-delay: $i * 0.25s;
+            }
+        }
+    }
+}
+
+@keyframes bounce-fade {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.6;
+        transform: translateY(-10px);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+}

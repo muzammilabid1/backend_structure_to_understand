@@ -1,0 +1,32 @@
+.check_your_email_or_phone_container {
+    max-width: 550px;
+    margin: auto;
+
+    .heading-one {
+        font-size: 32px;
+    }
+
+    .not_rec_an_email {
+        margin-top: 32px;
+    }
+
+    .link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .fransferring_your_account {
+        text-align: center;
+        margin-top: 64px;
+
+        .lwp-button {
+            margin-top: 24px;
+        }
+    }
+
+    .confirmed_details {
+        max-width: 500px;
+        line-height: 22px;
+        text-align: center;
+    }
+}

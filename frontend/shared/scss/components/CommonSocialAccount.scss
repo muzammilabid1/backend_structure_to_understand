@@ -1,0 +1,46 @@
+.common_social_account_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .common_social_account_info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 32px;
+        padding: 20px 15px;
+
+        .common_social_account_social {
+            img {
+                object-fit: contain;
+            }
+        }
+        .common_social_account_name_and_info {
+            width: 100%;
+            .typography-text,
+            .typography-text::first-letter {
+                text-transform: none !important;
+            }
+
+            h3 {
+                text-align: left;
+            }
+
+            p {
+                color: map-get($theme-colors, dark-warm-grey);
+
+                @include sm {
+                    font-size: 14px;
+                    width: 190px;
+                    word-break: break-all;
+                }
+            }
+        }
+
+        @include sm {
+            padding: 20px 10px;
+            gap: 16px;
+        }
+    }
+}

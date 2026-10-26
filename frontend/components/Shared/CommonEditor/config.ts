@@ -1,0 +1,48 @@
+import { InitialConfigType } from '@lexical/react/LexicalComposer';
+import { CodeNode } from '@lexical/code';
+import { HeadingNode, QuoteNode } from '@lexical/rich-text';
+import { ListItemNode, ListNode } from '@lexical/list';
+import { LinkNode } from '@lexical/link';
+import { ExtendedTextNode } from './plugins/ExtendedTextNode';
+
+export default {
+    namespace: 'MyEditor',
+    onError: (error) => console.error(error),
+    nodes: [ExtendedTextNode, CodeNode, HeadingNode, QuoteNode, ListNode, ListItemNode, LinkNode],
+    theme: {
+        code: 'editor-code',
+        heading: {
+            h1: 'editor-heading-h1',
+            h2: 'editor-heading-h2',
+            h3: 'editor-heading-h3',
+            h4: 'editor-heading-h4',
+            h5: 'editor-heading-h5',
+            h6: 'editor-heading-h6'
+        },
+        image: 'editor-image',
+        link: 'editor-link',
+        list: {
+            listitem: 'editor-listitem',
+            nested: {
+                listitem: 'editor-nested-listitem'
+            },
+            ol: 'editor-list-ol',
+            ul: 'editor-list-ul'
+        },
+        ltr: 'ltr',
+        paragraph: 'editor-paragraph',
+        placeholder: 'editor-placeholder',
+        quote: 'editor-quote',
+        rtl: 'rtl',
+        text: {
+            bold: 'editor-text-bold',
+            code: 'editor-text-code',
+            hashtag: 'editor-text-hashtag',
+            italic: 'editor-text-italic',
+            overflowed: 'editor-text-overflowed',
+            strikethrough: 'editor-text-strikethrough',
+            underline: 'editor-text-underline',
+            underlineStrikethrough: 'editor-text-underlineStrikethrough'
+        }
+    }
+} satisfies InitialConfigType;

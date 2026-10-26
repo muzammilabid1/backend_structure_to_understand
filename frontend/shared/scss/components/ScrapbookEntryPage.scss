@@ -1,0 +1,262 @@
+.scrapbook-entry-page {
+    padding: 20px;
+
+    .scrapbook-entry-page-main-heading {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .teacher-prompt-heading {
+        margin-bottom: 10px;
+    }
+
+    .teacher-prompt-subtext {
+        font-style: italic;
+    }
+
+    .mathscot-with-bubble-text {
+        .preview-topic-img {
+            justify-content: flex-start;
+        }
+    }
+
+    .add-you-memory-heading {
+        margin-bottom: 20px;
+    }
+
+    .add-you-memory-heading::after {
+        content: '*';
+        color: map-get($theme-colors, auxiliary-red-base);
+    }
+
+    .scrapbook-comment-box {
+        margin-top: 24px;
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+        padding: 0 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 4px;
+        .MuiList-root {
+            .MuiListItemIcon-root {
+                min-width: 30px;
+                .material-icons {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+        .input-field {
+            label.Mui-focused {
+                background-color: #ffffff;
+            }
+            .MuiInputBase-root {
+                padding: 0;
+            }
+        }
+    }
+
+    .upload-img-right-content {
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+        padding: 0 14px 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 4px;
+        .MuiListItemIcon-root {
+            min-width: 30px;
+            .material-icons {
+                color: map-get($theme-colors, base-blue-black);
+            }
+        }
+        .recoder-img-conatiner {
+            background: rgba(255, 255, 255, 0.4);
+            width: -webkit-fill-available;
+            border: 3px dashed map-get($theme-colors, base-warm-grey);
+            padding: 1em;
+            .mic-icon {
+                color: map-get($theme-colors, base-warm-grey);
+                font-size: 100px !important;
+                margin-bottom: 25px;
+            }
+            .MuiButton-root {
+                width: 172px;
+            }
+            .audio-player-container {
+                width: 100%;
+                .audio-player {
+                    width: 100%;
+                    audio {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .image_upload_neated_container {
+            width: -webkit-fill-available;
+            .dropzone-container {
+                background: rgba(255, 255, 255, 0.4);
+                .dropzone-para {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .image-uploaded-container {
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+        padding: 0 14px 12px 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        border-radius: 4px;
+        .MuiListItemIcon-root {
+            min-width: 30px;
+            .material-icons {
+                color: map-get($theme-colors, base-blue-black);
+            }
+        }
+        .image_upload_neated_container {
+            width: -webkit-fill-available;
+            .dropzone-container {
+                background: map-get($theme-colors, auxiliary-yellow-light);
+                border: none;
+                .MuiBox-root {
+                    width: 100%;
+                    .dropzone-para {
+                        margin-bottom: 0;
+                        .lwp-button-wrapper {
+                            button {
+                                width: 157px;
+                                background: none;
+                                .material-icons {
+                                    color: map-get($theme-colors, base-blue-black);
+                                }
+                            }
+                            :hover {
+                                background-color: rgba(0, 0, 0, 0.04);
+                            }
+                        }
+                    }
+                    img {
+                        border-radius: 8px;
+                        width: 100%;
+                        max-height: 600px;
+                        object-fit: contain;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .scrapbook-thoughts-fields {
+        margin-bottom: 16px;
+    }
+
+    .error-message {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .add-you-memory-heading {
+            margin: 0;
+            h3 {
+                margin: 0;
+            }
+        }
+        p {
+            margin: 0;
+            color: map-get($theme-colors, auxiliary-red-base);
+            font-size: 12px;
+        }
+    }
+
+    .image_upload_neated_container .MuiButtonBase-root {
+        width: 180px;
+    }
+
+    .scrapbook-input-card-container {
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        .scrapbook-input-card {
+            padding: 8px 22px;
+            border: 3px dashed map-get($theme-colors, base-warm-grey);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .scrapbook-input-card-image-text {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                flex-direction: column;
+                color: map-get($theme-colors, principal-main-dark);
+                h1 {
+                    font-size: 16px;
+                    color: map-get($theme-colors, principal-main-dark);
+                }
+            }
+        }
+    }
+
+    .scrapbook-photo-permission-card {
+        margin: 30px 0;
+        padding: 10px 20px;
+        background-color: map-get($theme-colors, base-off-white);
+        box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+
+        .mt2 {
+            margin-top: 8px;
+        }
+
+        .mb2 {
+            margin-bottom: 8px;
+        }
+
+        .my5 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .scrapbook-photo-permission-update-card {
+        background-color: map-get($theme-colors, base-off-white);
+        margin: 30px 0;
+        padding: 10px 20px;
+
+        .update-link {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .scrapbook-entry-page-buttons-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    @include sm {
+        .scrapbook-thoughts-fields {
+            margin-left: -32px;
+            width: calc(100% + 64px);
+            .upload-img-right-content {
+                .recoder-img-conatiner {
+                    width: -webkit-fill-available !important;
+                }
+            }
+        }
+
+        .scrapbook-input-card-container {
+            gap: 14px;
+            .scrapbook-input-card {
+                width: 91px;
+                height: 107px;
+                padding: 0;
+            }
+        }
+    }
+}

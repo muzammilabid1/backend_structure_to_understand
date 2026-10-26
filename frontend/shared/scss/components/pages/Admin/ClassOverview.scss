@@ -1,0 +1,119 @@
+.class_overview {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+        }
+        .header-view-button {
+            display: flex;
+            gap: 24px;
+            .MuiButtonBase-root {
+                background: map-get($theme-colors, base-warm-grey);
+                .material-icons {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+    }
+    h2 {
+        font-family: Chaloops-Medium;
+        font-weight: unset;
+    }
+    .admin-lock {
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .delete-class,
+    .delete-class-topic {
+        .mb-10 {
+            margin: 10px 0;
+        }
+        .lwp-button {
+            background-color: map-get($theme-colors, aa-red);
+
+            &:hover {
+                background-color: map-get($theme-colors, aa-red-hover);
+            }
+        }
+    }
+
+    .pupil-topic-update-button {
+        display: block;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    .visibility {
+        .visibility-nasted {
+            display: flex;
+            flex-direction: column;
+        }
+        .divider {
+            margin: 2em 0;
+        }
+        .heading-two {
+            margin: 0;
+        }
+    }
+
+    .admin-student-overview {
+        .help_snackbar_icon {
+            color: map-get($theme-colors, auxiliary-yellow-base) !important;
+        }
+        .pupil-filter-button {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+
+            .filter-button {
+                color: black;
+                text-transform: initial;
+                font-weight: bold;
+            }
+            .filter-icon {
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+        }
+
+        .pupil-collapse {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .feeds-filter-container {
+            margin-bottom: 20px;
+
+            .MuiCardActions-root {
+                justify-content: flex-end;
+            }
+            .MuiCardActions-spacing > :not(:first-child) {
+                margin-left: 30px;
+            }
+        }
+        .snackbar_icon {
+            font-size: 33px;
+            height: 35px;
+        }
+        .premium_link {
+            text-decoration: underline;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.add-child-modal-for-admin {
+    .dialog-content-section {
+        .add-pupil-to-school-class {
+            width: 100%;
+        }
+    }
+}

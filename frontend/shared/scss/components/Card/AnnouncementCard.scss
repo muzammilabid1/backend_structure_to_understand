@@ -1,0 +1,48 @@
+.announcement-card {
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid map-get($theme-colors, principal-main-base);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(214, 209, 203, 0.5);
+    padding: 24px;
+    align-items: center;
+
+    .MuiIconButton-root {
+        padding: 8px;
+        .material-icons {
+            font-size: 20px;
+        }
+    }
+
+    > div {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        align-items: center;
+
+        img {
+            width: 36px;
+            object-fit: contain;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    @include maw(425) {
+        align-items: flex-start;
+        padding: 16px;
+
+        > div {
+            flex-direction: column;
+            align-items: flex-start;
+            .announcement-message {
+                margin-right: -30px;
+            }
+        }
+    }
+}
+
+.seen-announcement {
+    background-color: map-get($theme-colors, base-off-white);
+    border: none;
+    box-shadow: none;
+}

@@ -1,0 +1,86 @@
+.class-groups-container {
+    .no-teacher {
+        margin-bottom: 60px;
+    }
+
+    .btn_group {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .extra-width {
+        min-width: 250px;
+    }
+
+    .py_40 {
+        padding: 40px 0;
+    }
+
+    .mathscots-header {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        @include sm {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+    }
+
+    .common_table .MuiTableRow-head {
+        background-color: map-get($theme-colors, base-off-white);
+
+        .typography-text {
+            font-weight: 500;
+        }
+    }
+
+    .common_drop_down {
+        width: fit-content;
+        text-decoration: underline;
+    }
+}
+
+.class-groups-empty {
+    max-width: 474px;
+    margin: 0 auto;
+    line-height: 140.625%;
+    padding: 0 20px 20px 20px;
+
+    .common_status_container .paragraph {
+        margin-top: 16px;
+    }
+
+    ul {
+        margin-top: 4px;
+        li {
+            font-size: 16px;
+        }
+    }
+
+    .empty-btn {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .common_status_container .common_status_container_image {
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+}
+
+.total-students-popover {
+    .colorGray {
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+    .show_pupil_name {
+        margin-bottom: 8px;
+        padding: 0 2px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

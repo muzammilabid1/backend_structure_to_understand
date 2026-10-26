@@ -1,0 +1,123 @@
+name: Sync database schema on migration change
+
+on:
+    pull_request:
+        types:
+            - opened
+            - ready_for_review
+            - synchronize
+            - reopened
+        paths:
+            - 'graphql-provider/src/migrations/**'
+
+jobs:
+    sync-schema:
+        if: >-
+            github.event.pull_request.draft == false &&
+            github.event.pull_request.head.ref != 'dev' &&
+            github.event.pull_request.head.ref != 'staging' &&
+            github.event.pull_request.head.ref != 'master'
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
+
+        container:
+            image: cimg/node:22.23.4
+            options: --user 1001
+
+        services:
+            postgres:
+                image: ghcr.io/poteris/pg_partman_cron:main
+                env:
+                    POSTGRES_DB: postgres
+                    POSTGRES_PASSWORD: postgres
+                options: >-
+                    --health-cmd pg_isready
+                    --health-interval 10s
+                    --health-timeout 5s
+                    --health-retries 5
+
+        env:
+            PGHOST: postgres
+            PGPORT: 5432
+            PGDATABASE: postgres
+            PGSUPERUSER: postgres
+            PGSUPERPASSWORD: postgres
+            SCHEMA_FILE: graphql-provider/schema-dump/latest-schema.sql
+            TYPES_FILE: libs/postgres-client/src/schema.gen.ts
+
+        steps:
+            - name: Checkout PR branch
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.head_ref }}
+                  fetch-depth: 0
+                  persist-credentials: true
+
+            - name: Rebase on latest PR branch
+              run: |
+                  git pull --rebase origin ${{ github.head_ref }}
+
+            - name: Install PostgreSQL client
+              run: |
+                  curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+                  echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+                  sudo apt-get update
+                  sudo apt-get install postgresql-client-16 -y
+
+            - name: Install dependencies
+              uses: bahmutov/npm-install@v1
+              with:
+                  useRollingCache: true
+
+            - name: Wait for PostgreSQL
+              run: |
+                  until pg_isready -h $PGHOST -p $PGPORT -U $PGSUPERUSER; do
+                    echo "Waiting for PostgreSQL..."
+                    sleep 5
+                  done
+
+            - name: Run migrations
+              env:
+                  DATABASE_URL: postgres://${{ env.PGSUPERUSER }}:${{ env.PGSUPERPASSWORD }}@${{ env.PGHOST }}:${{ env.PGPORT }}/${{ env.PGDATABASE }}
+                  PGPASSWORD: ${{ env.PGSUPERPASSWORD }}
+              run: |
+                  yarn workspace graphql-provider prebuild
+                  yarn workspace graphql-provider typeorm:up
+
+            - name: Generate schema dump
+              run: |
+                  mkdir -p graphql-provider/schema-dump
+
+                  export PGPASSWORD=$PGSUPERPASSWORD
+                  pg_dump --schema-only --no-owner --no-acl \
+                    -h $PGHOST -U $PGSUPERUSER -d $PGDATABASE \
+                    > "$SCHEMA_FILE"
+
+            - name: Generate postgres-client types
+              env:
+                  DATABASE_URL: postgres://${{ env.PGSUPERUSER }}:${{ env.PGSUPERPASSWORD }}@${{ env.PGHOST }}:${{ env.PGPORT }}/${{ env.PGDATABASE }}
+              run: |
+                  yarn workspace @lwp/postgres-client generate:types
+
+            - name: Commit generated files
+              run: |
+                  git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                  git config --local user.name "github-actions[bot]"
+
+                  git add $SCHEMA_FILE $TYPES_FILE
+
+                  if git diff --staged --quiet; then
+                    echo "No changes detected"
+                  else
+                    git commit -m "chore: sync database schema and regenerate postgres-client types"
+                    git push origin HEAD:${{ github.head_ref }}
+                  fi
+
+            - name: Summary
+              run: |
+                  echo "Schema dump: $SCHEMA_FILE"
+                  echo "Types file:  $TYPES_FILE"
+                  echo "Branch:      ${{ github.head_ref }}"
+                  echo "Target:      ${{ github.base_ref }}"

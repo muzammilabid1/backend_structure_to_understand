@@ -1,0 +1,17 @@
+Evaluate the clarity of the text based on the following criteria. For each question, provide:
+
+A repetition of the question.
+A score out of 10.
+A brief explanation of the score, including reasoning and suggestions for improvement if the criterion is not fully met.
+Criteria for Evaluation:
+
+Is the text brief and grammatically simple, avoiding complex clauses?
+Are instructions formatted for mobile-friendliness (e.g., fitting on one screen)?
+Are topic-specific terms explained clearly using hyperlinks or hover text?
+Is passive voice avoided?
+Output Example Format:
+
+[Repeated Question]
+Score: [X/10]
+Explanation: [Brief reasoning behind the score, highlighting strengths and weaknesses. Include suggestions for improvement where relevant.]
+Ensure responses are concise, objective, and actionable.

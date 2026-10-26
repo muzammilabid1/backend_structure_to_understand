@@ -1,0 +1,106 @@
+.cancel-voice {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.recoder-img-conatiner {
+    display: flex;
+    justify-content: space-between;
+    border-radius: $base-radius;
+    padding: 2em 2.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px !important;
+
+    @include sm {
+        border-radius: none;
+        padding: 0;
+        flex-direction: column;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .recorder-countdown {
+        line-height: 60px;
+        padding: 5px 20px;
+        font-size: 40px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        @keyframes blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .blink {
+            animation: blink 1s linear infinite;
+            color: #e8492a;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            background-color: #e8492a;
+            border-radius: 50%;
+            margin-right: 11px;
+        }
+    }
+
+    .MuiDropzoneArea-root {
+        background-color: rgba($color: #ffffff, $alpha: 0.4);
+
+        @include sm {
+            background: transparent;
+        }
+    }
+    @include sm {
+        width: 100%;
+    }
+
+    .recoder-camera-icon {
+        color: map-get($theme-colors, base-warm-grey);
+        .recoder-mic-icon {
+            margin-bottom: 10px;
+            svg {
+                font-size: 53px !important;
+            }
+        }
+
+        .recoder-mic-icon_grey {
+            color: map-get($theme-colors, base-warm-grey);
+        }
+
+        .recoder-mic-icon_red {
+            color: map-get($theme-colors, aa-red);
+        }
+
+        .icon_group {
+            span {
+                color: map-get($theme-colors, base-blue-black);
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+.audio_recorder_popover {
+    .microphone_permission {
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 14px 29px;
+
+        @include sm {
+            padding: 14px 4px;
+        }
+    }
+}

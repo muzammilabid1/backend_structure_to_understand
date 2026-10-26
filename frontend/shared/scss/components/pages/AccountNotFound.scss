@@ -1,0 +1,30 @@
+.account-not-found{
+    .common_status_container {
+        .common_status_img{
+            margin-top: 100px;
+        }
+        h1{
+            margin-top: 25px;
+        }
+        p {
+            width: 500px;
+        }
+        @include sm{
+            .common_status_img{
+                margin-top: 68px;
+            }
+            h1{
+                margin-top: 0;
+            }
+            p {
+                width: 100% ;
+            }
+            .lwp-button-wrapper{
+                width: 100%;
+                .lwp-button{
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}

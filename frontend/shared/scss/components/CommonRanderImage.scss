@@ -1,0 +1,19 @@
+.common_rander_image_container {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    span {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        background-color: map-get($theme-colors, principal-main-base);
+
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 40px;
+        color: black;
+    }
+}

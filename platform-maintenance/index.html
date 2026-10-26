@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Learning With Parents</title>
+        <link
+            rel="icon"
+            href="./assets/images/main-logo.png"
+            type="image/png"
+        />
+        <style>
+            @font-face {
+                font-family: 'Chaloops-Medium';
+                src: url('./assets/fonts/Chaloops-Medium.ttf')
+                    format('truetype');
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+            }
+            @font-face {
+                font-family: 'Verdana';
+                src: url('./assets/fonts/verdana.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Verdana';
+            }
+
+            .platform-maintenance {
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .platform-maintenance-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .platform-maintenance-content img {
+                object-fit: contain;
+                max-width: 182px;
+            }
+            .platform-maintenance-content h1 {
+                margin-bottom: 8px;
+                font-family: 'Chaloops-Medium';
+                font-size: 2rem;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            .platform-maintenance-content p {
+                text-align: center;
+                font-size: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="platform-maintenance">
+            <div class="platform-maintenance-content">
+                <img
+                    src="./assets/images/koala-maintenance.png"
+                    alt="Maintenance"
+                />
+                <div>
+                    <h1 id="maintenance-heading">
+                        Essential site maintenance in progress
+                    </h1>
+                    <p id="maintenance-message">
+                        Please come back again at: <b id="time">1 PM</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        const updateMaintenanceInfo = () => {
+            const heading = 'Essential site maintenance in progress';
+            const subHeading = 'Please come back again at: ';
+            const maintenanceTime = '1 PM';
+
+            document.getElementById('maintenance-heading').textContent =
+                heading;
+
+            const timeElement = document.getElementById('time');
+
+            timeElement.textContent = maintenanceTime;
+
+            const subHeadingElement = document.getElementById(
+                'maintenance-message',
+            );
+
+            subHeadingElement.textContent = subHeading;
+            subHeadingElement.appendChild(timeElement);
+        };
+
+        // Call the function to update the page content
+        updateMaintenanceInfo();
+    </script>
+</html>

@@ -1,0 +1,48 @@
+.common_status_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .common_status_container_image {
+        max-width: 200px;
+        max-height: 180px !important;
+    }
+
+    .common_status_img {
+        display: flex;
+    }
+
+    .heading-one {
+        margin-top: 8px;
+    }
+
+    .paragraph {
+        margin-top: 8px;
+        white-space: pre-line;
+    }
+
+    .lwp-button {
+        margin-top: 40px;
+        font-size: 14px;
+
+        @include sm {
+            width: 100%;
+        }
+    }
+}
+
+.expired-school-impact-report {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .expired-school-impact-report-paragraph {
+        margin-top: 20px;
+
+        .expired-school-impact-report-paragraph-link {
+            color: #000000;
+        }
+    }
+}

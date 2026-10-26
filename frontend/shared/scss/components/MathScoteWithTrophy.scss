@@ -1,0 +1,105 @@
+.mathScote-with-trophy {
+    margin: 20px 0 30px 0;
+    @include sm {
+        margin: 0;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        //margin: 5em 10em;
+        /*@include sm {
+      display: none;
+    }*/
+
+        span {
+            cursor: pointer;
+        }
+
+        .child-img {
+            max-width: 327px;
+            // height: $math-scot-height;
+        }
+    }
+
+    .mathscot-not-available {
+        text-align: center;
+    }
+
+    .mobile-steper-show {
+        display: none;
+
+        /*@include sm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2em;
+    }*/
+    }
+}
+
+.my_achievements {
+    .MuiDialogTitle-root {
+        padding: 0 0 10px 0;
+    }
+    .dialog-title {
+        .makeStyles-wrapper-18 {
+            margin: 0;
+        }
+        button {
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+
+    .dialog-content-section {
+        max-width: 1032px;
+        margin: 0 auto;
+
+        .MuiDialogContent-root {
+            padding: 4rem;
+
+            @include sm {
+                padding: 40px 10px;
+            }
+        }
+    }
+
+    .head_section {
+        text-align: center;
+
+        .img_container {
+            width: 185px;
+            margin: 0 auto 10px auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .my_trophies_nested_container {
+        display: flex;
+        align-items: center;
+
+        .paragraph {
+            margin-left: 10px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .empty_span {
+            border: 1px solid lightgray;
+            border-radius: 50%;
+        }
+    }
+
+    .heading-two {
+        margin-top: 40px;
+        margin-bottom: 18px;
+    }
+}

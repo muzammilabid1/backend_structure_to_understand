@@ -1,0 +1,41 @@
+.terms_holiday_overview {
+    .btn_group {
+        align-items: baseline;
+        .common_nav_list {
+            padding-top: 0px;
+        }
+    }
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        .MuiList-root {
+            padding-bottom: 0;
+            padding-bottom: 0;
+            .MuiListItemIcon-root {
+                min-width: 36px;
+            }
+        }
+    }
+    .terms_holiday_filter_button {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+        .filter-button {
+            color: black;
+            text-transform: initial;
+            font-weight: bold;
+        }
+        .filter-icon {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+    .terms_holiday_collapse {
+        max-width: 750px;
+        margin: auto;
+        margin-bottom: 25px;
+        .MuiCardActions-root {
+            justify-content: flex-end;
+        }
+    }
+}

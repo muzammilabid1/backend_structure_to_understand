@@ -1,0 +1,10 @@
+.drawer-container {
+  .MuiBackdrop-root {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+  }
+  .MuiPaper-root {
+    min-width: 50%;
+    padding: 2em 1em;
+    overflow-x: hidden;
+  }
+}

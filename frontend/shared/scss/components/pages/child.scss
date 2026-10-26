@@ -1,0 +1,98 @@
+.child-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .child-main-heading {
+        margin-top: 70px;
+        margin-bottom: 36px;
+        font-size: 32px;
+    }
+
+    .child-cards {
+        justify-content: flex-start;
+    }
+
+    .empty-childs {
+        max-width: 340px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            width: 205px;
+        }
+
+        .add-child {
+            width: 300px;
+        }
+    }
+
+    .invited-child-container {
+        width: 640px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+        padding: 28px 24px;
+        margin-bottom: 36px;
+        .invited-child-header-top {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            h1 {
+                font-size: 20px;
+                color: map-get($theme-colors, principal-main-base);
+            }
+        }
+        .invited-child-header-bottom {
+            width: 100%;
+            margin-top: 28px;
+            .MuiCardContent-root {
+                border-left: 7px solid map-get($theme-colors, principal-main-base);
+                padding: 34px 24px 34px 16px !important;
+                // padding-bottom: 34px !important;
+                .invited-child-detail-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    @include sm {
+        .child-main-heading {
+            margin-top: 24px;
+        }
+        .invited-child-container {
+            width: 100%;
+            .invited-child-header-bottom {
+                .invited-child-detail-container {
+                    flex-direction: column;
+                    align-items: flex-start !important;
+                    gap: 24px;
+                    .invited-child-button {
+                        width: 100%;
+                        .lwp-button-wrapper {
+                            a {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .inactive_child_border::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 8px;
+        left: 0px;
+        background-color: map-get($theme-colors, base-warm-grey);
+    }
+}

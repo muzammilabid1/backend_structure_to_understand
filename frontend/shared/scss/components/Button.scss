@@ -1,0 +1,182 @@
+.common-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-size: 0.85em;
+    min-width: 164px;
+    padding: 1em 2.5em;
+    font-weight: bold;
+    border-radius: $base-radius;
+
+    @include sm {
+        width: 100%;
+    }
+}
+
+.primary-btn {
+    background-color: map-get($theme-colors, principal-main-base);
+    color: map-get($theme-colors, base-black);
+}
+
+.secondary-btn {
+    background-color: map-get($theme-colors, base-warm-grey);
+    color: map-get($theme-colors, base-black);
+}
+
+.math-btn {
+    background-color: map-get($theme-colors, principal-maths-base);
+    color: map-get($theme-colors, base-white);
+}
+
+.english-btn {
+    background-color: map-get($theme-colors, principal-english-base);
+    color: map-get($theme-colors, base-white);
+}
+.reading-btn {
+    background-color: map-get($theme-colors, principal-green-base);
+    color: map-get($theme-colors, base-black);
+}
+.text-btn {
+    background-color: map-get($theme-colors, base-white);
+    color: map-get($theme-colors, base-black);
+}
+
+.icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-size: 0.85em;
+    min-width: 130px;
+    padding: 0;
+    font-weight: bold;
+    color: map-get($theme-colors, base-black);
+    background-color: transparent;
+    height: 1.5em;
+
+    @include sm {
+        width: 100%;
+    }
+
+    .icon {
+        margin: 0 0.85em;
+        height: 1.25em;
+        width: 1.25em;
+    }
+}
+
+.lwp-button {
+    box-shadow: none !important;
+
+    text-transform: none;
+    font-weight: 700;
+}
+
+.lwp-social-button {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    text-transform: none;
+    color: black;
+    .MuiButton-startIcon {
+        margin-right: 0;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .social-button-text {
+        width: 190px;
+    }
+}
+
+.activity-button-container {
+    // background-image: url("@assets/images/Background.png");
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    width: fit-content;
+    box-shadow: $standard-shadow;
+    min-height: 180px;
+
+    @include sm {
+        flex-direction: column-reverse;
+    }
+
+    .activity-button-img {
+        width: 180px;
+        object-fit: contain;
+        position: relative;
+        top: 2em;
+    }
+
+    .activity-button-content {
+        padding: 3em 1em;
+        padding-right: 2em;
+
+        @include sm {
+            padding-bottom: 0;
+            padding-top: 1.5em;
+        }
+    }
+}
+
+.end-icon {
+    width: 0.75em;
+    height: 1.5em;
+}
+
+.badge-color {
+    margin-left: 2em;
+    .MuiBadge-badge {
+        padding: 0 0.75em;
+        font-family: Verdana;
+    }
+    .MuiBadge-colorPrimary {
+        color: map-get($theme-colors, base-black);
+        background-color: map-get($theme-colors, principal-main-base);
+    }
+}
+
+// back button styling
+
+.desktop-btn {
+    display: block;
+
+    @include sm {
+        display: none;
+    }
+
+    // .desktop-back-icon {
+    //   width: 6px;
+    //   height: 10px;
+    //   margin-right: 0.5em;
+    // }
+}
+
+.mobile-btn {
+    display: none;
+
+    @include sm {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 240px;
+        margin-right: 10px;
+    }
+    .back-btn {
+        padding: 8px 0;
+        span {
+            .material-icons {
+                color: map-get($theme-colors, principal-main-base);
+                font-size: 28px;
+            }
+        }
+    }
+}

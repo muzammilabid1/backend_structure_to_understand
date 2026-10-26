@@ -1,0 +1,49 @@
+.account_not_linked_container {
+    h1 {
+        padding-top: 90px;
+        @include sm {
+            padding-top: 40px;
+        }
+    }
+    .account_information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+        margin: 22px 0 57px 0;
+        span {
+            font-size: 45px;
+            color: map-get($theme-colors, auxiliary-yellow-base);
+        }
+    }
+    p {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+    .account_not_linked_button_container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 45px;
+        button {
+            height: 52px;
+        }
+    }
+
+    @include sm {
+        .account_information {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin: 22px 0 39px 0;
+        }
+        .account_not_linked_button_container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 39px;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

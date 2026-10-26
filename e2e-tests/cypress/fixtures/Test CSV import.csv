@@ -1,0 +1,7 @@
+"Unique ID","Forename","Surname","Date of birth","UPN","Gender","Pupil Premium status","NC year","Class name","Parent 1 email","Parent 1 phone number","Parent 1 forename","Parent 1 surname","Parent 2 email","Parent 2 phone number","Parent 2 forename","Parent 2 surname","Is pupil pre registration","Is class active"
+,"Childy","McChildface","09/04/23",,"Undetermined","Yes","Preschool","Beans Class","parent@example.com",,"Parent 1 forename","Example",,,,,"TRUE", "FALSE"
+,"Child4","Somechild","08/08/24",,"Female","No","Preschool","Beans Class","diffparent@example.com",,"Different","Parent",,,,,"FALSE", "FALSE"
+,"Child5","Someother","09/08/07",,"Male","No","Preschool","Beans Class","someoneelse@example.com",,"Someone","Else",,,,,"FALSE", "FALSE"
+,"Child2","McAdultface","09/04/23",,"Male","FALSE",1,"Bones Class","doodah@example.com",,"Doo","Dah",,,,,"FALSE", "FALSE"
+,"Child3","McAdultface","09/04/23",,"Male","FALSE",1,"Bones Class","doodah@example.com",,"Doo","Dah",,,,,"FALSE", "FALSE"
+,"Child6","McAdultface","09/09/23",,"Male","FALSE",1,"Ball Class","doodah@example.com",,"Doo","Dah",,,,,"FALSE", "TRUE"

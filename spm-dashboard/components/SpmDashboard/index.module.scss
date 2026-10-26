@@ -1,0 +1,14 @@
+$breakpoint-md: 900px;
+
+.panelRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .panelRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

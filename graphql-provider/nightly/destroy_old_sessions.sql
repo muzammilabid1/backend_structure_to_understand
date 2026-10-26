@@ -1,0 +1,1 @@
+delete from lwp_user_session where "logUpdatedAt" + ("sessionLength" * 2 * interval '1 second') < current_timestamp

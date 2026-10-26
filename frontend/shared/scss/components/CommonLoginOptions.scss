@@ -1,0 +1,14 @@
+.login-options-wrapper {
+    .login-options-heading {
+        font-size: 1.5rem;
+        margin: 1.25rem 0;
+    }
+    @include sm {
+        .login-options-heading {
+            padding-left: 15px;
+        }
+        width: 100%;
+        position: absolute;
+        left: 0;
+    }
+}

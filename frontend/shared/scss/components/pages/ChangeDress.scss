@@ -1,0 +1,75 @@
+.change-dress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6em;
+
+    .child-img {
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .dress-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 2.5em 0;
+        overflow: auto;
+        width: 100%;
+
+        // @include sm {
+        //   justify-content: flex-start;
+        // }
+
+        .dress-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5em;
+            padding: 0.5em;
+            border-radius: $base-radius;
+            box-shadow: $standard-shadow;
+            cursor: pointer;
+            width: 152px;
+            height: 168px;
+
+            @include sm {
+                height: 96px;
+                // .dress-img {
+                //     margin-top: -25px !important;
+                //     height: 150px !important;
+                // }
+            }
+
+            @include maw(599) {
+                .selector {
+                    width: 100px;
+                }
+            }
+
+            @include maw(462) {
+                .selector {
+                    width: 86px;
+                    overflow: hidden;
+                }
+            }
+            .dress-img {
+                // height: 198px;
+                // margin-top: -45px;
+                object-fit: contain;
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include customRange(375, 540) {
+        .lwp-button-wrapper {
+            width: 100%;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

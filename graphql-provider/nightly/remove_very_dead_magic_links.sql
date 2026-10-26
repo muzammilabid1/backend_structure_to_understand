@@ -1,0 +1,1 @@
+delete from lwp_magic_link where "expiryTime" < current_timestamp - interval '1 year'

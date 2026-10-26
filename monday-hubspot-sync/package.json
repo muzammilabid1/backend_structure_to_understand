@@ -1,0 +1,45 @@
+{
+    "name": "monday-hubspot-sync",
+    "version": "1.0.0",
+    "description": "LWP - Bidirectional sync service between Monday.com and HubSpot for school/company records",
+    "main": "index.ts",
+    "packageManager": "yarn@1.22.22",
+    "keywords": [
+        "monday",
+        "hubspot",
+        "sync",
+        "integration"
+    ],
+    "scripts": {
+        "test": "jest",
+        "test:unit": "jest",
+        "test:integration": "jest --config jest.integration.config.ts",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "test:verbose": "jest --verbose",
+        "seed": "tsx scripts/seed.ts",
+        "seed:hubspot": "tsx scripts/seedHubspot.ts",
+        "seed:monday": "tsx scripts/seedMonday.ts",
+        "seed:cleanup": "tsx scripts/seed.ts --cleanup"
+    },
+    "dependencies": {
+        "@faker-js/faker": "^10.2.0",
+        "@hubspot/api-client": "^13.4.0",
+        "axios": "^1.13.2",
+        "dotenv": "^17.2.3"
+    },
+    "devDependencies": {
+        "@cloudflare/workers-types": "^4.20260107.1",
+        "@types/jest": "^30.0.0",
+        "@types/node": "^24.10.1",
+        "jest": "^30.2.0",
+        "ts-jest": "^29.4.5",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.20.6",
+        "typescript": "^5.9.3",
+        "wrangler": "^4.54.0"
+    },
+    "engines": {
+        "node": "^22.23.4"
+    }
+}

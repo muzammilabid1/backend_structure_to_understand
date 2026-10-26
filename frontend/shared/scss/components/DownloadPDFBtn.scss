@@ -1,0 +1,12 @@
+.download_PDF_btn {
+    a {
+        text-decoration: none;
+    }
+
+    button {
+        @include sm {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+    }
+}

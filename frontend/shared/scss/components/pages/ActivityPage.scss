@@ -1,0 +1,123 @@
+// .activity-page-container {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   border-radius: $base-radius;
+
+.activity-page-card {
+    padding: 5em 10em;
+    box-shadow: $standard-shadow;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: $base-radius;
+
+    @include sm {
+        padding: 1.5em;
+    }
+
+    .main-heading {
+        // margin-bottom: 1.5em;
+        @include sm {
+            display: none;
+        }
+    }
+
+    .activity-question {
+        font-size: 1em;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+
+        .activity-image {
+            display: flex;
+            justify-content: center;
+            object-fit: contain;
+            width: 100%;
+            max-height: 350px;
+        }
+    }
+
+    .activity-btn {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+
+        .lwp-button {
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.activity_contain {
+    line-height: normal;
+    margin: 32px 0;
+
+    .modal-btn {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .secondary_btn_color {
+        color: #000;
+    }
+
+    .activity-step-modal {
+        text-align: center;
+    }
+
+    ul,
+    ol,
+    dl {
+        padding-left: 50px;
+    }
+
+    dd {
+        padding-left: 20px;
+    }
+
+    button {
+        pointer-events: all;
+    }
+}
+
+.activity_contain_roll_btn {
+    button {
+        pointer-events: all;
+    }
+}
+
+.link_tag {
+    padding-bottom: 28px;
+    display: inline-block;
+}
+// }
+
+// .top-english-border {
+//   border-top: 0.5em solid map-get($theme-colors, principal-english-base);
+// }
+// .top-maths-border {
+//   border-top: 0.5em solid map-get($theme-colors, principal-maths-base);
+// }
+// .top-general-border {
+//   border-top: 0.5em solid map-get($theme-colors, principal-main-base);
+// }
+
+.top-ENGLISH-border {
+    border-top: 0.5em solid map-get($theme-colors, principal-english-base);
+}
+.top-MATHS-border {
+    border-top: 0.5em solid map-get($theme-colors, principal-maths-base);
+}
+.top-TOPIC-border {
+    border-top: 0.5em solid map-get($theme-colors, principal-maths-base);
+}
+.top-OTHER-border {
+    border-top: 0.5em solid map-get($theme-colors, principal-main-base);
+}

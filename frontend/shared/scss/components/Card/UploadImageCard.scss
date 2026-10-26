@@ -1,0 +1,113 @@
+.upload-img-conatiner {
+    display: flex;
+    justify-content: space-between;
+    border-radius: $base-radius;
+    box-shadow: $standard-shadow;
+    padding: 2em 2.5em;
+    // background-color: map-get($theme-colors, principal-maths-light);
+
+    @include sm {
+        border-radius: none;
+        padding: 0;
+        flex-direction: column;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .upload-img-left-content {
+        width: 40%;
+
+        .heading-three {
+            padding-bottom: 0.5em;
+        }
+
+        @include sm {
+            width: 100%;
+            padding-bottom: 1.5em;
+        }
+    }
+    .upload-img-right-content {
+        width: 40%;
+
+        .all_events_disabled {
+            pointer-events: none;
+        }
+
+        .image_upload_neated_container {
+            .MuiButtonBase-root {
+                width: 175px;
+            }
+        }
+
+        .MuiDropzoneArea-root {
+            background-color: rgba($color: #ffffff, $alpha: 0.4);
+
+            @include sm {
+                background: transparent;
+            }
+        }
+        @include sm {
+            width: 100%;
+        }
+    }
+}
+
+.image_upload_neated_container {
+    // border: 1px solid red;
+    // position: relative;
+
+    .cancel-photo {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    display: flex;
+    flex-direction: column;
+
+    input[type='file'] {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    .MuiButtonBase-root {
+        width: 50px;
+    }
+
+    .image-preview {
+        // width: 100%;
+        max-width: 400px;
+    }
+
+    .file-upload-images-preview {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .file-upload-image-preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    .delete_icon {
+        position: absolute;
+        right: -15px;
+        color: red;
+        top: -15px;
+        padding: 5px;
+        border-radius: 50%;
+        z-index: 1;
+        cursor: pointer !important;
+        background: rgba(225, 225, 225, 0.6);
+
+        &:hover {
+            transition: 0.3s;
+            background: rgba(225, 225, 225, 1);
+        }
+    }
+    .upload-camera-icon {
+        color: map-get($theme-colors, base-warm-grey);
+        font-size: 100px !important;
+    }
+}

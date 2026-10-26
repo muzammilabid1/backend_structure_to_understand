@@ -1,0 +1,226 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana;
+    // background-color: map-get($theme-colors, white-color);
+    // background-color: map-get($theme-colors, base-theme-background);
+}
+
+.cookiefirst-root {
+    /* !important reluctantly used because Cookiefirst tries hard to override */
+    position: relative !important;
+    z-index: 9999999999 !important;
+
+    [data-cookiefirst-action='open-preferences'] {
+        display: none;
+    }
+}
+
+// #__next {
+//   background-color: map-get($theme-colors, base-theme-background);
+// }
+
+button {
+    cursor: pointer;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.breadcrumbs-icon {
+    color: map-get($theme-colors, base-black);
+}
+
+.MuiRating-sizeLarge {
+    font-size: 4em !important;
+
+    @include sm {
+        font-size: 3em !important;
+    }
+}
+
+.progress-bar > .MuiLinearProgress-root {
+    border-radius: 50px;
+    height: 1.5em;
+}
+
+.progress_bar_card_text_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    .underline {
+        text-decoration: underline;
+    }
+}
+
+.progress_bar_card_text_container_no_hover {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.reading-topic-detail-progress-bar-card {
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.divider {
+    width: 100%;
+    border-top: 1px solid map-get($theme-colors, base-warm-grey);
+}
+
+// will remove
+.svg-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+}
+// will remove
+
+.grid-card {
+    display: flex;
+
+    @include sm {
+        justify-content: center;
+    }
+    @include md {
+        justify-content: center;
+    }
+}
+
+.hide-on-mobile {
+    display: block !important;
+    @include sm {
+        display: none !important;
+    }
+}
+.hide-on-desktop {
+    display: none !important;
+    @include sm {
+        display: block !important;
+    }
+}
+
+.MuiBreadcrumbs-li {
+    &:last-child {
+        a {
+            cursor: default;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.display-content {
+    display: contents;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active-icon-color {
+    color: map-get($theme-colors, principal-main-base);
+}
+
+.un-active-icon-color {
+    color: #00303c;
+}
+
+.child_detail_container {
+    .child_pupil_classes {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .parents_carers_table_container {
+        max-width: 800px;
+        .common_table {
+            tbody {
+                tr {
+                    .parent-carers-table-actions-tablecell {
+                        .common_drop_down {
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .material-icons {
+        width: 24px;
+        font-size: 27px;
+    }
+
+    .register-card {
+        .MuiList-root {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// .school-overview,
+// .topic_detail_container,
+// .child_detail_container {
+//     .Mui-expanded:last-child,
+//     .common_accordion {
+//         @include sm {
+//             overflow: auto;
+//         }
+
+//         .MuiAccordionSummary-root {
+//             min-width: 700px;
+//             cursor: default;
+
+//             @include sm {
+//                 border-bottom: 1px solid map-get($theme-colors, base-background-light-grey);
+//             }
+//         }
+
+//         .MuiAccordionDetails-root {
+//             min-width: 700px;
+//         }
+//     }
+
+//     .cursor_pointer {
+//         cursor: pointer;
+//     }
+// }
+
+.MuiCardContent-root:last-child {
+    padding-bottom: 16px !important;
+}
+
+.makeStyles-wrapper-13 {
+    // @include sm {
+    margin: 0 !important;
+    // }
+}
+
+.survey-drawer {
+    background-color: #ffe799;
+    width: 25px;
+    height: 25px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        height: 20px;
+        object-fit: contain;
+    }
+}
+
+.parent-carers-table-actions-container {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    cursor: pointer;
+    padding: 7px 15px;
+}

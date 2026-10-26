@@ -1,0 +1,57 @@
+@use 'sass:color';
+
+$theme-colors: (
+    /* Shadows */ box-shadow-color: rgba(214, 209, 203, 0.5),
+    /* Principal */ principal-main-base: #f28d00,
+    principal-main-light: #fdd19b,
+    principal-main-lighter: lighten(#fdd19b, 15%),
+    principal-light: #ffd19b,
+
+    principal-main-dark: #c66c00,
+
+    principal-maths-base: #9bc53d,
+    principal-maths-light: #d4e5ab,
+    principal-maths-dark: #7f972a,
+
+    principal-english-base: #39b0e2,
+    principal-english-light: #b8e5ef,
+    principal-english-dark: #2f879a,
+
+    principal-reading-base: #887dff,
+    principal-reading-light: #d0d8ff,
+    principal-reading-dark: #6f60ae,
+
+    /* Auxiliary colours */ auxiliary-pink-base: #d13f75,
+    auxiliary-blue-base: #0083cb,
+    auxiliary-blue-light: #e5f3fa,
+    auxiliary-red-base: #e8492a,
+    auxiliary-red-light: #fce9e5,
+    auxiliary-yellow-base: #fdc300,
+    auxiliary-yellow-light: #fff6d9,
+    auxiliary-green-base: #65b32e,
+    auxiliary-green-light: #edf6e6,
+
+    /* AA compliant tones */ aa-red-hover: #92250f,
+    aa-red: #dd3818,
+
+    /* Base */ base-black: #000000,
+    base-white: #ffffff,
+    base-off-white: #f5f5f5,
+    base-blue-black: #00303c,
+    base-warm-grey: #d6d1cb,
+    dark-warm-grey: #999591,
+    base-background-grey: #fcfcfd,
+    base-background-light-grey: #e0e0e0,
+    base-light-grey: #F2F2F2,
+    base-static-pages-background-gray: #eaecef,
+    base-normal-pages-background-gray: #e5e6e7,
+
+    /* status bar colours OLD */ status-green-1: #faf3b3,
+    status-green-2: #c6dd84,
+    status-green-3: #99c95d,
+    status-green-4: #65b32e,
+
+    status-active: #99c95d,
+    status-registered: #c6dd84,
+    status-missing: #faf3b3
+);

@@ -1,0 +1,30 @@
+.grid-card > .simple-child-card-container {
+    background: map-get($theme-colors, base-white);
+    box-shadow: $standard-shadow;
+    border-radius: $base-radius;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 237px;
+    max-height: 215px;
+    min-height: 215px;
+    padding: 2em 0 1.5em 0;
+    cursor: pointer;
+
+    .simple-child-card-bg {
+        text-align: center;
+
+        .simple-child-image {
+            width: 140px;
+            padding-bottom: 1em;
+        }
+
+        .typography-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 205px;
+        }
+    }
+}

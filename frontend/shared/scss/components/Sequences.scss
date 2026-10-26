@@ -1,0 +1,316 @@
+// Admin topic sequences: the builder's chosen-topics table and its topic picker.
+// The green left accent on each row echoes the scheduled-topics table in the designs.
+
+// The empty states reuse the house Paper + CommonStatus pattern, but
+// .no_match_item_status is only ever styled under a page ancestor such as
+// .schedule, and .no-result-found has no rule anywhere, so the treatment has to be
+// repeated under both sequence roots rather than inherited.
+.admin-sequences {
+    // Matches the other admin filter cards, which right-align Reset and Apply. The
+    // rule is repeated per page scope throughout the codebase rather than declared once.
+    .feeds-filter-container {
+        .MuiCardActions-root {
+            justify-content: flex-end;
+        }
+
+        .MuiCardActions-spacing > :not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+}
+
+.admin-sequences {
+    // The name opens the sequence, so it has to look like it does. Scoped under the page root
+    // deliberately: the class is on a cell inside the shared table, and an unscoped rule would
+    // reach every other table that happens to reuse the name.
+    .sequences-table-name {
+        cursor: pointer;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus-visible {
+            // The same green as this table's own row accent, from the theme map rather than a
+            // literal, so it moves with the palette.
+            color: map-get($theme-colors, auxiliary-green-base);
+        }
+    }
+}
+
+.admin-sequences,
+.sequence-form {
+    .no_match_item_status {
+        padding: 27px 0 40px 0;
+        box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+
+        p {
+            max-width: 400px;
+        }
+    }
+}
+
+// CommonCard renders a Grid item, which carries no margin of its own, so the
+// builder's sections need their own vertical rhythm rather than sitting flush.
+.sequence-form {
+    > * {
+        margin-bottom: 24px;
+    }
+
+    > .heading-one {
+        margin-bottom: 8px;
+    }
+
+    .heading-three {
+        margin-bottom: 12px;
+    }
+
+    .common_card {
+        padding: 8px;
+    }
+
+    // Grid spacing uses negative margins, which would otherwise pull the first row
+    // up into the section heading above it.
+    .MuiGrid-container {
+        margin-top: 0;
+    }
+
+    .common_radio_button {
+        width: 100%;
+    }
+}
+
+// Sized to sit inside the picker card: tall enough to read as "this is working", short
+// enough that the card does not jump when the topics arrive.
+.sequence-topic-picker-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 140px;
+    padding: 24px 0;
+
+    .paragraph {
+        margin: 0 !important;
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+}
+
+.sequence-topic-picker-error {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+// The same spinner as the first load, scaled down, so a search reload reads as the same
+// kind of wait rather than a different mechanism.
+.sequence-topic-picker-refreshing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0 4px;
+
+    .paragraph {
+        margin: 0 !important;
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+}
+
+// The list stays readable while a search reloads it, but is visibly not the live answer yet.
+.sequence-topic-picker-groups[aria-busy='true'] {
+    opacity: 0.5;
+    transition: opacity 120ms ease-in-out;
+}
+
+.sequence-topic-picker-hint {
+    color: map-get($theme-colors, dark-warm-grey);
+    font-size: 14px;
+    margin: 12px 0 4px !important;
+}
+
+.sequence-topic-picker-groups {
+    max-height: 360px;
+    overflow-y: auto;
+    margin-top: 8px;
+}
+
+.sequence-topic-picker-row {
+    padding: 4px 0;
+    border-bottom: 1px solid map-get($theme-colors, base-light-grey);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.sequence-items-table {
+    margin: 16px 0 24px;
+
+    .sequence-items-table-head {
+        padding: 0 12px 8px;
+        border-bottom: 1px solid map-get($theme-colors, base-light-grey);
+
+        .sequence-items-table-heading {
+            font-weight: 700;
+            margin: 0 !important;
+        }
+    }
+
+    .sequence-items-table-row {
+        padding: 12px;
+        background: map-get($theme-colors, base-white);
+        border-bottom: 1px solid map-get($theme-colors, base-light-grey);
+        border-left: 4px solid map-get($theme-colors, auxiliary-green-base);
+
+        .step-handler {
+            cursor: grab;
+            color: map-get($theme-colors, dark-warm-grey);
+        }
+
+        // The date pickers sit inline in the row, so they should not add the
+        // stacked-form spacing they carry elsewhere.
+        .MuiFormControl-root {
+            margin: 0;
+        }
+
+        // A finding belongs to the row above it, so it is indented to read as part of it.
+        .sequence-item-warning,
+        .error-text {
+            margin: 8px 0 0 8px;
+        }
+    }
+}
+
+.sequence-timing-hint {
+    color: map-get($theme-colors, dark-warm-grey);
+    font-size: 14px;
+}
+
+.sequence-form-actions {
+    margin-top: 24px;
+}
+
+// The leader's auto-schedule page. The preview table reuses .sequence-items-table wholesale, which is why
+// those rules are not scoped to .sequence-form: the two tables are meant to read as the same thing
+// seen from either end.
+
+// A newer plan is on its way. The current rows stay readable but are visibly not the answer yet,
+// matching how the topic picker treats a re-query.
+.sequence-items-table[aria-busy='true'] {
+    opacity: 0.5;
+    transition: opacity 120ms ease-in-out;
+}
+
+// A skipped topic keeps its place so the order still reads as the sequence, but loses the green
+// accent that means "this is being scheduled".
+.sequence-preview-row-skipped {
+    background: map-get($theme-colors, base-light-grey) !important;
+    border-left-color: map-get($theme-colors, base-warm-grey) !important;
+
+    .paragraph {
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+}
+
+// A topic the teacher dropped (LEA-6596). Greyed like a skipped row, because both mean "not being
+// scheduled", and struck through on top, because this one was their decision and is theirs to undo.
+//
+// The strike lands on the row's own text, which is the dates and the topic name. The "Removed" tag
+// is a MUI Chip rather than a .paragraph, so it stays legible: it is what explains the strike, and
+// striking it through too would undercut it.
+.sequence-preview-row-excluded {
+    background: map-get($theme-colors, base-light-grey) !important;
+    border-left-color: map-get($theme-colors, base-warm-grey) !important;
+
+    .paragraph {
+        color: map-get($theme-colors, dark-warm-grey);
+        text-decoration: line-through;
+    }
+}
+
+// A year group on the whole-school record whose topics have all finished. Unlike the two rules
+// above, the background stays white and the bar stays green: this one did get scheduled, and it
+// happened. Only the text greys, which is how the design tells "done" from "never scheduled".
+.sequence-preview-row-completed {
+    .paragraph {
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+}
+
+// The design puts the Completed badge on its own line, 22px under the row's text.
+.sequence-preview-completed-tag {
+    display: inline-block;
+    margin-top: 22px;
+}
+
+.sequence-preview-skip-reason {
+    margin: 6px 0 0 8px !important;
+    font-size: 14px;
+    color: map-get($theme-colors, dark-warm-grey);
+}
+
+// Same treatment as the topic picker's re-query notice, so the two read as one kind of wait.
+.sequence-preview-refreshing {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0 0;
+
+    .paragraph {
+        margin: 0 !important;
+        font-size: 14px;
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+}
+
+// Indented to read as belonging to the row above it, matching how the admin form's own findings sit.
+.sequence-preview-warning {
+    margin: 10px 0 2px 8px;
+    border-radius: 8px;
+}
+
+.sequence-preview-changed-label {
+    margin: 4px 0 0 !important;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: map-get($theme-colors, dark-warm-grey);
+}
+
+/**
+ * The row being edited opens a full-width block of its own beneath the row.
+ *
+ * Two date pickers plus their labels need roughly 550px between them, and the dates column is
+ * nowhere near that inside a dialog, so squeezing them in there left both fields clipped. Inset and
+ * tinted so it reads as belonging to the row above it rather than as a new row.
+ */
+.sequence-preview-edit {
+    margin: 12px 0 4px 8px;
+    padding: 16px 20px 20px;
+    background: map-get($theme-colors, base-light-grey);
+    border-radius: 8px;
+
+    .sequence-preview-edit-heading {
+        margin: 0 0 4px !important;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+// .date-picker-field carries no width of its own, so a picker keeps MUI's default field width and
+// ignores the grid cell it sits in. Every caller that wants it to fill the cell has to set this.
+.sequence-preview-date-field {
+    width: 100%;
+}
+
+// The whole-school tab has no filter row, and on the class sequences tab it is the filter
+// Collapse that supplies the gap between the intro line and whatever follows it: that
+// component carries marginBottom 24 inline. Without a filter the empty-state card, and the
+// table once there is one, sat flush against the paragraph.
+//
+// The same 24px, declared here rather than inline so the two tabs stay visually identical,
+// and scoped to this class rather than to .admin-sequences: that root is shared with the
+// class sequences tab, which already has its gap and would end up with two.
+.whole-school-sequences-intro {
+    margin-bottom: 24px;
+}

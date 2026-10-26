@@ -1,0 +1,12 @@
+.read_more_schedule {
+    background-color: '#EDEBFF';
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+
+    .collapse {
+        color: map-get($theme-colors, auxiliary-blue-base);
+        cursor: pointer;
+    }
+}

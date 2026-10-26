@@ -1,0 +1,108 @@
+.edit-class-detail-modal {
+    .MuiButtonBase-root {
+        color: map-get($theme-colors, base-blue-black);
+    }
+
+    .MuiFormControlLabel-root {
+        align-items: center !important;
+    }
+
+    .MuiRadio-colorSecondary {
+        .Mui-checked {
+            color: map-get($theme-colors, base-blue-black);
+        }
+    }
+
+    .common_table {
+        margin-top: 1rem;
+
+        .MuiTableCell-root {
+            padding: 6px 15px;
+            .typography-text {
+                padding: 7px 0;
+            }
+        }
+
+        .MuiPaper-elevation1 {
+            box-shadow: none;
+        }
+
+        .makeStyles-table-81 {
+            min-width: 584px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .buttons-div {
+        margin-top: 5px;
+        .modal-btn {
+            margin-left: 5px;
+        }
+    }
+
+    .normal-link {
+        text-decoration: underline;
+        margin-left: 5px;
+        cursor: pointer;
+        color: #000000;
+        margin-bottom: 0.25rem;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .null_status {
+        background-color: map-get($theme-colors, auxiliary-yellow-light);
+    }
+
+    .common_table {
+        overflow: auto;
+        max-height: 51vh;
+
+        .first-extra-width {
+            min-width: 350px;
+        }
+
+        .certificate-container {
+            display: flex;
+            align-items: center;
+
+            .certi-gold {
+                margin: 0 20px 0 0;
+                font-size: 24px;
+                font-weight: 600;
+                color: map-get($theme-colors, auxiliary-yellow-base);
+            }
+
+            .certi-silver {
+                font-size: 24px;
+                font-weight: 600;
+                color: map-get($theme-colors, dark-warm-grey);
+                margin: 0;
+            }
+        }
+
+        .invited-modal-text {
+            max-width: 854px;
+        }
+    }
+
+    .modal-btn-container {
+        margin-top: 20px;
+    }
+
+    .class_pupil_table {
+        tr {
+            th {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+
+    .modal_loader {
+        min-width: 900px;
+    }
+}

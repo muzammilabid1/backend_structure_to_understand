@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Both the below lines are now handled when producing our AMI
+# apt-get update && sudo apt-get -y upgrade
+# apt install -y awscli
+
+mkdir /var/lwp

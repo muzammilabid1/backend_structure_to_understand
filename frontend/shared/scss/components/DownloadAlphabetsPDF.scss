@@ -1,0 +1,26 @@
+.download_alphabets_PDF {
+    text-align: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    .text_span {
+        font-size: 64px;
+        font-family: SassoonInfantTkB-Regular;
+        word-break: break-word;
+        line-height: 90px;
+        margin: 0 12px;
+    }
+
+    button {
+        @include sm {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+    }
+
+    .btn_container {
+        margin-top: 30px;
+    }
+}

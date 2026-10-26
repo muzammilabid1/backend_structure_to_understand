@@ -1,0 +1,151 @@
+name: Playwright smoke tests
+
+on:
+    workflow_call:
+        inputs:
+            branch:
+                required: true
+                type: string
+                description: The branch to run the tests on
+            type:
+                required: false
+                type: string
+                description: Type of test run (defaults to "nightly")
+            enableFastFail:
+                required: false
+                type: boolean
+                description: If true, enables the tests to fast-fail.
+            testCommand:
+                required: false
+                type: string
+                description: Command to execute tests (defaults to "yarn test:playwright")
+        secrets:
+            slack_webhook:
+                required: true
+            GH_LWP_PULL_TOKEN:
+                required: true
+            WONDE_API_TOKEN:
+                required: true
+jobs:
+    playwright-run:
+        timeout-minutes: 360 # GitHub-hosted runners cap job execution at 6 hours
+        runs-on: ${{ inputs.type == 'Renovate' && 'renovate' || 'ubuntu-latest' }}
+        env:
+            required_packages: apt-transport-https ca-certificates chromium curl gnupg-agent software-properties-common libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libnss3 libxss1 libasound2 libxtst6 xauth xvfb postgresql-client
+            NODE_ENV: test
+        container:
+            image: cimg/node:22.23.4
+            options: --user root --add-host=host.docker.internal:host-gateway --shm-size 2048M --ipc=host
+        outputs:
+            job-id: ${{ steps.job_id.outputs.result }}
+            status: ${{ steps.test-runner.conclusion == 'success' && 'passed' || steps.test-runner.conclusion == 'failure' && 'failed' || 'encountered an exception' }}
+        steps:
+            # LEA-6599. The runner image arrives ~84% full, and yarn install takes 8.6G of the 12G
+            # that is left. That drops the host below MinIO's minimum-free-drive threshold, so every
+            # upload comes back 507 XMinioStorageFull and any spec that uploads a file fails - and on
+            # the worst nights the backend cannot finish syncing site images and never starts at all.
+            #
+            # MinIO runs as a sibling container on the host daemon (see setup-filestore.sh), so the
+            # space that matters is the host root. These steps run inside the cimg/node container and
+            # the host root is not mounted into it, so the delete goes through a helper container
+            # that mounts it. None of these toolchains are used by this job.
+            - name: Free disk space on the runner host
+              run: |
+                  echo "before: $(df -h / | tail -1)"
+                  docker run --rm -v /:/host alpine:3 sh -c 'rm -rf \
+                      /host/usr/share/dotnet \
+                      /host/usr/local/lib/android \
+                      /host/opt/ghc \
+                      /host/usr/local/.ghcup \
+                      /host/usr/share/swift \
+                      /host/usr/local/share/powershell \
+                      /host/opt/hostedtoolcache/CodeQL 2>/dev/null || true'
+                  echo "after:  $(df -h / | tail -1)"
+            - run: add-apt-repository ppa:xtradeb/apps -y
+            - run: apt-get update
+            - run: apt-get install -y ${{ env.required_packages }}
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ inputs.branch }}
+                  submodules: 'recursive'
+                  token: ${{ secrets.GH_LWP_PULL_TOKEN }}
+            - name: Setup env
+              run: cp .env.container .env
+            ## Based on https://stackoverflow.com/a/78171197/8060859
+            - name: Resolve job ID from workflow run, accounting for matrix strategy.
+              id: job_id
+              uses: actions/github-script@main
+              env:
+                  matrix: ${{ toJson(matrix) }}
+              with:
+                  script: |
+                      const { data: workflow_run } = await github.rest.actions.listJobsForWorkflowRun({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        run_id: context.runId
+                      });
+                      const matrix = JSON.parse(process.env.matrix);
+                      const job_name = `${context.job}${matrix ? ` (${Object.values(matrix).join(", ")})` : ""}`;
+                      return workflow_run.jobs.find((job) => job.name.match(new RegExp(`^(?:[^/]*/\\s*)?${job_name}$`)))?.id;
+
+            - name: Playwright run
+              id: test-runner
+              env:
+                  PLAYWRIGHT_GRAPHQL_ENDPOINT: http://localhost:3006/graphql
+                  PLAYWRIGHT_BACKEND_BASE_URL: http://localhost:3006
+                  WONDE_API_TOKEN: ${{ secrets.WONDE_API_TOKEN }}
+                  PLAYWRIGHT_FAST_FAIL_ENABLED: ${{ inputs.enableFastFail || false }}
+              run: |
+                  yarn install
+                  yarn build
+                  yarn start:fresh &
+                  npx wait-on http://localhost:3000 http://localhost:3006/health --timeout 300000
+                  echo "Installing Playwright Browser Chromium"
+                  npx playwright install --with-deps chromium
+                  ${{ inputs.testCommand || 'yarn test:playwright' }}
+            - uses: actions/upload-artifact@v4
+              if: ${{ !cancelled() }}
+              with:
+                  name: playwright-report
+                  path: e2e-tests/playwright-report/
+                  if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+    slack-notifier:
+        runs-on: ubuntu-latest
+        if: ${{ !cancelled() }}
+        permissions:
+            actions: read
+            contents: read
+        needs: playwright-run
+        steps:
+            - name: Get failure info
+              id: failure-info
+              run: |
+                  delimiter=$(openssl rand -hex 8)
+                  {
+                    echo "ERRORS_OUTPUT<<$delimiter"
+                    curl -v -L \
+                      -H "Accept: application/vnd.github+json" \
+                      -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                      -H "X-GitHub-Api-Version: 2022-11-28" \
+                      https://api.github.com/repos/${{ github.repository }}/actions/jobs/${{ needs.playwright-run.outputs.job-id }}/logs \
+                      | (grep '✘' || echo "No errors found") | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g"
+                    echo -e "\n$delimiter\n"
+                  } | tee -a "$GITHUB_OUTPUT"
+            - name: Notify Slack
+              uses: slackapi/slack-github-action@v1.26.0
+              if: ${{ !cancelled() }}
+              with:
+                  # This data can be any valid JSON from a previous step in the GitHub Action.
+                  # The toJSON function in "errors" should automatically quote the errors appropriately.
+                  payload: |
+                      {
+                        "branch": "${{ inputs.branch }}",
+                        "type": "${{ inputs.type || 'Nightly playwright' }}",
+                        "commit": "${{ github.sha }}",
+                        "run_id": "${{ github.run_id }}",
+                        "status": "${{ needs.playwright-run.outputs.status }}",
+                        "errors": ${{ toJSON(steps.failure-info.outputs.ERRORS_OUTPUT) }}
+                      }
+              env:
+                  SLACK_WEBHOOK_URL: ${{ secrets.slack_webhook }}

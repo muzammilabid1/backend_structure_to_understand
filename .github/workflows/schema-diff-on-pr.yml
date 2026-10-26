@@ -1,0 +1,105 @@
+name: Schema diff on PR
+
+on:
+    pull_request:
+        types: [opened, synchronize, ready_for_review, auto_merge_enabled]
+
+jobs:
+    diff:
+        if: github.event.pull_request.draft == false && github.event.pull_request.user.login != 'renovate[bot]'
+        env:
+            DBDISAMBIG: run_${{ github.run_id }}_${{ github.run_attempt }}
+            PGHOST: postgres
+            PGPORT: 5432
+            PGSUPERUSER: postgres
+            PGSUPERPASSWORD: postgres
+        runs-on: ubuntu-latest
+        permissions:
+            pull-requests: write
+            contents: read
+        container:
+            image: cimg/node:22.23.4
+            options: --user 1001
+        # Service containers to run with `container-job`
+        services:
+            # Label used to access the service container
+            postgres:
+                # Docker Hub image
+                image: ghcr.io/poteris/pg_partman_cron:main
+                # Provide the password for postgres
+                env:
+                    POSTGRES_DB: tempdb_schemacheck_${{ env.DBDISAMBIG }}
+                    POSTGRES_PASSWORD: postgres
+                # Set health checks to wait until postgres has started
+                options: >-
+                    --health-cmd pg_isready
+                    --health-interval 10s
+                    --health-timeout 5s
+                    --health-retries 5
+        outputs:
+            DIFF_STATUS: ${{ steps.diff.outputs.DIFF_STATUS }}
+        steps:
+            - run: |
+                  curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+                  echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
+                  sudo apt-get update
+                  sudo apt-get install postgresql-client-16 -y
+            - uses: actions/checkout@v4
+            - name: Install new dependencies
+              uses: bahmutov/npm-install@v1
+              with:
+                  useRollingCache: true
+            - name: Get new schema
+              id: new-schema
+              shell: bash
+              run: |
+                  yarn workspace graphql-provider scripts:generate-schema | head -n -2 >> /tmp/changed.schema
+            - name: Checkout base ref
+              shell: bash
+              run: |
+                  git fetch origin ${{ github.base_ref }}
+                  git checkout ${{ github.base_ref }}
+            - name: Install base dependencies
+              uses: bahmutov/npm-install@v1
+              with:
+                  useRollingCache: true
+            - name: Get original schema
+              id: original-schema
+              shell: bash
+              run: |
+                  yarn workspace graphql-provider scripts:generate-schema | head -n -2 >> /tmp/original.schema
+            - name: Get diff
+              id: diff
+              shell: bash
+              run: |
+                  delimiter=$(openssl rand -hex 8)
+                  {
+                      export DIFF_STATUS=0
+
+                      echo <<"EOF"
+                  <details>
+                  <summary>🚨 Schema diff</summary>
+                  ```diff
+                  EOF
+
+                      echo "GEN_DIFF<<$delimiter"
+                      diff -du --color='never' --label="" /tmp/original.schema /tmp/changed.schema || export DIFF_STATUS=$?
+                      echo -e "\n$delimiter"
+                      echo "DIFF_STATUS=$DIFF_STATUS"
+
+                      echo <<"EOF"
+                  ```
+                  </details>
+                  EOF
+                  } | tee -a ~/diff-output
+                  echo "DIFF_STATUS=$DIFF_STATUS" >> $GITHUB_OUTPUT
+            - name: Comment PR with diff
+              uses: thollander/actions-comment-pull-request@v2
+              if: ${{ steps.diff.outputs.DIFF_STATUS != 0 }}
+              with:
+                  filePath: ~/diff-output
+            - name: Confirm empty diff
+              uses: thollander/actions-comment-pull-request@v2
+              if: ${{ steps.diff.outputs.DIFF_STATUS == 0 }}
+              with:
+                  message: '✅ No schema diff detected.'

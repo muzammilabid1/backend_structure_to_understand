@@ -1,0 +1,27 @@
+.image_editor_container {
+    .crop_btn_group {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .btn_group {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+
+        .cancel_btn {
+            margin-right: 10px;
+            padding: 8px 22px;
+        }
+    }
+
+    .cropper-bg {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .cropper-modal {
+        opacity: 0.7;
+    }
+}

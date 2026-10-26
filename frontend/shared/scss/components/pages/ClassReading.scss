@@ -1,0 +1,223 @@
+.reading_tab {
+    margin: 24px 0;
+
+    .reading_container {
+        display: flex;
+        gap: 20px;
+
+        .reading_Item {
+            cursor: pointer;
+            border-radius: 4px;
+            border: 1px solid #c9c9c9;
+
+            padding: 14px 24px;
+        }
+
+        .active {
+            border: 1px solid map-get($theme-colors, principal-main-dark);
+            background: map-get($theme-colors, principal-light);
+        }
+    }
+}
+
+.reading_group {
+    .reading-group-info {
+        padding: 0px 8px !important;
+        font-size: 16px !important;
+    }
+    .reading_group_container {
+        display: flex;
+
+        .form_section {
+            width: 50%;
+            padding-right: 35px;
+
+            .mb_24 {
+                margin-bottom: 24px;
+            }
+            .mb_8 {
+                margin-bottom: 8px;
+            }
+
+            .group_radio_button {
+                color: #00303c;
+            }
+
+            .date-picker-field {
+                width: 100%;
+            }
+
+            .includeInReadingTarget-checkbox {
+                .paragraph {
+                    display: flex;
+                    .common_drop_down {
+                        padding: 0px 7px;
+                    }
+                }
+            }
+
+            .submit_group {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 48px;
+                gap: 24px;
+            }
+
+            .disabled-field {
+                display: flex;
+            }
+            .suggested-books-container {
+                overflow-x: auto;
+
+                padding-bottom: 15px;
+
+                scrollbar-width: unset;
+                -ms-overflow-style: unset;
+
+                &::-webkit-scrollbar {
+                    width: 4px;
+                    display: unset;
+                }
+
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px #e6e6e6;
+                    border-radius: 20px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #b7b7b7;
+                    border-radius: 20px;
+                }
+                &::-webkit-scrollbar {
+                    width: 5px;
+                    height: 5px;
+                }
+
+                .suggested-books-card {
+                    min-width: 215px;
+                }
+            }
+        }
+
+        .previous_section {
+            padding-left: 35px;
+            width: 50%;
+
+            .show_feed {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .activity_Feed_card {
+                .infinite-scroll-component {
+                    padding-right: 30px;
+
+                    .no_feed {
+                        margin-top: 100px;
+                    }
+
+                    &::-webkit-scrollbar {
+                        width: 4px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        -webkit-box-shadow: inset 0 0 6px #e6e6e6;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #b7b7b7;
+                    }
+
+                    .feedback-comment-card {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .activity-feed-title-icon {
+                justify-content: left !important;
+                padding: 0 8px;
+                margin: 0 !important;
+                @include sm {
+                    margin-top: 12px !important;
+                }
+            }
+
+            .activity-feed-accordion-summary {
+                align-items: flex-start;
+                .MuiAccordionSummary-expandIconWrapper {
+                    margin: 18px 5px;
+                }
+
+                .activity-feed-header-section {
+                    .activity-feed-edit-container {
+                        margin: 18px 0px;
+                    }
+                    .activity-feed-content {
+                        width: calc(100% + 50px);
+                        margin: 0px;
+                        padding: 0px 8px 16px !important;
+                        @include sm {
+                            padding-top: 10px !important;
+                            max-width: calc(100% + 50px);
+                        }
+                    }
+                }
+                .activity-feed-title-section {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    @include maw(1160) {
+        .reading_group_container {
+            flex-direction: column;
+
+            .form_section {
+                padding-right: 0;
+                width: 100% !important;
+            }
+
+            .previous_section {
+                padding-left: 0;
+                margin-top: 40px;
+                width: 100% !important;
+                .activity_Feed_card {
+                    .infinite-scroll-component {
+                        padding-right: 10px;
+                        .feedback-comment-card {
+                            width: 80%;
+                            @include maw(768) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.count-towards-reading-target-checkbox {
+    display: flex;
+    align-items: center;
+    .MuiTypography-root {
+        padding-top: 0px !important;
+        .paragraph {
+            margin-bottom: 0px;
+        }
+        .MuiBox-root {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+.custum_multiselect {
+    .MuiOutlinedInput-notchedOutline {
+        border-color: #00303c !important;
+    }
+}

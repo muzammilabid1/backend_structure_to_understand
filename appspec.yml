@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+files:
+    - source: /
+      destination: /var/lwp
+hooks:
+    # BeforeInstall:
+    #   - location: release/install_dependencies.sh
+    #     timeout: 300
+    #     runas: root
+    AfterInstall:
+        - location: release/install_node.sh
+          runas: root
+        - location: release/install.sh
+          timeout: 720
+          runas: root
+        - location: release/instrument_new_relic.sh
+          runas: root
+    ApplicationStart:
+        - location: release/start.sh
+          runas: root
+    ApplicationStop:
+        - location: release/stop.sh
+          runas: root

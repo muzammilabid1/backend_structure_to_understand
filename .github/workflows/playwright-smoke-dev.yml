@@ -1,0 +1,16 @@
+name: Nightly dev Playwright tests
+
+on:
+    schedule:
+        - cron: '0 19 * * *'
+    workflow_dispatch:
+
+jobs:
+    run-nightly:
+        uses: ./.github/workflows/playwright-smoke-base.yml
+        with:
+            branch: dev
+        secrets:
+            GH_LWP_PULL_TOKEN: ${{ secrets.GH_LWP_PULL_TOKEN }}
+            slack_webhook: ${{ secrets.slack_webhook }}
+            WONDE_API_TOKEN: ${{ secrets.WONDE_API_TOKEN }}

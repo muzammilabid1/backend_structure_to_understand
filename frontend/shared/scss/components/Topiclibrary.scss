@@ -1,0 +1,70 @@
+.topic_libary_container {
+    max-width: 618px;
+    margin: 0 auto;
+
+    .date-picker-field {
+        width: 100%;
+    }
+
+    .topic-preview-and-resources {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        margin-bottom: 18px;
+        justify-self: center;
+        width: fit-content;
+        margin: auto;
+    }
+    .topic-review-text {
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .common_table .MuiTableRow-head {
+        background-color: map-get($theme-colors, base-off-white);
+
+        .typography-text {
+            font-weight: 500;
+        }
+    }
+
+    .set_topic_reader_btn {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 25px;
+    }
+
+    .view_scheduled {
+        display: flex;
+        justify-content: flex-end;
+        gap: 26px;
+        p {
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+}
+
+.class_group_renderGroup {
+    padding: 16px;
+    .renderGroup_heading {
+        font-weight: 700;
+        padding-bottom: 8px;
+    }
+
+    .MuiAutocomplete-option {
+        padding: 8px 0;
+    }
+}
+
+.set_topic_modal {
+    .dialog-content-section {
+        .dialog-btn-section {
+            justify-content: center;
+        }
+    }
+    .heading-one {
+        font-size: 24px;
+    }
+}

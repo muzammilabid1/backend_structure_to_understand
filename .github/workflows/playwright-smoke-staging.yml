@@ -1,0 +1,16 @@
+name: Nightly staging Playwright tests
+
+on:
+    schedule:
+        - cron: '45 2 * * *'
+    workflow_dispatch:
+
+jobs:
+    run-nightly:
+        uses: ./.github/workflows/playwright-smoke-base.yml
+        with:
+            branch: staging
+        secrets:
+            GH_LWP_PULL_TOKEN: ${{ secrets.GH_LWP_PULL_TOKEN }}
+            slack_webhook: ${{ secrets.slack_webhook }}
+            WONDE_API_TOKEN: ${{ secrets.WONDE_API_TOKEN }}

@@ -1,0 +1,38 @@
+.activity-feed-header {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+        flex-direction: column;
+    }
+
+    .filter-text {
+        font-weight: 700;
+    }
+    .MuiChip-root {
+        background-color: map-get($theme-colors, $key: auxiliary-yellow-base);
+    }
+    .teacher-activity-feed-header {
+        display: flex;
+        align-items: center;
+        .MuiChip-root {
+            margin-left: 25px;
+        }
+
+        .heading-one {
+            font-size: 24px;
+        }
+    }
+}
+.filter-content {
+    padding: 0.5em;
+    min-width: 250px;
+
+    &:focus {
+        outline: none;
+    }
+
+    .option-field {
+        margin: 1em 0;
+    }
+}

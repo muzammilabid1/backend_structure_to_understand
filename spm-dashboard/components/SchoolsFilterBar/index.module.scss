@@ -1,0 +1,36 @@
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+// MUI's Chip is a pill by default; the dashboard's badges are softened rectangles.
+.tag {
+  height: 34px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 9px;
+
+  :global(.MuiChip-label) {
+    padding: 0 14px;
+  }
+
+  &:global(.MuiChip-outlined) {
+    color: var(--text-primary);
+    background: var(--surface-card);
+    border-color: var(--surface-border);
+
+    &:hover {
+      background: var(--surface-accent-tint);
+    }
+  }
+}

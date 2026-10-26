@@ -1,0 +1,61 @@
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  width: fit-content;
+  min-width: 250px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  .selectLabel {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .selectContainer {
+    position: relative;
+    width: 100%;
+
+    .select {
+      width: 100%;
+      padding: 0.6rem 2.5rem 0.6rem 1rem;
+      border: 1.5px solid var(--border-medium);
+      border-radius: 8px;
+      font-size: 14px;
+      background: var(--background-card);
+      font-family: inherit;
+      cursor: pointer;
+      appearance: none;
+      transition: border-color 0.2s;
+      color: var(--text-primary);
+      outline: none;
+    }
+
+    .select:focus {
+      border-color: var(--primary-orange);
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.08);
+    }
+
+    .select:hover {
+      border-color: var(--primary-orange);
+    }
+    .selectArrow {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      height: 1.25rem;
+      width: 1.25rem;
+      pointer-events: none;
+      background: url('data:image/svg+xml;utf8,<svg fill="%23FF6B35" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.293l3.71-3.06a.75.75 0 1 1 .98 1.14l-4.25 3.5a.75.75 0 0 1-.98 0l-4.25-3.5a.75.75 0 0 1 .02-1.06z"/></svg>')
+        no-repeat center/contain;
+    }
+  }
+}

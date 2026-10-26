@@ -1,0 +1,1165 @@
+{
+    "classYearGroups": [
+        { "value": "Preschool", "key": "P" },
+        { "value": "Reception", "key": "R" },
+        { "value": "Year 1", "key": "1" },
+        { "value": "Year 2", "key": "2" },
+        { "value": "Year 3", "key": "3" },
+        { "value": "Year 4", "key": "4" },
+        { "value": "Year 5", "key": "5" },
+        { "value": "Year 6", "key": "6" }
+    ],
+    "weeklyReadingTarget": [
+        { "value": "0 days", "key": "0" },
+        { "value": "1 day", "key": "1" },
+        { "value": "2 days", "key": "2" },
+        { "value": "3 days", "key": "3" },
+        { "value": "4 days", "key": "4" },
+        { "value": "5 days", "key": "5" },
+        { "value": "6 days", "key": "6" },
+        { "value": "7 days", "key": "7" }
+    ],
+    "readingDays": [
+        { "value": "Monday to Sunday", "key": "1" },
+        { "value": "Tuesday to Monday", "key": "2" },
+        { "value": "Wednesday to Tuesday", "key": "3" },
+        { "value": "Thursday to Wednesday", "key": "4" },
+        { "value": "Friday to Thursday", "key": "5" },
+        { "value": "Saturday to Friday", "key": "6" },
+        { "value": "Sunday to Saturday", "key": "0" }
+    ],
+    "chartsOptions": [
+        { "value": "Percentage", "key": "1" },
+        { "value": "Numerical", "key": "2" }
+    ],
+    "barChartOptions": ["EYFS", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"],
+    "barChartOptions_2": ["Pupil premium", "Non pupil premium", "Total"],
+    "signUpBarChartData": [
+        {
+            "name": "Your year groups",
+            "data": [10, 31, 63, 20, 20, 80, 20],
+            "color": "#F28D00"
+        },
+        {
+            "name": "National Average",
+            "data": [13, 15, 94, 40, 60, 98, 76],
+            "color": "#FFD19B"
+        }
+    ],
+    "signUpBarChartData_2": [
+        {
+            "name": "Your total activities completed",
+            "data": [10, 31, 63],
+            "color": "#F28D00"
+        },
+        {
+            "name": "National Average",
+            "data": [13, 15, 94],
+            "color": "#FFD19B"
+        }
+    ],
+    "stackedColumnChartData": [
+        {
+            "name": "2 activities complete",
+            "data": [5, 3, 4, 7, 2, 4, 2],
+            "stack": "male",
+            "color": "#65B32E"
+        },
+        {
+            "name": "1 activities complete",
+            "data": [3, 4, 4, 2, 5, 6, 2],
+            "stack": "male",
+            "color": "#99C95D"
+        },
+        {
+            "name": "Watched video",
+            "data": [2, 5, 6, 2, 1, 9, 7],
+            "stack": "male",
+            "color": "#C6DD84"
+        }
+    ],
+    "topicsBarChartData": [
+        {
+            "name": "Your total activities completed",
+            "data": [10, 31, 63, 20, 20, 80, 20],
+            "color": "#65B32E"
+        },
+        {
+            "name": "National Average",
+            "data": [13, 15, 94, 40, 60, 98, 76],
+            "color": "#C6DD84"
+        }
+    ],
+    "topicsBarChartData_2": [
+        {
+            "name": "Your total topics completed",
+            "data": [10, 31, 63],
+            "color": "#65B32E"
+        },
+        {
+            "name": "National Average",
+            "data": [13, 15, 94],
+            "color": "#C6DD84"
+        }
+    ],
+    "lineChartData": [
+        {
+            "name": "Test class 1",
+            "data": [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+        },
+        {
+            "name": "Test class 2",
+            "data": [4, 14, 24, 34, 44, 54, 64, 74, 86, 92, 99]
+        },
+        {
+            "name": "Test class 3",
+            "data": [2, 14, 25, 36, 47, 58, 69, 72, 75, 82, 97]
+        },
+        {
+            "name": "Test class 4",
+            "data": [5, 15, 25, 35, 45, 55, 65, 75, 82, 89, 92]
+        },
+        {
+            "name": "Test class 5",
+            "data": [1, 11, 21, 31, 41, 51, 61, 71, 77, 88, 91]
+        },
+        {
+            "name": "Test class 6",
+            "data": [8, 18, 28, 38, 48, 58, 68, 78, 84, 95, 93]
+        },
+        {
+            "name": "Test class 7",
+            "data": [3, 13, 23, 33, 43, 53, 63, 73, 80, 87, 95]
+        }
+    ],
+    "columnChartData": [
+        {
+            "name": "Test class 1",
+            "y": 62.74,
+            "drilldown": "Test class 1",
+            "color": "#F28D00"
+        },
+        {
+            "name": "Test class 2",
+            "y": 30.57,
+            "drilldown": "Test class 2",
+            "color": "#F28D00"
+        },
+        {
+            "name": "Test class 3",
+            "y": 70.23,
+            "drilldown": "Test class 3",
+            "color": "#F28D00"
+        },
+        {
+            "name": "Test class 4",
+            "y": 99.58,
+            "drilldown": "Test class 4",
+            "color": "#F28D00"
+        },
+        {
+            "name": "Test class 5",
+            "y": 40.02,
+            "drilldown": "Test class 5",
+            "color": "#F28D00"
+        },
+        {
+            "name": "Test class 6",
+            "y": 61.92,
+            "drilldown": "Test class 6",
+            "color": "#F28D00"
+        },
+        {
+            "name": "Test class 7",
+            "y": 81.92,
+            "drilldown": "Test class 7",
+            "color": "#F28D00"
+        }
+    ],
+    "pieGraphData_1": [
+        [
+            {
+                "name": "Signed up",
+                "y": 31.41,
+                "color": "#F28D00"
+            },
+            {
+                "name": "Not signed up",
+                "y": 11.84,
+                "color": "#FFD19B"
+            }
+        ],
+        [
+            {
+                "name": "Signed up",
+                "y": 82.41,
+                "color": "#F28D00"
+            },
+            {
+                "name": "Not signed up",
+                "y": 11.84,
+                "color": "#FFD19B"
+            }
+        ],
+        [
+            {
+                "name": "Signed up",
+                "y": 15.41,
+                "color": "#F28D00"
+            },
+            {
+                "name": "Not signed up",
+                "y": 11.84,
+                "color": "#FFD19B"
+            }
+        ]
+    ],
+    "pieGraphData_2": [
+        [
+            {
+                "name": "2 activities complete",
+                "y": 50.41,
+                "color": "#65B32E"
+            },
+            {
+                "name": "1 activity complete",
+                "y": 15.84,
+                "color": "#99C95D"
+            },
+            {
+                "name": "Watched video",
+                "y": 15.84,
+                "color": "#C6DD84"
+            },
+            {
+                "name": "Not started",
+                "y": 15.84,
+                "color": "#FAF3B3"
+            }
+        ],
+        [
+            {
+                "name": "2 activities complete",
+                "y": 30.41,
+                "color": "#65B32E"
+            },
+            {
+                "name": "1 activity complete",
+                "y": 30.84,
+                "color": "#99C95D"
+            },
+            {
+                "name": "Watched video",
+                "y": 30.84,
+                "color": "#C6DD84"
+            },
+            {
+                "name": "Not started",
+                "y": 9.84,
+                "color": "#FAF3B3"
+            }
+        ],
+        [
+            {
+                "name": "2 activities complete",
+                "y": 15.41,
+                "color": "#65B32E"
+            },
+            {
+                "name": "1 activity complete",
+                "y": 30.84,
+                "color": "#99C95D"
+            },
+            {
+                "name": "Watched video",
+                "y": 30.84,
+                "color": "#C6DD84"
+            },
+            {
+                "name": "Not started",
+                "y": 15.84,
+                "color": "#FAF3B3"
+            }
+        ]
+    ],
+    "statisticsOptions": [
+        {
+            "key": 1,
+            "value": "Signups"
+        },
+        {
+            "key": 2,
+            "value": "Topics"
+        },
+        {
+            "key": 3,
+            "value": "Overview"
+        }
+    ],
+    "periodOptions": [
+        {
+            "key": 1,
+            "value": "Last two weeks"
+        },
+        {
+            "key": 2,
+            "value": "Past Month"
+        },
+        {
+            "key": 3,
+            "value": "Past Year"
+        }
+    ],
+    "userType": [
+        { "key": "Parent", "value": "PARENT" },
+        { "key": "Teacher", "value": "TEACHER" }
+    ],
+    "interstitialUserOptions": [
+        { "key": "PARENT", "value": "Parents" },
+        { "key": "TEACHER", "value": "Teachers" },
+        { "key": "NEW_PARENT", "value": "New Parents" },
+        { "key": "NEW_TEACHER", "value": "New Teachers" }
+    ],
+    "feedbackSharedStatus": [
+        {
+            "key": "ALL",
+            "value": "All"
+        },
+        {
+            "key": "SHAREDONLY",
+            "value": "Shared Only"
+        },
+        {
+            "key": "SHAREDPHOTOSONLY",
+            "value": "Shared Photos Only"
+        },
+        {
+            "key": "INCLUDEDINIMPACTREPORT",
+            "value": "Included in impact report"
+        }
+    ],
+    "deletedClassTopicFilter": [
+        {
+            "key": "ALL_PUPIL_TOPICS",
+            "value": "All Pupil Topics"
+        },
+        {
+            "key": "PUPIL_TOPICS_WITH_NO_FEEDBACK",
+            "value": "Pupil Topic With No Feedback"
+        }
+    ],
+    "how_does_it_work_data_parents_page": [
+        {
+            "image": "pupil_with_round_bg1.png",
+            "alt": "Create an account",
+            "title": "Create an account",
+            "subTitle": "You’ll need a class code from your child’s teacher to set up your child’s account."
+        },
+        {
+            "image": "pupil_with_round_bg2.png",
+            "alt": "Learn with your child",
+            "title": "Learn with your child",
+            "subTitle": "Your child’s teacher will send you videos to watch and activites to do together. "
+        },
+        {
+            "image": "pupil_with_round_bg3.png",
+            "alt": "Share with your teacher",
+            "title": "Share with your teacher",
+            "subTitle": "Send comments and photos to your child’s teacher through the platform."
+        }
+    ],
+    "how_does_it_work_data_teachers_page": [
+        {
+            "image": "pupil_with_round_bg1.png",
+            "alt": "how does it work image",
+            "title": "Set a topic for your class",
+            "subTitle": "Schedule curriculum-aligned topics from Early Years to Year 6. Families receive a child-led video and related hands-on activities. Parents are notified when a new topic is ready for them to explore at home."
+        },
+        {
+            "image": "pupil_with_round_bg2.png",
+            "alt": "how does it work image",
+            "title": "Families learn together",
+            "subTitle": "Parents and children watch the video and complete the activities offline. Activities are open-ended and accessible for everyone. Families then share comments and photos to let you know how it went."
+        },
+        {
+            "image": "pupil_with_round_bg3.png",
+            "alt": "how does it work image",
+            "title": "See their engagement",
+            "subTitle": "Keep track of engagement through the register view and families' comments and photos. Pupils are rewarded for their engagement with items to dress-up their Monkey Mathscot and through our termly initiatives."
+        }
+    ],
+    "what_makes_us_different_data": [
+        {
+            "icon": "sentiment_satisfied_alt",
+            "title": "Child-led",
+            "subTitle": "Our friendly child-led videos support parents and children to use the methods learnt at school."
+        },
+        {
+            "icon": "home",
+            "title": "Offline",
+            "subTitle": "Our games can be enjoyed using objects from around children's homes. The play-based activities are hands-on and open-ended."
+        },
+        {
+            "icon": "accessibility_new",
+            "title": "Inclusive",
+            "subTitle": "Our platform works on all devices - from mobile to laptop. We are working with The Developer Society to ensure that our resources are accessible to everyone."
+        }
+    ],
+    "latest_updates_data": [
+        {
+            "title": "Parental Engagement Forum Meeting – 9th June 2020",
+            "subTitle": "Friday 16 January",
+            "description": "The team behind Teacher Tapp are developing Parent Ping, an app which will collect data from parents of all backgrounds on their views and experiences. Parent Ping will be UK wide and will target parents with children aged 2-19"
+        },
+        {
+            "title": "TES Article",
+            "subTitle": "Wednesday 6 May",
+            "description": "We were delighted to see so many education organisations creating and sharing new resources to   We were delighted to see so many education organisations creating and sharing new resources to support parental engagement in their children’s learning at this time. However, we were concerned that such resources may not explicitly consider the barriers that disadvantaged parents may face in accessing them. This risks helping to"
+        },
+        {
+            "title": "Parental Engagement Webinar",
+            "subTitle": "Wednesday 6 May",
+            "description": "To further ensure that organisations working with parents focussed their efforts on the most disadvantaged families, we hosted a webinar titled “Supporting disadvantaged parents to engage in their children’s learning”. You can watch brief highlights below or the full"
+        }
+    ],
+    "latest_updates_data_for_news_page": [
+        {
+            "title": "Parental Engagement Forum Meeting – 9th June 2020",
+            "subTitle": "Friday 16 January",
+            "description": "The team behind Teacher Tapp are developing Parent Ping, an app which will collect data from parents of all backgrounds on their views and experiences. Parent Ping will be UK wide and will target parents with children aged 2-19"
+        },
+        {
+            "title": "TES Article",
+            "subTitle": "Wednesday 6 May",
+            "description": "We were delighted to see so many education organisations creating and sharing new resources to   We were delighted to see so many education organisations creating and sharing new resources to support parental engagement in their children’s learning at this time. However, we were concerned that such resources may not explicitly consider the barriers that disadvantaged parents may face in accessing them. This risks helping to"
+        },
+        {
+            "title": "Parental Engagement Webinar",
+            "subTitle": "Wednesday 6 May",
+            "description": "To further ensure that organisations working with parents focussed their efforts on the most disadvantaged families, we hosted a webinar titled “Supporting disadvantaged parents to engage in their children’s learning”. You can watch brief highlights below or the full"
+        },
+        {
+            "title": "Parental Engagement Forum Meeting – 9th June 2020",
+            "subTitle": "Friday 16 January",
+            "description": "The team behind Teacher Tapp are developing Parent Ping, an app which will collect data from parents of all backgrounds on their views and experiences. Parent Ping will be UK wide and will target parents with children aged 2-19"
+        },
+        {
+            "title": "TES Article",
+            "subTitle": "Wednesday 6 May",
+            "description": "We were delighted to see so many education organisations creating and sharing new resources to   We were delighted to see so many education organisations creating and sharing new resources to support parental engagement in their children’s learning at this time. However, we were concerned that such resources may not explicitly consider the barriers that disadvantaged parents may face in accessing them. This risks helping to"
+        },
+        {
+            "title": "Parental Engagement Webinar",
+            "subTitle": "Wednesday 6 May",
+            "description": "To further ensure that organisations working with parents focussed their efforts on the most disadvantaged families, we hosted a webinar titled “Supporting disadvantaged parents to engage in their children’s learning”. You can watch brief highlights below or the full"
+        }
+    ],
+    "clear_and_simple_pricing_list": [
+        "Child-led videos for every topic, covering maths and english from Early Years to Year 6",
+        "Accessible curriculum aligned activities for children to enjoy around the home with their parents",
+        "Live engagement data for your class, including families’ comments and photos",
+        "Automated texts and emails to parents when you set new topics",
+        "Support from the Learning with Parents team",
+        "Termly impact summaries and engagement reports"
+    ],
+    "think_about_the_benefits": [
+        {
+            "heading": "85%",
+            "title": "Amazing statistic"
+        },
+        {
+            "heading": "12m",
+            "title": "Another statistic"
+        },
+        {
+            "heading": "500",
+            "title": "Yet another statistic"
+        }
+    ],
+    "FAQs": [
+        {
+            "question": "How do I find out my class code?",
+            "answer": "If you are a returning parent, it is even easier to assign your child to a class. Log in and click on your child's Mathscot. You will be given a list of the new classes. Click on their class name, then they will be added and ready to receive any new topics set."
+        },
+        {
+            "question": "How do I find out my class code?",
+            "answer": "If you are a returning parent, it is even easier to assign your child to a class. Log in and click on your child's Mathscot. You will be given a list of the new classes. Click on their class name, then they will be added and ready to receive any new topics set."
+        },
+        {
+            "question": "How do I find out my class code?",
+            "answer": "If you are a returning parent, it is even easier to assign your child to a class. Log in and click on your child's Mathscot. You will be given a list of the new classes. Click on their class name, then they will be added and ready to receive any new topics set."
+        }
+    ],
+    "section": [
+        { "value": "Supported by", "key": "SUPPORTEDBY" },
+        { "value": "Working with", "key": "WORKINGWITH" },
+        { "value": "Working with maths", "key": "WORKINGWITHMATHS" },
+        { "value": "Working with english", "key": "WORKINGWITHENGLISH" },
+        { "value": "Working together", "key": "WORKINGTOGETHER" }
+    ],
+    "digital_checklist": [
+        { "key": 1, "image": "baby.png", "caption": "Something loud", "checked": false },
+        { "key": 2, "image": "leaf.png", "caption": "Something quiet", "checked": false },
+        { "key": 3, "image": "bike.png", "caption": "A vehicle", "checked": false },
+        { "key": 4, "image": "dog.png", "caption": "An animal", "checked": false },
+        { "key": 5, "image": "football.png", "caption": "Something near", "checked": false },
+        { "key": 6, "image": "bird.png", "caption": "Something far away", "checked": false },
+        { "key": 7, "image": "cloud.png", "caption": "Something you can’t see", "checked": false },
+        { "key": 8, "image": "plane.png", "caption": "Something above you", "checked": false },
+        { "key": 9, "image": "people.png", "caption": "A noise made by people", "checked": false },
+        { "key": 10, "image": "building.png", "caption": "A noise coming from inside a building", "checked": false },
+        { "key": 11, "image": "rain-cloud.png", "caption": "A noise made by the weather", "checked": false },
+        { "key": 12, "image": "river.png", "caption": "A noise made by water", "checked": false }
+    ],
+
+    "alphabets_images": [
+        { "key": 1, "image": "a.png" },
+        { "key": 2, "image": "b.png" },
+        { "key": 3, "image": "c.png" },
+        { "key": 4, "image": "d.png" },
+        { "key": 5, "image": "e.png" },
+        { "key": 6, "image": "f.png" },
+        { "key": 7, "image": "g.png" },
+        { "key": 8, "image": "h.png" },
+        { "key": 9, "image": "i.png" },
+        { "key": 10, "image": "j.png" },
+        { "key": 11, "image": "k.png" },
+        { "key": 12, "image": "l.png" },
+        { "key": 12, "image": "m.png" },
+        { "key": 12, "image": "n.png" },
+        { "key": 12, "image": "o.png" },
+        { "key": 12, "image": "p.png" },
+        { "key": 12, "image": "q.png" },
+        { "key": 12, "image": "r.png" },
+        { "key": 12, "image": "s.png" },
+        { "key": 12, "image": "t.png" },
+        { "key": 12, "image": "u.png" },
+        { "key": 12, "image": "v.png" },
+        { "key": 12, "image": "w.png" },
+        { "key": 12, "image": "x.png" },
+        { "key": 12, "image": "y.png" },
+        { "key": 12, "image": "z.png" }
+    ],
+    "alphabets": [
+        { "text": "a" },
+        { "text": "b" },
+        { "text": "c" },
+        { "text": "d" },
+        { "text": "e" },
+        { "text": "f" },
+        { "text": "g" },
+        { "text": "h" },
+        { "text": "i" },
+        { "text": "j" },
+        { "text": "k" },
+        { "text": "l" },
+        { "text": "m" },
+        { "text": "n" },
+        { "text": "o" },
+        { "text": "p" },
+        { "text": "q" },
+        { "text": "r" },
+        { "text": "s" },
+        { "text": "t" },
+        { "text": "u" },
+        { "text": "v" },
+        { "text": "w" },
+        { "text": "x" },
+        { "text": "y" },
+        { "text": "z" }
+    ],
+    "mySigns": [
+        { "image": "my_room4.png", "caption": "Coloured pens or pencils" },
+        { "image": "my_room1.png", "caption": "Gluing on lentils or other small, dried food" },
+        { "image": "my_room3.png", "caption": "Cutting out coloured paper, maybe from a magazine" },
+        { "image": "my_room2.png", "caption": "Making coloured rice using food colouring" }
+    ],
+    "dictionary_checkbox": [
+        { "key": 1, "caption": "Has more than two definitions", "checked": false },
+        { "key": 2, "caption": "Is a noun and a verb", "checked": false },
+        { "key": 3, "caption": "Originally comes from a country in Asia", "checked": false },
+        { "key": 4, "caption": "Is obsolete (no longer used)", "checked": false },
+        { "key": 5, "caption": "Mentions a woman in its definition", "checked": false },
+        { "key": 6, "caption": "Is longer than ten letters", "checked": false },
+        { "key": 7, "caption": "Can be spelled in more than one way", "checked": false },
+        { "key": 8, "caption": "Has a Latin root", "checked": false },
+        { "key": 9, "caption": "Starts with a double letter", "checked": false },
+        { "key": 10, "caption": "Means something different from what you expected", "checked": false }
+    ],
+    "saidSwapCarouselTitles": [
+        "“I have it,” said the witch.",
+        "“You will never win,” said mum.",
+        "“I wanted ice cream,” said Logan.",
+        "“Run!” said Scarlett.",
+        "“He’s the best,” said Mo."
+    ],
+    "spellingPostersCarouselTitles": [
+        "Beautiful Pretty Attractive",
+        "Run Hurry Rush",
+        "Funny Hilarious Entertaining",
+        "Scary Terrifying Creepy",
+        "Hot Boiling Scorching"
+    ],
+    "iFeelSaidCarouselTitles": [
+        "[1] \n “I can’t believe it!” said Greta in a disappointed voice.",
+        "[2] \n “Look out for the shark!” said Mason, sounding scared. ",
+        "[3] \n “It hurts,” said Luca as he clutched his broken leg.",
+        "[4] \n ““It’s so tiny,” she said quietly, “I think it must have been born today.”",
+        "[5] \n “That planet is pretty enormous,” he said in amazement. ",
+        "[6] \n “The jewels are mine, all mine!” said the Queen with a wicked look on her face.",
+        "[7] \n Slowly he turned around, and when he saw the dragon he said, “I’m not scared.”",
+        "[8] \n As the tiger leaped towards them, he said, “Run!”",
+        "[9] \n She peeped through bushes at ghosts swirling in the mist and said, “Do you think we should turn back?”",
+        "[10]\n The dark knight stood over the wolf with his sword drawn and said, “What will you do now?”",
+        "[11]\n “I will just slide this gold into my pocket,” said the gnome sneakily, “and then I will put it somewhere safe.”",
+        "[12]\n The waves broke over the sinking stern of the ship as the captain said, “My boat and I will go down together.”"
+    ],
+    "whyCarouselTitles": [
+        "Why are some screw heads cross shaped and some a line?",
+        "Why can’t penguins fly?",
+        "Why are bats the only mammals that can fly?",
+        "Why do people use a baby voice to small children?",
+        "Why do people want to travel into space?",
+        "Why do we put carpet on the floor but not on the wall?"
+    ],
+    "whatIfCarouselTitles": [
+        "What if you had a theme song that played every time you walked into a room…?",
+        "What if there was a zombie apocalypse and you were the only person left on the planet…?",
+        "What if dinosaurs came back to life…?",
+        "What if you were allowed to create one new law everyone had to follow…?",
+        "What if you won a million pounds…?",
+        "What if there were only three books left in the world…?",
+        "What if children were allowed to drive cars…?",
+        "What if you went five hundred years back in time…?"
+    ],
+    "characters": [
+        "Queen",
+        "King",
+        "Gymnast",
+        "Clown",
+        "Zookeeper",
+        "Dragon Tamer",
+        "Child",
+        "Dog",
+        "Horse",
+        "Unicorn",
+        "Astronaut",
+        "Chef",
+        "Witch",
+        "Troll",
+        "Imp",
+        "Fairy",
+        "Reindeer",
+        "Teacher",
+        "Mum",
+        "Dad",
+        "Superhero",
+        "Worm"
+    ],
+    "settings": [
+        "Moon",
+        "School",
+        "Castle",
+        "Village",
+        "Supermarket",
+        "Field",
+        "Farm",
+        "Station",
+        "Hotel",
+        "Escalator",
+        "Lift",
+        "Bedroom",
+        "Kitchen",
+        "Park",
+        "Underground",
+        "Cave",
+        "Up a Tree",
+        "Seaside",
+        "Dolls House",
+        "Hospital",
+        "Palace"
+    ],
+    "objects": [
+        "Cup",
+        "Ball",
+        "Wand",
+        "Broomstick",
+        "Rug",
+        "Flower",
+        "Aeroplane",
+        "Crown",
+        "Diamond",
+        "Key",
+        "Potion",
+        "Poison",
+        "Winged Sandals",
+        "Sword",
+        "Parachute",
+        "Pillow",
+        "Spoon",
+        "Torch",
+        "Needle",
+        "Compass",
+        "Matches"
+    ],
+    "actions": [
+        "A Wish",
+        "A Promise",
+        "A Flight",
+        "A Fall",
+        "A Phone Call",
+        "An Explosion",
+        "A Party",
+        "A Loud Noise",
+        "A Creak",
+        "An Idea",
+        "Crying",
+        "A Scream",
+        "A Knock at the Door",
+        "A Jingling Sound",
+        "A Quest",
+        "Whispering"
+    ],
+    "words_and_sentences": {
+        "a": [
+            "Accident: I dropped my glass by accident.",
+            "Accidentally: Dad accidentally stepped in a puddle.",
+            "Actually: I don’t actually like cake.",
+            "Actual: The actual cost was lower than he expected.",
+            "Address: Write the address on the envelope.",
+            "Answer: Please can you answer my question.",
+            "Appear: A star will appear in the sky.",
+            "Arrive: Let me know when you arrive safely."
+        ],
+        "b": [
+            "Believe: I believe it will snow tomorrow.",
+            "Bicycle: Mrs Bell rides her bicycle to school.",
+            "Breath: Take a deep breath before you sing.",
+            "Breathe: Humans can’t breathe under water.",
+            "Build: I can build a tall tower.",
+            "Busy: Dad is busy at the moment.",
+            "Business: That is none of your business."
+        ],
+        "c": [
+            "Calendar: I will write the date in my calendar.",
+            "Caught: He caught a fish in his net.",
+            "Centre: There is a cross at the centre of the map.",
+            "Century: This is the twenty-first century.",
+            "Certain: I am certain that is true.",
+            "Circle: A circle is a round shape.",
+            "Complete: I ran a complete loop round the park.",
+            "Consider: Consider yourself part of the furniture.",
+            "Continue: Continue walking until you reach the roundabout."
+        ],
+        "d": [
+            "Decide: I can’t decide which flavour I like best.",
+            "Describe: How would you describe the robber?",
+            "Different: She has a different sock on each foot.",
+            "Difficult: That was a difficult question.",
+            "Disappear: He waved his wand and made the rabbit disappear."
+        ],
+        "e": [
+            "Early: It is much too early to get up.",
+            "Earth: Plant that seed in the earth.",
+            "Eight: Spiders have eight legs.",
+            "Eighth: He came eighth in the race.",
+            "Enough: Have you had enough breakfast?",
+            "Exercise: I play football for exercise.",
+            "Experience: Do you have experience of working in a shop?",
+            "Experiment: She did an experiment to find out if it was true.",
+            "Extreme: Today we have had extreme weather conditions."
+        ],
+        "f": [
+            "Famous: She is famous for her brilliant driving.",
+            "Favourite: My favourite food is cheese.",
+            "February: The second month is called February.",
+            "Forward: He ran forward into the crowd.",
+            "Forwards: The train moves forwards along the track.",
+            "Fruit: I have fruit for a snack."
+        ],
+        "g": [
+            "Grammar: Grammar is the way we arrange words to make sentences.",
+            "Group: Now group the objects by size.",
+            "Guard: There was a guard outside the dragon’s cave.",
+            "Guide: She will guide you through the forest."
+        ],
+        "h": [
+            "Heard: The ladybird heard the whole plan.",
+            "Heart: My heart beats fast when I run.",
+            "Height: What height is the tallest building?",
+            "History: I like learning about history."
+        ],
+        "i": [
+            "Imagine: Imagine what you might find at the end of a rainbow.",
+            "Increase: The bakery must increase the number of loaves it makes.",
+            "Important: This is very important news.",
+            "Interest: I have no interest in farming.",
+            "Island: The pirates landed on the island."
+        ],
+        "j": [],
+        "k": ["Knowledge: I have the knowledge to build a shed."],
+        "l": [
+            "Learn: I need to learn my times tables.",
+            "Length: What is the length of the table?",
+            "Library: You can borrow books from the library."
+        ],
+        "m": [
+            "Material: What material is that chair made from?",
+            "Medicine: The doctor gives you medicine when you are ill.",
+            "Mention: Please mention it when you see the doctor.",
+            "Minute: One minute is sixty seconds long."
+        ],
+        "n": [
+            "Natural: I like my natural curls.",
+            "Naughty: Sometimes my dog is naughty.",
+            "Notice: Mum did not notice me take an extra cake."
+        ],
+        "o": [
+            "Occasion: My birthday is a special occasion.",
+            "Occasionally: We occasionally have pizza for tea.",
+            "Often: I often go for a run.",
+            "Opposite: Left is the opposite of right.",
+            "Ordinary: It was an ordinary day."
+        ],
+        "p": [
+            "Particular: Which toy do you like in particular?",
+            "Peculiar: Your face is looking very peculiar!",
+            "Perhaps: Perhaps we should stop here.",
+            "Popular: Chocolate is the most popular flavour of ice cream.",
+            "Position: What position do you play in?",
+            "Possess: I possess three bags.",
+            "Possession: My watch is my most treasured possession.",
+            "Possible: It is not possible for pigs to fly.",
+            "Potatoes: Chips are made of potatoes.",
+            "Pressure: I do not work well under pressure.",
+            "Probably: That was probably the funniest thing I heard all week!",
+            "Promise: I promise we can go to the park tomorrow.",
+            "Purpose: She said she didn’t kick him on purpose."
+        ],
+        "q": ["Quarter: It is quarter past seven.", "Question: The teacher asked him a question."],
+        "r": [
+            "Recent: When was your most recent visit to the dentist?",
+            "Regular: A square is a regular shape.",
+            "Reign: Queen Victoria’s reign began in 1837.",
+            "Remember: I don’t remember his name."
+        ],
+        "s": [
+            "Sentence: Can you write this sentence?",
+            "Separate: We have two separate playgrounds at school.",
+            "Special: That is a very special rock.",
+            "Straight: Draw a straight line using a ruler.",
+            "Strange: The princess gave him a strange look.",
+            "Strength: Swimming can help build up your strength.",
+            "Suppose: I suppose it could be true.",
+            "Surprise: He had a surprise party for his birthday."
+        ],
+        "t": [
+            "Therefore: I think therefore I am.",
+            "Though: Though she is little, she is fierce.",
+            "Thought: She thought it would be sunny today.",
+            "Through: I looked through the window."
+        ],
+        "u": [],
+        "v": ["Various: We have various options to show you."],
+        "w": ["Weight: What weight of flour do we need?", "Woman: The woman was very strong.", "Women: Queens are women."],
+        "x": [],
+        "y": [],
+        "z": []
+    },
+    "words_and_sentences_year_five_or_six": {
+        "a": [
+            "Accommodate: The flats accommodate up to six people.",
+            "Accompany: Bill will accompany you to the door.",
+            "According: According to my nan, it was enormous!",
+            "Achieve: You can achieve anything you set your mind to.",
+            "Aggressive: The lion was very aggressive.",
+            "Amateur: He was an amateur boxer.",
+            "Ancient: The Ancient Greeks lived over two thousand years ago.",
+            "Apparent: She smiled for no apparent reason.",
+            "Appreciate: I appreciate the effort you put into it.",
+            "Attached: Please look at the image I attached to the email.",
+            "Available: Is this house available to rent?",
+            "Average: She was average height.",
+            "Awkward: The chicken looked awkward as it crossed the road."
+        ],
+        "b": ["Bargain: I found a real bargain in the shop today.", "Bruise: She got a big bruise falling off her bike."],
+        "c": [
+            "Category: In which category would you put carrots?",
+            "Cemetery: People are buried in the cemetery.",
+            "Committee: The committee will decide what to do next.",
+            "Communicate: Please communicate with me by email.",
+            "Community: The community supported each other during the crisis.",
+            "Competition: Enter the competition to win fantastic prizes!",
+            "Conscience: Is your conscience clean?",
+            "Conscious: He was conscious of someone standing behind him.",
+            "Controversy: The design has caused controversy.",
+            "Convenience: I keep food in the freezer for convenience.",
+            "Correspond: We like to correspond by letter.",
+            "Criticise: Please don’t criticise him!",
+            "Curiosity: Curiosity killed the cat."
+        ],
+        "d": [
+            "Definite: We have no definite plans.",
+            "Desperate: She was desperate to win the race.",
+            "Determined: She was determined to climb the climb the mountain.",
+            "Develop: We plan to develop this land.",
+            "Dictionary: Use a dictionary to check the word’s meaning.",
+            "Disastrous: The Titanic made a disastrous journey across the Atlantic."
+        ],
+        "e": [
+            "Embarrass: You will embarrass yourself if you slip on the ice.",
+            "Environment: We must look after the environment.",
+            "Equipped: You are well equipped to handle any situation.",
+            "equipment: Set up the equipment ready for the experiment.",
+            "Especially: You must be especially careful near the sharks.",
+            "Exaggerate: Do not exaggerate how tall you are!",
+            "Excellent: That pizza tasted excellent!",
+            "Existence: The organisation has been in existence for six years.",
+            "Explanation: I hope you have an explanation for how it was broken!"
+        ],
+        "f": [
+            "Familiar: I like home because it feels familiar.",
+            "Foreign: He can speak three foreign languages!",
+            "Forty: My dad is forty next year.",
+            "Frequently: How frequently do you watch TV?"
+        ],
+        "g": ["Government: The government was slow to react.", "Guarantee: Does this fridge come with a guarantee?"],
+        "h": ["Harass: It is wrong to harass somebody.", "Hindrance: The biggest hindrance was lack of funds."],
+        "i": [
+            "Identity: The policy knew the identity of the robber.",
+            "Immediate: The fire was his immediate concern.",
+            "Immediately: Come here immediately!",
+            "Individual: Each individual can make their own choice.",
+            "Interfere: Please do not interfere with your brother’s Lego.",
+            "Interrupt: Don’t interrupt me when I am talking."
+        ],
+        "j": [],
+        "k": [],
+        "l": [
+            "language: What language do you speak at home?",
+            "Leisure: Let’s go to the leisure centre for a swim.",
+            "Lightning: The lightning flashed and the thunder roared."
+        ],
+        "m": [
+            "Marvellous: I have made a marvellous cake!",
+            "Mischievous: The monkey was very mischievous.",
+            "Muscle: Where is the smallest muscle in your body?"
+        ],
+        "n": [
+            "Necessary: Is a bell necessary on a bicycle?",
+            "Neighbour: My neighbour lives next door.",
+            "Nuisance: That dog is a bit of a nuisance."
+        ],
+        "o": [
+            "Occupy: I occupy the front bedroom.",
+            "Occur: When will that occur?",
+            "Opportunity: He had the opportunity to learn French."
+        ],
+        "p": [
+            "Parliament: A group of owls is called a parliament.",
+            "Persuade: I will persuade him to buy it.",
+            "Physical: PE is short for physical education.",
+            "Prejudice: She has prejudice against short people.",
+            "Privilege: It is a privilege to be meeting the Queen.",
+            "Profession: Which profession would you choose?",
+            "Programme: What programme shall we watch on TV?",
+            "Pronunciation: What is the correct pronunciation of scone?"
+        ],
+        "q": ["Queue: There was a long queue outside the shop."],
+        "r": [
+            "Recognise: After a year away, he could barely recognise her.",
+            "Recommend: Which book would you recommend?",
+            "Relevant: Please share all the relevant information.",
+            "Restaurant: Let’s have dinner in a restaurant.",
+            "Rhyme: Is there a rhyme for orange?",
+            "Rhythm: Play that rhythm on your drum."
+        ],
+        "s": [
+            "Sacrifice: The emperor made a sacrifice to the god Mars.",
+            "Secretary: The secretary will take notes at our meeting.",
+            "Shoulder: A parrot perched on the pirate’s shoulder.",
+            "Signature: You must write your signature at the bottom of the page.",
+            "Sincere: I must offer my most sincere apology.",
+            "Sincerely: The letter ended, “Yours sincerely, Dan.”",
+            "Soldier: The soldier went away to fight.",
+            "Stomach: Food travels down into your stomach.",
+            "Sufficient: Have you had sufficient food for lunch?",
+            "Suggest: Please suggest a book I could read.",
+            "Symbol: The magical symbol glowed.",
+            "System: There was an engine system fault."
+        ],
+        "t": [
+            "Temperature: Today, the temperature is high.",
+            "Thorough: The doctor gave her a thorough examination.",
+            "Twelfth: She’s coming on the twelfth of May."
+        ],
+        "u": [],
+        "v": [
+            "Variety: He liked a variety of ice cream flavours.",
+            "Vegetable: My favourite vegetable is a carrot.",
+            "Vehicle: I wonder what vehicle made those tyre tracks…"
+        ],
+        "w": [],
+        "x": [],
+        "y": ["Yacht: She sailed her yacht around the world."],
+        "z": []
+    },
+    "activity_types": [
+        { "value": "Static", "key": "STATIC" },
+        { "value": "Legacy", "key": "LEGACY" }
+    ],
+    "sassoon_infant_font_types": [
+        { "value": "Sassoon Infant Regular", "key": "SassoonInfantRg-Regular" },
+        { "value": "Sassoon Infant Tracker", "key": "SassoonInfantTk-Regular2" },
+        { "value": "Sassoon Infant Tracker B", "key": "SassoonInfantTkB-Regular" }
+    ],
+    "activity_step_types": [
+        { "value": "Editor", "key": "EDITOR" },
+        { "value": "Download", "key": "DOWNLOAD" },
+        { "value": "Link", "key": "LINK" },
+        { "value": "Carousel", "key": "CAROUSEL" },
+        { "value": "Accordion", "key": "ACCORDION" },
+        { "value": "Text-only digital checklist", "key": "TEXT_ONLY_DIGITAL_CHECKLIST" },
+        { "value": "Digital Checklist", "key": "DIGITAL_CHECKLIST" },
+        { "value": "Table", "key": "TABLE" },
+        { "value": "Modal", "key": "MODAL" },
+        { "value": "Dice", "key": "TEXTDICE" },
+        { "value": "Timer", "key": "TIMER" },
+        { "value": "Video", "key": "VIDEO" },
+        { "value": "Image", "key": "IMAGE" },
+        { "value": "Audio", "key": "AUDIO" },
+        { "value": "Tabs", "key": "TABS" },
+        { "value": "Stopwatch", "key": "STOPWATCH" },
+        { "value": "Modal With Clickable Alphabet", "key": "MODAL_WITH_CLICKABLE_ALPHABET" },
+        { "value": "Set by teacher", "key": "SET_BY_TEACHER" }
+    ],
+    "cron_job_options": [
+        { "value": "Re-import wonde data for schools", "key": "reimportSchoolsWonde" },
+        { "value": "Pupil Topics Mail To Parent", "key": "sendReleasedPupilTopicNotifications" },
+        { "value": "Teacher Topics To Be Released Tomorrow", "key": "teacherTopicsToBeReleasedTomorrow" },
+        { "value": "Teacher Topics To Be Released Next Week", "key": "teacherTopicsToBeReleasedNextWeek" },
+        { "value": "Teacher Money Skills First Topic Scheduled", "key": "teacherMoneySkillsFirstTopicScheduled" },
+        { "value": "Topic Reminder After 7 Days", "key": "topicReminderAfter7Days" },
+        { "value": "Update status of pupils with no linked parents", "key": "updateNoLinkedParentStatusOfPupils" },
+        { "value": "Update School Class Counts", "key": "updateSchoolClassCounts" },
+        { "value": "Update All School Classes Counts", "key": "updateAllSchoolClassCounts" },
+        { "value": "Send Trophy Mail To Pupil", "key": "sendTrophyMailToPupil" },
+        { "value": "Send Trophy Mail To Teacher", "key": "sendTrophyMailToTeacher" },
+        { "value": "Send Trophy Mail To School Leader", "key": "sendTrophyMailToSchoolLeader" },
+        { "value": "Logs Clean Up", "key": "logsCleanUp" },
+        { "value": "Create Reading Topics", "key": "createReadingTopics" },
+        { "value": "Trophies Assigned To Pupils", "key": "trophiesAssignedToPupils" },
+        { "value": "Refresh All Admin Queries", "key": "refreshAllAdminQueries" },
+        {
+            "value": "Send Teacher Reading Topic Ended Notification",
+            "key": "sendTeacherReadingTopicEnd"
+        },
+        {
+            "value": "Send Mail For Reading Topic Reminder After 2 and 5 Days",
+            "key": "readingTopicReminders"
+        },
+        { "key": "updateAllInterstitialFormsContextMutation", "value": "Update site forms context" },
+        { "key": "runHourlySqlQueries", "value": "Run hourly SQL queries" },
+        { "key": "runNightlySqlQueries", "value": "Run nightly SQL queries" },
+        { "key": "sendParentNotificationOfTeacherReadingComment", "value": "Send parent notification of teacher reading comment" },
+        { "key": "sendParentNotificationOfTeacherFeedbackReply", "value": "Send parent notification of teacher feedback reply" },
+        { "key": "updateAllGroupAcrossClassesLicenseDetails", "value": "Update all group across classes license details" },
+        { "key": "sendAllPendingNotifications", "value": "Send pending notifications" },
+        { "key": "updateRegionInSchoolFromWondeData", "value": "Update region in school from Wonde data" }
+    ],
+    "schdule_cron_job_options": [
+        { "value": "Send teacher reading topic ended notification", "key": "sendTeacherReadingTopicEnd" },
+        { "value": "Send mail for reading topic reminder after 5 days", "key": "readingTopicReminderAfter5Days" },
+        { "value": "Send mail for reading topic reminder after 2 days", "key": "readingTopicReminderAfter2Days" },
+        { "value": "Send mail for topic reminder after 7 days", "key": "sendMailForTopicReminderAfter7Days" }
+    ],
+    "trophy_certificate_fieldData_types": [
+        { "value": "Child Name", "key": "childName" },
+        { "value": "Date", "key": "date" },
+        { "value": "Total Stars", "key": "totalStars" },
+        { "value": "Teacher Name", "key": "teacherName" }
+    ],
+    "lwp_button_type": [
+        { "value": "Primary Button", "key": "PRIMARY" },
+        { "value": "Secondary Button", "key": "SECONDARY" }
+    ],
+    "the_why_boat_items": [
+        { "key": 1, "image": "paperBoat1.png", "caption": "1. Fold in half" },
+        { "key": 2, "image": "paperBoat2.png", "caption": "2. Fold in half the other way." },
+        { "key": 3, "image": "paperBoat3.png", "caption": "3. Fold the corners to the middle." },
+        { "key": 4, "image": "paperBoat4.png", "caption": "4. Fold up the edges on both sides." },
+        { "key": 5, "image": "paperBoat5.png", "caption": "5. Pull sides out and flatten." },
+        { "key": 6, "image": "paperBoat6.png", "caption": "6. Fold front and back layers up." },
+        { "key": 7, "image": "paperBoat7.png", "caption": "7. Pull sides apart and flatten." },
+        { "key": 8, "image": "paperBoat8.png", "caption": "8. Pull top flaps outwards." },
+        { "key": 9, "image": "paperBoat9.png", "caption": "9. Squish the bottom and pull up the sides." },
+        { "key": 10, "image": "paperBoat10.png", "caption": "10. Your boat is finished! Now you can see if it will float!" }
+    ],
+    "interviewing_my_family": [
+        "Can",
+        "Will",
+        "Would",
+        "May",
+        "Might",
+        "Could",
+        "Does",
+        "Did",
+        "Who",
+        "What",
+        "Where",
+        "When",
+        "Why",
+        "How",
+        "Whose",
+        "Whither (this means “to where”)",
+        "Whence (this means “from where”)",
+        "Which"
+    ],
+    "would_you_rather_carousel_item": [
+        "...be able to breathe under water or breathe in space?",
+        "...have the ability to see 10 minutes into the future or 150 years into the future?",
+        "...go into the past and meet your ancestors or go into the future and meet your great-great grandchildren?",
+        "...have x-ray vision or magnified hearing?",
+        "...lose the ability to read or lose the ability to speak?",
+        "...be covered in fur or covered in scales?",
+        "...know the history of every object you touched or be able to talk to animals?",
+        "...give up all drinks except for water or give up eating anything that was cooked in an oven?",
+        "...have unlimited international first-class tickets or never have to pay for food at restaurants?",
+        "...eat chocolate for every meal or never eat chocolate again?",
+        "...be able to breathe under water or breathe in space?",
+        "...be forced to dance every time you heard music or be forced to sing along to any song you heard?",
+        "...have whatever you are thinking to appear above your head for everyone to see or have absolutely everything you do live streamed for anyone to see?",
+        "...be a reverse centaur or a reverse mermaid/merman?",
+        "...eat a sandwich made from 4 ingredients in your fridge chosen at random or eat a sandwich made by a group of your friends from 4 ingredients in your fridge?",
+        "...be able to teleport anywhere or be able to read minds?"
+    ],
+    "imagine_you_are_there": [
+        "Scary",
+        "Peaceful",
+        "Humorous",
+        "Melancholy (sad)",
+        "Mysterious",
+        "Romantic",
+        "Dark",
+        "Horrifying",
+        "Boring"
+    ],
+    "alphabetical_categories": [
+        "Cars",
+        "Disney characters",
+        "Wild animals",
+        "Countries",
+        "Names",
+        "Book title",
+        "Clothing",
+        "Toys",
+        "Sports"
+    ],
+    "statusOption": [
+        { "value": "Failed/rejected", "key": "FAILED" },
+        { "value": "Waiting/queued", "key": "WAITING" },
+        { "value": "Sent", "key": "SENT" },
+        { "value": "Delivered", "key": "DELIVERED" },
+        { "value": "Clicked", "key": "CLICKED" }
+    ]
+}

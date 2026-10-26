@@ -1,0 +1,53 @@
+.MuiFormControlLabel-root {
+    // align-items: flex-start !important;
+}
+.checkbox-container > .PrivateSwitchBase-root-5 {
+    // padding-top: 0;
+}
+
+.checkbox-container > .MuiCheckbox-colorSecondary.Mui-checked {
+    color: map-get($theme-colors, base-blue-black) !important;
+
+    &:hover {
+        background: none;
+    }
+    .material-icons {
+        color: map-get($theme-colors, base-blue-black) !important;
+    }
+}
+
+.checkbox-container > .MuiIconButton-colorSecondary:hover {
+    color: map-get($theme-colors, base-blue-black);
+    background: none;
+}
+
+.checkbox-container {
+    padding-top: 0;
+    align-items: flex-start;
+    // .MuiCheckbox-root {
+    //     padding: 6px 9px;
+    // }
+    .MuiTypography-root {
+        padding-top: 7px;
+        p {
+            color: map-get($theme-colors, base-blue-black);
+        }
+    }
+    .Mui-disabled {
+        color: map-get($theme-colors, dark-warm-grey) !important;
+        .material-icons {
+            color: map-get($theme-colors, dark-warm-grey) !important;
+        }
+        p {
+            color: #757575;
+        }
+    }
+}
+
+.checkbox-container.Mui-disabled:hover {
+    cursor: not-allowed !important;
+}
+
+.checkbox-formgroup > .checkbox-container {
+    align-items: flex-start;
+}

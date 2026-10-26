@@ -1,0 +1,187 @@
+.list-item-container {
+    background: map-get($theme-colors, base-white);
+    box-shadow: $standard-shadow;
+    border-radius: $base-radius;
+
+    .accordion-summary {
+        border-bottom: 1px solid map-get($theme-colors, base-warm-grey);
+        background-color: map-get($theme-colors, base-background-grey);
+
+        .MuiAccordionSummary-content {
+            align-items: baseline;
+            margin: 12px 0;
+        }
+        .list-item-text {
+            flex: 1;
+            @include sm {
+                .paragraph {
+                    font-size: 0.75em;
+                }
+            }
+            &:first-child {
+                flex: 2;
+                @include sm {
+                    flex: 1;
+                }
+            }
+
+            .heading-three {
+                font-size: 0.85em;
+                text-align: end;
+                @include sm {
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+    .accordion-details {
+        padding: 0;
+        flex-direction: column;
+
+        .Mui-expanded {
+            &:first-child {
+                margin-bottom: 0;
+            }
+            &:nth-child(2n + 1) {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            &:last-child {
+                margin-top: 0;
+            }
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .secondary-accordion-container {
+            align-items: flex-start;
+        }
+
+        .secondary-accordion-container {
+            width: 100%;
+            border-bottom: 1px solid map-get($theme-colors, base-warm-grey);
+
+            .secondary-accordion-summary {
+                // align-items: flex-start;
+                min-height: 65px;
+
+                .expand-header-icon {
+                    color: map-get($theme-colors, $key: base-blue-black);
+                }
+                .expand-icon {
+                    font-size: 1.25em;
+                    color: map-get($theme-colors, $key: base-blue-black);
+                }
+            }
+            .list-container {
+                display: contents;
+
+                .list-item-text {
+                    flex: 1;
+                    @include sm {
+                        .paragraph {
+                            font-size: 0.75em;
+                        }
+                    }
+                    &:first-child {
+                        flex: 2;
+                        @include sm {
+                            flex: 1;
+                        }
+                    }
+                    .check-icon {
+                        color: map-get($theme-colors, auxiliary-green-base);
+
+                        @include sm {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    .remove-icon {
+                        @include sm {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+
+                .accordion-list-item {
+                    flex: 1;
+                    align-items: center;
+
+                    @include sm {
+                        .paragraph {
+                            font-size: 0.75em;
+                        }
+                    }
+                    .activities-spacing {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 50%;
+
+                        @include sm {
+                            width: 75%;
+                        }
+                    }
+                }
+            }
+
+            .secondary-accordion-details {
+                .secondary-accordion-list-item {
+                    padding: 0;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-top: 3em;
+                }
+                .accordion-list-item {
+                    padding: 0;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    .list-item-text {
+                        flex: 1;
+
+                        .heading-font {
+                            font-size: 1.5em;
+
+                            @include sm {
+                                font-size: 1em;
+                            }
+                        }
+                    }
+
+                    .accordion-list-content {
+                        align-items: flex-start;
+                        padding: 0;
+                        padding-top: 1.5em;
+
+                        .list-item-text {
+                            flex: 1;
+
+                            .side-img {
+                                width: 100%;
+                                object-fit: contain;
+                                height: 250px;
+                            }
+
+                            .secondary-list-item-text {
+                                margin-top: 2em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.check-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+
+    @include sm {
+        width: 16px;
+        height: 16px;
+    }
+}

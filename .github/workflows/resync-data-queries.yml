@@ -1,0 +1,22 @@
+name: Resync data queries
+
+on:
+    push:
+        branches:
+            - 'dev'
+            - 'staging'
+            - 'master'
+        paths:
+            - 'data-queries/**.sql'
+
+jobs:
+    send-resync-lambda-payload:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Invoke deployment hook
+              uses: distributhor/workflow-webhook@v3
+              env:
+                  webhook_type: 'json-extended'
+                  webhook_url: ${{ github.ref == 'refs/heads/dev' && vars.DATA_QUERIES_DEV_WEBHOOK_URL || vars.DATA_QUERIES_PROD_WEBHOOK_URL }}
+                  webhook_secret: ${{ github.ref == 'refs/heads/dev' && secrets.DATA_QUERIES_DEV_WEBHOOK_SECRET || secrets.DATA_QUERIES_PROD_WEBHOOK_SECRET }}

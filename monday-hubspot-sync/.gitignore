@@ -1,0 +1,44 @@
+# Environment files
+**/.env
+**/.env.local
+**/.env.*.local
+**/*.env
+**/*.dev.vars*
+
+# HubSpot config
+hubspot.config.yml
+
+# Node modules
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.js
+*.js.map
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.cursor/
+
+# Temporary files
+*.tmp
+.cache/
+
+temp/
+
+# Test coverage
+coverage/
+*.lcov
+

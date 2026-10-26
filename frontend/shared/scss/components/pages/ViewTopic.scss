@@ -1,0 +1,220 @@
+.view-topic-container,
+.view-topic-container-modal {
+    .topic-detail {
+        text-align: center;
+
+        @include sm {
+            margin-top: 1em;
+            text-align: start;
+        }
+    }
+
+    .center-content {
+        display: flex;
+        justify-content: center;
+        margin: 2.5em 0 1em;
+
+        @include sm {
+            margin: 1em 0;
+        }
+
+        // .center-img {
+        //   height: $math-scot-height;
+
+        //   @include sm {
+        //     // height: 195px;
+        //     object-fit: contain;
+        //   }
+        // }
+        // .view-topic-speech-bubble {
+        //   width: 400px;
+        //   margin-left: 1em;
+
+        //   .speech-bubble {
+        //     padding: 2.8em 2.4em 2em;
+
+        //     @include sm {
+        //       padding: 1.5em 1em;
+        //       &::after {
+        //         top: 20%;
+        //       }
+        //     }
+
+        //     .inner-text {
+        //       font-size: 1em;
+        //       font-family: Chaloops-Light;
+        //     }
+        //   }
+        // }
+    }
+
+    .topic-activity-cards {
+        position: relative;
+
+        &--sbt {
+            margin-top: 20px;
+        }
+
+        .blur {
+            filter: blur(15px);
+            -webkit-filter: blur(15px);
+        }
+
+        .topic-activity-overlay-container {
+            position: absolute;
+            top: 95px;
+            right: 50%;
+            transform: translate(50%, 50%);
+
+            .unlock-activities-container {
+                position: relative;
+                background-color: #ffff;
+                min-width: 359px;
+                height: 167px;
+                border-radius: 8px;
+                border: 1px solid map-get($theme-colors, auxiliary-yellow-base);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include sm {
+                    min-width: 327px;
+                }
+
+                .unlock-activities-image {
+                    position: absolute;
+                    top: -150px;
+                    right: 50%;
+                    transform: translate(50%, 50%);
+                    background-color: #ffff;
+                    box-shadow: 0px 4px 8px 0px #d6d1cb80;
+                    width: fit-content;
+                    border-radius: 50%;
+                    padding: 15px;
+                }
+
+                .lwp-button-wrapper {
+                    margin-top: 35px !important;
+                }
+
+                .unlock-activities-text {
+                    width: 225px;
+                    margin-top: 30px;
+                    p {
+                        font-family: Chaloops-Light;
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 34px;
+                        letter-spacing: 0em;
+
+                        img {
+                            margin: -5px 8px -5px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lock_icon {
+            font-size: 80px;
+        }
+    }
+
+    .teacher_message_container {
+        .speech-bubble-text {
+            font-family: Chaloops-Light;
+            font-weight: 400;
+            font-size: 16px !important;
+            text-align: center;
+            margin: 0;
+        }
+
+        .preview-topic-img {
+            margin: 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            @include sm {
+                margin-top: 24px;
+                margin-bottom: 56px;
+            }
+        }
+
+        .img_container {
+            width: 190px;
+            @include sm {
+                width: 90px;
+                z-index: 1;
+            }
+        }
+
+        .speech-bubble-class {
+            width: unset;
+        }
+
+        .speech-bubble {
+            max-width: 250px;
+            padding: 32px 36px !important;
+
+            @include sm {
+                padding: 24px 16px !important;
+            }
+        }
+
+        .img_container img {
+            width: 255px;
+            height: 225px;
+            object-fit: contain;
+
+            @include sm {
+                width: 132px;
+                height: 177px;
+            }
+        }
+    }
+}
+
+.view-topic-container-modal {
+    .MuiDialogContent-root {
+        padding: 8px 80px;
+
+        @include sm {
+            padding: 0 10px;
+        }
+    }
+}
+
+.video_container {
+    .mein_no_video_card {
+        position: relative;
+        margin: 1rem 0;
+    }
+
+    .star {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+    }
+
+    .no_video_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 8px solid;
+        height: 180px;
+    }
+
+    .card_details {
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .paragraph {
+            max-width: 355px;
+            margin: 0.75rem 0 1.5rem 0;
+            text-align: center;
+        }
+    }
+}
+

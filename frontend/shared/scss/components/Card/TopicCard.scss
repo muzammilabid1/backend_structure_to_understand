@@ -1,0 +1,90 @@
+.grid-card > .topic-card-container {
+    box-shadow: $standard-shadow;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    border-top: 4px solid;
+
+    .topic-card-content {
+        padding: 0;
+
+        .topic-card-header {
+            display: flex;
+            justify-content: space-between;
+
+            .right-content {
+                .maths-edit-icon {
+                    height: 1.25em;
+                    object-fit: contain;
+                    cursor: pointer;
+                    padding: 5px;
+                    transition: 0.2s;
+                    border-radius: $base-radius;
+
+                    &:hover {
+                        background-color: map-get($theme-colors, principal-maths-light);
+                    }
+                }
+
+                .english-edit-icon {
+                    height: 1.25em;
+                    object-fit: contain;
+                    cursor: pointer;
+                    padding: 5px;
+                    transition: 0.2s;
+                    border-radius: $base-radius;
+
+                    &:hover {
+                        background-color: map-get($theme-colors, principal-english-light);
+                    }
+                }
+
+                .reading-edit-icon {
+                    height: 1.25em;
+                    object-fit: contain;
+                    cursor: pointer;
+                    padding: 5px;
+                    transition: 0.2s;
+                    border-radius: $base-radius;
+
+                    &:hover {
+                        background-color: map-get($theme-colors, principal-reading-light);
+                    }
+                }
+            }
+        }
+    }
+
+    .english-color {
+        border-top: 4px solid map-get($theme-colors, principal-english-base);
+    }
+
+    .next-color {
+        border-top: 4px solid map-get($theme-colors, principal-main-base);
+    }
+
+    .maths-color {
+        border-top: 4px solid map-get($theme-colors, principal-maths-base);
+    }
+
+    .prograss-bar-color-maths {
+        background-color: map-get($theme-colors, principal-maths-light);
+        .MuiLinearProgress-barColorPrimary {
+            background-color: map-get($theme-colors, principal-maths-base);
+        }
+    }
+
+    .prograss-bar-color-english {
+        background-color: map-get($theme-colors, principal-english-light);
+        .MuiLinearProgress-barColorPrimary {
+            background-color: map-get($theme-colors, principal-english-base);
+        }
+    }
+
+    .prograss-bar-color-next {
+        background-color: map-get($theme-colors, principal-main-light);
+        .MuiLinearProgress-barColorPrimary {
+            background-color: map-get($theme-colors, principal-main-base);
+        }
+    }
+}

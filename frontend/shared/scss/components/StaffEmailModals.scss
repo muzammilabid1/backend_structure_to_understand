@@ -1,0 +1,57 @@
+// Shared by the admin bulk staff-email modals - Send invites and Send welcome emails - which are the same
+// shape: a scrollable list of people with checkboxes above a count of what is about to be sent.
+.staff-email-count {
+    font-weight: bold;
+}
+
+.staff-email-subtitle {
+    margin-top: 4px;
+}
+
+.staff-email-list {
+    max-height: 360px;
+    overflow-y: auto;
+    margin-top: 8px;
+
+    .staff-email-row {
+        border-bottom: 1px solid #e0e0e0;
+
+        // Top-align the checkbox with the multi-line person details.
+        .MuiFormControlLabel-root {
+            align-items: flex-start;
+        }
+
+        .staff-email-person {
+            display: flex;
+            flex-direction: column;
+
+            // Secondary line explaining why the row is (or is not) ticked - kept quieter than the name.
+            .staff-email-person-note {
+                font-size: 0.85em;
+                font-style: italic;
+                opacity: 0.75;
+            }
+        }
+    }
+
+    .common_table_container {
+        .MuiTableHead-root .MuiTableCell-root {
+            white-space: nowrap;
+        }
+    }
+
+    // An expanded school drops its own divider, so its row and the leaders under it read as one block.
+    .staff-email-school-expanded .MuiTableCell-root {
+        border-bottom: 0;
+    }
+
+    // Welcome emails only: the leaders behind one school's count, indented under their school. When a single
+    // school's leaders are shown on their own there is no school row to indent under.
+    .staff-email-leaders {
+        padding: 0 24px 8px 24px;
+    }
+
+    > .staff-email-leaders {
+        padding: 0;
+    }
+}

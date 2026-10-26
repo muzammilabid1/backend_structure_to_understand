@@ -1,0 +1,15 @@
+export enum SchoolAnalyticsGraphType {
+  ENGAGEMENT_BY_YEAR_GROUP = "engagementByYearGroup",
+  ENGAGEMENT_BY_CLASS = "engagementByClass",
+  ENGAGEMENT_BY_SCHOOL = "engagementBySchool",
+  AVG_WEEKLY_TARGET_MET_BY_YEAR_GROUP = "avgWeeklyTargetMetByYearGroup",
+  AVG_WEEKLY_TARGET_MET_BY_CLASS = "avgWeeklyTargetMetByClass",
+  AVG_WEEKLY_TARGET_MET_BY_SCHOOL = "avgWeeklyTargetMetBySchool",
+  BUILDING_ENGAGEMENT = "buildingEngagement",
+  AVG_TOPIC_SET_BY_YEAR_GROUP = "avgTopicSetByYearGroup",
+  AVG_TOPIC_SET_BY_CLASS = "avgTopicSetByClass",
+  AVG_TOPIC_SET_BY_SCHOOL = "avgTopicSetBySchool",
+  AVG_TOPIC_COMPLETION_BY_YEAR_GROUP = "avgTopicCompletionByYearGroup",
+  AVG_TOPIC_COMPLETION_BY_CLASS = "avgTopicCompletionByClass",
+  AVG_TOPIC_COMPLETION_BY_SCHOOL = "avgTopicCompletionBySchool",
+}

@@ -1,0 +1,16 @@
+Examine the resources required for the activity based on the following criteria. For each question, provide:
+
+A repetition of the question.
+A score out of 10.
+A brief explanation of the score, including reasoning and suggestions for improvement if the criterion is not fully met.
+Criteria for Evaluation:
+
+Are the resources minimal and likely to be found in most homes?
+Are alternatives provided for uncommon or food-based items?
+Are uncommon resources duplicated throughout the activity (they should not be)?
+Output Example Format:
+
+[Repeated Question]
+Score: [X/10]
+Explanation: [Brief reasoning behind the score, highlighting strengths and weaknesses. Include suggestions for improvement where relevant, particularly for resource-related issues.]
+Ensure responses are concise, objective, and actionable.

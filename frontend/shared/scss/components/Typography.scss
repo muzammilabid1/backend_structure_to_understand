@@ -1,0 +1,48 @@
+.heading-one {
+  font-size: 2rem;
+  font-family: Chaloops-Medium;
+  font-weight: 500;
+
+  @include sm {
+    font-size: 1.5rem;
+  }
+}
+
+.heading-two {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  @include sm {
+    font-size: 1.25rem;
+  }
+}
+
+.heading-three {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.link {
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.typography-text {
+  color: map-get($theme-colors, base-black);
+  // line-height: 1.3rem;
+  margin-bottom: 0.25rem;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.center-text {
+  text-align: center;
+}

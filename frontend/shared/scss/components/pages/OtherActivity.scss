@@ -1,0 +1,54 @@
+.other-activity-container {
+  .other-activity-heading {
+    margin: 2.5em 0;
+  }
+  .other-activity-content {
+    margin: 0 4em;
+
+    @include sm {
+      margin: 0;
+    }
+    @include md {
+      margin: 0;
+    }
+  }
+  .other-activity-btn-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25em;
+  }
+}
+.activity-description {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2.5em;
+  border-radius: $base-radius;
+  background-color: map-get($theme-colors, principal-main-light);
+
+  @include sm {
+    padding: 0;
+    background: transparent;
+  }
+  .activity-description-left-sec {
+    width: 70%;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  .activity-description-right-sec {
+    width: 30%;
+    display: contents;
+
+    @include sm {
+      display: none;
+    }
+
+    .side-image {
+      height: 290px;
+      object-fit: contain;
+    }
+  }
+}

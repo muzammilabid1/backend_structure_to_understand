@@ -1,0 +1,119 @@
+.teacher_feeds_filter_container {
+    padding: 8px;
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    .btn_group {
+        flex-wrap: wrap;
+        width: 100%;
+
+        button {
+            color: #000;
+            border: 1px solid #0000001f;
+            text-transform: none;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            flex: 1;
+        }
+
+        .drop_down_btn {
+            .drop_down_btn_container {
+                width: 100%;
+                height: 100%;
+
+                .common_drop_down {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        p {
+            width: max-content;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .class-selected {
+            background-color: #fff6d9;
+            border: 1px solid map-get($theme-colors, auxiliary-yellow-base);
+        }
+
+        .fix_all_width {
+            flex: unset;
+            width: 100px;
+        }
+    }
+
+    .activity-date {
+        .MuiInputBase-root {
+            height: 40px;
+        }
+        .MuiOutlinedInput-input {
+            text-align: center;
+            height: 0;
+        }
+
+        .MuiInputLabel-root {
+            margin: -6px 0 !important;
+            width: 100%;
+            text-align: center;
+        }
+
+        .MuiFormLabel-filled {
+            margin: 0 !important;
+            width: inherit;
+        }
+    }
+
+    .active-date {
+        .MuiInputBase-root {
+            background-color: #fff6d9;
+        }
+        .MuiOutlinedInput-input {
+            background-color: #fff6d9;
+        }
+        .MuiOutlinedInput-notchedOutline {
+            border-color: map-get($theme-colors, auxiliary-yellow-base) !important;
+        }
+    }
+
+    .MuiOutlinedInput-notchedOutline {
+        border: 1px solid rgba(0, 0, 0, 0.1215686275) !important;
+    }
+
+    .academic_year_dropdown {
+        width: 100%;
+
+        .common_drop_down {
+            width: 100%;
+        }
+    }
+
+    .bookname_input {
+        .MuiOutlinedInput-input {
+            padding: 0.5em 8px 0.5em 0;
+        }
+
+        .MuiInputBase-root {
+            padding: 0 0 0 13px;
+        }
+
+        .lwp-button {
+            height: 28px;
+            padding: 0 15px;
+        }
+
+        .material-icons {
+            font-size: 14px;
+        }
+    }
+}
+
+.drop_down_date_picker {
+    .Mui-selected {
+        background-color: #c66c00;
+        color: #fff6d9;
+    }
+}

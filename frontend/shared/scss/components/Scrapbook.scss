@@ -1,0 +1,107 @@
+// Scrapbook empty state
+.scrapbook-empty-state {
+    .common_status_img {
+        margin-top: 50px;
+    }
+}
+
+.scrapbook-login-prompt {
+    .common_status_img {
+        margin-top: 50px;
+    }
+
+    @include sm {
+        .lwp-button-wrapper {
+            width: 100%;
+
+            button {
+                padding: 8px 40px;
+                height: 52px;
+            }
+        }
+    }
+}
+
+.scrapbook-entries-container {
+    .scrapbook-action-bar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+
+        @include sm {
+            display: none !important;
+        }
+    }
+
+    .activity-feed-container {
+        .activity-feed-comment-section {
+            .history_log_img {
+                display: flex;
+                justify-content: flex-start;
+                img {
+                    width: 100%;
+                    max-height: 532px;
+                }
+
+                .activity-feed-card {
+                    line-height: normal !important;
+                    .common_card {
+                        padding: 24px !important;
+                        @include sm {
+                            padding: 16px !important;
+                        }
+                    }
+
+                    max-width: 80%;
+                    width: auto !important;
+                    @include maw(768) {
+                        max-width: unset;
+                    }
+                }
+
+                @include sm {
+                    img {
+                        max-height: 283px;
+                    }
+                }
+            }
+        }
+    }
+
+    .scrapbook-fab {
+        position: fixed;
+        bottom: 96px;
+        right: 24px;
+        z-index: 1000;
+
+        .scrapbook-fab-btn {
+            width: 56px;
+            height: 56px;
+            min-width: unset !important;
+            border-radius: 50% !important;
+            padding: 0 !important;
+
+            .MuiButton-startIcon {
+                margin: 0;
+            }
+        }
+    }
+
+    .pupil_history_card {
+        .comment {
+            .paragraph {
+                margin-bottom: 26px;
+            }
+
+            .comment-text {
+                font-size: 16px;
+                white-space: break-spaces;
+                line-height: 160%;
+
+                @include sm {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

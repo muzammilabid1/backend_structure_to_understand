@@ -1,0 +1,5 @@
+case "${GIT_REFLOG_ACTION}" in
+    *rebase*reword*) exit 0 ;;
+esac
+
+yarn lint-staged

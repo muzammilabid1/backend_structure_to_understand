@@ -1,0 +1,96 @@
+.impact-report {
+    .impact-report-container {
+        .impact-report-background {
+            background-color: #fef6ef;
+            border-radius: 4px;
+            padding: 32px;
+
+            @include sm {
+                .impact_report_logo {
+                    display: none;
+                }
+            }
+        }
+    }
+    .share-print-btn {
+        display: flex;
+        gap: 20px;
+
+        @include maw(450) {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    .common_tebs {
+        .MuiTabs-root {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.report-sections-container {
+    border-radius: 6px;
+
+    > .common_card {
+        border-top: 6px solid map-get($theme-colors, principal-reading-base);
+        > .MuiCardContent-root {
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+
+            .graph-container {
+                width: 100%;
+
+                .common_card {
+                    .MuiCardContent-root {
+                        padding: 24px !important;
+                        .heading-three {
+                            font-size: 1rem;
+                            font-weight: bold;
+                        }
+                    }
+                    .active-families-content {
+                        h3 {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.highcharts-exporting-group {
+    display: none;
+}
+
+// For the reading report, the border-top color is principal-reading-base
+.reading-impact-report {
+    > .common_card {
+        border-top: 6px solid map-get($theme-colors, principal-reading-base);
+    }
+}
+
+// For the topic report, the border-top color is principal-main-base
+.topic-and-activity-impact-report {
+    > .common_card {
+        border-top: 6px solid map-get($theme-colors, principal-maths-base);
+    }
+}
+
+.program-overview {
+    .common_card {
+        .MuiCardContent-root {
+            padding: 24px;
+            .heading-three {
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+        .active-families-content {
+            h3 {
+                display: inline;
+            }
+        }
+    }
+}

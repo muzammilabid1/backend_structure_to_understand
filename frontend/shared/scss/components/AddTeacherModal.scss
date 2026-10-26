@@ -1,0 +1,403 @@
+.send-invite {
+    display: flex;
+}
+
+.add_activity_modal {
+    .dialog-content-section {
+        .MuiDialogContent-root {
+            .add_activity_resources {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 15px;
+                .MuiGrid-root {
+                    margin-bottom: 0;
+                }
+                .MuiFormControl-root {
+                    width: 97%;
+                }
+                .add_activity_resource_button {
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+            .activity-step-field-array {
+                .MuiDivider-root {
+                    margin: 20px 0;
+                }
+                .activities_card {
+                    margin: 12px;
+                }
+
+                .add-step-btn {
+                    display: flex;
+                    justify-content: center;
+                }
+                .icon {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+                .disabel {
+                    cursor: no-drop;
+                    color: grey;
+                }
+
+                textarea {
+                    min-height: 100px;
+                }
+
+                .activity-step-divider {
+                    margin: 20px 0;
+                }
+
+                .activity-step-card-isDragging {
+                    height: 100px !important;
+                    overflow: hidden;
+                }
+
+                .activity-step-card {
+                    // border: 1px solid red;
+                    padding: 20px 10px;
+                    margin: 15px 0;
+                    // max-width: 340px;
+                    max-width: 100%;
+
+                    // .makeStyles-wrapper-22 {
+                    //     display: flex;
+                    //     justify-content: flex-end;
+                    // }
+
+                    .activity-step-card-header {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+
+                        .activity-step-card-title {
+                            display: flex;
+
+                            .step-card-heading {
+                                font-family: Verdana;
+                            }
+                        }
+                        .MuiIconButton-root {
+                            height: 40px;
+                            width: 40px;
+                        }
+                        .MuiIconButton-root:hover {
+                            background-color: #f5f5f5;
+                        }
+                    }
+
+                    .editor-step {
+                        .MuiGrid-item {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    .stopwatch-grid-container {
+                        flex-direction: column;
+                    }
+
+                    .step-handler {
+                        font-size: 30px;
+                    }
+
+                    .tabs-step-field-array {
+                        width: 100%;
+                        padding: 10px;
+
+                        .tabs-step-field {
+                            margin: 10px 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 10px;
+
+                            .step-handler {
+                                margin-bottom: 15px;
+                                @include sm {
+                                    display: none;
+                                }
+                            }
+
+                            .step-dropdown {
+                                @include sm {
+                                    width: 100%;
+                                }
+                            }
+
+                            .tabs-step-field-buttons {
+                                display: flex;
+                                justify-content: flex-end;
+                                margin-bottom: 15px;
+
+                                .MuiButtonBase-root {
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            @include sm {
+                                flex-direction: column;
+                                align-items: flex-end;
+                            }
+                        }
+                    }
+
+                    .table-step-field-array {
+                        width: 100%;
+                        padding: 10px;
+
+                        .step-handler {
+                            @include sm {
+                                display: none;
+                            }
+                        }
+
+                        .table-step-field {
+                            padding: 0 10px;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .step-handler {
+                                margin-top: 10px;
+                            }
+
+                            .table-step-field-buttons {
+                                display: flex;
+                                justify-content: flex-end;
+                                margin-bottom: 15px;
+
+                                .MuiButtonBase-root {
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            .MuiButtonBase-root {
+                                height: 50px;
+
+                                @include sm {
+                                    min-width: 50px;
+                                }
+                            }
+                        }
+                    }
+
+                    .carousel-step-field-array {
+                        width: 100%;
+                        padding: 10px;
+
+                        .step-handler {
+                            @include sm {
+                                display: none;
+                            }
+                        }
+
+                        .carousel-step-field {
+                            margin: 10px 0;
+                            padding: 10px;
+                            display: flex;
+                            justify-content: space-between;
+
+                            .MuiButtonBase-root {
+                                height: 50px;
+
+                                @include sm {
+                                    min-width: 50px;
+                                }
+                            }
+
+                            .carousel-step-field-buttons {
+                                display: flex;
+                                justify-content: flex-end;
+                                margin-bottom: 15px;
+
+                                .MuiButtonBase-root {
+                                    margin-left: 10px;
+                                }
+                            }
+
+                            @include sm {
+                                flex-direction: column;
+                            }
+                        }
+                    }
+
+                    .image-carousel-step-field-array {
+                        width: 100%;
+                        padding: 10px;
+
+                        .step-handler {
+                            @include sm {
+                                display: none;
+                            }
+                        }
+
+                        .image-carousel-step-field {
+                            display: flex;
+                            .image-carousel-step-field-container {
+                                display: flex;
+                                flex-direction: column-reverse;
+                                width: 100%;
+
+                                .image-carousel-step-text-container {
+                                    flex-grow: 0.6;
+                                    gap: 10px;
+                                    display: flex;
+                                }
+                            }
+
+                            .MuiButtonBase-root {
+                                height: 50px;
+
+                                @include sm {
+                                    min-width: 50px;
+                                }
+                            }
+
+                            .image-carousel-order {
+                                @include sm {
+                                    padding: 0 10px;
+                                }
+                            }
+
+                            .image-carousel-btn-group {
+                                display: flex;
+                                justify-content: flex-start;
+
+                                .image-carousel-step-add-btn {
+                                    margin-right: 10px;
+                                }
+
+                                @include sm {
+                                    justify-content: flex-end;
+                                }
+                            }
+
+                            .file-uploader {
+                                margin-bottom: 20px;
+                                justify-content: center;
+                                display: flex;
+                                align-items: center;
+
+                                input[type='file'] {
+                                    margin-left: 170px;
+                                }
+
+                                @include sm {
+                                    width: 100%;
+                                }
+
+                                img {
+                                    @include sm {
+                                        max-width: 85%;
+                                    }
+                                }
+                            }
+
+                            @include sm {
+                                flex-direction: column;
+                            }
+                        }
+                    }
+
+                    .dice-step-field-array {
+                        width: 100%;
+                        padding: 10px;
+
+                        .step-handler {
+                            @include sm {
+                                display: none;
+                            }
+                        }
+
+                        .dice-step-field {
+                            margin: 10px 0;
+                            display: flex;
+                            padding: 10px;
+                            justify-content: space-between;
+
+                            .dice-step-field-elements-container {
+                                width: 83%;
+
+                                .dice-type-options {
+                                    display: flex;
+                                    flex-direction: row;
+
+                                    .MuiFormGroup-root {
+                                        display: flex;
+                                        flex-direction: row;
+                                        margin-left: 20px;
+
+                                        .MuiFormControlLabel-root {
+                                            .MuiRadio-root {
+                                                padding-top: 0;
+                                                padding-bottom: 0;
+                                            }
+
+                                            .MuiRadio-root.Mui-checked {
+                                                color: map-get($theme-colors, base-blue-black);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                @include sm {
+                                    width: 100%;
+                                }
+                            }
+                            .dice-step-field-buttons {
+                                display: flex;
+                                justify-content: flex-end;
+
+                                .dice-step-duplicate-btn {
+                                    height: 42.25px;
+                                    .MuiButton-endIcon {
+                                        margin-right: 0;
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                            @include sm {
+                                flex-direction: column;
+                            }
+                        }
+                    }
+
+                    .step-card-heading {
+                        margin-bottom: 15px;
+                    }
+
+                    .rdw-storybook-editor {
+                        border: 1px solid rgba(0, 0, 0, 0.23);
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        min-height: 300px;
+                    }
+
+                    .file-uploader {
+                        margin-bottom: 20px;
+                        justify-content: center;
+                        display: flex;
+                        align-items: center;
+
+                        input[type='file'] {
+                            margin-left: 170px;
+                        }
+                    }
+                }
+            }
+            // hr {
+            //     margin: 20px 0;
+            // }
+        }
+    }
+}
+
+.rdw-storybook-editor {
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    padding: 10px 20px;
+    border-radius: 10px;
+    min-height: 300px;
+}

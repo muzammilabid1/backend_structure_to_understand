@@ -1,0 +1,9 @@
+.common_progress_bar {
+    border-radius: 120px;
+    overflow: auto;
+    display: flex;
+    min-width: 100%;
+    div {
+        height: 24px;
+    }
+}

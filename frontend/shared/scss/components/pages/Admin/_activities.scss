@@ -1,0 +1,136 @@
+.activity_detail_for_admin {
+    .MuiList-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .MuiListItemIcon-root {
+        min-width: 35px;
+    }
+
+    .activity-step-field-array {
+        .MuiDivider-root {
+            margin: 20px 0;
+        }
+
+        .add-step-btn {
+            display: flex;
+            justify-content: center;
+        }
+        .icon {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .disabel {
+            cursor: no-drop;
+            color: grey;
+        }
+    }
+
+    .activity_detailpage {
+        .activity_resource {
+            .activity_resource_form {
+                display: flex;
+                justify-content: space-between;
+                .MuiGrid-root {
+                    width: 97%;
+                    .MuiFormControl-root {
+                        width: 97%;
+                    }
+                }
+                .add_activity_resource_button {
+                    display: flex;
+                    margin-top: 6px;
+                    gap: 10px;
+                }
+            }
+        }
+
+        .copy-activity-container {
+            padding-bottom: 10px;
+
+            .heading-three {
+                margin: 0px 0 15px 0;
+            }
+
+            .divider {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .remove-activity-btn {
+        background-color: map-get($theme-colors, aa-red);
+
+        &:hover {
+            background-color: map-get($theme-colors, aa-red-hover);
+        }
+    }
+
+    .body_container {
+        height: 287px;
+        padding: 24px 0;
+        border-top: 2px dotted lightgray;
+        border-bottom: 2px dotted lightgray;
+
+        .file_upload_container {
+            .lwp-button {
+                margin-top: 10px;
+            }
+
+            .upload-camera-icon {
+                color: #d6d1cb;
+                font-size: 53px;
+            }
+        }
+    }
+
+    .topic_details {
+        .play-icon {
+            width: 100px;
+        }
+        .topic_settings {
+            font-size: 16px;
+        }
+    }
+
+    // .activity_outline {
+    //     .MuiCardContent-root {
+    //         border-top: 5px solid;
+    //         height: 189px;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: space-around;
+    //         align-items: center;
+    //         position: relative;
+    //     }
+
+    //     hr {
+    //         position: absolute;
+    //         border: 1px dotted lightgray;
+    //     }
+
+    //     .body_container {
+    //         margin-top: 2rem;
+    //     }
+
+    //     .nested_container {
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         justify-content: center;
+    //         align-items: center;
+    //         padding: 12px 0;
+    //         border: 3px dotted lightgray;
+
+    //         .lwp-button {
+    //             margin: 12px;
+    //         }
+    //     }
+    // }
+
+    // .w-100 {
+    //     width: 100%;
+    // }
+}

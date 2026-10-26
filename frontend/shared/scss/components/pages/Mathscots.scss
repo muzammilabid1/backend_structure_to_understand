@@ -1,0 +1,96 @@
+.class-register-header-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+    .class-register-header-image-reading {
+        width: 34px;
+        height: 34px;
+        background-color: map-get($theme-colors, principal-reading-light);
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 34px;
+            height: 18px;
+            margin-left: 3px;
+            object-fit: none;
+        }
+    }
+    .class-register-header-image-fullProgramme {
+        width: 34px;
+        height: 34px;
+        background-color: map-get($theme-colors, principal-maths-light);
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 28px;
+            height: 31px;
+            object-fit: none;
+        }
+    }
+    .class-register-header-image-group-across-classes {
+        width: 34px;
+        height: 34px;
+        background-color: map-get($theme-colors, principal-light);
+        border-radius: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 28px;
+            height: 31px;
+            object-fit: none;
+        }
+    }
+    .heading {
+        font-size: 1.5rem;
+        margin-right: 22px;
+    }
+
+    .add-other-programm-icon {
+        .MuiIconButton-root {
+            padding: 8px;
+            background-color: map-get($theme-colors, base-warm-grey);
+            border-radius: 8px;
+            .material-icons {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.mathscot_popOver {
+    display: flex;
+    justify-content: flex-end;
+    .typography {
+        max-width: 250px;
+    }
+}
+
+.MuiPaper-root {
+    .mathscot-filter {
+        .MuiFormGroup-root {
+            .MuiFormControlLabel-root {
+                align-items: center !important;
+
+                .MuiRadio-root {
+                    color: map-get($theme-colors, base-blue-black);
+                }
+            }
+        }
+    }
+}
+
+.mathscots-cards-grid {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 1em;
+
+    @include sm {
+        justify-content: center;
+    }
+}

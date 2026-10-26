@@ -1,0 +1,15 @@
+.jumbotron {
+    @include sm {
+        flex-direction: column-reverse;
+    }
+
+    .heading-one {
+        line-height: 45px;
+
+        @include sm {
+            font-size: 32px;
+            margin-bottom: 16px;
+            // text-align: center;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.schools_overview {
+    .MuiList-padding {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .schools_overview_filter {
+        display: flex;
+    }
+    a {
+        text-decoration: none;
+        color: map-get($theme-colors, base-black);
+    }
+
+    .admin-export-statistics-download-container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+
+        .lwp-button {
+            margin-top: 15px;
+        }
+    }
+
+    .school-filter-button {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 16px;
+        margin-bottom: 20px;
+
+        .filter-button {
+            color: black;
+            text-transform: initial;
+            font-weight: bold;
+            margin-right: 110px;
+        }
+        .filter-icon {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    }
+
+    .school-collapse {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    .feeds-filter-container {
+        margin-bottom: 20px;
+
+        .MuiCardActions-root {
+            justify-content: flex-end;
+        }
+        .MuiCardActions-spacing > :not(:first-child) {
+            margin-left: 30px;
+        }
+    }
+
+    .MuiListItemIcon-root {
+        min-width: 30px;
+    }
+
+    .heading-three {
+        font-size: 14px;
+    }
+
+    .redColor {
+        background-color: map-get($theme-colors, auxiliary-red-base);
+    }
+
+    .redColorLight {
+        background-color: map-get($theme-colors, auxiliary-red-light);
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            flex: 1;
+            font-family: Chaloops-Medium;
+            font-weight: unset;
+        }
+    }
+}

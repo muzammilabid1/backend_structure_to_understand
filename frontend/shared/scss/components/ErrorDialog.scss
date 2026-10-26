@@ -1,0 +1,12 @@
+.error_dialog {
+    margin: 0 auto;
+    margin-top: 25px;
+
+    .MuiDialog-scrollBody {
+        height: auto;
+    }
+
+    .MuiDialog-scrollPaper {
+        display: inherit;
+    }
+}

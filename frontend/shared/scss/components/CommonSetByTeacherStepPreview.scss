@@ -1,0 +1,18 @@
+.set-by-teacher-step-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+
+    &__placeholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 350px;
+        max-height: 350px;
+        background: map-get($theme-colors, base-light-grey);
+        border-radius: 8px;
+    }
+}

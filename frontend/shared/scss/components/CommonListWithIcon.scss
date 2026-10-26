@@ -1,0 +1,32 @@
+.common_nav_list {
+    .MuiListItem-root {
+        padding: 4px 20px 4px 20px;
+    }
+}
+.nav_bar_focus {
+    li {
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    a {
+        &:focus-visible {
+            outline: #f28d00 auto 1px !important;
+        }
+    }
+}
+
+.nav_popover {
+    .MuiPaper-rounded {
+        &::before {
+            right: 75%;
+            left: auto;
+
+            @include sm {
+                right: 70%;
+                left: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.update-reading-log-modal {
+    .demo-activity-photo-permission-card {
+        margin: 30px 0;
+        padding: 10px 20px;
+        background-color: map-get($theme-colors, base-off-white);
+        box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+
+        .divider-line {
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+    .demo-activity-photo-permission-update-card {
+        background-color: map-get($theme-colors, base-off-white);
+        margin: 30px 0;
+        padding: 10px 20px;
+
+        .update-link {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .upload-img-right-content {
+        .recoder-img-conatiner {
+            border: 3px dashed #d6d1cb;
+            padding: 1em;
+
+            @include sm {
+                width: inherit;
+            }
+
+            .mic-icon {
+                color: #d6d1cb;
+                font-size: 100px !important;
+                margin-bottom: 25px;
+            }
+
+            .MuiButton-root {
+                width: 172px;
+            }
+        }
+        .image_upload_neated_container {
+            .MuiButton-root {
+                width: 172px;
+            }
+        }
+    }
+
+    @include maw(425) {
+        .update-reading-log-buttons {
+            flex-direction: column-reverse;
+            align-items: stretch;
+            gap: 8px;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

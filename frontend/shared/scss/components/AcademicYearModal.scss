@@ -1,0 +1,21 @@
+.add-academic-year {
+    .dialog-content-section {
+        .MuiFormHelperText-root {
+            margin: 3px 0 0 0;
+        }
+
+        @include sm {
+            width: 327px;
+        }
+    }
+    .btn_group {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+
+        .cancel_btn {
+            margin-right: 10px;
+            padding: 8px 22px;
+        }
+    }
+}

@@ -1,0 +1,427 @@
+.data-changes-container {
+    .paragraph {
+        margin-bottom: 0px;
+    }
+    .link-platform-data-with-imported-data-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .link-platform-data-with-imported-data-header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .heading-one {
+                margin-bottom: 0px;
+                font-size: 24px;
+            }
+            .paragraph {
+                margin-bottom: 0px;
+            }
+        }
+        .link-entity-select {
+            margin-bottom: 0px;
+        }
+        .link-table {
+            position: relative;
+            thead {
+                background-color: map-get($theme-colors, base-background-grey);
+            }
+            tbody {
+                tr {
+                    td {
+                        .imported-entity-name {
+                            width: fit-content;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                        button:disabled .compare-icon {
+                            color: map-get($theme-colors, dark-warm-grey);
+                        }
+                    }
+                }
+            }
+        }
+
+        .link-actions {
+            position: sticky;
+            bottom: 0;
+            background-color: map-get($theme-colors, base-white);
+            flex-grow: 1;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 32px;
+            box-shadow: 0 -2px 4px 0 rgba(214, 209, 203, 0.25);
+            z-index: 1;
+        }
+
+        .button_group_btn_group {
+            .MuiButtonGroup-root {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+
+                button {
+                    flex: 1 1 auto;
+                    width: auto;
+                    min-width: 180px;
+                }
+            }
+        }
+    }
+
+    .diffing-changes-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .heading-one,
+        .heading-three,
+        .paragraph {
+            margin-bottom: 0px;
+        }
+
+        .pupil-diffing-filter {
+            margin-bottom: 32px;
+            .common_card {
+                .MuiCardContent-root {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    padding: 24px !important;
+                    .button_group_btn_group {
+                        .MuiButtonGroup-root {
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            button {
+                                flex: 1 1 auto;
+                                width: auto;
+                                min-width: 180px;
+                            }
+                        }
+                    }
+                    .switch-container {
+                        align-self: flex-start;
+                    }
+                }
+            }
+        }
+
+        .pupil-changes-table {
+            box-shadow: 0 4px 8px 0 rgba(214, 209, 203, 0.5);
+            background-color: white;
+            .MuiCheckbox-root {
+                padding: 0px;
+                color: #000;
+                span {
+                    color: map-get($theme-colors, base-warm-grey);
+                }
+            }
+
+            thead {
+                overflow: hidden;
+                tr {
+                    border-radius: 4px 4px 0 0;
+                    background-color: map-get($theme-colors, base-off-white);
+                    th {
+                        .paragraph {
+                            font-weight: 700;
+                        }
+
+                        padding: 21px 0px 16px 16px;
+
+                        &:first-child {
+                            padding-left: 14px;
+                            border-radius: 4px 0 0 0;
+                        }
+                        &:last-child {
+                            padding-right: 14px;
+                            border-radius: 0 4px 0px 0;
+                        }
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        padding: 16px 0px 16px 16px;
+                        border: none;
+
+                        .changes-count {
+                            font-size: 12px;
+                            text-align: center;
+                            border-radius: 25px;
+                            height: 25px;
+                            min-width: 95px;
+                            &.CREATE {
+                                background-color: map-get($theme-colors, auxiliary-blue-base);
+                                color: white;
+                            }
+
+                            &.UPDATE {
+                                background-color: map-get($theme-colors, principal-main-base);
+                                color: white;
+                            }
+
+                            &.DELETE {
+                                background-color: map-get($theme-colors, base-warm-grey);
+                            }
+                        }
+
+                        .changed-fields-table {
+                            .common_table_container {
+                                box-shadow: none;
+                                thead {
+                                    overflow: hidden;
+                                    tr {
+                                        th {
+                                            background-color: map-get($theme-colors, base-off-white);
+                                            border: none;
+                                            padding: 12px 0px 12px 24px !important;
+                                            .paragraph {
+                                                font-weight: 400;
+                                            }
+                                            &:first-child {
+                                                border-radius: 4px 0 0 4px;
+                                            }
+                                            &:last-child {
+                                                border-radius: 0 4px 4px 0;
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            border: none;
+                                            padding: 12px 24px !important;
+                                        }
+
+                                        &.highlight-row {
+                                            background-color: transparent;
+                                            position: relative;
+                                            z-index: 1;
+                                            &::after {
+                                                content: '';
+                                                position: absolute;
+                                                left: 0;
+                                                top: 5px;
+                                                bottom: 5px;
+                                                width: 100%;
+                                                background-color: map-get($theme-colors, auxiliary-yellow-light);
+                                                z-index: -1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            padding-left: 14px;
+                        }
+                        &:last-child {
+                            padding-right: 18px;
+                        }
+
+                        .actions-icons-container {
+                            .MuiGrid-item {
+                                width: 32px;
+                                height: 32px;
+                            }
+                            .MuiIconButton-root {
+                                padding: 4px;
+                                .reject-button {
+                                    color: map-get($theme-colors, auxiliary-red-base);
+                                }
+                                .accept-button {
+                                    color: map-get($theme-colors, auxiliary-green-base);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .deleted-row {
+                    td {
+                        .paragraph {
+                            color: map-get($theme-colors, dark-warm-grey);
+                        }
+
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(5) {
+                            position: relative;
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                top: 50%;
+                                border-top: 1px solid map-get($theme-colors, dark-warm-grey);
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            &::after {
+                                left: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .rejected-change-indicator {
+                    display: flex;
+                    gap: 8px;
+                    svg {
+                        color: map-get($theme-colors, auxiliary-blue-base);
+                    }
+                }
+
+                .changes-expanded-row {
+                    td {
+                        padding: 0px;
+                        border-bottom: 1px solid map-get($theme-colors, base-warm-grey);
+                        .pupil-changes-expanded-container {
+                            padding: 0px 0px 16px 17px;
+                            .heading-three {
+                                font-size: 16px;
+                            }
+                            .summary-row {
+                                td {
+                                    padding: 16px 0px !important;
+                                    border-top: 1px solid map-get($theme-colors, base-warm-grey);
+                                    .lwp-button {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .accept-reject-actions-container {
+                position: sticky;
+                bottom: -1px;
+                padding: 24px 32px;
+                background-color: white;
+                box-shadow: 0 -2px 4px 0 rgba(214, 209, 203, 0.25);
+                margin-bottom: -1px;
+                z-index: 2;
+                .lwp-button {
+                    font-size: 14px;
+                }
+                .MuiIconButton-root {
+                    padding: 8px;
+                }
+            }
+        }
+    }
+
+    .last-import-status-container {
+        min-height: calc(100vh - 16rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        
+        .pupil-diffing-filter {
+            width: 100%;
+        }
+
+        @include sm {
+            min-height: calc(100vh - 6rem);
+        }
+        .common_status_container {
+            max-width: 700px;
+            text-align: center;
+            .paragraph {
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+.link-entity-select-item {
+    .select-item-sub-text {
+        color: map-get($theme-colors, dark-warm-grey);
+    }
+}
+
+.pupil-detail-container {
+    .heading-three,
+    .paragraph {
+        margin-bottom: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    box-shadow: 0 4px 8px 0 rgba(214, 209, 203, 0.5);
+    padding: 24px;
+    box-sizing: border-box;
+
+    .pupil-detail-grid {
+        .MuiGrid-item {
+            @media (min-width: 600px) and (max-width: 768px) {
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+        }
+    }
+
+    .parent-list-table {
+        .common_table_container {
+            box-shadow: none;
+            thead {
+                overflow: hidden;
+                tr {
+                    th {
+                        background-color: map-get($theme-colors, base-off-white);
+                        border: none;
+                        padding: 12px 16px !important;
+                        .paragraph {
+                            font-weight: 400;
+                        }
+                    }
+                    th:first-child {
+                        border-radius: 4px 0 0 4px;
+                    }
+                    th:last-child {
+                        border-radius: 0 4px 4px 0;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        border: none;
+                        padding: 12px 16px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.compare-details-drawer {
+    .detail-comparison-icon {
+        transform: rotate(90deg);
+        font-size: 38px;
+    }
+    .pupils-in-class-container {
+        box-shadow: 0 4px 8px 0 rgba(214, 209, 203, 0.5);
+        padding: 24px;
+        .heading-three {
+            margin-bottom: 0px;
+        }
+        .pupil-name-chip {
+            border-radius: 61px;
+            border: 1px solid map-get($theme-colors, dark-warm-grey);
+            background-color: map-get($theme-colors, base-off-white);
+            padding: 9px 16px;
+            margin-bottom: 0px;
+            cursor: pointer;
+        }
+    }
+}

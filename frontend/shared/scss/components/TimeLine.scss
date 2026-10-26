@@ -1,0 +1,39 @@
+.common_time_line {
+    padding: 0 !important;
+
+    .MuiTimelineSeparator-root {
+        .MuiTimelineDot-root {
+            color: map-get($theme-colors, base-white);
+            background: map-get($theme-colors, base-white);
+            border-color: map-get($theme-colors, base-white);
+            box-shadow: none;
+            width: 8px;
+            height: 8px;
+        }
+
+        .MuiTimelineConnector-root {
+            width: 4px;
+            background-color: map-get($theme-colors, base-white);
+        }
+    }
+
+    .MuiTimelineItem-missingOppositeContent:before {
+        padding-left: 4px;
+        padding-right: 4px;
+        max-width: 474px;
+
+        @include customRange(0, 767) {
+            display: none;
+        }
+    }
+
+    .MuiTimelineContent-root {
+        padding-left: 4px;
+        padding-right: 4px;
+        max-width: 416px;
+
+        @include customRange(0, 767) {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.grid-card > .topic-summary-card-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    background: map-get($theme-colors, base-white);
+    box-shadow: 0px 4px 8px rgba(214, 209, 203, 0.5);
+    border-radius: $base-radius;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 0;
+    .truncate_local {
+        max-width: 250px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        height: 40px;
+    }
+
+    .topic-summary-content-section {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+
+        &:last-child {
+            padding: 0;
+        }
+
+        .topic-summary-discriptions {
+            margin: 1em 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-height: 79px;
+            min-height: 79px;
+        }
+        // .topic-summary-without-discriptions {
+        //     margin: 1em 0;
+        //     display: -webkit-box;
+        //     -webkit-line-clamp: 4;
+        //     -webkit-box-orient: vertical;
+        //     overflow: hidden;
+        //     max-height: 87px;
+        //     min-height: 87px;
+        // }
+    }
+    .MuiCardActions-root {
+        padding: 14px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .topic-summary-btn-container-with-para {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            .topic-summary-btn {
+                padding: 4px 0;
+            }
+
+            p {
+                padding: 0 8px;
+            }
+        }
+        .topic-summary-btn-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            // margin-top: 0.5em;
+
+            .topic-summary-btn {
+                padding: 4px 5px;
+            }
+
+            p {
+                padding: 0 8px;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: map-get($theme-colors, base-blue-black);
+            margin-top: 8px;
+            padding-left: 5px;
+        }
+
+        .previously_text {
+            margin-left: 0;
+        }
+    }
+}
+
+.border-top-ENGLISH {
+    border-top: 4px solid map-get($theme-colors, principal-english-base);
+}
+.border-top-MATHS {
+    border-top: 4px solid map-get($theme-colors, principal-maths-base);
+}
+.border-top-TOPIC {
+    border-top: 4px solid map-get($theme-colors, principal-maths-base);
+}
+.border-top-OTHER {
+    border-top: 4px solid map-get($theme-colors, principal-main-base);
+}

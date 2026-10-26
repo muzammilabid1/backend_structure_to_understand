@@ -1,0 +1,215 @@
+import { gql, useQuery } from '@apollo/client';
+import { Checkbox, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+
+import {} from '../../../graphQl/mutations';
+import CommonLoading from '../../Shared/CommonLoading';
+import DialogWrapper from './../../Shared/DialogWrapper';
+import Heading3 from './../../Shared/Typography/Heading3';
+import Paragraph from './../../Shared/Typography/Paragraph';
+
+// Queries
+
+const getAwaitingInvitedPupils = gql`
+    query getAwaitingInvitedPupils($classId: Float!) {
+        getAwaitingInvitedPupils(classId: $classId) {
+            id
+            firstname
+            lastname
+            parents {
+                id
+                parent {
+                    id
+                    firstname
+                    lastname
+                    email
+                    phoneNumber
+                }
+            }
+        }
+    }
+`;
+
+const pupilParents = (pupil) => {
+    return pupil?.parents?.map((pupilParent) => ({
+        pupilParentId: pupilParent?.id,
+        ...pupilParent.parent
+    }));
+};
+
+type SendAwaitingInvitationToParentsProps = {
+    onEmailSend: (ids: string[]) => void; // Now expects an array of any type as an argument
+    onClose: () => void;
+    selectPupilModal: boolean;
+    class_id: number;
+    btnLoading: boolean;
+};
+
+const SendAwaitingInvitationToParents = ({
+    onEmailSend,
+    onClose,
+    selectPupilModal,
+    class_id,
+    btnLoading
+}: SendAwaitingInvitationToParentsProps) => {
+    const [pupilData, setPupilData] = useState([]);
+    const [selectedPupilParentIds, setSelectedPupilParentIds] = useState([]);
+
+    const isSelected = (pupilParentId) => selectedPupilParentIds?.some((p) => p === pupilParentId);
+    const isAnySelected = () => selectedPupilParentIds?.length > 0;
+    const isAllSelected = () => pupilData.length > 0 && selectedPupilParentIds?.length === getAllParents(pupilData).length;
+    const toggleSelect = (pupilParentId) => {
+        if (isSelected(pupilParentId)) {
+            setSelectedPupilParentIds((s) => s?.filter((selectedPupilParentId) => +selectedPupilParentId !== +pupilParentId));
+        } else {
+            setSelectedPupilParentIds((s) => [...s, pupilParentId]);
+        }
+    };
+    const clearAll = () => setSelectedPupilParentIds([]);
+    const getAllParents = (pupilData) => {
+        const allParentsArr = [];
+
+        for (const pupil of pupilData) {
+            if (pupil?.allParents) {
+                for (const parent of pupil.allParents) {
+                    if (parent?.pupilParentId) {
+                        allParentsArr.push(parent.pupilParentId);
+                    }
+                }
+            }
+        }
+
+        return allParentsArr;
+    };
+    const selectAll = () => {
+        setSelectedPupilParentIds(getAllParents(pupilData));
+    };
+    const toggleAllSelect = () => {
+        if (isAllSelected()) {
+            clearAll();
+        } else {
+            selectAll();
+        }
+    };
+
+    const tableHeaders = ['Pupil', 'Parents to invite'];
+
+    const {
+        loading: pupilsLoading,
+        error: pupilsError,
+        data: pupils
+    } = useQuery(getAwaitingInvitedPupils, {
+        variables: { classId: +class_id }
+    });
+
+    const onConfirm = () => {
+        onEmailSend(selectedPupilParentIds);
+    };
+
+    const pupilToPupilView = (pupil) => {
+        return {
+            pupil,
+            allParents: pupilParents(pupil)
+        };
+    };
+
+    useEffect(() => {
+        if (!pupilsLoading && !pupilsError) {
+            const pp = pupils['getAwaitingInvitedPupils'];
+
+            setPupilData([...pp].map(pupilToPupilView));
+        }
+    }, [pupils, pupilsLoading]);
+
+    return (
+        <DialogWrapper
+            className="edit-class-detail-modal send-invitation-to-parents-modal"
+            heading={`Send invitations immediately`}
+            open={selectPupilModal}
+            setOpen={onClose}
+            cancelBtn
+            dialogFooter
+            primaryBtnText="Confirm"
+            cancelBtnText="Go back"
+            primaryBtnDisabled={!(selectedPupilParentIds?.length > 0)}
+            primaryBtnloading={btnLoading}
+            primaryBtnHandler={() => onConfirm()}
+            contentWidth="918px">
+            <div className="common_table">
+                <Paragraph customClass="invited-modal-text">
+                    Inivitations are usually sent automatically at the end of the school day so that they are at the top of parents’ inboxes
+                    when the pupils get home. If you want to send some of them immediately rather than waiting, please select the parents to
+                    send to below.
+                </Paragraph>
+                <TableContainer component={Paper} className="table-container">
+                    <Table className="table-content">
+                        <TableHead className="table-head">
+                            <TableRow className="table-row">
+                                {tableHeaders.map((header) => (
+                                    <TableCell key={header} className={`nested-table-cell`}>
+                                        <div className="justify-sb">
+                                            <Heading3 text={header} />
+                                            {header === 'Parents to invite' && (
+                                                <Checkbox
+                                                    indeterminate={!isAllSelected() && isAnySelected()}
+                                                    checked={isAllSelected()}
+                                                    onBlur={undefined}
+                                                    onClick={() => toggleAllSelect()}
+                                                />
+                                            )}
+                                        </div>
+                                    </TableCell>
+                                ))}
+                            </TableRow>
+                        </TableHead>
+
+                        <TableBody className="table-body">
+                            {(pupilData || []).map((pupil) => (
+                                <TableRow key={pupil?.pupil.id} className="table-row extra">
+                                    <TableCell component="th" scope="row" className="table-cell extra-width">
+                                        <Paragraph text={`${pupil?.pupil?.firstname} ${pupil?.pupil?.lastname}`} />
+                                    </TableCell>
+                                    <TableCell component="th" scope="row" className="table-cell ">
+                                        {(pupil?.allParents || []).map((parent) => (
+                                            <Grid container justifyContent={'space-between'} className="parent_invite_container">
+                                                <Grid>
+                                                    <Paragraph
+                                                        text={`${parent.firstname} ${parent.lastname}`}
+                                                        customClass="parent_invite_heading"
+                                                    />
+                                                    <p className="parent_invite_heading parent_invite_sub_heading">{parent.email}</p>
+                                                    <Paragraph
+                                                        text={parent.phoneNumber}
+                                                        customClass="parent_invite_heading parent_invite_sub_heading"
+                                                    />
+                                                </Grid>
+                                                <Grid>
+                                                    <Checkbox
+                                                        checked={isSelected(parent?.pupilParentId)}
+                                                        onBlur={undefined}
+                                                        onClick={() => toggleSelect(parent?.pupilParentId)}
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        ))}
+                                        {pupil?.allParents?.length === 0 && (
+                                            <div>
+                                                <Paragraph text={'-'} />
+                                                <Checkbox disabled={true} />
+                                            </div>
+                                        )}
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                        {/* )} */}
+                    </Table>
+                </TableContainer>
+            </div>
+
+            {pupilsLoading && <CommonLoading />}
+        </DialogWrapper>
+    );
+};
+
+export default SendAwaitingInvitationToParents;

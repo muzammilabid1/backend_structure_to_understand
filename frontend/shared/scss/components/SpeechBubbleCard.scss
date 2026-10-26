@@ -1,0 +1,39 @@
+.speech-bubble-card-container {
+    width: 100%;
+}
+.speech-bubble {
+    position: relative;
+    background-color: map-get($theme-colors, base-white);
+    border-radius: 1.5em;
+    filter: drop-shadow(0px 4px 8px rgba(214, 209, 203, 0.5));
+    padding: 2em;
+
+    h1 {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    img {
+        position: absolute;
+        top: 20px;
+        left: -30px;
+    }
+}
+
+// .speech-bubble:after {
+//     content: '';
+//     position: absolute;
+//     left: -10px;
+//     top: 50px;
+//     width: 0;
+//     height: 0;
+//     border: 50px solid transparent;
+//     border-right-color: map-get($theme-colors, base-white);
+//     border-left: 0;
+//     border-top: 0;
+//     margin-top: -10px;
+//     margin-left: -20px;
+//     z-index: -1;
+// }

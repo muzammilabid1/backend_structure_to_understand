@@ -1,0 +1,201 @@
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .common_status_container {
+        margin: 40px 0;
+        h1 {
+            margin-top: 25px;
+        }
+        @include sm {
+            margin: 0 0 30px 0;
+            h1 {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .error_card_container {
+        margin-bottom: 84px;
+        .card {
+            border-top: 4px solid map-get($theme-colors, principal-main-base);
+            .login-page-parameter-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                .heading {
+                    font-size: 24px;
+                    font-weight: 500;
+                    display: block;
+                    font-family: Chaloops-Medium;
+                    color: map-get($theme-colors, base-blue-black);
+                }
+
+                .login-page-parameter-login-image {
+                    width: 80px;
+                    img {
+                        width: 80px;
+                    }
+                }
+
+                .para {
+                    margin-top: 8px;
+                    font-family: Verdana;
+                    display: block;
+                }
+            }
+        }
+        @include sm {
+            .login-page-parameter-container {
+                display: flex;
+                flex-direction: column;
+                .login-page-parameter-login-image {
+                    display: flex;
+                    width: 100% !important;
+                    img {
+                        object-fit: contain;
+                    }
+                }
+                .login-page-parameter-login-text {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .login-page-parameter-login {
+        margin-bottom: 40px;
+    }
+
+    .account-text {
+        text-align: center;
+    }
+
+    .text-fields {
+        width: 543px;
+        text-align: center;
+        .account-not-found-error {
+            .MuiAlert-message {
+                text-align: left;
+            }
+            .lwp-button {
+                background: map-get($theme-colors, base-warm-grey);
+            }
+        }
+        .password-button-container {
+            .rememberMe-container {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: -25px;
+
+                label {
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-right: 9px;
+                    border-bottom-left-radius: 0.5em;
+                    border-bottom-right-radius: 0.5em;
+                    border: 1px solid map-get($theme-colors, principal-main-base);
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        font-size: 110%;
+
+                        .typography-text {
+                            font-size: 80%;
+                        }
+                    }
+                }
+
+                @include sm {
+                    width: 100%;
+
+                    label {
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+            .login-button-container {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                button {
+                    width: 249px;
+
+                    @include sm {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                }
+            }
+
+            .password_container {
+                p,
+                a {
+                    @include sm {
+                        font-size: 14px;
+                        margin: 0;
+
+                        .checkbox-container .MuiTypography-root {
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .social-options-btn-container {
+            width: 100%;
+            h1 {
+                margin: 32px 0 40px 0;
+            }
+        }
+
+        @include sm {
+            width: 100%;
+            .login-button-container {
+                .lwp-button-wrapper {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+            .social-options-btn-container {
+                width: 100%;
+                h1 {
+                    margin: 24px 0;
+                }
+            }
+        }
+
+        .login_password_btn {
+            border: 1px solid #dadce0;
+            width: 275px;
+            font-weight: 500;
+        }
+    }
+    .login_btn_container {
+        .lwp-button-wrapper {
+            width: 100%;
+        }
+    }
+
+    .login-btn {
+        width: 237px;
+        height: 52px;
+        @include sm {
+            width: 100%;
+        }
+    }
+
+    .social-options-btn-container {
+        width: 50%;
+    }
+    @include sm {
+        .social-options-btn-container {
+            width: 100%;
+        }
+    }
+}

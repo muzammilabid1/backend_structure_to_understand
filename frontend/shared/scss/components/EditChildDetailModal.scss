@@ -1,0 +1,7 @@
+.edit-child-detail-modal {
+  .edit-child-modal-inner-content {
+    padding: 96px 108px;
+    background-color: map-get($theme-colors, base-white);
+    border-radius: $base-radius;
+  }
+}

@@ -1,0 +1,33 @@
+.social_media_buttons_container {
+    display: flex;
+    margin-top: 30px;
+
+    .social_button {
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        color: white;
+        height: 40px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: bold;
+        margin: 12px;
+    }
+
+    .facebook {
+        background: #3b5998;
+        width: 141px;
+    }
+
+    .linkedIn {
+        background: #0077b5;
+        width: 136px;
+    }
+
+    .twitter {
+        background: #1da1f2;
+        width: 124px;
+    }
+}

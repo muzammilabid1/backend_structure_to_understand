@@ -1,0 +1,259 @@
+.view-activity-container {
+    .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 4em 0;
+
+        // .center-img {
+        //   object-fit: contain;
+        //   height: $math-scot-height;
+        //   margin-right: 2em;
+
+        //   @include sm {
+        //     height: 160px;
+        //     margin-right: 0em;
+        //   }
+        // }
+
+        // .view-topic-speech-bubble {
+        //   width: 322px;
+
+        //   .speech-bubble {
+        //     padding: 2em 3.5em;
+        //     @include sm {
+        //       padding: 1.5em;
+        //       margin-left: 0.5em;
+
+        //       &::after {
+        //         top: 20%;
+        //       }
+        //     }
+
+        //     .inner-text {
+        //       font-family: Chaloops-Light;
+        //       @include sm {
+        //         font-size: 1.5em;
+        //       }
+        //     }
+        //   }
+        // }
+    }
+
+    .common_status_container {
+        .common_status_img {
+            img {
+                max-height: unset;
+            }
+        }
+    }
+
+    .activity-cards {
+        position: relative;
+
+        .blur {
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        }
+
+        .activity-overlay-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 175px;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .lock_icon {
+            font-size: 80px;
+            color: map-get($theme-colors, base-blue-black);
+        }
+    }
+
+    .activity-preview-buttons {
+        margin-top: 37px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rating-comments-upload-container {
+        margin: 6em;
+        @include sm {
+            margin: 3em 0;
+            .rating-card {
+                width: calc(100% + 47px);
+                margin-left: -24px;
+            }
+        }
+
+        .pupil-activity-feedbacks-section {
+            margin-top: 100px;
+
+            .pupil-activity-feedbacks-section-header {
+                .heading-two {
+                    text-align: center;
+                    font-size: 2rem;
+                    font-family: Chaloops-Medium;
+                    font-weight: 500;
+                    margin-bottom: 42px;
+                }
+            }
+
+            .pupil-activity-feedbacks-section-main {
+                margin: 30px 0;
+                .activity-feed-accordion {
+                    .activity-feed-accordion-summary {
+                        .activity-feed-header-section {
+                            .activity-feed-title-section {
+                                .activity-feed-content {
+                                    padding-top: 0px;
+                                    p:first-child {
+                                        font-size: 16px;
+                                    }
+                                    .activity-feed-paragraph {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .MuiCardContent-root:last-child {
+                    padding-bottom: 0px !important;
+                }
+
+                .activity-feed-comment-section {
+                    .family-comment,
+                    .child-comment {
+                        .paragraph {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            @include sm {
+                .pupil-activity-feedbacks-section-main {
+                    .activity-feed-accordion {
+                        .activity-feed-accordion-summary {
+                            padding: 16px;
+                            .MuiAccordionSummary-expandIconWrapper {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pupil-activity-feedbacks-section-footer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: dashed;
+                border-color: rgba(0, 0, 0, 0.12);
+                border-radius: 4px;
+                padding: 40px;
+                margin-top: 29px;
+            }
+            .pupil-activity-close-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 29px;
+            }
+        }
+
+        .save_comment_btn_wrapper {
+            text-align: center;
+            margin-top: 37px;
+        }
+        .activity-preview-buttons {
+            margin-top: 37px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // .ENGLISH-bg {
+        //   background-color: map-get($theme-colors, principal-english-light);
+        // }
+
+        // .MATHS-bg {
+        //   background-color: map-get($theme-colors, principal-maths-light);
+        // }
+
+        // .OTHER-bg {
+        //   background-color: map-get($theme-colors, base-off-white);
+        // }
+
+        // .OWN-bg {
+        //   background-color: map-get($theme-colors, principal-main-light);
+        // }
+
+        .demo-activity-photo-permission-card {
+            margin: 30px 0;
+            padding: 10px 20px;
+        }
+
+        .demo-activity-photo-permission-update-card {
+            background-color: map-get($theme-colors, base-off-white);
+            margin: 30px 0;
+            padding: 10px 20px;
+
+            .update-link {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .swap-div {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .mathscot-with-bubble-text {
+        .speech-bubble-class {
+            .speech-bubble {
+                padding: 2.5em;
+                .speech-bubble-text {
+                    font-family: Chaloops-Light;
+                    font-weight: 400;
+                    font-size: 17px !important;
+                }
+            }
+        }
+    }
+}
+
+.mathscot_Looking {
+    margin: auto;
+    .dialog-content-section {
+        .mathscot_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            button {
+                margin-top: 16px;
+            }
+            @include sm {
+                gap: 16px;
+                button {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+}
+.mathscot_selection {
+    .mathscot-selection-error {
+        color: map-get($theme-colors, aa-red);
+    }
+}
